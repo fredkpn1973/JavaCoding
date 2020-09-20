@@ -38,11 +38,12 @@ public class SinglyLinkedList<E> {
     }
 
     public E first() {
-        if (isEmpty()) {
+        if(isEmpty()) {
             return null;
         }
         return head.getElement();
     }
+
 
     public E last() {
         if (isEmpty()) {
@@ -62,6 +63,7 @@ public class SinglyLinkedList<E> {
         size++;
     }
 
+
     public void addLast(E e) {
         Node<E> newest = new Node<>(e, null);
         if (isEmpty()) {
@@ -78,9 +80,7 @@ public class SinglyLinkedList<E> {
             return null;
         }
         E answer = head.getElement();
-        System.out.println(answer);
         head = head.getNext();
-        System.out.println(head);
         size--;
         if (size == 0) {
             tail = null;

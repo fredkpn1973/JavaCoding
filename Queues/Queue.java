@@ -1,4 +1,4 @@
-public interface Queue <E> {
+public interface Queue<E> {
 
     int size();
 

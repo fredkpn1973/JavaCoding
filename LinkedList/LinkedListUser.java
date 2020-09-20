@@ -11,10 +11,11 @@ public class LinkedListUser {
         linkedList.addLast(s2);
         linkedList.addLast(s3);
         linkedList.addLast(s4);
-        System.out.print(linkedList.size());  
-        System.out.print("\n Dit is de eerste tekst: " + linkedList.first() + "\n Dit is de laatste tekst: " + linkedList.last());
+        System.out.print(linkedList.size());
+        System.out.print("\n Dit is de eerste tekst: " + linkedList.first() + "\n Dit is de laatste tekst: "
+                + linkedList.last());
+        System.out.println(linkedList.removeFirst());
 
-
-   }
+    }
 
 }
