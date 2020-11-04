@@ -1,0 +1,388 @@
+RP/0/RSP0/CPU0:Sep 29 11:36:58.128 CEST: sc_reddrv[427]: %PLATFORM-REDDRV-7-ROLE_CHANGE : Detected role change to ACTIVE state due to mastership release after retry count = 0 
+RP/0/RSP0/CPU0:Sep 29 11:36:58.197 CEST: sc_reddrv[427]: %PLATFORM-REDDRV-6-RESET_STANDBY : Active is going to reset standby peer node node0_RSP1_CPU0 
+RP/0/RSP0/CPU0:Sep 29 11:36:58.198 CEST: rmf_svr[422]: %HA-REDCON-6-GO_ACTIVE : this card going active 
+RP/0/RSP0/CPU0:Sep 29 11:36:58.198 CEST: sysmgr[98]: %OS-SYSMGR-5-NOTICE : This standby node is going active at Tue Sep 29 11:36:58 2020   
+RP/0/RSP0/CPU0:Sep 29 11:36:58.274 CEST: sysmgr[98]: %OS-SYSMGR-5-NOTICE : This node is active now at Tue Sep 29 11:36:58 2020  
+RP/0/RSP0/CPU0:Sep 29 11:36:58.274 CEST: sysmgr[98]: %OS-SYSMGR-5-NOTICE : Critical failover elapsed time 0.075 seconds (56.900% idle)  
+RP/0/RSP0/CPU0:Sep 29 11:36:58.275 CEST: isis[1013]: %ROUTING-ISIS-5-NSR_CONN : ISIS NSR Connection 'Down' on 'Nii0' 
+RP/0/RSP0/CPU0:Sep 29 11:36:58.592 CEST: isis[1013]: %ROUTING-ISIS-6-INFO_STARTUP_START : Cisco NSR controlled start beginning 
+RP/0/RSP0/CPU0:Sep 29 11:36:59.094 CEST: pim6[1218]: %ROUTING-IPV4_PIM-5-HA_NOTICE : NSR not ready 
+RP/0/RSP0/CPU0:Sep 29 11:36:59.096 CEST: pim[1217]: %ROUTING-IPV4_PIM-5-HA_NOTICE : NSR not ready 
+RP/0/RSP0/CPU0:Sep 29 11:36:59.421 CEST: shelfmgr[433]: %PLATFORM-SHELFMGR_HAL-7-CAN_INFO : Can API: slot 0 online event. 
+RP/0/RSP0/CPU0:Sep 29 11:37:00.606 CEST: isis[1013]: %ROUTING-ISIS-6-INFO_STARTUP_FINISH : Cisco NSR controlled start completed 
+RP/0/RSP0/CPU0:Sep 29 11:37:00.663 CEST: pfm_node_rp[379]: %PLATFORM-FABMGR-1-SPINE_UNAVAILABLE : Set|fabmgr[200817]|0x1034000|Number of active spines has dropped below the recommended number 5 
+RP/0/RSP0/CPU0:Sep 29 11:37:02.507 CEST: bgp[1087]: %ROUTING-BGP-5-LSD_CONN_FAIL : [21] : BGP has lost Connection to the LSD. LSD down event received 
+RP/0/RSP0/CPU0:Sep 29 11:37:02.508 CEST: bgp[1087]: %ROUTING-BGP-5-ASYNC_IPC_STATUS : default:(S)inst-id 0, Connection Close 
+RP/0/RSP0/CPU0:Sep 29 11:37:03.139 CEST: bpm[1102]: %ROUTING-BGP-5-ASYNC_IPC_STATUS : bpm-active:(bgp-bpm-active)inst-id 0, Service Published 
+RP/0/RSP0/CPU0:Sep 29 11:37:05.615 CEST: shelfmgr[433]: %PLATFORM-SHELFMGR-6-NODE_DISCOVERY : Node State Discovery complete 
+RP/0/RSP0/CPU0:Sep 29 11:37:05.630 CEST: shelfmgr[433]: %PLATFORM-SHELFMGR-6-NODE_STATE_CHANGE : 0/RSP1/CPU0 A9K-RSP880-LT-TR state:NOT-PRESENT 
+RP/0/RSP0/CPU0:Sep 29 11:37:05.635 CEST: isis[1013]: %ROUTING-ISIS-5-NSR_NOTIFY_READY : ISIS NSR set nsr ISIS NSR not ready yet for instance ISIS_SPN. rc 0 
+RP/0/RSP0/CPU0:Sep 29 11:37:05.638 CEST: bgp[1087]: %ROUTING-BGP-5-NSR_STATE_CHANGE : Changed state to Not NSR-Ready 
+RP/0/RSP0/CPU0:Sep 29 11:37:05.656 CEST: invmgr[270]: %PLATFORM-INV-6-OIROUT : OIR: Node 0/RSP1/CPU0 Sn: (null) removed  
+RP/0/RSP0/CPU0:Sep 29 11:37:05.959 CEST: alphadisplay[114]: %PLATFORM-ALPHA_DISPLAY-6-CHANGE : Alpha display on node 0/RSP0/CPU0 changed to ACTV in state default  
+RP/0/RSP0/CPU0:Sep 29 11:37:07.510 CEST: bpm[1102]: %ROUTING-BGP-5-ASYNC_IPC_STATUS : bpm-default:(A)inst-id 0, Connection Open 
+RP/0/RSP0/CPU0:Sep 29 11:37:07.713 CEST: bgp[1087]: %ROUTING-BGP-5-ASYNC_IPC_STATUS : default, process instance 1:(A)inst-id 0, Connection Establised 
+RP/0/RSP0/CPU0:Sep 29 11:37:28.198 CEST: pciesvr[77]: %PLATFORM-PCIE-7-GEN_DEBUG : pcie_switchover_notif_handler - PCIE: switchover new_role 1  
+RP/0/RSP0/CPU0:Sep 29 11:37:28.388 CEST: hsrp[1136]: Unknown#0x1000 Successfully Initialized FHRP Library
+RP/0/RSP0/CPU0:Sep 29 11:37:28.388 CEST: hsrp[1136]: Unknown#0x1000 Successfully Initialized FHRP Library
+RP/0/RSP0/CPU0:Sep 29 11:37:28.689 CEST: hsrp[1136]: Unknown#0x1000 Successfully bound to OT
+RP/0/RSP0/CPU0:Sep 29 11:37:28.689 CEST: hsrp[1136]: Unknown#0x1000 Successfully bound to OT
+RP/0/RSP0/CPU0:Sep 29 11:37:28.694 CEST: hsrp[1136]: Unknown#0x1000Recovering checkpointed information for IPv4 address family
+RP/0/RSP0/CPU0:Sep 29 11:37:28.694 CEST: hsrp[1136]: Unknown#0x1000Recovering checkpointed information for IPv4 address family
+RP/0/RSP0/CPU0:Sep 29 11:37:28.694 CEST: hsrp[1136]: Unknown#0x1000Recovering checkpointed information for IPv6 address family
+RP/0/RSP0/CPU0:Sep 29 11:37:28.694 CEST: hsrp[1136]: Unknown#0x1000Recovering checkpointed information for IPv6 address family
+RP/0/RSP0/CPU0:Sep 29 11:37:28.743 CEST: hsrp[1136]: Unknown#0x1000Initialise IPC updates
+RP/0/RSP0/CPU0:Sep 29 11:37:28.743 CEST: hsrp[1136]: Unknown#0x1000Initialise IPC updates
+RP/0/RSP0/CPU0:Sep 29 11:37:28.818 CEST: hsrp[1136]: Unknown#0x1000APPLY PRIMARY: Interface Bundle-Ether1.2020, group 2020, addr 89.248.142.86  (add)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.818 CEST: hsrp[1136]: Unknown#0x1000APPLY PRIMARY: Interface Bundle-Ether1.2020, group 2020, addr 89.248.142.86  (add)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.820 CEST: hsrp[1136]: IPv4#Bundle-Ether1.2020#0x7e4HSRP group 2020 MAC Address set to 0000.0c9f.f7e4 (use bia not configured)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.820 CEST: hsrp[1136]: IPv4#Bundle-Ether1.2020#0x7e4HSRP group 2020 MAC Address set to 0000.0c9f.f7e4 (use bia not configured)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.833 CEST: hsrp[1136]: Bundle-Ether1.2020#0x1000hsrp_interface_control_fhrp_replay
+RP/0/RSP0/CPU0:Sep 29 11:37:28.833 CEST: hsrp[1136]: Bundle-Ether1.2020#0x1000hsrp_interface_control_fhrp_replay
+RP/0/RSP0/CPU0:Sep 29 11:37:28.849 CEST: hsrp[1136]: IPv4#Bundle-Ether1.2020#0x7e4Add primary VIP 89.248.142.86 (Down) 
+RP/0/RSP0/CPU0:Sep 29 11:37:28.849 CEST: hsrp[1136]: IPv4#Bundle-Ether1.2020#0x7e4Add primary VIP 89.248.142.86 (Down) 
+RP/0/RSP0/CPU0:Sep 29 11:37:28.866 CEST: hsrp[1136]: Unknown#0x1000APPLY PRIMARY Succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:28.866 CEST: hsrp[1136]: Unknown#0x1000APPLY PRIMARY Succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:28.866 CEST: hsrp[1136]: Unknown#0x1000APPLY PRIMARY: Interface Bundle-Ether1.3000, group 3000, addr 10.10.10.254  (add)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.866 CEST: hsrp[1136]: Unknown#0x1000APPLY PRIMARY: Interface Bundle-Ether1.3000, group 3000, addr 10.10.10.254  (add)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.866 CEST: hsrp[1136]: IPv4#Bundle-Ether1.3000#0xbb8HSRP group 3000 MAC Address set to 0000.0c9f.fbbRP/0/RSP0/CPU0:Sep 29 11:37:28.869 CEST: hsrp[1136]: IPv4#Unknown#0x1000APPLY PREEMPT: Interface Bundle-Ether1.2020, group 20208 (use bia not configured)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.875 CEST: hsrp[1136]: Unknown#0x1000APPLY GLOBAL: Interface Bundle-EtRP/0/RSP0/CPU0:Sep 29 11:37:28.866 CEST: hsrp[1136]: Bundle-Ether1.3000#0x1000hsrp_interface_control_fhrp_replay
+RP/0/RSP0/CPU0:Sep 29 11:37:28.866 CEST: hsrp[1136]: IPv4#Bundle-Ether1.3000#0xbb8Add primary VIP 10.10.10.254 (Down) 
+RP/0/RSP0/CPU0:Sep 29RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: Unknown#0x1000APPLY PRIORITY Succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:28.866 CEST: hsrp[1136]: Unknown#0x1000APPLY PRIMARY Succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: Unknown#0x1000APPRP/0/RSP0/CPU0:Sep 29 11:37:28.866 CEST: hsrp[1136]: Unknown#0x1000APPLY LINKLOCAL: Interface Bundle-Ether1.2020, group 2020, RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: Unknown#0x1000APPLY LINKLOCAL: Interface Bundle-Ether1.3000, group 3000, adaddr fe80::205:73ff:fea0:7e4 (add)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.866 CEST: hsrp[1136]: IPv6#Bundle-Ether1.2020#0x7e4HSRP group 2020 MAC Address set to 0005.73a0.07e4 (use bia not configured)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.866 CEST: hsrp[1136]: IPv6#Bundle-Ether1.2020#0x7e4Add primary VIP fe80::205:73ff:fea0:7e4 (Up) 
+RP/0/RSP0/CPU0:Sep 29 11:37:28.866 CEST: hsrp[1136]: Unknown#0x1000APPLY LINKLOCAL Succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:28.866 CEST: hsrp[1136]: Unknown#0x1000APPLY LINKLOCAL: Interface Bundle-Ether1.3000, group 3000, addr fe80::205:73ff:fea0:bb8 (add)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.866 CEST: hsrp[1136]: IPv6#Bundle-Ether1.3000#0xbb8HSRP group 3000 MAC Address set to 0005.73a0.0bb8 (use bia not configured)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.866 CEST: hsrp[1136]: IPv6#Bundle-Ether1.3000#0xbb8Add primary VIP fe80::205:73ff:fea0:bb8 (Up) 
+RP/0/RSP0/CPU0:Sep 29 11:37:28.866 CEST: hsrp[1136]: Unknown#0x1000APPLY LINKLOCAL Succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:28.866 CEST: hsrp[1136]: Unknown#0x1000Send IPC updates
+RP/0/RSP0/CPU0:Sep 29 11:37:28.868 CEST: hsrp[1136]: Unknown#0x1000Initialise IPC updates
+RP/0/RSP0/CPU0:Sep 29 11:37:28.869 CEST: hsrp[1136]: IPv4#Unknown#0x1000VERIFY TIMERS: Interface Bundle-Ether1.2020, group 2020, hellotime 1 sec, holdtime 3 sec (add)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.869 CEST: hsrp[1136]: Unknown#0x1000APPLY TIMERS Succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:28.869 CEST: hsrp[1136]: IPv4#Unknown#0x1000APPLY PREEMPT: Interface Bundle-Ether1.2020, group 2020, delay 180 (add)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.869 CEST: hsrp[1136]: Unknown#0x1000APPLY PREEMPT Succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:28.869 CEST: hsrp[1136]: IPv4#Unknown#0x1000APPLY PRIORITY: Interface Bundle-Ether1.2020, group 2020,priority 120 (add)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.869 CEST: hsrp[1136]: Unknown#0x1000APPLY PRIORITY Succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:28.869 CEST: hsrp[1136]: Unknown#0x1000APPLY PRIMARY: Interface Bundle-Ether1.2020, group 2020, addr 89.248.142.86  (add)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.869 CEST: hsrp[1136]: IPv4#Bundle-Ether1.2020#0x7e4Add primary VIP 89.248.142.86 (Down) 
+RP/0/RSP0/CPU0:Sep 29 11:37:28.869 CEST: hsrp[1136]: Unknown#0x1000APPLY PRIMARY Succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:28.870 CEST: hsrp[1136]: IPv6#Unknown#0x1000VERIFY TIMERS: Interface Bundle-Ether1.2020, group 2020, hellotime 1 sec, holdtime 3 sec (add)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.870 CEST: hsrp[1136]: Unknown#0x1000APPLY TIMERS Succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:28.870 CEST: hsrp[1136]: IPv6#Unknown#0x1000APPLY PREEMPT: Interface Bundle-Ether1.2020, group 2020, delay 180 (add)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.870 CEST: hsrp[1136]: Unknown#0x1000APPLY PREEMPT Succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:28.870 CEST: hsrp[1136]: IPv6#Unknown#0x1000APPLY PRIORITY: Interface Bundle-Ether1.2020, group 2020,priority 120 (add)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.875 CEST: hsrp[1136]: Unknown#0x1000APPLY PRIORITY Succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:28.875 CEST: hsrp[1136]: Unknown#0x1000APPLY GLOBAL: Interface Bundle-Ether1.2020, group 2020, addr 2a00:1ae8:cafe:cafe::1 (add)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.875 CEST: hsrp[1136]: IPv6#Bundle-Ether1.2020#0x7e4hsrp_group_control_secondary_add : address 2a00:1ae8:cafe:cafe::1
+RP/0/RSP0/CPU0:Sep 29 11:37:28.875 CEST: hsrp[1136]: Unknown#0x1000APPLY GLOBAL Succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:28.875 CEST: hsrp[1136]: Unknown#0x1000APPLY LINKLOCAL: Interface Bundle-Ether1.2020, group 2020, addr fe80::205:73ff:fea0:7e4 (add)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.875 CEST: hsrp[1136]: IPv6#Bundle-Ether1.2020#0x7e4Add primary VIP fe80::205:73ff:fea0:7e4 (Up) 
+RP/0/RSP0/CPU0:Sep 29 11:37:28.875 CEST: hsrp[1136]: Unknown#0x1000APPLY LINKLOCAL Succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:28.875 CEST: hsrp[1136]: IPv4#Unknown#0x1000VERIFY TIMERS: Interface Bundle-Ether1.3000, group 3000, hellotime 1 sec, holdtime 3 sec (add)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.875 CEST: hsrp[1136]: Unknown#0x1000APPLY TIMERS Succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:28.875 CEST: hsrp[1136]: IPv4#Unknown#0x1000APPLY PREEMPT: Interface Bundle-Ether1.3000, group 3000, delay 0 (add)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.875 CEST: hsrp[1136]: Unknown#0x1000APPLY PREEMPT Succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:28.875 CEST: hsrp[1136]: IPv4#Unknown#0x1000APPLY PRIORITY: Interface Bundle-Ether1.3000, group 3000,priority 120 (add)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.876 CEST: hsrp[1136]: Unknown#0x1000APPLY PRIORITY Succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:28.876 CEST: hsrp[1136]: Unknown#0x1000APPLY PRIMARY: Interface Bundle-Ether1.3000, group 3000, addr 10.10.10.254  (add)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.876 CEST: hsrp[1136]: IPv4#Bundle-Ether1.3000#0xbb8Add primary VIP 10.10.10.254 (Down) 
+RP/0/RSP0/CPU0:Sep 29 11:37:28.876 CEST: hsrp[1136]: Unknown#0x1000APPLY PRIMARY Succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:28.876 CEST: hsrp[1136]: IPv6#Unknown#0x1000VERIFY TIMERS: Interface Bundle-Ether1.3000, group 3000, hellotime 1 sec, holdtime 3 sec (add)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.876 CEST: hsrp[1136]: Unknown#0x1000APPLY TIMERS Succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:28.876 CEST: hsrp[1136]: IPv6#Unknown#0x1000APPLY PREEMPT: Interface Bundle-Ether1.3000, group 3000, delay 180 (add)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.876 CEST: hsrp[1136]: Unknown#0x1000APPLY PREEMPT Succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:28.876 CEST: hsrp[1136]: IPv6#Unknown#0x1000APPLY PRIORITY: Interface Bundle-Ether1.3000, group 3000,priority 120 (add)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.876 CEST: hsrp[1136]: Unknown#0x1000APPLY PRIORITY Succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:28.876 CEST: hsrp[1136]: Unknown#0x1000APPLY GLOBAL: Interface Bundle-Ether1.3000, group 3000, addr 2a00:1ae8:babe:babe::1 (add)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.876 CEST: hsrp[1136]: IPv6#Bundle-Ether1.3000#0xbb8hsrp_group_control_secondary_add : address 2a00:1ae8:babe:babe::1
+RP/0/RSP0/CPU0:Sep 29 11:37:28.876 CEST: hsrp[1136]: Unknown#0x1000APPLY GLOBAL Succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:28.876 CEST: hsrp[1136]: Unknown#0x1000APPLY LINKLOCAL: Interface Bundle-Ether1.3000, group 3000, addr fe80::205:73ff:fea0:bb8 (add)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.876 CEST: hsrp[1136]: IPv6#Bundle-Ether1.3000#0xbb8Add primary VIP fe80::205:73ff:fea0:bb8 (Up) 
+RP/0/RSP0/CPU0:Sep 29 11:37:28.876 CEST: hsrp[1136]: Unknown#0x1000APPLY LINKLOCAL Succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:28.876 CEST: hsrp[1136]: Unknown#0x1000Send IPC updates
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: Unknown#0x1000Initialise IPC updates
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: Unknown#0x1000APPLY DELAY: Interface Bundle-Ether1.2020, min 0 msec, reload 0 msec (add)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: Unknown#0x1000APPLY DELAY Succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: IPv4#Unknown#0x1000VERIFY TIMERS: Interface Bundle-Ether1.2020, group 2020, hellotime 1 sec, holdtime 3 sec (add)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: Unknown#0x1000APPLY TIMERS Succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: IPv4#Unknown#0x1000APPLY PREEMPT: Interface Bundle-Ether1.2020, group 2020, delay 180 (add)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: Unknown#0x1000APPLY PREEMPT Succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: IPv4#Unknown#0x1000APPLY PRIORITY: Interface Bundle-Ether1.2020, group 2020,priority 120 (add)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: Unknown#0x1000APPLY PRIORITY Succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: Unknown#0x1000APPLY PRIMARY: Interface Bundle-Ether1.2020, group 2020, addr 89.248.142.86  (add)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: IPv4#Bundle-Ether1.2020#0x7e4Add primary VIP 89.248.142.86 (Down) 
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: Unknown#0x1000APPLY PRIMARY Succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: IPv6#Unknown#0x1000VERIFY TIMERS: Interface Bundle-Ether1.2020, group 2020, hellotime 1 sec, holdtime 3 sec (add)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: Unknown#0x1000APPLY TIMERS Succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: IPv6#Unknown#0x1000APPLY PREEMPT: Interface Bundle-Ether1.2020, group 2020, delay 180 (add)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: Unknown#0x1000APPLY PREEMPT Succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: IPv6#Unknown#0x1000APPLY PRIORITY: Interface Bundle-Ether1.2020, group 2020,priority 120 (add)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: Unknown#0x1000APPLY PRIORITY Succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: Unknown#0x1000APPLY GLOBAL: Interface Bundle-Ether1.2020, group 2020, addr 2a00:1ae8:cafe:cafe::1 (add)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: IPv6#Bundle-Ether1.2020#0x7e4hsrp_group_control_secondary_add : address 2a00:1ae8:cafe:cafe::1
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: Unknown#0x1000APPLY GLOBAL Succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: Unknown#0x1000APPLY LINKLOCAL: Interface Bundle-Ether1.2020, group 2020, addr fe80::205:73ff:fea0:7e4 (add)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: IPv6#Bundle-Ether1.2020#0x7e4Add primary VIP fe80::205:73ff:fea0:7e4 (Up) 
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: Unknown#0x1000APPLY LINKLOCAL Succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: Unknown#0x1000APPLY DELAY: Interface Bundle-Ether1.3000, min 0 msec, reload 0 msec (add)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: Unknown#0x1000APPLY DELAY Succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: IPv4#Unknown#0x1000VERIFY TIMERS: Interface Bundle-Ether1.3000, group 3000, hellotime 1 sec, holdtime 3 sec (add)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: Unknown#0x1000APPLY TIMERS Succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: IPv4#Unknown#0x1000APPLY PREEMPT: Interface Bundle-Ether1.3000, group 3000, delay 0 (add)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: Unknown#0x1000APPLY PREEMPT Succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: IPv4#Unknown#0x1000APPLY PRIORITY: Interface Bundle-Ether1.3000, group 3000,priority 120 (add)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: Unknown#0x1000APPLY PRIORITY Succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: Unknown#0x1000APPLY PRIMARY: Interface Bundle-Ether1.3000, group 3000, addr 10.10.10.254  (add)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: IPv4#Bundle-Ether1.3000#0xbb8Add primary VIP 10.10.10.254 (Down) 
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: Unknown#0x1000APPLY PRIMARY Succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: IPv6#Unknown#0x1000VERIFY TIMERS: Interface Bundle-Ether1.3000, group 3000, hellotime 1 sec, holdtime 3 sec (add)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: Unknown#0x1000APPLY TIMERS Succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: IPv6#Unknown#0x1000APPLY PREEMPT: Interface Bundle-Ether1.3000, group 3000, delay 180 (add)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: Unknown#0x1000APPLY PREEMPT Succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: IPv6#Unknown#0x1000APPLY PRIORITY: Interface Bundle-Ether1.3000, group 3000,priority 120 (add)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: Unknown#0x1000APPLY PRIORITY Succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: Unknown#0x1000APPLY GLOBAL: Interface Bundle-Ether1.3000, group 3000, addr 2a00:1ae8:babe:babe::1 (add)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: IPv6#Bundle-Ether1.3000#0xbb8hsrp_group_control_secondary_add : address 2a00:1ae8:babe:babe::1
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: Unknown#0x1000APPLY GLOBAL Succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: Unknown#0x1000APPLY LINKLOCAL: Interface Bundle-Ether1.3000, group 3000, addr fe80::205:73ff:fea0:bb8 (add)
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: IPv6#Bundle-Ether1.3000#0xbb8Add primary VIP fe80::205:73ff:fea0:bb8 (Up) 
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: Unknown#0x1000APPLY LINKLOCAL Succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: Unknown#0x1000APPLY IOS DISABLE: add
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: Unknown#0x1000APPLY IOS DISABLE Succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:28.878 CEST: hsrp[1136]: Unknown#0x1000Send IPC updates
+RP/0/RSP0/CPU0:Sep 29 11:37:30.759 CEST: hsrp[1136]: IPv4#Unknown#0x1000Add interface Bundle-Ether1.2020 to the IM state register queue succeeded 
+RP/0/RSP0/CPU0:Sep 29 11:37:30.759 CEST: hsrp[1136]: IPv6#Unknown#0x1000Add interface Bundle-Ether1.2020 to the IM state register queue succeeded 
+RP/0/RSP0/CPU0:Sep 29 11:37:30.759 CEST: hsrp[1136]: IPv4#Unknown#0x1000Add interface Bundle-Ether1.3000 to the IM state register queue succeeded 
+RP/0/RSP0/CPU0:Sep 29 11:37:30.759 CEST: hsrp[1136]: IPv6#Unknown#0x1000Add interface Bundle-Ether1.3000 to the IM state register queue succeeded 
+RP/0/RSP0/CPU0:Sep 29 11:37:30.759 CEST: hsrp[1136]: Unknown#0x1000IM state register finished with 4 successes and 0  failures
+RP/0/RSP0/CPU0:Sep 29 11:37:30.800 CEST: hsrp[1136]: Unknown#0x1000Receive IP-ARM connect control callback (flags 0x0000000b)
+RP/0/RSP0/CPU0:Sep 29 11:37:30.800 CEST: hsrp[1136]: Unknown#0x1000Initialise IPC updates
+RP/0/RSP0/CPU0:Sep 29 11:37:30.800 CEST: hsrp[1136]: Unknown#0x1000Send IPC updates
+RP/0/RSP0/CPU0:Sep 29 11:37:30.928 CEST: hsrp[1136]: Unknown#0x1000Successfully registered with Install for event: 100
+RP/0/RSP0/CPU0:Sep 29 11:37:30.934 CEST: hsrp[1136]: Unknown#0x1000Successfully registered with Install for event: 50
+RP/0/RSP0/CPU0:Sep 29 11:37:30.938 CEST: hsrp[1136]: Unknown#0x1000Successfully got issu phase: 50
+RP/0/RSP0/CPU0:Sep 29 11:37:31.074 CEST: hsrp[1136]: Unknown#0x1000EEM:hsrp publisher registration successful
+RP/0/RSP0/CPU0:Sep 29 11:37:31.075 CEST: hsrp[1136]: Unknown#0x1000Initialise IPC updates
+RP/0/RSP0/CPU0:Sep 29 11:37:31.076 CEST: hsrp[1136]: Unknown#0x1000Attribute notification received for Bundle-Ether1.2020
+RP/0/RSP0/CPU0:Sep 29 11:37:31.076 CEST: hsrp[1136]: IPv4#Bundle-Ether1.2020#0x1000hsrp_interface_control_caps_create
+RP/0/RSP0/CPU0:Sep 29 11:37:31.077 CEST: hsrp[1136]: Bundle-Ether1.2020#0x1000hsrp_interface_control_idb_first_caps_create
+RP/0/RSP0/CPU0:Sep 29 11:37:31.077 CEST: hsrp[1136]: Unknown#0x1000Add interface Bundle-Ether1.2020 to the IM mac register queue succeeded 
+RP/0/RSP0/CPU0:Sep 29 11:37:31.077 CEST: hsrp[1136]: IPv4#Bundle-Ether1.2020#0x1000Add interface Bundle-Ether1.2020 to the IP-ARM register queue succeeded 
+RP/0/RSP0/CPU0:Sep 29 11:37:31.082 CEST: hsrp[1136]: IPv4#Bundle-Ether1.2020#0x2000Skipped queueing output create for ineligible group
+RP/0/RSP0/CPU0:Sep 29 11:37:31.082 CEST: hsrp[1136]: IPv4#Bundle-Ether1.2020#0x1000Updating interface database entry using checkpointed data
+RP/0/RSP0/CPU0:Sep 29 11:37:31.082 CEST: hsrp[1136]: IPv4#Unknown#0x1000Bundle-Ether1.2020: interface state notification (up) (old state unknown)
+RP/0/RSP0/CPU0:Sep 29 11:37:31.082 CEST: hsrp[1136]: IPv4#Bundle-Ether1.2020#0x1000hsrp_interface_control_caps_state_change : new state up
+RP/0/RSP0/CPU0:Sep 29 11:37:31.082 CEST: hsrp[1136]: IPv4#Bundle-Ether1.2020#0x1000Starting Delay timer for 180 secs
+RP/0/RSP0/CPU0:Sep 29 11:37:31.082 CEST: hsrp[1136]: Unknown#0x1000 IM state notification for Bundle-Ether1.2020 (IPv4) - Up
+RP/0/RSP0/CPU0:Sep 29 11:37:31.082 CEST: hsrp[1136]: Unknown#0x1000Attribute notification received for Bundle-Ether1.3000
+RP/0/RSP0/CPU0:Sep 29 11:37:31.082 CEST: hsrp[1136]: IPv4#Bundle-Ether1.3000#0x1000hsrp_interface_control_caps_create
+RP/0/RSP0/CPU0:Sep 29 11:37:31.082 CEST: hsrp[1136]: Bundle-Ether1.3000#0x1000hsrp_interface_control_idb_first_caps_create
+RP/0/RSP0/CPU0:Sep 29 11:37:31.082 CEST: hsrp[1136]: Unknown#0x1000Add interface Bundle-Ether1.3000 to the IM mac register queue succeeded 
+RP/0/RSP0/CPU0:Sep 29 11:37:31.082 CEST: hsrp[1136]: IPv4#Bundle-Ether1.3000#0x1000Add interface Bundle-Ether1.3000 to the IP-ARM register queue succeeded 
+RP/0/RSP0/CPU0:Sep 29 11:37:31.082 CEST: hsrp[1136]: IPv4#Bundle-Ether1.3000#0x2000Skipped queueing output create for ineligible group
+RP/0/RSP0/CPU0:Sep 29 11:37:31.082 CEST: hsrp[1136]: IPv4#Bundle-Ether1.3000#0x1000Updating interface database entry using checkpointed data
+RP/0/RSP0/CPU0:Sep 29 11:37:31.082 CEST: hsrp[1136]: IPv4#Unknown#0x1000Bundle-Ether1.3000: interface state notification (up) (old state unknown)
+RP/0/RSP0/CPU0:Sep 29 11:37:31.082 CEST: hsrp[1136]: IPv4#Bundle-Ether1.3000#0x1000hsrp_interface_control_caps_state_change : new state up
+RP/0/RSP0/CPU0:Sep 29 11:37:31.082 CEST: hsrp[1136]: IPv4#Bundle-Ether1.3000#0x1000Starting Delay timer for 180 secs
+RP/0/RSP0/CPU0:Sep 29 11:37:31.082 CEST: hsrp[1136]: Unknown#0x1000 IM state notification for Bundle-Ether1.3000 (IPv4) - Up
+RP/0/RSP0/CPU0:Sep 29 11:37:31.082 CEST: hsrp[1136]: Unknown#0x1000Send IPC updates
+RP/0/RSP0/CPU0:Sep 29 11:37:31.085 CEST: hsrp[1136]: Unknown#0x1000Received 2 interface IP address updates (scan)
+RP/0/RSP0/CPU0:Sep 29 11:37:31.085 CEST: hsrp[1136]: Unknown#0x1000Updating IP address info: 89.248.142.81/29 (add/change) VRF 0x60000002, tbl 0xe0000001
+RP/0/RSP0/CPU0:Sep 29 11:37:31.085 CEST: hsrp[1136]: IPv4#Bundle-Ether1.2020#0x1000hsrp_interface_control_ip_change
+RP/0/RSP0/CPU0:Sep 29 11:37:31.085 CEST: hsrp[1136]: Unknown#0x1000Added VRF, vrf_id 0x60000002 refcount 0
+RP/0/RSP0/CPU0:Sep 29 11:37:31.085 CEST: hsrp[1136]: Unknown#0x1000Added reference to VRF, vrf_id 0x60000002 refcount 1
+RP/0/RSP0/CPU0:Sep 29 11:37:31.085 CEST: hsrp[1136]: Unknown#0x1000Updating IP address info: 10.10.10.252/24 (add/change) VRF 0x60000003, tbl 0xe0000011
+RP/0/RSP0/CPU0:Sep 29 11:37:31.085 CEST: hsrp[1136]: IPv4#Bundle-Ether1.3000#0x1000hsrp_interface_control_ip_change
+RP/0/RSP0/CPU0:Sep 29 11:37:31.085 CEST: hsrp[1136]: Unknown#0x1000Added VRF, vrf_id 0x60000003 refcount 0
+RP/0/RSP0/CPU0:Sep 29 11:37:31.085 CEST: hsrp[1136]: Unknown#0x1000Added reference to VRF, vrf_id 0x60000003 refcount 1
+RP/0/RSP0/CPU0:Sep 29 11:37:31.085 CEST: hsrp[1136]: Unknown#0x1000IP-ARM register finished with 2 successes and 0 failures
+RP/0/RSP0/CPU0:Sep 29 11:37:31.085 CEST: hsrp[1136]: Unknown#0x1000IM mac register finished with 2 successes and 0  failures
+RP/0/RSP0/CPU0:Sep 29 11:37:31.085 CEST: hsrp[1136]: Unknown#0x1000Initialise IPC updates
+RP/0/RSP0/CPU0:Sep 29 11:37:31.085 CEST: hsrp[1136]: Unknown#0x1000Attribute notification received for Bundle-Ether1.2020
+RP/0/RSP0/CPU0:Sep 29 11:37:31.085 CEST: hsrp[1136]: IPv6#Bundle-Ether1.2020#0x1000hsrp_interface_control_caps_create
+RP/0/RSP0/CPU0:Sep 29 11:37:31.085 CEST: hsrp[1136]: IPv6#Bundle-Ether1.2020#0x1000Add interface Bundle-Ether1.2020 to the IP-ARM register queue succeeded 
+RP/0/RSP0/CPU0:Sep 29 11:37:31.085 CEST: hsrp[1136]: Unknown#0x1000Queued registration for link-local address updates for Bundle-Ether1.2020
+RP/0/RSP0/CPU0:Sep 29 11:37:31.085 CEST: hsrp[1136]: IPv6#Bundle-Ether1.2020#0x1000Updating interface database entry using checkpointed data
+RP/0/RSP0/CPU0:Sep 29 11:37:31.085 CEST: hsrp[1136]: IPv6#Unknown#0x1000Bundle-Ether1.2020: interface state notification (up) (old state unknown)
+RP/0/RSP0/CPU0:Sep 29 11:37:31.085 CEST: hsrp[1136]: IPv6#Bundle-Ether1.2020#0x1000hsrp_interface_control_caps_state_change : new state up
+RP/0/RSP0/CPU0:Sep 29 11:37:31.085 CEST: hsrp[1136]: IPv6#Bundle-Ether1.2020#0x1000Starting Delay timer for 180 secs
+RP/0/RSP0/CPU0:Sep 29 11:37:31.085 CEST: hsrp[1136]: Unknown#0x1000 IM state notification for Bundle-Ether1.2020 (IPv6) - Up
+RP/0/RSP0/CPU0:Sep 29 11:37:31.085 CEST: hsrp[1136]: Unknown#0x1000Attribute notification received for Bundle-Ether1.3000
+RP/0/RSP0/CPU0:Sep 29 11:37:31.085 CEST: hsrp[1136]: IPv6#Bundle-Ether1.3000#0x1000hsrp_interface_control_caps_create
+RP/0/RSP0/CPU0:Sep 29 11:37:31.085 CEST: hsrp[1136]: IPv6#Bundle-Ether1.3000#0x1000Add interface Bundle-Ether1.3000 to the IP-ARM register queue succeeded 
+RP/0/RSP0/CPU0:Sep 29 11:37:31.085 CEST: hsrp[1136]: Unknown#0x1000Queued registration for link-local address updates for Bundle-Ether1.3000
+RP/0/RSP0/CPU0:Sep 29 11:37:31.085 CEST: hsrp[1136]: IPv6#Bundle-Ether1.3000#0x1000Updating interface database entry using checkpointed data
+RP/0/RSP0/CPU0:Sep 29 11:37:31.085 CEST: hsrp[1136]: IPv6#Unknown#0x1000Bundle-Ether1.3000: interface state notification (up) (old state unknown)
+RP/0/RSP0/CPU0:Sep 29 11:37:31.085 CEST: hsrp[1136]: IPv6#Bundle-Ether1.3000#0x1000hsrp_interface_control_caps_state_change : new state up
+RP/0/RSP0/CPU0:Sep 29 11:37:31.085 CEST: hsrp[1136]: IPv6#Bundle-Ether1.3000#0x1000Starting Delay timer for 180 secs
+RP/0/RSP0/CPU0:Sep 29 11:37:31.085 CEST: hsrp[1136]: Unknown#0x1000 IM state notification for Bundle-Ether1.3000 (IPv6) - Up
+RP/0/RSP0/CPU0:Sep 29 11:37:31.085 CEST: hsrp[1136]: Unknown#0x1000Send IPC updates
+RP/0/RSP0/CPU0:Sep 29 11:37:31.086 CEST: hsrp[1136]: Unknown#0x1000Received 2 interface IP address updates (scan)
+RP/0/RSP0/CPU0:Sep 29 11:37:31.086 CEST: hsrp[1136]: Unknown#0x1000Updating IP address info: 2a00:1ae8:cafe:cafe::2/64 (add/change) VRF 0x60000002, tbl 0xe0800001
+RP/0/RSP0/CPU0:Sep 29 11:37:31.086 CEST: hsrp[1136]: IPv6#Bundle-Ether1.2020#0x1000hsrp_interface_control_ip_change
+RP/0/RSP0/CPU0:Sep 29 11:37:31.086 CEST: hsrp[1136]: Unknown#0x1000Updating IP address info: 2a00:1ae8:babe:babe::2/64 (add/change) VRF 0x60000003, tbl 0xe0800011
+RP/0/RSP0/CPU0:Sep 29 11:37:31.086 CEST: hsrp[1136]: IPv6#Bundle-Ether1.3000#0x1000hsrp_interface_control_ip_change
+RP/0/RSP0/CPU0:Sep 29 11:37:31.086 CEST: hsrp[1136]: Unknown#0x1000IP-ARM register finished with 2 successes and 0 failures
+RP/0/RSP0/CPU0:Sep 29 11:37:31.086 CEST: hsrp[1136]: Unknown#0x1000Batch of 2 LAS register operations complete (2 success / 0 fail)
+RP/0/RSP0/CPU0:Sep 29 11:37:31.091 CEST: hsrp[1136]: Unknown#0x1000Batch of 2 Link-local address get operation complete (2 success / 0 fail)
+RP/0/RSP0/CPU0:Sep 29 11:37:31.091 CEST: hsrp[1136]: Bundle-Ether1.2020#0x1000Received linklocal update: old address ::, new address fe80::4ea6:4dff:fe26:7645
+RP/0/RSP0/CPU0:Sep 29 11:37:31.091 CEST: hsrp[1136]: Bundle-Ether1.3000#0x1000Received linklocal update: old address ::, new address fe80::4ea6:4dff:fe26:7645
+RP/0/RSP0/CPU0:Sep 29 11:37:31.091 CEST: hsrp[1136]: Unknown#0x1000Initialise IPC updates
+RP/0/RSP0/CPU0:Sep 29 11:37:31.091 CEST: hsrp[1136]: Unknown#0x1000Attribute notification received for Bundle-Ether1.2020
+RP/0/RSP0/CPU0:Sep 29 11:37:31.091 CEST: hsrp[1136]: Bundle-Ether1.2020#0x1000Received MAC change notification: new mac 4ca6.4d26.7645 ,old mac 0000.0000.0000
+RP/0/RSP0/CPU0:Sep 29 11:37:31.091 CEST: hsrp[1136]: Bundle-Ether1.2020#0x1000hsrp_interface_control_mac_change : new MAC 4ca6.4d26.7645
+RP/0/RSP0/CPU0:Sep 29 11:37:31.091 CEST: hsrp[1136]: Unknown#0x1000Attribute notification received for Bundle-Ether1.3000
+RP/0/RSP0/CPU0:Sep 29 11:37:31.091 CEST: hsrp[1136]: Bundle-Ether1.3000#0x1000Received MAC change notification: new mac 4ca6.4d26.7645 ,old mac 0000.0000.0000
+RP/0/RSP0/CPU0:Sep 29 11:37:31.091 CEST: hsrp[1136]: Bundle-Ether1.3000#0x1000hsrp_interface_control_mac_change : new MAC 4ca6.4d26.7645
+RP/0/RSP0/CPU0:Sep 29 11:37:31.091 CEST: hsrp[1136]: Unknown#0x1000Send IPC updates
+RP/0/RSP0/CPU0:Sep 29 11:37:31.091 CEST: hsrp[1136]: Unknown#0x1000Initialise IPC updates
+RP/0/RSP0/CPU0:Sep 29 11:37:31.091 CEST: hsrp[1136]: Unknown#0x1000Received 3rd party bulk end notification
+RP/0/RSP0/CPU0:Sep 29 11:37:31.092 CEST: hsrp[1136]: Unknown#0x1000Successfully signalled startup to output processes
+RP/0/RSP0/CPU0:Sep 29 11:37:31.245 CEST: hsrp[1136]: Unknown#0x1000Adding item dest_macs/2a0,00000c9ffbb8 to the sysdb ICMP redirects notification queue
+RP/0/RSP0/CPU0:Sep 29 11:37:31.245 CEST: hsrp[1136]: Unknown#0x1000Adding item ip_mapping/2a0,fc0a0a0a,3000 to the sysdb ICMP redirects notification queue
+RP/0/RSP0/CPU0:Sep 29 11:37:31.245 CEST: hsrp[1136]: Unknown#0x1000Adding item dest_macs/2a0,000573a00bb8 to the sysdb ICMP redirects notification queue
+RP/0/RSP0/CPU0:Sep 29 11:37:31.245 CEST: hsrp[1136]: Unknown#0x1000Adding item dest_macs/20002e0,00000c9ff7e4 to the sysdb ICMP redirects notification queue
+RP/0/RSP0/CPU0:Sep 29 11:37:31.245 CEST: hsrp[1136]: Unknown#0x1000Adding item ip_mapping/20002e0,518ef859,2020 to the sysdb ICMP redirects notification queue
+RP/0/RSP0/CPU0:Sep 29 11:37:31.245 CEST: hsrp[1136]: Unknown#0x1000Adding item dest_macs/20002e0,000573a007e4 to the sysdb ICMP redirects notification queue
+RP/0/RSP0/CPU0:Sep 29 11:37:31.245 CEST: hsrp[1136]: IPv4#Bundle-Ether1.3000#0x1000Stopping Delay timer
+RP/0/RSP0/CPU0:Sep 29 11:37:31.245 CEST: hsrp[1136]: IPv6#Bundle-Ether1.3000#0x1000Stopping Delay timer
+RP/0/RSP0/CPU0:Sep 29 11:37:31.245 CEST: hsrp[1136]: IPv4#Bundle-Ether1.2020#0x1000Stopping Delay timer
+RP/0/RSP0/CPU0:Sep 29 11:37:31.245 CEST: hsrp[1136]: IPv6#Bundle-Ether1.2020#0x1000Stopping Delay timer
+RP/0/RSP0/CPU0:Sep 29 11:37:31.245 CEST: hsrp[1136]: IPv4#Bundle-Ether1.3000#0xbb8hsrp_group_control_interface_ready
+RP/0/RSP0/CPU0:Sep 29 11:37:31.245 CEST: hsrp[1136]: IPv4#Bundle-Ether1.3000#0xbb8Skipped queueing output create for ineligible group
+RP/0/RSP0/CPU0:Sep 29 11:37:31.245 CEST: hsrp[1136]: IPv6#Bundle-Ether1.3000#0xbb8hsrp_group_control_interface_ready
+RP/0/RSP0/CPU0:Sep 29 11:37:31.245 CEST: hsrp[1136]: IPv6#Bundle-Ether1.3000#0xbb8Skipped queueing output create for ineligible group
+RP/0/RSP0/CPU0:Sep 29 11:37:31.245 CEST: hsrp[1136]: IPv4#Bundle-Ether1.2020#0x7e4hsrp_group_control_interface_ready
+RP/0/RSP0/CPU0:Sep 29 11:37:31.245 CEST: hsrp[1136]: IPv4#Bundle-Ether1.2020#0x7e4Skipped queueing output create for ineligible group
+RP/0/RSP0/CPU0:Sep 29 11:37:31.245 CEST: hsrp[1136]: IPv6#Bundle-Ether1.2020#0x7e4hsrp_group_control_interface_ready
+RP/0/RSP0/CPU0:Sep 29 11:37:31.245 CEST: hsrp[1136]: IPv6#Bundle-Ether1.2020#0x7e4Skipped queueing output create for ineligible group
+RP/0/RSP0/CPU0:Sep 29 11:37:31.328 CEST: hsrp[1136]: Unknown#0x1000Received Pakman event 80
+RP/0/RSP0/CPU0:Sep 29 11:37:31.328 CEST: hsrp[1136]: Unknown#0x1000Connecting to UDP socket for IPv4
+RP/0/RSP0/CPU0:Sep 29 11:37:31.379 CEST: hsrp[1136]: Unknown#0x1000HSRP socket = 73
+RP/0/RSP0/CPU0:Sep 29 11:37:31.379 CEST: hsrp[1136]: IPv4#Unknown#0x1000Adding item to the socket add vrf queue for VRF 0x60000002
+RP/0/RSP0/CPU0:Sep 29 11:37:31.379 CEST: hsrp[1136]: IPv4#Unknown#0x1000Adding item to the socket add vrf queue for VRF 0x60000003
+RP/0/RSP0/CPU0:Sep 29 11:37:31.379 CEST: hsrp[1136]: IPv4#Bundle-Ether1.3000#0x1000Joining mcast group for Bundle-Ether1.3000, VRF 0x60000003
+RP/0/RSP0/CPU0:Sep 29 11:37:31.379 CEST: hsrp[1136]: IPv4#Unknown#0x1000Adding item to the socket join queue for VRF 0x60000003 on interface Bundle-Ether1.3000
+RP/0/RSP0/CPU0:Sep 29 11:37:31.379 CEST: hsrp[1136]: IPv4#Bundle-Ether1.2020#0x1000Joining mcast group for Bundle-Ether1.2020, VRF 0x60000002
+RP/0/RSP0/CPU0:Sep 29 11:37:31.379 CEST: hsrp[1136]: IPv4#Unknown#0x1000Adding item to the socket join queue for VRF 0x60000002 on interface Bundle-Ether1.2020
+RP/0/RSP0/CPU0:Sep 29 11:37:31.379 CEST: hsrp[1136]: IPv4#Bundle-Ether1.3000#0xbb8SB3000: Bundle-Ether1.3000: Active: (Ev e) Hello timer expired
+RP/0/RSP0/CPU0:Sep 29 11:37:31.379 CEST: hsrp[1136]: IPv4#Bundle-Ether1.3000#0xbb8SB3000: Bundle-Ether1.3000: Active: (Ac F) Sending hello message
+RP/0/RSP0/CPU0:Sep 29 11:37:31.390 CEST: hsrp[1136]: SB3000: BE1.3000   Hello out    10.10.10.252  Active pri 120 ip    10.10.10.254
+RP/0/RSP0/CPU0:Sep 29 11:37:31.390 CEST: hsrp[1136]: IPv4#Bundle-Ether1.2020#0x7e4SB2020: Bundle-Ether1.2020: Active: (Ev e) Hello timer expired
+RP/0/RSP0/CPU0:Sep 29 11:37:31.390 CEST: hsrp[1136]: IPv4#Bundle-Ether1.2020#0x7e4SB2020: Bundle-Ether1.2020: Active: (Ac F) Sending hello message
+RP/0/RSP0/CPU0:Sep 29 11:37:31.390 CEST: hsrp[1136]: SB2020: BE1.2020   Hello out   89.248.142.81  Active pri 120 ip   89.248.142.86
+RP/0/RSP0/CPU0:Sep 29 11:37:31.390 CEST: hsrp[1136]: Unknown#0x1000socket add vrf batch size 2
+RP/0/RSP0/CPU0:Sep 29 11:37:31.391 CEST: hsrp[1136]: Unknown#0x1000socket add vrf completed with 0 failures and 4 successes
+RP/0/RSP0/CPU0:Sep 29 11:37:31.391 CEST: hsrp[1136]: Unknown#0x1000Socket binding completed with 0 failures and 2 successes
+RP/0/RSP0/CPU0:Sep 29 11:37:31.391 CEST: hsrp[1136]: IPv4#Unknown#0x1000socket join for 4 interfaces
+RP/0/RSP0/CPU0:Sep 29 11:37:31.391 CEST: hsrp[1136]: Unknown#0x1000socket join completed with 0 failures and 4 successes
+RP/0/RSP0/CPU0:Sep 29 11:37:31.391 CEST: hsrp[1136]: Unknown#0x1000Connecting to UDP socket for IPv6
+RP/0/RSP0/CPU0:Sep 29 11:37:31.399 CEST: hsrp[1136]: Unknown#0x1000HSRP socket = 76
+RP/0/RSP0/CPU0:Sep 29 11:37:31.399 CEST: hsrp[1136]: IPv6#Unknown#0x1000Adding item to the socket add vrf queue for VRF 0x60000002
+RP/0/RSP0/CPU0:Sep 29 11:37:31.399 CEST: hsrp[1136]: IPv6#Unknown#0x1000Adding item to the socket add vrf queue for VRF 0x60000003
+RP/0/RSP0/CPU0:Sep 29 11:37:31.399 CEST: hsrp[1136]: IPv6#Bundle-Ether1.3000#0x1000Joining mcast group for Bundle-Ether1.3000, VRF 0x60000003
+RP/0/RSP0/CPU0:Sep 29 11:37:31.399 CEST: hsrp[1136]: IPv6#Unknown#0x1000Adding item to the socket join queue for VRF 0x60000003 on interface Bundle-Ether1.3000
+RP/0/RSP0/CPU0:Sep 29 11:37:31.399 CEST: hsrp[1136]: IPv6#Bundle-Ether1.2020#0x1000Joining mcast group for Bundle-Ether1.2020, VRF 0x60000002
+RP/0/RSP0/CPU0:Sep 29 11:37:31.399 CEST: hsrp[1136]: IPv6#Unknown#0x1000Adding item to the socket join queue for VRF 0x60000002 on interface Bundle-Ether1.2020
+RP/0/RSP0/CPU0:Sep 29 11:37:31.399 CEST: hsrp[1136]: IPv6#Bundle-Ether1.3000#0xbb8SB3000: Bundle-Ether1.3000: Active: (Ev e) Hello timer expired
+RP/0/RSP0/CPU0:Sep 29 11:37:31.399 CEST: hsrp[1136]: IPv6#Bundle-Ether1.3000#0xbb8SB3000: Bundle-Ether1.3000: Active: (Ac F) Sending hello message
+RP/0/RSP0/CPU0:Sep 29 11:37:31.399 CEST: hsrp[1136]: SB3000: BE1.3000   Hello out fe80::4ea6:4dff:fe26:7645  Active pri 120 ip fe80::205:73ff:fea0:bb8
+RP/0/RSP0/CPU0:Sep 29 11:37:31.399 CEST: hsrp[1136]: IPv6#Bundle-Ether1.2020#0x7e4SB2020: Bundle-Ether1.2020: Active: (Ev e) Hello timer expired
+RP/0/RSP0/CPU0:Sep 29 11:37:31.399 CEST: hsrp[1136]: IPv6#Bundle-Ether1.2020#0x7e4SB2020: Bundle-Ether1.2020: Active: (Ac F) Sending hello message
+RP/0/RSP0/CPU0:Sep 29 11:37:31.399 CEST: hsrp[1136]: SB2020: BE1.2020   Hello out fe80::4ea6:4dff:fe26:7645  Active pri 120 ip fe80::205:73ff:fea0:7e4
+RP/0/RSP0/CPU0:Sep 29 11:37:31.399 CEST: hsrp[1136]: Unknown#0x1000socket add vrf batch size 2
+RP/0/RSP0/CPU0:Sep 29 11:37:31.400 CEST: hsrp[1136]: Unknown#0x1000socket add vrf completed with 0 failures and 4 successes
+RP/0/RSP0/CPU0:Sep 29 11:37:31.400 CEST: hsrp[1136]: Unknown#0x1000Socket binding completed with 0 failures and 2 successes
+RP/0/RSP0/CPU0:Sep 29 11:37:31.400 CEST: hsrp[1136]: IPv6#Unknown#0x1000socket join for 2 interfaces
+RP/0/RSP0/CPU0:Sep 29 11:37:31.402 CEST: hsrp[1136]: Unknown#0x1000socket join completed with 0 failures and 2 successes
+RP/0/RSP0/CPU0:Sep 29 11:37:31.402 CEST: hsrp[1136]: Unknown#0x1000 FHRP Resync End declared
+RP/0/RSP0/CPU0:Sep 29 11:37:31.440 CEST: hsrp[1136]: Unknown#0x1000 Initialized ARP Successfully
+RP/0/RSP0/CPU0:Sep 29 11:37:31.440 CEST: hsrp[1136]: Unknown#0x1000 FHRP Replay all ARP entries
+RP/0/RSP0/CPU0:Sep 29 11:37:31.441 CEST: hsrp[1136]: Bundle-Ether1.2020#0x1000 Successfully queued ARP Update for 89.248.142.86
+RP/0/RSP0/CPU0:Sep 29 11:37:31.441 CEST: hsrp[1136]: Bundle-Ether1.3000#0x1000 Successfully queued ARP Update for 10.10.10.254
+RP/0/RSP0/CPU0:Sep 29 11:37:31.445 CEST: hsrp[1136]: Unknown#0x1000 ND Client Register succeeded - conn a327088
+RP/0/RSP0/CPU0:Sep 29 11:37:31.445 CEST: hsrp[1136]: Unknown#0x1000 Initialized ND successfully
+RP/0/RSP0/CPU0:Sep 29 11:37:31.445 CEST: hsrp[1136]: Bundle-Ether1.2020#0x1000 Queued ND update for LL addr fe80::205:73ff:fea0:7e4
+RP/0/RSP0/CPU0:Sep 29 11:37:31.445 CEST: hsrp[1136]: Bundle-Ether1.3000#0x1000 Queued ND update for LL addr fe80::205:73ff:fea0:bb8
+RP/0/RSP0/CPU0:Sep 29 11:37:31.485 CEST: hsrp[1136]: Unknown#0x1000 Successfully queued MAC permit for 0000.0c9f.f7e4
+RP/0/RSP0/CPU0:Sep 29 11:37:31.485 CEST: hsrp[1136]: Unknown#0x1000 Setting vmac-state reserving for HSRP-id: 2020 vmac: 0000.0c9f.f7e4
+RP/0/RSP0/CPU0:Sep 29 11:37:31.485 CEST: hsrp[1136]: Unknown#0x1000 Successfully queued MAC permit for 0005.73a0.07e4
+RP/0/RSP0/CPU0:Sep 29 11:37:31.485 CEST: hsrp[1136]: Unknown#0x1000 Setting vmac-state reserving for HSRP-id: 2020 vmac: 0005.73a0.07e4
+RP/0/RSP0/CPU0:Sep 29 11:37:31.485 CEST: hsrp[1136]: Unknown#0x1000 Successfully queued MAC permit for 0000.0c9f.fbb8
+RP/0/RSP0/CPU0:Sep 29 11:37:31.485 CEST: hsrp[1136]: Unknown#0x1000 Setting vmac-state reserving for HSRP-id: 3000 vmac: 0000.0c9f.fbb8
+RP/0/RSP0/CPU0:Sep 29 11:37:31.485 CEST: hsrp[1136]: Unknown#0x1000 Successfully queued MAC permit for 0005.73a0.0bb8
+RP/0/RSP0/CPU0:Sep 29 11:37:31.485 CEST: hsrp[1136]: Unknown#0x1000 Setting vmac-state reserving for HSRP-id: 3000 vmac: 0005.73a0.0bb8
+RP/0/RSP0/CPU0:Sep 29 11:37:31.485 CEST: hsrp[1136]: Unknown#0x1000 Initialized MAC module successfully
+RP/0/RSP0/CPU0:Sep 29 11:37:31.495 CEST: hsrp[1136]: Unknown#0x1000 RIB Bind succeeded: handle a327114, fd 80
+RP/0/RSP0/CPU0:Sep 29 11:37:31.495 CEST: hsrp[1136]: Unknown#0x1000 Successfully queued RIB proto reg for table 0xe0000001
+RP/0/RSP0/CPU0:Sep 29 11:37:31.496 CEST: hsrp[1136]: Bundle-Ether1.2020#0x1000 Queued RIB add for 89.248.142.86 on Bundle-Ether1.2020
+RP/0/RSP0/CPU0:Sep 29 11:37:31.496 CEST: hsrp[1136]: Unknown#0x1000 Successfully queued RIB proto reg for table 0xe0000011
+RP/0/RSP0/CPU0:Sep 29 11:37:31.496 CEST: hsrp[1136]: Bundle-Ether1.3000#0x1000 Queued RIB add for 10.10.10.254 on Bundle-Ether1.3000
+RP/0/RSP0/CPU0:Sep 29 11:37:31.496 CEST: hsrp[1136]: Unknown#0x1000 Updating RIB protocol registrations: size 2
+RP/0/RSP0/CPU0:Sep 29 11:37:31.496 CEST: hsrp[1136]: Unknown#0x1000     (batch_buffer_add_proto returned 1 - success)
+RP/0/RSP0/CPU0:Sep 29 11:37:31.496 CEST: hsrp[1136]: Unknown#0x1000     (batch_buffer_add_proto returned 1 - success)
+RP/0/RSP0/CPU0:Sep 29 11:37:31.496 CEST: hsrp[1136]: Unknown#0x1000 Updating RIB (table 0xe0000011, proto 0x4): Adding 1 routes, removing 0 routes
+RP/0/RSP0/CPU0:Sep 29 11:37:31.496 CEST: hsrp[1136]: Unknown#0x1000     (route add returned 1 - success)
+RP/0/RSP0/CPU0:Sep 29 11:37:31.496 CEST: hsrp[1136]: Bundle-Ether1.3000#0x1000     (path add returned 1 - success)
+RP/0/RSP0/CPU0:Sep 29 11:37:31.496 CEST: hsrp[1136]: Unknown#0x1000     (batch_buffer_complete returned 1 - success)
+RP/0/RSP0/CPU0:Sep 29 11:37:31.496 CEST: hsrp[1136]: Unknown#0x1000     (Sending batch to RIB)
+RP/0/RSP0/CPU0:Sep 29 11:37:31.497 CEST: hsrp[1136]: Unknown#0x1000     (operation returned 6 - success)
+RP/0/RSP0/CPU0:Sep 29 11:37:31.497 CEST: hsrp[1136]: Unknown#0x1000 Updating RIB (table 0xe0000001, proto 0x5): Adding 1 routes, removing 0 routes
+RP/0/RSP0/CPU0:Sep 29 11:37:31.497 CEST: hsrp[1136]: Unknown#0x1000     (route add returned 1 - success)
+RP/0/RSP0/CPU0:Sep 29 11:37:31.497 CEST: hsrp[1136]: Bundle-Ether1.2020#0x1000     (path add returned 1 - success)
+RP/0/RSP0/CPU0:Sep 29 11:37:31.497 CEST: hsrp[1136]: Unknown#0x1000     (batch_buffer_complete returned 1 - success)
+RP/0/RSP0/CPU0:Sep 29 11:37:31.497 CEST: hsrp[1136]: Unknown#0x1000     (Sending batch to RIB)
+RP/0/RSP0/CPU0:Sep 29 11:37:31.497 CEST: hsrp[1136]: Unknown#0x1000     (operation returned 6 - success)
+RP/0/RSP0/CPU0:Sep 29 11:37:31.502 CEST: hsrp[1136]: Unknown#0x1000 RIB Bind failed: handle a327118, fd -1
+RP/0/RSP0/CPU0:Sep 29 11:37:31.502 CEST: hsrp[1136]: Unknown#0x1000 Initialized RIB successfully
+RP/0/RSP0/CPU0:Sep 29 11:37:31.502 CEST: hsrp[1136]: Unknown#0x1000Send IPC updates
+RP/0/RSP0/CPU0:Sep 29 11:37:31.503 CEST: hsrp[1136]: Unknown#0x1000 Successful ARP update of size 2 (2 add, 0 remove, 0 grat ARP)
+RP/0/RSP0/CPU0:Sep 29 11:37:31.503 CEST: hsrp[1136]: Unknown#0x1000 ND Replay Start
+RP/0/RSP0/CPU0:Sep 29 11:37:31.503 CEST: hsrp[1136]: Unknown#0x1000 ND bulk update of size 2 succeeded
+RP/0/RSP0/CPU0:Sep 29 11:37:31.503 CEST: hsrp[1136]: Unknown#0x1000 ND Replay End
+RP/0/RSP0/CPU0:Sep 29 11:37:31.504 CEST: hsrp[1136]: Unknown#0x1000 Updating Owner Channel for 1 interfaces, 4 mac-addresses
+RP/0/RSP0/CPU0:Sep 29 11:37:31.517 CEST: hsrp[1136]: Unknown#0x1000 Owner Channel update complete (1/4 successes, 0/0 failures): No error
+RP/0/RSP0/CPU0:Sep 29 11:37:31.517 CEST: hsrp[1136]: Unknown#0x1000 Setting vmac-state active for HSRP-id: 2020 vmac: 0000.0c9f.f7e4
+RP/0/RSP0/CPU0:Sep 29 11:37:31.517 CEST: hsrp[1136]: Unknown#0x1000 Setting vmac-state active for HSRP-id: 3000 vmac: 0000.0c9f.fbb8
+RP/0/RSP0/CPU0:Sep 29 11:37:31.517 CEST: hsrp[1136]: Unknown#0x1000 Setting vmac-state active for HSRP-id: 2020 vmac: 0005.73a0.07e4
+RP/0/RSP0/CPU0:Sep 29 11:37:31.517 CEST: hsrp[1136]: Unknown#0x1000 Setting vmac-state active for HSRP-id: 3000 vmac: 0005.73a0.0bb8
+RP/0/RSP0/CPU0:Sep 29 11:37:31.517 CEST: hsrp[1136]: Unknown#0x1000Updating 6 sysdb ICMP redirect notifications
+RP/0/RSP0/CPU0:Sep 29 11:37:31.523 CEST: hsrp[1136]: Unknown#0x1000Received Output Process Event Notification type 1 from node  0x821 (not present in DB)
+RP/0/RSP0/CPU0:Sep 29 11:37:31.523 CEST: hsrp[1136]: Unknown#0x1000FHRP Output process resync on node 0x821
+RP/0/RSP0/CPU0:Sep 29 11:37:31.524 CEST: hsrp[1136]: Unknown#0x1000Sent resync start message on node 0x821
+RP/0/RSP0/CPU0:Sep 29 11:37:31.525 CEST: hsrp[1136]: Unknown#0x1000Sent resync end message on node 0x821
+RP/0/RSP0/CPU0:Sep 29 11:37:31.525 CEST: hsrp[1136]: Unknown#0x1000Received Output Process Event Notification type 1 from node  0x831 (not present in DB)
+RP/0/RSP0/CPU0:Sep 29 11:37:31.525 CEST: hsrp[1136]: Unknown#0x1000FHRP Output process resync on node 0x831
+RP/0/RSP0/CPU0:Sep 29 11:37:31.527 CEST: hsrp[1136]: Unknown#0x1000Sent resync start message on node 0x831
+RP/0/RSP0/CPU0:Sep 29 11:37:31.528 CEST: hsrp[1136]: Unknown#0x1000Sent resync end message on node 0x831
+RP/0/RSP0/CPU0:Sep 29 11:37:31.528 CEST: hsrp[1136]: Unknown#0x1000Received Output Process Event Notification type 1 from node  0x821 (present in DB)
+RP/0/RSP0/CPU0:Sep 29 11:37:31.528 CEST: hsrp[1136]: Unknown#0x1000FHRP Output process resync on node 0x821
+RP/0/RSP0/CPU0:Sep 29 11:37:31.529 CEST: hsrp[1136]: Unknown#0x1000Sent resync start message on node 0x821
+RP/0/RSP0/CPU0:Sep 29 11:37:31.530 CEST: hsrp[1136]: Unknown#0x1000Sent resync end message on node 0x821
+RP/0/RSP0/CPU0:Sep 29 11:37:31.530 CEST: hsrp[1136]: Unknown#0x1000Received Output Process Event Notification type 1 from node  0x831 (present in DB)
+RP/0/RSP0/CPU0:Sep 29 11:37:31.530 CEST: hsrp[1136]: Unknown#0x1000FHRP Output process resync on node 0x831
+RP/0/RSP0/CPU0:Sep 29 11:37:31.531 CEST: hsrp[1136]: Unknown#0x1000Sent resync start message on node 0x831
+RP/0/RSP0/CPU0:Sep 29 11:37:31.532 CEST: hsrp[1136]: Unknown#0x1000Sent resync end message on node 0x831
+RP/0/RSP0/CPU0:Sep 29 11:37:31.532 CEST: hsrp[1136]: Unknown#0x1000Received Output Process Event Notification type 1 from node  0x1 (not present in DB)
+RP/0/RSP0/CPU0:Sep 29 11:37:31.532 CEST: hsrp[1136]: Unknown#0x1000FHRP Output process resync on node 0x1
+RP/0/RSP0/CPU0:Sep 29 11:37:31.532 CEST: hsrp[1136]: Unknown#0x1000Sent resync start message on node 0x1
+RP/0/RSP0/CPU0:Sep 29 11:37:31.532 CEST: hsrp[1136]: Unknown#0x1000Sent resync end message on node 0x1
+RP/0/RSP0/CPU0:Sep 29 11:37:31.532 CEST: hsrp[1136]: Unknown#0x1000Received Output Process Event Notification type 1 from node  0x1 (present in DB)
+RP/0/RSP0/CPU0:Sep 29 11:37:31.532 CEST: hsrp[1136]: Unknown#0x1000FHRP Output process resync on node 0x1
+RP/0/RSP0/CPU0:Sep 29 11:37:31.533 CEST: hsrp[1136]: Unknown#0x1000Sent resync start message on node 0x1
+RP/0/RSP0/CPU0:Sep 29 11:37:31.533 CEST: hsrp[1136]: Unknown#0x1000Sent resync end message on node 0x1
+RP/0/RSP0/CPU0:Sep 29 11:37:31.533 CEST: hsrp[1136]: Unknown#0x1000Initialise IPC updates
+RP/0/RSP0/CPU0:Sep 29 11:37:31.533 CEST: hsrp[1136]: SB3000: BE1.3000   Hello in  fe80::1616:9dff:fec9:f2cd   Speak pri 110 ip fe80::205:73ff:fea0:bb8
+RP/0/RSP0/CPU0:Sep 29 11:37:31.533 CEST: hsrp[1136]: SB3000: BE1.3000  Resign in  fe80::1616:9dff:fec9:f2cd   Speak pri 110 ip fe80::205:73ff:fea0:bb8
+RP/0/RSP0/CPU0:Sep 29 11:37:31.533 CEST: hsrp[1136]: IPv6#Bundle-Ether1.3000#0xbb8SB3000: Bundle-Ether1.3000: Active: (Ev i) Resign message from Active
+RP/0/RSP0/CPU0:Sep 29 11:37:31.533 CEST: hsrp[1136]: IPv6#Bundle-Ether1.3000#0xbb8SB3000: Bundle-Ether1.3000: Active: (Ac G) Sending coup message
+RP/0/RSP0/CPU0:Sep 29 11:37:31.533 CEST: hsrp[1136]: SB3000: BE1.3000    Coup out fe80::4ea6:4dff:fe26:7645  Active pri 120 ip fe80::205:73ff:fea0:bb8
+RP/0/RSP0/CPU0:Sep 29 11:37:31.533 CEST: hsrp[1136]: IPv6#Bundle-Ether1.3000#0xbb8SB3000: Bundle-Ether1.3000: Active: (Ac F) Sending hello message
+RP/0/RSP0/CPU0:Sep 29 11:37:31.533 CEST: hsrp[1136]: SB3000: BE1.3000   Hello out fe80::4ea6:4dff:fe26:7645  Active pri 120 ip fe80::205:73ff:fea0:bb8
+RP/0/RSP0/CPU0:Sep 29 11:37:31.533 CEST: hsrp[1136]: SB2020: BE1.2020   Hello in  fe80::1616:9dff:fec9:f2cd   Speak pri 110 ip fe80::205:73ff:fea0:7e4
+RP/0/RSP0/CPU0:Sep 29 11:37:31.533 CEST: hsrp[1136]: SB2020: BE1.2020  Resign in  fe80::1616:9dff:fec9:f2cd   Speak pri 110 ip fe80::205:73ff:fea0:7e4
+RP/0/RSP0/CPU0:Sep 29 11:37:31.533 CEST: hsrp[1136]: IPv6#Bundle-Ether1.2020#0x7e4SB2020: Bundle-Ether1.2020: Active: (Ev i) Resign message from Active
+RP/0/RSP0/CPU0:Sep 29 11:38:09.812 CEST: SSHD_[65947]: %SECURITY-SSHD-4-WARNING_LOGIN : The requested term-type 'xterm-256color' is not supported 

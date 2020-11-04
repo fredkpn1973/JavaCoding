@@ -1,0 +1,5 @@
+remark --- Permit access special /28 network
+ sequence 620 permit ip any host 109.69.226.120 
+ sequence 630 permit ip any host 109.69.226.121 
+ sequence 640 permit ip any host 109.69.226.122 
+ sequence 650 permit ip any host 109.69.226.123 

@@ -1,0 +1,24 @@
+ remark --- Permit Cogent monitoring to MLX TER24
+ sequence 400 permit icmp 66.28.3.0 0.0.0.255 host 149.6.129.46 
+ sequence 410 permit icmp 66.250.250.0 0.0.0.255 host 149.6.129.46 
+ sequence 420 permit icmp 130.117.228.0 0.0.0.255 host 149.6.129.46 
+ sequence 430 permit icmp 130.117.254.0 0.0.0.255 host 149.6.129.46 
+ sequence 440 permit icmp any 82.150.157.248 0.0.0.7 
+ sequence 450 permit icmp any 89.248.139.0 0.0.0.15 
+ sequence 460 permit icmp any 109.69.229.240 0.0.0.15 
+ sequence 470 permit icmp any 149.11.158.0 0.0.0.3 
+ sequence 480 permit icmp any 217.170.23.0 0.0.0.7 
+ sequence 490 permit icmp any 82.150.158.88 0.0.0.7 
+ sequence 500 permit icmp any 149.6.129.44 0.0.0.3 
+ sequence 510 permit icmp any 193.79.227.152 0.0.0.3 
+ sequence 520 permit icmp any 217.170.23.200 0.0.0.7 
+ sequence 530 deny ip any 82.150.157.248 0.0.0.7 
+ sequence 540 deny ip any 89.248.139.0 0.0.0.15 
+ sequence 550 deny ip any 109.69.229.240 0.0.0.15 
+ sequence 560 deny ip any 149.11.158.0 0.0.0.3 
+ sequence 570 deny ip any 217.170.23.0 0.0.0.7 
+ sequence 580 deny ip any 82.150.158.88 0.0.0.7 
+ sequence 590 deny ip any 149.6.129.44 0.0.0.3 
+ sequence 600 deny ip any 193.79.227.152 0.0.0.3 
+ sequence 610 deny ip any 217.170.23.200 0.0.0.7 
+ 

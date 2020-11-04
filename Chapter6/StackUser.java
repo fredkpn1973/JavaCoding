@@ -4,7 +4,7 @@ public class StackUser {
 
     public static void main(String args[]) {
 
-        LinkedStack<Integer> stackA = new LinkedStack<>();
+        Stack<Integer> stackA = new LinkedStack<>();
         System.out.println("De grootte is: " + stackA.size());
         System.out.println("Staat er wat op?: " + stackA.isEmpty());
         System.out.println("Wat is de top: " + stackA.top());
@@ -13,12 +13,25 @@ public class StackUser {
             stackA.push(i);
         }
 
+        System.out.println("De stack bevat: " + stackA.toString());
+
         System.out.println("De grootte is: " + stackA.size());
         System.out.println("Staat er wat op?: " + stackA.isEmpty());
         System.out.println("Wat is de top: " + stackA.top());
 
-        LinkedStack<Integer> stackB = new LinkedStack<>();
-        stackB = stackA.kopie();
+        Stack<Integer> stackB = new LinkedStack<>();
+        transfer(stackA, stackB);
+
+        System.out.println("De stack bevat: " + stackA.toString());
+        System.out.println("De stack bevat: " + stackB.toString());
+        stackB.cleanStack();
+        System.out.println("De stack bevat: " + stackB.toString());
+
+    }
+
+    private static void transfer(Stack s, Stack t) {
+        while (!s.isEmpty())
+            t.push(s.pop());
     }
 
 }

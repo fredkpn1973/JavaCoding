@@ -1,0 +1,10 @@
+remark --- Permit own & customer networks to go out to internet
+ sequence 7400 permit ip any 77.241.224.0 0.0.15.255 
+ sequence 7410 permit ip any 109.69.224.0 0.0.7.255 
+ sequence 7420 permit ip any 145.35.0.0 0.0.255.255 
+ sequence 7430 permit ip any 194.229.29.0 0.0.0.255 
+ sequence 7440 permit ip any 89.248.128.0 0.0.15.255 
+ sequence 7450 permit ip any 194.53.130.0 0.0.1.255 
+ sequence 7460 permit ip any 194.53.132.0 0.0.1.255 
+ sequence 7470 permit ip any 194.53.134.0 0.0.0.255 
+ sequence 7480 permit ip any 224.0.0.0 15.255.255.255 

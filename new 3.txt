@@ -1,0 +1,114 @@
+ neighbor 149.11.158.1 filter-list 2 in
+ neighbor 149.11.158.1 filter-list st-all out
+ neighbor 149.11.158.1 prefix-list permit-le-23-routes in
+ neighbor 149.11.158.1 route-map in cogent-in
+ neighbor 149.11.158.1 route-map out cogent-out
+ 
+ neighbor 217.170.23.1 filter-list 2 in
+ neighbor 217.170.23.1 filter-list st-all out
+ neighbor 217.170.23.1 prefix-list permit-le-23-routes in
+ neighbor 217.170.23.1 route-map in jointtransit-in
+ neighbor 217.170.23.1 route-map out jointtransit-out
+ neighbor 217.170.23.1 send-community
+ 
+ neighbor 217.170.23.2 filter-list 2 in
+ neighbor 217.170.23.2 filter-list st-all out
+ neighbor 217.170.23.2 prefix-list permit-le-23-routes in
+ neighbor 217.170.23.2 route-map in jointtransit-in
+ neighbor 217.170.23.2 route-map out jointtransit-out
+ neighbor 217.170.23.2 send-community
+ 
+ neighbor 217.170.23.3 filter-list 2 in
+ neighbor 217.170.23.3 filter-list st-all out
+ neighbor 217.170.23.3 route-map in openpeering-in
+ neighbor 217.170.23.3 route-map out openpeering-out
+ neighbor 217.170.23.3 send-community
+ !
+ 
+#############################################
+## Geen RFC1918
+## Geen eigen netwerken
+## Deny subnet 5.61.83.0/24 
+## zet local pref op 100 en communtiy op 42517:12000
+ route-map cogent-in deny 10
+  match ip address prefix-list rfc1918
+ route-map cogent-in deny 11
+  match ip address prefix-list deny-own-networks
+ route-map cogent-in deny 12
+  match ip address prefix-list deny-104587-subnet
+ route-map cogent-in permit 40
+  set local-preference 100 
+  set community  42517:12000
+!
+
+#######################################################
+## Geen RFC1918
+## Alleen prefixes vam /25 of groter
+## deny 701:9881, permit 42517:6000, permit 42517:7000, 702:9881 
+ route-map cogent-out deny 5
+  match ip address prefix-list rfc1918
+ route-map cogent-out deny 6
+  match ip address prefix-list 25bits-and-up
+ route-map cogent-out permit 10
+  match community announce-cogent
+!
+
+#############################################
+## Geen RFC1918
+## Geen eigen netwerken
+## voor 83.138.0.0/21  local-pref op 150
+## voor 195.108.0.0/15  local-pref op 150
+## zet local pref op 100 en communtiy op 42517:11000
+route-map jointtransit-in deny 10
+ match ip address prefix-list rfc1918
+route-map jointtransit-in deny 11
+ match ip address prefix-list deny-own-networks
+route-map jointtransit-in permit 20
+ match ip address prefix-list atos-through-jt
+ set local-preference 150 
+route-map jointtransit-in permit 25
+ match ip address prefix-list temp-through-jt
+ set local-preference 150 
+route-map jointtransit-in permit 40
+ set local-preference 100 
+ set community  42517:11000
+!
+######################################################
+## Geen RFC1918
+## Alleen /25 en grooter
+## deny 701:9881, permit 42517:6000, permit 42517:7000, 702:9881 
+route-map jointtransit-out deny 5
+ match ip address prefix-list rfc1918
+route-map jointtransit-out deny 6
+ match ip address prefix-list 25bits-and-up
+route-map jointtransit-out permit 10
+ match community announce-cogent
+!
+
+#############################################
+## Geen RFC1918
+## Geen eigen netwerken
+## zet local pref op 50 en communtiy op 42517:10000
+route-map openpeering-in deny 5
+ match ip address prefix-list rfc1918
+route-map openpeering-in deny 10
+ match ip address prefix-list deny-own-networks
+route-map openpeering-in permit 15
+ set local-preference 50 
+ set community  42517:10000
+!
+
+######################################################
+## Geen RFC1918
+## Alleen /25 en grooter
+## Prepend AS-path 42517 425174251
+## deny 701:9881, permit 42517:6000, permit 42517:7000, 702:9881 
+route-map openpeering-out deny 5
+ match ip address prefix-list rfc1918
+route-map openpeering-out deny 10
+ match ip address prefix-list 25bits-and-up
+route-map openpeering-out permit 15
+ set as-path prepend  42517 42517
+route-map openpeering-out permit 20
+ match community announce-nltransit
+!

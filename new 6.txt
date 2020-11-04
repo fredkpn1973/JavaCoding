@@ -1,0 +1,32 @@
+ 
+ ip as-path access-list 10 seq 5 permit ^64512_
+ !
+ neighbor 89.248.139.6 filter-list 10 in
+ neighbor 89.248.139.6 default-originate
+ neighbor 89.248.139.6 prefix-list sg-networks in
+ neighbor 89.248.139.6 route-map in sg-in
+ neighbor 89.248.139.6 route-map out sg-out
+ neighbor 89.248.139.6 send-community
+!
+ip prefix-list sg-networks seq 10 permit 145.35.0.0/16 
+ip prefix-list sg-networks seq 20 permit 194.229.29.0/24 
+ip prefix-list sg-networks seq 50 permit 89.248.143.0/25 
+ip prefix-list sg-networks seq 60 permit 89.248.143.128/25 
+ip prefix-list sg-networks seq 70 permit 89.248.143.0/25 le 32 
+ip prefix-list sg-networks seq 80 permit 89.248.143.128/25 le 32 
+!
+route-map sg-in deny 5
+ match ip address prefix-list rfc1918
+route-map sg-in permit 10
+ match community pref120
+ set local-preference 120 
+ set community  42517:7000
+route-map sg-in permit 20
+ match community pref100
+ set local-preference 100 
+ set community  42517:7000
+!
+route-map sg-out permit 10
+ match ip address prefix-list cust-default-route
+route-map sg-out deny 100
+!

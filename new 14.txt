@@ -1,0 +1,59 @@
+router hsrp
+ interface Bundle-Ether1.2020
+  hsrp delay minimum 180 reload 180
+  address-family ipv4
+   hsrp 2020
+    timers 1 3
+    preempt
+    priority 110
+    address 89.248.142.86
+   !
+  !
+  address-family ipv6
+   hsrp 2020
+    timers 1 3
+    preempt
+    priority 110
+    address global 2a00:1ae8:cafe:cafe::1
+    address linklocal autoconfig
+   !
+  !
+ !
+ 
+ interface Bundle-Ether1.2020
+ service-policy input 20M-1TO10_IN_PM
+ service-policy output 20M-1TO10_OUT_PM
+ vrf 1
+ ipv4 address 89.248.142.86 255.255.255.248
+ ipv4 verify unicast source reachable-via rx
+ ipv6 verify unicast source reachable-via rx
+ no ipv6 address 2a00:1ae8:cafe:cafe::3/64
+ ipv6 address 2a00:1ae8:cafe:cafe::1/64
+ shutdown
+ load-interval 30
+ encapsulation dot1q 2020
+
+
+
+========================================================
+router hsrp
+ interface Bundle-Ether1.2020
+  hsrp delay minimum 180 reload 180
+  address-family ipv4
+   hsrp 2020
+    timers 1 3
+    preempt delay 180
+    priority 120
+    address 89.248.142.86
+   !
+  !
+  address-family ipv6
+   hsrp 2020
+    timers 1 3
+    preempt delay 180
+    priority 120
+    address global 2a00:1ae8:cafe:cafe::1
+    address linklocal autoconfig
+   !
+  !
+ !

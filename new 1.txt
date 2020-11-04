@@ -1,0 +1,782 @@
+interface ve 67
+ port-name "NL Transit"
+ ip address 82.150.157.251/29
+ no ip redirect
+ ip access-group from-BGP-peers-15 in 
+ ip access-group Anti-Spoofing-V3 out 
+ ipv6 address 2a02:10:1:1::23:10/112
+ ipv6 enable
+ ipv6 traffic-filter IPv6-Anti-Spoofing-V3 out
+ ipv6 traffic-filter from-ipv6-BGP-peers-1 in
+ ipv6 nd suppress-ra
+!
+ip access-list extended from-BGP-peers-15
+ remark --- Deny own & customer networks incoming
+ sequence 10 deny ip 10.0.0.0 0.255.255.255 any 
+ sequence 20 deny ip 172.16.0.0 0.15.255.255 any 
+ sequence 30 deny ip 192.168.0.0 0.0.255.255 any 
+ sequence 40 deny ip 77.241.224.0 0.0.15.255 any 
+ sequence 50 deny ip 109.69.224.0 0.0.7.255 any 
+ sequence 60 deny ip 145.35.0.0 0.0.255.255 any 
+ sequence 70 deny ip 194.229.29.0 0.0.0.255 any 
+ sequence 80 deny ip 89.248.128.0 0.0.15.255 any 
+ sequence 90 deny ip 0.0.0.0 0.255.255.255 any 
+ remark --- Permit BGP from Openpeering JOINTTRANSIT TER15 router
+ sequence 100 permit tcp 217.170.23.0 0.0.0.7 host 217.170.23.4 eq bgp 
+ sequence 110 permit tcp 217.170.23.0 0.0.0.7 eq bgp host 217.170.23.4 
+ remark --- Permit BGP from Openpeering NLTRANSIT TER15 router
+ sequence 120 permit tcp 82.150.157.248 0.0.0.7 host 82.150.157.251 eq bgp 
+ sequence 130 permit tcp 82.150.157.248 0.0.0.7 eq bgp host 82.150.157.251 
+ remark --- Permit BGP from Cogent TER15 router
+ sequence 140 permit tcp host 149.11.158.1 host 149.11.158.2 eq bgp 
+ sequence 150 permit tcp host 149.11.158.1 eq bgp host 149.11.158.2 
+ remark --- Permit BGP from Openpeering JOINTTRANSIT TER24 router
+ sequence 160 permit tcp 217.170.23.200 0.0.0.7 host 217.170.23.204 eq bgp 
+ sequence 170 permit tcp 217.170.23.200 0.0.0.7 eq bgp host 217.170.23.204 
+ remark --- Permit BGP from Openpeering NLTRANSIT TER24 router    
+ sequence 180 permit tcp 82.150.158.88 0.0.0.7 host 82.150.158.91 eq bgp 
+ sequence 190 permit tcp 82.150.158.88 0.0.0.7 eq bgp host 82.150.158.91 
+ remark --- Permit BGP from Cogent TER24 router
+ sequence 200 permit tcp host 149.6.129.45 host 149.6.129.46 eq bgp 
+ sequence 210 permit tcp host 149.6.129.45 eq bgp host 149.6.129.46 
+ remark --- Permit BGP from NL-IX Peering VLAN TER24
+ sequence 240 permit tcp 193.239.116.0 0.0.1.255 host 193.239.117.23 eq bgp 
+ sequence 250 permit tcp 193.239.116.0 0.0.1.255 eq bgp host 193.239.117.23 
+ remark --- Permit BGP from NL-IX Peering VLAN TER15
+ sequence 260 permit tcp 193.239.116.0 0.0.1.255 host 193.239.117.7 eq bgp 
+ sequence 270 permit tcp 193.239.116.0 0.0.1.255 eq bgp host 193.239.117.7 
+ remark --- Permit oob access from Qi ict to MLX TER15
+ sequence 280 permit tcp 46.243.44.0 0.0.1.255 host 82.150.157.251 eq ssh 
+ sequence 290 permit tcp 46.243.44.0 0.0.1.255 host 149.11.158.2 eq ssh 
+ sequence 300 permit tcp 46.243.44.0 0.0.1.255 host 217.170.23.4 eq ssh 
+ remark --- Permit oob access from Qi ict to MLX TER24
+ sequence 310 permit tcp 46.243.44.0 0.0.1.255 host 82.150.158.91 eq ssh 
+ sequence 320 permit tcp 46.243.44.0 0.0.1.255 host 149.6.129.46 eq ssh 
+ sequence 340 permit tcp 46.243.44.0 0.0.1.255 host 217.170.23.204 eq ssh 
+ remark --- Permit oob access from Qi ict to SG & Transavia routers
+ sequence 350 permit ip 46.243.44.0 0.0.1.255 109.69.225.64 0.0.0.15 
+ sequence 360 permit icmp 46.243.44.0 0.0.1.255 109.69.225.64 0.0.0.15 
+ remark --- Permit ntp from uunet                                 
+ sequence 370 permit udp host 193.67.79.202 eq ntp any eq ntp 
+ sequence 380 permit udp host 194.151.25.195 eq ntp any eq ntp 
+ remark --- Permit outside access from Qi ict all
+ sequence 390 permit ip 46.243.44.0 0.0.1.255 any 
+ remark --- Permit Cogent monitoring to MLX TER24
+ sequence 400 permit icmp 66.28.3.0 0.0.0.255 host 149.6.129.46 
+ sequence 410 permit icmp 66.250.250.0 0.0.0.255 host 149.6.129.46 
+ sequence 420 permit icmp 130.117.228.0 0.0.0.255 host 149.6.129.46 
+ sequence 430 permit icmp 130.117.254.0 0.0.0.255 host 149.6.129.46 
+ sequence 440 permit icmp any 82.150.157.248 0.0.0.7 
+ sequence 450 permit icmp any 89.248.139.0 0.0.0.15 
+ sequence 460 permit icmp any 109.69.229.240 0.0.0.15 
+ sequence 470 permit icmp any 149.11.158.0 0.0.0.3 
+ sequence 480 permit icmp any 217.170.23.0 0.0.0.7 
+ sequence 490 permit icmp any 82.150.158.88 0.0.0.7 
+ sequence 500 permit icmp any 149.6.129.44 0.0.0.3 
+ sequence 510 permit icmp any 193.79.227.152 0.0.0.3 
+ sequence 520 permit icmp any 217.170.23.200 0.0.0.7 
+ sequence 530 deny ip any 82.150.157.248 0.0.0.7 
+ sequence 540 deny ip any 89.248.139.0 0.0.0.15 
+ sequence 550 deny ip any 109.69.229.240 0.0.0.15 
+ sequence 560 deny ip any 149.11.158.0 0.0.0.3 
+ sequence 570 deny ip any 217.170.23.0 0.0.0.7                    
+ sequence 580 deny ip any 82.150.158.88 0.0.0.7 
+ sequence 590 deny ip any 149.6.129.44 0.0.0.3 
+ sequence 600 deny ip any 193.79.227.152 0.0.0.3 
+ sequence 610 deny ip any 217.170.23.200 0.0.0.7 
+ remark --- Permit access special /28 network
+ sequence 620 permit ip any host 109.69.226.120 
+ sequence 630 permit ip any host 109.69.226.121 
+ sequence 640 permit ip any host 109.69.226.122 
+ sequence 650 permit ip any host 109.69.226.123 
+ remark --- Deny access to own network interfaces
+ sequence 660 deny ip any 109.69.224.0 0.0.1.249 
+ sequence 670 deny ip any 109.69.224.0 0.0.1.250 
+ sequence 680 deny ip any 109.69.224.0 0.0.1.251 
+ sequence 690 deny ip any 109.69.226.0 0.0.1.249 
+ sequence 700 deny ip any 109.69.226.0 0.0.1.250 
+ sequence 710 deny ip any 109.69.226.0 0.0.1.251 
+ sequence 720 deny ip any 109.69.228.0 0.0.1.241 
+ sequence 730 deny ip any 109.69.228.0 0.0.1.242 
+ sequence 740 deny ip any 109.69.228.0 0.0.1.243 
+ sequence 750 deny ip any 109.69.230.0 0.0.1.249 
+ sequence 760 deny ip any 109.69.230.0 0.0.1.250 
+ sequence 770 deny ip any 109.69.230.0 0.0.1.251 
+ sequence 780 deny ip any 145.35.174.0 0.0.0.3                    
+ sequence 790 deny ip any 77.241.224.0 0.0.0.249 
+ sequence 800 deny ip any 77.241.224.0 0.0.0.250 
+ sequence 810 deny ip any 77.241.224.0 0.0.0.251 
+ sequence 820 deny ip any 77.241.225.0 0.0.0.249 
+ sequence 830 deny ip any 77.241.225.0 0.0.0.250 
+ sequence 840 deny ip any 77.241.225.0 0.0.0.251 
+ sequence 850 deny ip any 77.241.226.64 0.0.0.3 
+ sequence 860 deny ip any 77.241.226.96 0.0.0.3 
+ sequence 870 deny ip any 77.241.226.128 0.0.0.3 
+ sequence 880 deny ip any 77.241.226.144 0.0.0.3 
+ sequence 890 deny ip any 77.241.226.160 0.0.0.3 
+ sequence 900 deny ip any 77.241.226.176 0.0.0.3 
+ sequence 910 deny ip any 77.241.226.192 0.0.0.3 
+ sequence 920 deny ip any 77.241.226.208 0.0.0.3 
+ sequence 930 deny ip any 77.241.226.224 0.0.0.3 
+ sequence 940 deny ip any 77.241.226.240 0.0.0.3 
+ sequence 950 deny ip any 77.241.227.0 0.0.0.249 
+ sequence 960 deny ip any 77.241.227.0 0.0.0.250 
+ sequence 970 deny ip any 77.241.227.0 0.0.0.251 
+ sequence 980 deny ip any 77.241.228.0 0.0.0.249 
+ sequence 990 deny ip any 77.241.228.0 0.0.0.250 
+ sequence 1000 deny ip any 77.241.228.0 0.0.0.251 
+ sequence 1010 deny ip any 77.241.229.0 0.0.0.3                   
+ sequence 1020 deny ip any 77.241.229.8 0.0.0.3 
+ sequence 1030 deny ip any 77.241.229.16 0.0.0.3 
+ sequence 1040 deny ip any 77.241.229.24 0.0.0.3 
+ sequence 1050 deny ip any 77.241.229.32 0.0.0.3 
+ sequence 1060 deny ip any 77.241.229.40 0.0.0.3 
+ sequence 1070 deny ip any 77.241.229.48 0.0.0.3 
+ sequence 1080 deny ip any 77.241.229.56 0.0.0.3 
+ sequence 1090 deny ip any 77.241.229.64 0.0.0.3 
+ sequence 1100 deny ip any 77.241.229.72 0.0.0.3 
+ sequence 1110 deny ip any 77.241.229.80 0.0.0.3 
+ sequence 1120 deny ip any 77.241.229.88 0.0.0.3 
+ sequence 1130 deny ip any 77.241.229.96 0.0.0.3 
+ sequence 1140 deny ip any 77.241.229.104 0.0.0.3 
+ sequence 1150 deny ip any 77.241.229.112 0.0.0.3 
+ sequence 1160 deny ip any 77.241.229.120 0.0.0.3 
+ sequence 1170 deny ip any 77.241.229.128 0.0.0.3 
+ sequence 1180 deny ip any 77.241.229.136 0.0.0.3 
+ sequence 1190 deny ip any 77.241.229.144 0.0.0.3 
+ sequence 1200 deny ip any 77.241.229.152 0.0.0.3 
+ sequence 1210 deny ip any 77.241.229.160 0.0.0.3 
+ sequence 1220 deny ip any 77.241.229.168 0.0.0.3 
+ sequence 1230 deny ip any 77.241.229.176 0.0.0.3 
+ sequence 1240 deny ip any 77.241.229.184 0.0.0.3                 
+ sequence 1250 deny ip any 77.241.229.192 0.0.0.3 
+ sequence 1260 deny ip any 77.241.229.200 0.0.0.3 
+ sequence 1270 deny ip any 77.241.229.208 0.0.0.3 
+ sequence 1280 deny ip any 77.241.229.216 0.0.0.3 
+ sequence 1290 deny ip any 77.241.229.224 0.0.0.3 
+ sequence 1300 deny ip any 77.241.230.0 0.0.0.249 
+ sequence 1310 deny ip any 77.241.230.0 0.0.0.250 
+ sequence 1320 deny ip any 77.241.230.0 0.0.0.251 
+ sequence 1330 deny ip any 77.241.231.0 0.0.0.3 
+ sequence 1340 deny ip any 77.241.231.8 0.0.0.3 
+ sequence 1350 deny ip any 77.241.231.16 0.0.0.3 
+ sequence 1360 deny ip any 77.241.231.24 0.0.0.3 
+ sequence 1370 deny ip any 77.241.231.32 0.0.0.3 
+ sequence 1380 deny ip any 77.241.231.44 0.0.0.3 
+ sequence 1390 deny ip any 77.241.231.48 0.0.0.3 
+ sequence 1400 deny ip any 77.241.231.56 0.0.0.3 
+ sequence 1410 deny ip any 77.241.231.64 0.0.0.3 
+ sequence 1420 deny ip any 77.241.231.72 0.0.0.3 
+ sequence 1430 deny ip any 77.241.231.80 0.0.0.3 
+ sequence 1440 deny ip any 77.241.231.88 0.0.0.3 
+ sequence 1450 deny ip any 77.241.231.96 0.0.0.3 
+ sequence 1460 deny ip any 77.241.231.104 0.0.0.3 
+ sequence 1470 deny ip any 77.241.231.112 0.0.0.3                 
+ sequence 1480 deny ip any 77.241.231.120 0.0.0.3 
+ sequence 1490 deny ip any 77.241.231.128 0.0.0.3 
+ sequence 1500 deny ip any 77.241.231.136 0.0.0.3 
+ sequence 1510 deny ip any 77.241.231.144 0.0.0.3 
+ sequence 1520 deny ip any 77.241.231.152 0.0.0.3 
+ sequence 1530 deny ip any 77.241.231.160 0.0.0.3 
+ sequence 1540 deny ip any 77.241.231.168 0.0.0.3 
+ sequence 1550 deny ip any 77.241.231.176 0.0.0.3 
+ sequence 1560 deny ip any 77.241.231.188 0.0.0.3 
+ sequence 1570 deny ip any 77.241.231.192 0.0.0.3 
+ sequence 1580 deny ip any 77.241.231.200 0.0.0.3 
+ sequence 1590 deny ip any 77.241.231.208 0.0.0.3 
+ sequence 1600 deny ip any 77.241.231.216 0.0.0.3 
+ sequence 1610 deny ip any 77.241.231.224 0.0.0.3 
+ sequence 1620 deny ip any 77.241.231.232 0.0.0.3 
+ sequence 1630 deny ip any 77.241.231.240 0.0.0.3 
+ sequence 1640 deny ip any 77.241.231.248 0.0.0.3 
+ remark --- 232.28 is afwijkend
+ sequence 1650 deny ip any 77.241.232.48 0.0.0.3 
+ sequence 1660 deny ip any 77.241.232.64 0.0.0.3 
+ sequence 1670 deny ip any 77.241.232.80 0.0.0.3 
+ sequence 1680 deny ip any 77.241.232.96 0.0.0.3 
+ sequence 1690 deny ip any 77.241.232.140 0.0.0.3                 
+ sequence 1700 deny ip any 77.241.232.156 0.0.0.3 
+ sequence 1710 deny ip any 77.241.232.160 0.0.0.3 
+ sequence 1720 deny ip any 77.241.232.176 0.0.0.3 
+ sequence 1730 deny ip any 77.241.232.192 0.0.0.3 
+ sequence 1740 deny ip any 77.241.232.208 0.0.0.3 
+ sequence 1750 deny ip any 77.241.232.224 0.0.0.3 
+ sequence 1760 deny ip any 77.241.233.0 0.0.0.3 
+ sequence 1770 deny ip any 77.241.233.16 0.0.0.3 
+ sequence 1780 deny ip any 77.241.233.24 0.0.0.3 
+ sequence 1790 deny ip any 77.241.233.32 0.0.0.3 
+ sequence 1800 deny ip any 77.241.233.40 0.0.0.3 
+ sequence 1810 deny ip any 77.241.233.48 0.0.0.3 
+ sequence 1820 deny ip any 77.241.233.56 0.0.0.3 
+ sequence 1830 deny ip any 77.241.233.64 0.0.0.3 
+ sequence 1840 deny ip any 77.241.233.72 0.0.0.3 
+ sequence 1850 deny ip any 77.241.233.84 0.0.0.3 
+ sequence 1860 deny ip any 77.241.233.88 0.0.0.3 
+ sequence 1870 deny ip any 77.241.233.96 0.0.0.3 
+ sequence 1880 deny ip any 77.241.233.104 0.0.0.3 
+ sequence 1890 deny ip any 77.241.233.112 0.0.0.3 
+ sequence 1900 deny ip any 77.241.233.120 0.0.0.3 
+ sequence 1910 deny ip any 77.241.233.128 0.0.0.3 
+ sequence 1920 deny ip any 77.241.233.136 0.0.0.3                 
+ sequence 1930 deny ip any 77.241.233.144 0.0.0.3 
+ sequence 1940 deny ip any 77.241.233.152 0.0.0.3 
+ sequence 1950 deny ip any 77.241.233.160 0.0.0.3 
+ sequence 1960 deny ip any 77.241.233.168 0.0.0.3 
+ sequence 1970 deny ip any 77.241.233.176 0.0.0.3 
+ sequence 1980 deny ip any 77.241.233.184 0.0.0.3 
+ sequence 1990 deny ip any 77.241.233.192 0.0.0.3 
+ sequence 2000 deny ip any 77.241.233.200 0.0.0.3 
+ sequence 2010 deny ip any 77.241.233.208 0.0.0.3 
+ sequence 2020 deny ip any 77.241.233.216 0.0.0.3 
+ sequence 2030 deny ip any 77.241.234.0 0.0.0.249 
+ sequence 2040 deny ip any 77.241.234.0 0.0.0.250 
+ sequence 2050 deny ip any 77.241.234.0 0.0.0.251 
+ sequence 2060 deny ip any 77.241.235.0 0.0.0.3 
+ sequence 2070 deny ip any 77.241.235.8 0.0.0.3 
+ sequence 2080 deny ip any 77.241.235.16 0.0.0.3 
+ sequence 2090 deny ip any 77.241.235.24 0.0.0.3 
+ sequence 2100 deny ip any 77.241.235.32 0.0.0.3 
+ sequence 2110 deny ip any 77.241.235.40 0.0.0.3 
+ sequence 2120 deny ip any 77.241.235.48 0.0.0.3 
+ sequence 2130 deny ip any 77.241.235.56 0.0.0.3 
+ sequence 2140 deny ip any 77.241.235.64 0.0.0.3 
+ sequence 2150 deny ip any 77.241.235.72 0.0.0.3                  
+ sequence 2160 deny ip any 77.241.235.80 0.0.0.3 
+ sequence 2170 deny ip any 77.241.235.88 0.0.0.3 
+ sequence 2180 deny ip any 77.241.235.96 0.0.0.3 
+ sequence 2190 deny ip any 77.241.235.104 0.0.0.3 
+ sequence 2200 deny ip any 77.241.235.112 0.0.0.3 
+ sequence 2210 deny ip any 77.241.235.120 0.0.0.3 
+ sequence 2220 deny ip any 77.241.235.128 0.0.0.3 
+ sequence 2230 deny ip any 77.241.235.136 0.0.0.3 
+ sequence 2240 deny ip any 77.241.235.144 0.0.0.3 
+ sequence 2250 deny ip any 77.241.235.152 0.0.0.3 
+ sequence 2260 deny ip any 77.241.235.160 0.0.0.3 
+ sequence 2270 deny ip any 77.241.235.168 0.0.0.3 
+ sequence 2280 deny ip any 77.241.235.176 0.0.0.3 
+ sequence 2290 deny ip any 77.241.235.184 0.0.0.3 
+ sequence 2300 deny ip any 77.241.235.192 0.0.0.3 
+ sequence 2310 deny ip any 77.241.235.200 0.0.0.3 
+ sequence 2320 deny ip any 77.241.235.208 0.0.0.3 
+ sequence 2330 deny ip any 77.241.235.224 0.0.0.3 
+ sequence 2340 deny ip any 77.241.236.32 0.0.0.3 
+ sequence 2350 deny ip any 77.241.236.40 0.0.0.3 
+ sequence 2360 deny ip any 77.241.236.48 0.0.0.3 
+ sequence 2370 deny ip any 77.241.236.56 0.0.0.3 
+ sequence 2380 deny ip any 77.241.236.64 0.0.0.3                  
+ sequence 2390 deny ip any 77.241.236.72 0.0.0.3 
+ sequence 2400 deny ip any 77.241.236.80 0.0.0.3 
+ sequence 2410 deny ip any 77.241.236.88 0.0.0.3 
+ sequence 2420 deny ip any 77.241.236.96 0.0.0.3 
+ sequence 2430 deny ip any 77.241.236.104 0.0.0.3 
+ sequence 2440 deny ip any 77.241.236.112 0.0.0.3 
+ sequence 2450 deny ip any 77.241.236.120 0.0.0.3 
+ sequence 2460 deny ip any 77.241.236.128 0.0.0.3 
+ sequence 2470 deny ip any 77.241.236.136 0.0.0.3 
+ sequence 2480 deny ip any 77.241.236.144 0.0.0.3 
+ sequence 2490 deny ip any 77.241.236.152 0.0.0.3 
+ sequence 2500 deny ip any 77.241.236.160 0.0.0.3 
+ sequence 2510 deny ip any 77.241.236.168 0.0.0.3 
+ sequence 2520 deny ip any 77.241.236.176 0.0.0.3 
+ sequence 2530 deny ip any 77.241.236.184 0.0.0.3 
+ sequence 2540 deny ip any 77.241.236.192 0.0.0.3 
+ sequence 2550 deny ip any 77.241.236.200 0.0.0.3 
+ sequence 2560 deny ip any 77.241.236.208 0.0.0.3 
+ sequence 2570 deny ip any 77.241.236.216 0.0.0.3 
+ sequence 2580 deny ip any 77.241.236.224 0.0.0.3 
+ sequence 2590 deny ip any 77.241.236.232 0.0.0.3 
+ sequence 2600 deny ip any 77.241.236.240 0.0.0.3 
+ sequence 2610 deny ip any 77.241.236.248 0.0.0.3                 
+ sequence 2620 deny ip any 77.241.237.0 0.0.0.3 
+ sequence 2630 deny ip any 77.241.237.8 0.0.0.3 
+ sequence 2640 deny ip any 77.241.237.16 0.0.0.3 
+ sequence 2650 deny ip any 77.241.237.24 0.0.0.3 
+ sequence 2660 deny ip any 77.241.237.32 0.0.0.3 
+ sequence 2670 deny ip any 77.241.237.40 0.0.0.3 
+ sequence 2680 deny ip any 77.241.237.48 0.0.0.3 
+ sequence 2690 deny ip any 77.241.237.56 0.0.0.3 
+ sequence 2700 deny ip any 77.241.237.64 0.0.0.3 
+ sequence 2710 deny ip any 77.241.237.72 0.0.0.3 
+ sequence 2720 deny ip any 77.241.237.80 0.0.0.3 
+ sequence 2730 deny ip any 77.241.237.88 0.0.0.3 
+ sequence 2740 deny ip any 77.241.237.96 0.0.0.3 
+ sequence 2750 deny ip any 77.241.237.104 0.0.0.3 
+ sequence 2760 deny ip any 77.241.237.112 0.0.0.3 
+ sequence 2770 deny ip any 77.241.237.120 0.0.0.3 
+ sequence 2780 deny ip any 77.241.237.128 0.0.0.3 
+ sequence 2790 deny ip any 77.241.237.136 0.0.0.3 
+ sequence 2800 deny ip any 77.241.237.144 0.0.0.3 
+ sequence 2810 deny ip any 77.241.237.152 0.0.0.3 
+ sequence 2820 deny ip any 77.241.237.160 0.0.0.3 
+ sequence 2830 deny ip any 77.241.237.168 0.0.0.3 
+ sequence 2840 deny ip any 77.241.237.176 0.0.0.3                 
+ sequence 2850 deny ip any 77.241.237.184 0.0.0.3 
+ sequence 2860 deny ip any 77.241.237.192 0.0.0.3 
+ sequence 2870 deny ip any 77.241.237.200 0.0.0.3 
+ sequence 2880 deny ip any 77.241.237.208 0.0.0.3 
+ sequence 2890 deny ip any 77.241.237.216 0.0.0.3 
+ sequence 2900 deny ip any 77.241.237.224 0.0.0.3 
+ sequence 2910 deny ip any 77.241.237.232 0.0.0.3 
+ sequence 2920 deny ip any 77.241.237.240 0.0.0.3 
+ sequence 2930 deny ip any 77.241.237.248 0.0.0.3 
+ sequence 2940 deny ip any 77.241.238.0 0.0.0.249 
+ sequence 2950 deny ip any 77.241.238.0 0.0.0.250 
+ sequence 2960 deny ip any 77.241.238.0 0.0.0.251 
+ sequence 2970 deny ip any 77.241.239.252 0.0.0.3 
+ sequence 2980 deny ip any 89.248.128.0 0.0.1.249 
+ sequence 2990 deny ip any 89.248.128.0 0.0.1.250 
+ sequence 3000 deny ip any 89.248.128.0 0.0.1.251 
+ sequence 3010 deny ip any 89.248.130.0 0.0.1.249 
+ sequence 3020 deny ip any 89.248.130.0 0.0.1.250 
+ sequence 3030 deny ip any 89.248.130.0 0.0.1.251 
+ sequence 3040 deny ip any 89.248.132.0 0.0.0.249 
+ sequence 3050 deny ip any 89.248.132.0 0.0.0.250 
+ sequence 3060 deny ip any 89.248.132.0 0.0.0.251 
+ sequence 3070 deny ip any 89.248.133.8 0.0.0.3                   
+ sequence 3080 deny ip any 89.248.133.16 0.0.0.3 
+ sequence 3090 deny ip any 89.248.133.24 0.0.0.3 
+ sequence 3100 deny ip any 89.248.133.32 0.0.0.3 
+ sequence 3110 deny ip any 89.248.133.40 0.0.0.3 
+ sequence 3120 deny ip any 89.248.133.48 0.0.0.3 
+ sequence 3130 deny ip any 89.248.133.56 0.0.0.3 
+ sequence 3140 deny ip any 89.248.133.64 0.0.0.3 
+ sequence 3150 deny ip any 89.248.133.72 0.0.0.3 
+ sequence 3160 deny ip any 89.248.133.80 0.0.0.3 
+ sequence 3170 deny ip any 89.248.133.88 0.0.0.3 
+ sequence 3180 deny ip any 89.248.133.96 0.0.0.3 
+ sequence 3190 deny ip any 89.248.133.104 0.0.0.3 
+ sequence 3200 deny ip any 89.248.133.112 0.0.0.3 
+ sequence 3210 deny ip any 89.248.133.120 0.0.0.3 
+ sequence 3220 deny ip any 89.248.133.128 0.0.0.3 
+ sequence 3230 deny ip any 89.248.133.136 0.0.0.3 
+ sequence 3240 deny ip any 89.248.133.144 0.0.0.3 
+ sequence 3250 deny ip any 89.248.133.152 0.0.0.3 
+ sequence 3260 deny ip any 89.248.133.160 0.0.0.3 
+ sequence 3270 deny ip any 89.248.133.168 0.0.0.3 
+ sequence 3280 deny ip any 89.248.133.176 0.0.0.3 
+ sequence 3290 deny ip any 89.248.133.184 0.0.0.3 
+ sequence 3300 deny ip any 89.248.133.192 0.0.0.3                 
+ sequence 3310 deny ip any 89.248.133.200 0.0.0.3 
+ sequence 3320 deny ip any 89.248.133.208 0.0.0.3 
+ sequence 3330 deny ip any 89.248.133.216 0.0.0.3 
+ sequence 3340 deny ip any 89.248.133.224 0.0.0.3 
+ sequence 3350 deny ip any 89.248.133.232 0.0.0.3 
+ sequence 3360 deny ip any 89.248.133.240 0.0.0.3 
+ sequence 3370 deny ip any 89.248.133.248 0.0.0.3 
+ sequence 3380 deny ip any 89.248.134.0 0.0.0.241 
+ sequence 3390 deny ip any 89.248.134.0 0.0.0.242 
+ sequence 3400 deny ip any 89.248.134.0 0.0.0.243 
+ sequence 3410 deny ip any 89.248.135.16 0.0.0.3 
+ sequence 3420 deny ip any 89.248.135.32 0.0.0.3 
+ sequence 3430 deny ip any 89.248.135.48 0.0.0.3 
+ sequence 3440 deny ip any 89.248.135.64 0.0.0.3 
+ sequence 3450 deny ip any 89.248.135.96 0.0.0.3 
+ sequence 3460 deny ip any 89.248.135.128 0.0.0.3 
+ sequence 3470 deny ip any 89.248.135.144 0.0.0.3 
+ sequence 3480 deny ip any 89.248.135.160 0.0.0.3 
+ sequence 3490 deny ip any 89.248.135.176 0.0.0.3 
+ sequence 3500 deny ip any 89.248.135.192 0.0.0.3 
+ sequence 3510 deny ip any 89.248.135.208 0.0.0.3 
+ sequence 3520 deny ip any 89.248.135.224 0.0.0.3 
+ sequence 3530 deny ip any 89.248.136.0 0.0.0.3                   
+ sequence 3540 deny ip any 89.248.136.32 0.0.0.3 
+ sequence 3550 deny ip any 89.248.136.64 0.0.0.3 
+ sequence 3560 deny ip any 89.248.136.96 0.0.0.3 
+ sequence 3570 deny ip any 89.248.136.160 0.0.0.3 
+ sequence 3580 deny ip any 89.248.136.192 0.0.0.3 
+ sequence 3590 deny ip any 89.248.136.224 0.0.0.3 
+ sequence 3600 deny ip any 89.248.137.0 0.0.0.249 
+ sequence 3610 deny ip any 89.248.137.0 0.0.0.250 
+ sequence 3620 deny ip any 89.248.137.0 0.0.0.251 
+ sequence 3630 deny ip any 89.248.138.0 0.0.1.249 
+ sequence 3640 deny ip any 89.248.138.0 0.0.1.250 
+ sequence 3650 deny ip any 89.248.138.0 0.0.1.251 
+ sequence 3660 deny ip any 89.248.140.0 0.0.0.3 
+ sequence 3670 deny ip any 89.248.140.64 0.0.0.3 
+ sequence 3680 deny ip any 89.248.140.72 0.0.0.3 
+ sequence 3690 deny ip any 89.248.140.80 0.0.0.3 
+ sequence 3700 deny ip any 89.248.140.88 0.0.0.3 
+ sequence 3710 deny ip any 89.248.140.96 0.0.0.3 
+ sequence 3720 deny ip any 89.248.140.104 0.0.0.3 
+ sequence 3730 deny ip any 89.248.140.112 0.0.0.3 
+ sequence 3740 deny ip any 89.248.140.120 0.0.0.3 
+ sequence 3750 deny ip any 89.248.140.128 0.0.0.3 
+ sequence 3760 deny ip any 89.248.140.136 0.0.0.3                 
+ sequence 3770 deny ip any 89.248.140.144 0.0.0.3 
+ sequence 3780 deny ip any 89.248.140.152 0.0.0.3 
+ sequence 3790 deny ip any 89.248.140.160 0.0.0.3 
+ sequence 3800 deny ip any 89.248.140.168 0.0.0.3 
+ sequence 3810 deny ip any 89.248.140.176 0.0.0.3 
+ sequence 3820 deny ip any 89.248.140.184 0.0.0.3 
+ sequence 3830 deny ip any 89.248.140.192 0.0.0.3 
+ sequence 3840 deny ip any 89.248.140.200 0.0.0.3 
+ sequence 3850 deny ip any 89.248.140.208 0.0.0.3 
+ sequence 3860 deny ip any 89.248.140.216 0.0.0.3 
+ sequence 3870 deny ip any 89.248.140.224 0.0.0.3 
+ sequence 3880 deny ip any 89.248.140.232 0.0.0.3 
+ sequence 3890 deny ip any 89.248.140.240 0.0.0.3 
+ sequence 3900 deny ip any 89.248.140.248 0.0.0.3 
+ sequence 3910 deny ip any 89.248.141.0 0.0.0.249 
+ sequence 3920 deny ip any 89.248.141.0 0.0.0.250 
+ sequence 3930 deny ip any 89.248.141.0 0.0.0.251 
+ sequence 3940 deny ip any 89.248.142.0 0.0.0.249 
+ sequence 3950 deny ip any 89.248.142.0 0.0.0.250 
+ sequence 3960 deny ip any 89.248.142.0 0.0.0.251 
+ remark -- KLM hardening
+ sequence 3970 permit ip 2.16.157.170 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 3980 permit ip host 2.16.157.171 145.35.174.0 0.0.0.255 
+ sequence 3990 permit ip host 2.18.25.47 145.35.174.0 0.0.0.255 
+ sequence 4000 permit ip 2.19.97.0 0.0.0.255 145.35.174.0 0.0.0.255 
+ sequence 4010 permit ip 2.19.193.116 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 4020 permit ip 2.22.10.12 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 4030 permit ip 2.22.49.0 0.0.0.255 145.35.174.0 0.0.0.255 
+ sequence 4040 permit ip 2.22.242.0 0.0.0.255 145.35.174.0 0.0.0.255 
+ sequence 4050 permit ip 3.24.133.64 0.0.0.63 145.35.174.0 0.0.0.255 
+ sequence 4060 permit ip 3.120.181.64 0.0.0.31 145.35.174.0 0.0.0.255 
+ sequence 4070 permit ip 3.141.193.240 0.0.0.3 145.35.174.0 0.0.0.255 
+ sequence 4080 permit ip host 8.18.42.132 145.35.174.0 0.0.0.255 
+ sequence 4090 permit ip host 8.18.42.133 145.35.174.0 0.0.0.255 
+ sequence 4100 permit ip host 8.18.42.134 145.35.174.0 0.0.0.255 
+ sequence 4110 permit ip host 8.18.42.135 145.35.174.0 0.0.0.255 
+ sequence 4120 permit ip 8.18.42.158 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 4130 permit ip 8.18.42.164 0.0.0.3 145.35.174.0 0.0.0.255 
+ sequence 4140 permit ip 8.18.42.172 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 4150 permit ip host 8.18.43.199 145.35.174.0 0.0.0.255 
+ sequence 4160 permit ip host 8.18.43.240 145.35.174.0 0.0.0.255 
+ sequence 4170 permit ip 9.8.112.100 0.0.0.3 145.35.174.0 0.0.0.255 
+ sequence 4180 permit ip 9.170.91.200 0.0.0.3 145.35.174.0 0.0.0.255 
+ sequence 4190 permit ip 13.83.107.112 0.0.0.15 145.35.174.0 0.0.0.255 
+ sequence 4200 permit ip 13.83.107.128 0.0.0.15 145.35.174.0 0.0.0.255 
+ sequence 4210 permit ip 13.83.107.144 0.0.0.15 145.35.174.0 0.0.0.255 
+ sequence 4220 permit ip 13.86.1.208 0.0.0.15 145.35.174.0 0.0.0.255 
+ sequence 4230 permit ip 13.86.1.224 0.0.0.15 145.35.174.0 0.0.0.255 
+ sequence 4240 permit ip 13.86.1.240 0.0.0.15 145.35.174.0 0.0.0.255 
+ sequence 4250 permit ip 18.231.105.96 0.0.0.15 145.35.174.0 0.0.0.255 
+ sequence 4260 permit ip host 23.3.11.140 145.35.174.0 0.0.0.255 
+ sequence 4270 permit ip 23.3.13.0 0.0.0.255 145.35.174.0 0.0.0.255 
+ sequence 4280 permit ip 23.3.104.186 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 4290 permit ip 23.4.240.0 0.0.0.255 145.35.174.0 0.0.0.255 
+ sequence 4300 permit ip 23.15.245.140 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 4310 permit ip 23.23.79.128 0.0.0.127 145.35.174.0 0.0.0.255 
+ sequence 4320 permit ip 23.35.151.34 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 4330 permit ip 23.35.219.28 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 4340 permit ip 23.35.219.36 0.0.0.3 145.35.174.0 0.0.0.255 
+ sequence 4350 permit ip 23.38.103.4 0.0.0.3 145.35.174.0 0.0.0.255 
+ sequence 4360 permit ip 23.38.103.8 0.0.0.3 145.35.174.0 0.0.0.255 
+ sequence 4370 permit ip 23.38.103.12 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 4380 permit ip 23.38.103.14 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 4390 permit ip 23.38.103.16 0.0.0.7 145.35.174.0 0.0.0.255 
+ sequence 4400 permit ip 23.44.172.230 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 4410 permit ip 23.45.181.0 0.0.0.255 145.35.174.0 0.0.0.255 
+ sequence 4420 permit ip 23.47.145.4 0.0.0.3 145.35.174.0 0.0.0.255 
+ sequence 4430 permit ip 23.47.145.8 0.0.0.3 145.35.174.0 0.0.0.255 
+ sequence 4440 permit ip 23.47.145.12 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 4450 permit ip 23.47.145.14 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 4460 permit ip 23.47.145.16 0.0.0.7 145.35.174.0 0.0.0.255 
+ sequence 4470 permit ip 23.47.147.164 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 4480 permit ip 23.48.168.0 0.0.3.255 145.35.174.0 0.0.0.255 
+ sequence 4490 permit ip 23.50.48.0 0.0.15.255 145.35.174.0 0.0.0.255 
+ sequence 4500 permit ip 23.54.164.0 0.0.0.255 145.35.174.0 0.0.0.255 
+ sequence 4510 permit ip 23.57.69.0 0.0.0.255 145.35.174.0 0.0.0.255 
+ sequence 4520 permit ip 23.57.74.70 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 4530 permit ip host 23.58.82.133 145.35.174.0 0.0.0.255 
+ sequence 4540 permit ip host 23.58.82.196 145.35.174.0 0.0.0.255 
+ sequence 4550 permit ip host 23.58.82.204 145.35.174.0 0.0.0.255 
+ sequence 4560 permit ip host 23.58.83.133 145.35.174.0 0.0.0.255 
+ sequence 4570 permit ip host 23.58.83.196 145.35.174.0 0.0.0.255 
+ sequence 4580 permit ip host 23.58.83.204 145.35.174.0 0.0.0.255 
+ sequence 4590 permit ip 23.61.1.150 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 4600 permit ip 23.62.2.210 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 4610 permit ip 23.62.98.172 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 4620 permit ip 23.63.234.0 0.0.0.31 145.35.174.0 0.0.0.255 
+ sequence 4630 permit ip 23.65.182.244 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 4640 permit ip host 23.79.242.196 145.35.174.0 0.0.0.255 
+ sequence 4650 permit ip host 23.79.242.198 145.35.174.0 0.0.0.255 
+ sequence 4660 permit ip 23.200.75.14 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 4670 permit ip 23.200.84.166 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 4680 permit ip 23.205.116.0 0.0.0.255 145.35.174.0 0.0.0.255 
+ sequence 4690 permit ip host 23.205.121.153 145.35.174.0 0.0.0.255 
+ sequence 4700 permit ip host 23.210.209.63 145.35.174.0 0.0.0.255 
+ sequence 4710 permit ip 23.210.209.66 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 4720 permit ip 23.210.209.74 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 4730 permit ip 23.212.50.0 0.0.0.255 145.35.174.0 0.0.0.255 
+ sequence 4740 permit ip 23.213.55.0 0.0.0.255 145.35.174.0 0.0.0.255 
+ sequence 4750 permit ip 23.214.85.0 0.0.0.255 145.35.174.0 0.0.0.255 
+ sequence 4760 permit ip 23.219.39.0 0.0.0.255 145.35.174.0 0.0.0.255 
+ sequence 4770 permit ip 24.143.192.220 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 4780 permit ip host 37.29.2.10 145.35.174.0 0.0.0.255 
+ sequence 4790 permit ip 46.33.75.0 0.0.0.255 145.35.174.0 0.0.0.255 
+ sequence 4800 permit ip 50.18.151.192 0.0.0.15 145.35.174.0 0.0.0.255 
+ sequence 4810 permit ip 50.112.119.192 0.0.0.15 145.35.174.0 0.0.0.255 
+ sequence 4820 permit ip host 52.56.71.32 145.35.174.0 0.0.0.255 
+ sequence 4830 permit ip host 52.57.11.200 145.35.174.0 0.0.0.255 
+ sequence 4840 permit ip host 52.57.155.186 145.35.174.0 0.0.0.255 
+ sequence 4850 permit ip 54.82.131.0 0.0.0.127 145.35.174.0 0.0.0.255 
+ sequence 4860 permit ip 54.93.255.128 0.0.0.31 145.35.174.0 0.0.0.255 
+ sequence 4870 permit ip 54.193.255.0 0.0.0.127 145.35.174.0 0.0.0.255 
+ sequence 4880 permit ip 54.247.111.192 0.0.0.63 145.35.174.0 0.0.0.255 
+ sequence 4890 permit ip 54.251.88.0 0.0.0.31 145.35.174.0 0.0.0.255 
+ sequence 4900 permit ip 54.252.79.192 0.0.0.31 145.35.174.0 0.0.0.255 
+ sequence 4910 permit ip 59.144.112.128 0.0.0.127 145.35.174.0 0.0.0.255 
+ sequence 4920 permit ip 60.254.143.0 0.0.0.255 145.35.174.0 0.0.0.255 
+ sequence 4930 permit ip 60.254.173.30 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 4940 permit ip 61.9.129.128 0.0.0.127 145.35.174.0 0.0.0.255 
+ sequence 4950 permit ip 61.111.58.82 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 4960 permit ip host 62.103.152.167 145.35.174.0 0.0.0.255 
+ sequence 4970 permit ip 63.141.193.228 0.0.0.3 145.35.174.0 0.0.0.255 
+ sequence 4980 permit ip 63.141.193.232 0.0.0.7 145.35.174.0 0.0.0.255 
+ sequence 4990 permit ip 63.141.193.240 0.0.0.3 145.35.174.0 0.0.0.255 
+ sequence 5000 permit ip host 63.141.193.244 145.35.174.0 0.0.0.255 
+ sequence 5010 permit ip 63.148.207.60 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 5020 permit ip 63.151.118.0 0.0.0.255 145.35.174.0 0.0.0.255 
+ sequence 5030 permit ip 63.151.119.0 0.0.0.255 145.35.174.0 0.0.0.255 
+ sequence 5040 permit ip 63.217.211.110 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 5050 permit ip 63.217.211.116 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 5060 permit ip 63.217.232.0 0.0.0.255 145.35.174.0 0.0.0.255 
+ sequence 5070 permit ip 63.217.250.92 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 5080 permit ip 63.233.60.0 0.0.0.255 145.35.174.0 0.0.0.255 
+ sequence 5090 permit ip 63.233.61.0 0.0.0.255 145.35.174.0 0.0.0.255 
+ sequence 5100 permit ip 63.235.21.192 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 5110 permit ip host 63.235.29.198 145.35.174.0 0.0.0.255 
+ sequence 5120 permit ip host 63.239.233.161 145.35.174.0 0.0.0.255 
+ sequence 5130 permit ip host 63.239.233.162 145.35.174.0 0.0.0.255 
+ sequence 5140 permit ip 64.94.14.0 0.0.0.31 145.35.174.0 0.0.0.255 
+ sequence 5150 permit ip 64.94.228.128 0.0.0.15 145.35.174.0 0.0.0.255 
+ sequence 5160 permit ip 64.145.89.236 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 5170 permit ip 65.120.61.100 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 5180 permit ip 65.124.174.194 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 5190 permit ip 65.152.116.70 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 5200 permit ip 65.158.180.206 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 5210 permit ip host 66.198.8.141 145.35.174.0 0.0.0.255 
+ sequence 5220 permit ip host 66.198.8.142 145.35.174.0 0.0.0.255 
+ sequence 5230 permit ip host 66.198.8.143 145.35.174.0 0.0.0.255 
+ sequence 5240 permit ip host 66.198.8.144 145.35.174.0 0.0.0.255 
+ sequence 5250 permit ip host 66.198.8.167 145.35.174.0 0.0.0.255 
+ sequence 5260 permit ip host 66.198.8.168 145.35.174.0 0.0.0.255 
+ sequence 5270 permit ip host 66.198.26.69 145.35.174.0 0.0.0.255 
+ sequence 5280 permit ip host 66.198.26.70 145.35.174.0 0.0.0.255 
+ sequence 5290 permit ip host 67.220.142.19 145.35.174.0 0.0.0.255 
+ sequence 5300 permit ip host 67.220.142.20 145.35.174.0 0.0.0.255 
+ sequence 5310 permit ip host 67.220.142.21 145.35.174.0 0.0.0.255 
+ sequence 5320 permit ip host 67.220.142.22 145.35.174.0 0.0.0.255 
+ sequence 5330 permit ip 67.220.143.216 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 5340 permit ip 69.31.17.130 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 5350 permit ip 69.31.17.132 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 5360 permit ip 69.31.17.138 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 5370 permit ip 69.31.17.140 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 5380 permit ip host 69.31.17.146 145.35.174.0 0.0.0.255 
+ sequence 5390 permit ip 69.31.58.212 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 5400 permit ip host 69.31.59.86 145.35.174.0 0.0.0.255 
+ sequence 5410 permit ip 69.31.59.188 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 5420 permit ip host 69.31.59.196 145.35.174.0 0.0.0.255 
+ sequence 5430 permit ip host 69.31.59.202 145.35.174.0 0.0.0.255 
+ sequence 5440 permit ip 69.31.121.20 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 5450 permit ip 69.31.138.100 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 5460 permit ip host 69.192.3.135 145.35.174.0 0.0.0.255 
+ sequence 5470 permit ip host 69.192.3.140 145.35.174.0 0.0.0.255 
+ sequence 5480 permit ip 72.246.52.144 0.0.0.15 145.35.174.0 0.0.0.255 
+ sequence 5490 permit ip 72.246.57.84 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 5500 permit ip host 72.246.192.184 145.35.174.0 0.0.0.255 
+ sequence 5510 permit ip host 72.246.194.165 145.35.174.0 0.0.0.255 
+ sequence 5520 permit ip 72.246.199.140 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 5530 permit ip host 72.247.39.94 145.35.174.0 0.0.0.255 
+ sequence 5540 permit ip host 72.247.120.173 145.35.174.0 0.0.0.255 
+ sequence 5550 permit ip host 72.247.122.157 145.35.174.0 0.0.0.255 
+ sequence 5560 permit ip host 72.247.123.46 145.35.174.0 0.0.0.255 
+ sequence 5570 permit ip 72.247.124.172 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 5580 permit ip host 72.247.237.135 145.35.174.0 0.0.0.255 
+ sequence 5590 permit ip host 75.101.129.141 145.35.174.0 0.0.0.255 
+ sequence 5600 permit ip host 75.101.137.168 145.35.174.0 0.0.0.255 
+ sequence 5610 permit ip host 75.101.141.43 145.35.174.0 0.0.0.255 
+ sequence 5620 permit ip host 75.101.142.168 145.35.174.0 0.0.0.255 
+ sequence 5630 permit ip host 75.101.146.168 145.35.174.0 0.0.0.255 
+ sequence 5640 permit ip 77.67.22.132 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 5650 permit ip 77.67.85.52 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 5660 permit ip host 78.135.123.73 145.35.174.0 0.0.0.255 
+ sequence 5670 permit ip host 78.135.123.78 145.35.174.0 0.0.0.255 
+ sequence 5680 permit ip 80.239.206.148 0.0.0.3 145.35.174.0 0.0.0.255 
+ sequence 5690 permit ip 80.239.206.152 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 5700 permit ip host 81.20.66.77 145.35.174.0 0.0.0.255 
+ sequence 5710 permit ip 84.53.138.0 0.0.0.255 145.35.174.0 0.0.0.255 
+ sequence 5720 permit ip host 87.236.193.132 145.35.174.0 0.0.0.255 
+ sequence 5730 permit ip host 87.236.193.137 145.35.174.0 0.0.0.255 
+ sequence 5740 permit ip 88.221.53.86 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 5750 permit ip host 88.221.213.4 145.35.174.0 0.0.0.255 
+ sequence 5760 permit ip host 90.84.52.180 145.35.174.0 0.0.0.255 
+ sequence 5770 permit ip 90.207.225.132 0.0.0.3 145.35.174.0 0.0.0.255 
+ sequence 5780 permit ip 92.122.127.108 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 5790 permit ip host 92.122.191.60 145.35.174.0 0.0.0.255 
+ sequence 5800 permit ip host 92.122.191.66 145.35.174.0 0.0.0.255 
+ sequence 5810 permit ip 92.123.244.140 0.0.0.3 145.35.174.0 0.0.0.255 
+ sequence 5820 permit ip host 92.123.244.142 145.35.174.0 0.0.0.255 
+ sequence 5830 permit ip host 93.17.191.204 145.35.174.0 0.0.0.255 
+ sequence 5840 permit ip host 93.94.105.60 145.35.174.0 0.0.0.255 
+ sequence 5850 permit ip host 93.94.105.75 145.35.174.0 0.0.0.255 
+ sequence 5860 permit ip host 93.115.86.209 145.35.174.0 0.0.0.255 
+ sequence 5870 permit ip host 93.189.33.16 145.35.174.0 0.0.0.255 
+ sequence 5880 permit ip host 93.189.33.18 145.35.174.0 0.0.0.255 
+ sequence 5890 permit ip host 94.72.18.106 145.35.174.0 0.0.0.255 
+ sequence 5900 permit ip host 94.180.111.234 145.35.174.0 0.0.0.255 
+ sequence 5910 permit ip 95.100.96.0 0.0.0.255 145.35.174.0 0.0.0.255 
+ sequence 5920 permit ip 95.100.169.0 0.0.0.255 145.35.174.0 0.0.0.255 
+ sequence 5930 permit ip 95.100.193.0 0.0.0.255 145.35.174.0 0.0.0.255 
+ sequence 5940 permit ip 95.101.62.0 0.0.0.255 145.35.174.0 0.0.0.255 
+ sequence 5950 permit ip 96.6.45.0 0.0.0.255 145.35.174.0 0.0.0.255 
+ sequence 5960 permit ip host 96.6.114.89 145.35.174.0 0.0.0.255 
+ sequence 5970 permit ip host 96.6.114.90 145.35.174.0 0.0.0.255 
+ sequence 5980 permit ip host 96.17.173.47 145.35.174.0 0.0.0.255 
+ sequence 5990 permit ip host 96.17.173.71 145.35.174.0 0.0.0.255 
+ sequence 6000 permit ip 99.79.20.128 0.0.0.31 145.35.174.0 0.0.0.255 
+ sequence 6010 permit ip 104.90.204.144 0.0.0.7 145.35.174.0 0.0.0.255 
+ sequence 6020 permit ip 104.96.91.132 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 6030 permit ip 104.103.232.0 0.0.0.255 145.35.174.0 0.0.0.255 
+ sequence 6040 permit ip 104.107.61.132 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 6050 permit ip 104.107.116.14 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 6060 permit ip 104.112.3.0 0.0.0.255 145.35.174.0 0.0.0.255 
+ sequence 6070 permit ip 104.112.226.200 0.0.0.3 145.35.174.0 0.0.0.255 
+ sequence 6080 permit ip 104.116.163.0 0.0.0.255 145.35.174.0 0.0.0.255 
+ sequence 6090 permit ip 104.116.241.196 0.0.0.3 145.35.174.0 0.0.0.255 
+ sequence 6100 permit ip 104.116.243.214 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 6110 permit ip host 104.125.80.12 145.35.174.0 0.0.0.255 
+ sequence 6120 permit ip 107.22.159.192 0.0.0.15 145.35.174.0 0.0.0.255 
+ sequence 6130 permit ip host 109.69.228.213 145.35.174.0 0.0.0.255 
+ sequence 6140 permit ip host 109.69.228.214 145.35.174.0 0.0.0.255 
+ sequence 6150 permit ip host 109.69.228.215 145.35.174.0 0.0.0.255 
+ sequence 6160 permit ip host 109.69.228.216 145.35.174.0 0.0.0.255 
+ sequence 6170 permit ip host 112.175.42.225 145.35.174.0 0.0.0.255 
+ sequence 6180 permit ip host 112.175.42.226 145.35.174.0 0.0.0.255 
+ sequence 6190 permit ip 117.104.138.0 0.0.0.255 145.35.174.0 0.0.0.255 
+ sequence 6200 permit ip 117.239.240.0 0.0.0.127 145.35.174.0 0.0.0.255 
+ sequence 6210 permit ip 124.40.41.200 0.0.0.7 145.35.174.0 0.0.0.255 
+ sequence 6220 permit ip 124.40.42.228 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 6230 permit ip 125.56.201.0 0.0.0.255 145.35.174.0 0.0.0.255 
+ sequence 6240 permit ip 125.56.205.0 0.0.0.255 145.35.174.0 0.0.0.255 
+ sequence 6250 permit ip 125.56.219.52 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 6260 permit ip 125.252.224.36 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 6270 permit ip host 131.103.137.209 145.35.174.0 0.0.0.255 
+ sequence 6280 permit ip host 131.103.137.210 145.35.174.0 0.0.0.255 
+ sequence 6290 permit ip host 131.103.137.211 145.35.174.0 0.0.0.255 
+ sequence 6300 permit ip host 131.103.137.212 145.35.174.0 0.0.0.255 
+ sequence 6310 permit ip host 131.103.137.217 145.35.174.0 0.0.0.255 
+ sequence 6320 permit ip host 131.103.137.218 145.35.174.0 0.0.0.255 
+ sequence 6330 permit ip 159.8.89.144 0.0.0.15 145.35.174.0 0.0.0.255 
+ sequence 6340 permit ip 159.122.189.182 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 6350 permit ip 165.254.1.0 0.0.0.255 145.35.174.0 0.0.0.255 
+ sequence 6360 permit ip 165.254.44.0 0.0.0.255 145.35.174.0 0.0.0.255 
+ sequence 6370 permit ip 165.254.92.132 0.0.0.3 145.35.174.0 0.0.0.255 
+ sequence 6380 permit ip 165.254.92.140 0.0.0.3 145.35.174.0 0.0.0.255 
+ sequence 6390 permit ip host 171.21.80.126 145.35.174.0 0.0.0.255 
+ sequence 6400 permit ip 173.205.7.116 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 6410 permit ip host 174.129.251.74 145.35.174.0 0.0.0.255 
+ sequence 6420 permit ip host 174.129.251.80 145.35.174.0 0.0.0.255 
+ sequence 6430 permit ip 176.34.239.192 0.0.0.15 145.35.174.0 0.0.0.255 
+ sequence 6440 permit ip 184.25.56.10 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 6450 permit ip 184.26.90.0 0.0.0.255 145.35.174.0 0.0.0.255 
+ sequence 6460 permit ip 184.27.198.224 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 6470 permit ip host 184.50.84.196 145.35.174.0 0.0.0.255 
+ sequence 6480 permit ip host 184.50.84.198 145.35.174.0 0.0.0.255 
+ sequence 6490 permit ip 184.50.228.238 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 6500 permit ip host 184.51.103.115 145.35.174.0 0.0.0.255 
+ sequence 6510 permit ip host 184.51.103.116 145.35.174.0 0.0.0.255 
+ sequence 6520 permit ip host 184.51.103.122 145.35.174.0 0.0.0.255 
+ sequence 6530 permit ip 184.51.198.0 0.0.0.255 145.35.174.0 0.0.0.255 
+ sequence 6540 permit ip host 184.84.242.21 145.35.174.0 0.0.0.255 
+ sequence 6550 permit ip 184.84.242.22 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 6560 permit ip 184.84.242.32 0.0.0.3 145.35.174.0 0.0.0.255 
+ sequence 6570 permit ip 185.10.229.160 0.0.0.15 145.35.174.0 0.0.0.255 
+ sequence 6580 permit ip host 185.206.224.89 145.35.174.0 0.0.0.255 
+ sequence 6590 permit ip host 185.212.169.67 145.35.174.0 0.0.0.255 
+ sequence 6600 permit ip 192.204.11.4 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 6610 permit ip 193.57.218.0 0.0.0.255 145.35.174.0 0.0.0.255 
+ sequence 6620 permit ip 193.57.244.0 0.0.0.255 145.35.174.0 0.0.0.255 
+ sequence 6630 permit ip 193.57.247.0 0.0.0.255 145.35.174.0 0.0.0.255 
+ sequence 6640 permit ip 193.67.235.160 0.0.0.15 145.35.174.0 0.0.0.255 
+ sequence 6650 permit ip host 193.108.155.118 145.35.174.0 0.0.0.255 
+ sequence 6660 permit ip host 193.108.155.208 145.35.174.0 0.0.0.255 
+ sequence 6670 permit ip 193.173.28.96 0.0.0.31 145.35.174.0 0.0.0.255 
+ sequence 6680 permit ip host 194.158.11.14 145.35.174.0 0.0.0.255 
+ sequence 6690 permit ip host 194.158.11.15 145.35.174.0 0.0.0.255 
+ sequence 6700 permit ip 194.178.160.80 0.0.0.15 145.35.174.0 0.0.0.255 
+ sequence 6710 permit ip 194.178.160.112 0.0.0.15 145.35.174.0 0.0.0.255 
+ sequence 6720 permit ip 195.59.188.146 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 6730 permit ip 195.59.188.148 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 6740 permit ip 195.59.188.154 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 6750 permit ip 195.59.188.156 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 6760 permit ip host 195.59.188.162 145.35.174.0 0.0.0.255 
+ sequence 6770 permit ip host 195.93.242.2 145.35.174.0 0.0.0.255 
+ sequence 6780 permit ip host 195.93.242.3 145.35.174.0 0.0.0.255 
+ sequence 6790 permit ip 201.6.6.214 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 6800 permit ip host 203.69.138.121 145.35.174.0 0.0.0.255 
+ sequence 6810 permit ip host 203.69.138.122 145.35.174.0 0.0.0.255 
+ sequence 6820 permit ip 204.1.136.238 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 6830 permit ip 204.2.159.68 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 6840 permit ip 204.2.160.182 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 6850 permit ip host 204.2.166.173 145.35.174.0 0.0.0.255 
+ sequence 6860 permit ip 204.2.166.174 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 6870 permit ip 204.2.166.176 0.0.0.3 145.35.174.0 0.0.0.255 
+ sequence 6880 permit ip host 204.2.166.180 145.35.174.0 0.0.0.255 
+ sequence 6890 permit ip host 204.2.179.183 145.35.174.0 0.0.0.255 
+ sequence 6900 permit ip host 204.2.179.188 145.35.174.0 0.0.0.255 
+ sequence 6910 permit ip 204.156.7.0 0.0.0.255 145.35.174.0 0.0.0.255 
+ sequence 6920 permit ip 204.188.136.0 0.0.0.255 145.35.174.0 0.0.0.255 
+ sequence 6930 permit ip 204.201.160.246 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 6940 permit ip host 204.236.130.149 145.35.174.0 0.0.0.255 
+ sequence 6950 permit ip host 204.236.130.201 145.35.174.0 0.0.0.255 
+ sequence 6960 permit ip host 204.236.130.207 145.35.174.0 0.0.0.255 
+ sequence 6970 permit ip 204.237.143.100 0.0.0.3 145.35.174.0 0.0.0.255 
+ sequence 6980 permit ip 204.237.143.104 0.0.0.7 145.35.174.0 0.0.0.255 
+ sequence 6990 permit ip 204.237.143.112 0.0.0.3 145.35.174.0 0.0.0.255 
+ sequence 7000 permit ip host 204.237.143.116 145.35.174.0 0.0.0.255 
+ sequence 7010 permit ip 205.185.205.132 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 7020 permit ip 207.86.215.0 0.0.0.255 145.35.174.0 0.0.0.255 
+ sequence 7030 permit ip 207.126.104.118 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 7040 permit ip host 208.49.157.49 145.35.174.0 0.0.0.255 
+ sequence 7050 permit ip 208.49.157.50 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 7060 permit ip 208.49.157.52 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 7070 permit ip host 208.49.157.54 145.35.174.0 0.0.0.255 
+ sequence 7080 permit ip 209.8.112.100 0.0.0.3 145.35.174.0 0.0.0.255 
+ sequence 7090 permit ip 209.8.112.96 0.0.0.3 145.35.174.0 0.0.0.255 
+ sequence 7100 permit ip 209.8.112.104 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 7110 permit ip host 209.8.118.39 145.35.174.0 0.0.0.255 
+ sequence 7120 permit ip host 209.8.118.44 145.35.174.0 0.0.0.255 
+ sequence 7130 permit ip 209.107.208.188 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 7140 permit ip 209.116.151.0 0.0.0.255 145.35.174.0 0.0.0.255 
+ sequence 7150 permit ip 209.170.91.190 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 7160 permit ip 209.170.91.192 0.0.0.7 145.35.174.0 0.0.0.255 
+ sequence 7170 permit ip 209.170.91.200 0.0.0.3 145.35.174.0 0.0.0.255 
+ sequence 7180 permit ip 209.170.91.204 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 7190 permit ip 209.170.113.98 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 7200 permit ip 209.170.113.100 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 7210 permit ip 209.170.113.106 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 7220 permit ip host 209.170.113.108 145.35.174.0 0.0.0.255 
+ sequence 7230 permit ip 209.249.98.36 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 7240 permit ip host 212.69.167.117 145.35.174.0 0.0.0.255 
+ sequence 7250 permit ip host 212.69.167.122 145.35.174.0 0.0.0.255 
+ sequence 7260 permit ip host 212.72.53.203 145.35.174.0 0.0.0.255 
+ sequence 7270 permit ip host 212.72.53.205 145.35.174.0 0.0.0.255 
+ sequence 7280 permit ip host 212.72.62.16 145.35.174.0 0.0.0.255 
+ sequence 7290 permit ip host 212.72.62.17 145.35.174.0 0.0.0.255 
+ sequence 7300 permit ip host 213.130.49.203 145.35.174.0 0.0.0.255 
+ sequence 7310 permit ip host 213.130.49.205 145.35.174.0 0.0.0.255 
+ sequence 7320 permit ip host 213.198.94.38 145.35.174.0 0.0.0.255 
+ sequence 7330 permit ip host 213.198.94.39 145.35.174.0 0.0.0.255 
+ sequence 7340 permit ip 216.52.39.0 0.0.0.255 145.35.174.0 0.0.0.255 
+ sequence 7350 permit ip 216.52.244.96 0.0.0.31 145.35.174.0 0.0.0.255 
+ sequence 7360 permit ip 216.133.249.0 0.0.0.255 145.35.174.0 0.0.0.255 
+ sequence 7370 permit ip 220.90.198.178 0.0.0.1 145.35.174.0 0.0.0.255 
+ sequence 7380 deny ip any 145.35.174.0 0.0.0.255 
+ remark --- Permit icmp to the rest
+ sequence 7390 permit icmp any any 
+ remark --- Permit own & customer networks to go out to internet
+ sequence 7400 permit ip any 77.241.224.0 0.0.15.255 
+ sequence 7410 permit ip any 109.69.224.0 0.0.7.255               
+ sequence 7420 permit ip any 145.35.0.0 0.0.255.255 
+ sequence 7430 permit ip any 194.229.29.0 0.0.0.255 
+ sequence 7440 permit ip any 89.248.128.0 0.0.15.255 
+ sequence 7450 permit ip any 194.53.130.0 0.0.1.255 
+ sequence 7460 permit ip any 194.53.132.0 0.0.1.255 
+ sequence 7470 permit ip any 194.53.134.0 0.0.0.255 
+ sequence 7480 permit ip any 224.0.0.0 15.255.255.255 
+ remark --- Deny the rest
+ sequence 7490 deny ip any any 
+!

@@ -67,5 +67,8 @@ public interface Stack<E> {
    */
   E pop();
 
-  
+  void cleanStack();
+
+  v
+
 }

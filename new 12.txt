@@ -1,0 +1,433 @@
+
+RP/0/RSP0/CPU0:SPN-LAB-AGG05#
+RP/0/RSP0/CPU0:SPN-LAB-AGG05#
+RP/0/RSP0/CPU0:SPN-LAB-AGG05#RP/0/RSP0/CPU0:Sep 29 09:08:05.617 CEST: bgp[1087]: [default-crit]: IDB: Tmr expired: 'BG'
+RP/0/RSP0/CPU0:Sep 29 09:08:05.617 CEST: bgp[1087]: [default-crit]: IDB: Tmr started: 'BG', 60 sec
+RP/0/RSP0/CPU0:Sep 29 09:08:10.969 CEST: bgp[1087]: [default-event]: Performing BGP generic scan
+RP/0/RSP0/CPU0:Sep 29 09:08:10.970 CEST: bgp[1087]: [default-event]: Finished BGP generic scan
+RP/0/RSP0/CPU0:Sep 29 09:08:11.763 CEST: bgp[1087]: [default-event] (vpn4u): Scanning VPNv4 unicast routing table
+RP/0/RSP0/CPU0:Sep 29 09:08:11.763 CEST: bgp[1087]: [default-event] (vpn4u): Prefix count 38, Segment count 1, Segment size 100000
+RP/0/RSP0/CPU0:Sep 29 09:08:11.763 CEST: bgp[1087]: [default-event] (vpn4u): Finished scanning VPNv4 unicast routing table
+RP/0/RSP0/CPU0:Sep 29 09:08:11.763 CEST: bgp[1087]: [default-event] (vpn6u): Scanning VPNv6 unicast routing table
+RP/0/RSP0/CPU0:Sep 29 09:08:11.763 CEST: bgp[1087]: [default-event] (vpn6u): Prefix count 13, Segment count 1, Segment size 100000
+RP/0/RSP0/CPU0:Sep 29 09:08:11.763 CEST: bgp[1087]: [default-event] (vpn6u): Finished scanning VPNv6 unicast routing table
+RP/0/RSP0/CPU0:Sep 29 09:08:11.767 CEST: bgp[1087]: [default-event] (ip4u): Scanning IPv4 unicast routing table
+RP/0/RSP0/CPU0:Sep 29 09:08:11.767 CEST: bgp[1087]: [default-event] (ip4u): Prefix count 0, Segment count 1, Segment size 100000
+RP/0/RSP0/CPU0:Sep 29 09:08:11.767 CEST: bgp[1087]: [default-event] (ip4u): Finished scanning IPv4 unicast routing table
+RP/0/RSP0/CPU0:Sep 29 09:08:11.767 CEST: bgp[1087]: [default-event] (ip6u): Scanning IPv6 Unicast routing table
+RP/0/RSP0/CPU0:Sep 29 09:08:11.767 CEST: bgp[1087]: [default-event] (ip6u): Prefix count 0, Segment count 1, Segment size 100000
+RP/0/RSP0/CPU0:Sep 29 09:08:11.767 CEST: bgp[1087]: [default-event] (ip6u): Finished scanning IPv6 Unicast routing table
+RP/0/RSP1/CPU0:Sep 29 09:08:31.990 CEST: bgp[1087]: [default-crit]: IDB: Tmr expired: 'BG'
+RP/0/RSP1/CPU0:Sep 29 09:08:31.990 CEST: bgp[1087]: [default-crit]: IDB: Tmr started: 'BG', 60 sec
+RP/0/RSP1/CPU0:Sep 29 09:08:33.010 CEST: bgp[1087]: [default-event]: Performing BGP generic scan
+RP/0/RSP1/CPU0:Sep 29 09:08:33.011 CEST: bgp[1087]: [default-event]: Finished BGP generic scan
+RP/0/RSP1/CPU0:Sep 29 09:08:38.090 CEST: bgp[1087]: [default-event] (vpn4u): Scanning VPNv4 unicast routing table
+RP/0/RSP1/CPU0:Sep 29 09:08:38.090 CEST: bgp[1087]: [default-event] (vpn4u): Prefix count 38, Segment count 1, Segment size 100000
+RP/0/RSP1/CPU0:Sep 29 09:08:38.090 CEST: bgp[1087]: [default-event] (vpn4u): Finished scanning VPNv4 unicast routing table
+RP/0/RSP1/CPU0:Sep 29 09:08:38.090 CEST: bgp[1087]: [default-event] (vpn6u): Scanning VPNv6 unicast routing table
+RP/0/RSP1/CPU0:Sep 29 09:08:38.090 CEST: bgp[1087]: [default-event] (vpn6u): Prefix count 13, Segment count 1, Segment size 100000
+RP/0/RSP1/CPU0:Sep 29 09:08:38.090 CEST: bgp[1087]: [default-event] (vpn6u): Finished scanning VPNv6 unicast routing table
+RP/0/RSP1/CPU0:Sep 29 09:08:38.090 CEST: bgp[1087]: [default-event] (ip4u): Scanning IPv4 unicast routing table
+RP/0/RSP1/CPU0:Sep 29 09:08:38.090 CEST: bgp[1087]: [default-event] (ip4u): Prefix count 0, Segment count 1, Segment size 100000
+RP/0/RSP1/CPU0:Sep 29 09:08:38.090 CEST: bgp[1087]: [default-event] (ip4u): Finished scanning IPv4 unicast routing table
+RP/0/RSP1/CPU0:Sep 29 09:08:38.090 CEST: bgp[1087]: [default-event] (ip6u): Scanning IPv6 Unicast routing table
+RP/0/RSP1/CPU0:Sep 29 09:08:38.090 CEST: bgp[1087]: [default-event] (ip6u): Prefix count 0, Segment count 1, Segment size 100000
+RP/0/RSP1/CPU0:Sep 29 09:08:38.090 CEST: bgp[1087]: [default-event] (ip6u): Finished scanning IPv6 Unicast routing table
+LC/0/0/CPU0:Sep 29 09:09:05.451 CEST: ifmgr[209]: %PKT_INFRA-LINK-3-UPDOWN : Interface FortyGigE0/0/0/0/0, changed state to Down 
+LC/0/0/CPU0:Sep 29 09:09:05.451 CEST: ifmgr[209]: %PKT_INFRA-LINEPROTO-5-UPDOWN : Line protocol on Interface FortyGigE0/0/0/0/0, changed state to Down 
+LC/0/0/CPU0:Sep 29 09:09:05.452 CEST: inv_agent[216]: %PLATFORM-INV_AGENT-6-IF_OIROUT : xFP OIR: HundredGigE0/0/CPU0/0 Sn: AVM2417U1JK      is removed, state: 0  
+RP/0/RSP0/CPU0:Sep 29 09:09:05.454 CEST: bgp[1087]: [default-crit]: IDB: Rx-ed IMC bulk notif, 1 events
+RP/0/RSP0/CPU0:Sep 29 09:09:05.454 CEST: bgp[1087]: [default-crit]: IDB: IMC intf state event: ifh=0x4000180, proto=12, caps=26, state='down'
+RP/0/RSP0/CPU0:Sep 29 09:09:05.454 CEST: bgp[1087]: [default-crit] VRF 10: Initiating Reset of 10.1.1.2 (Interface flap)
+RP/0/RSP0/CPU0:Sep 29 09:09:05.454 CEST: bgp[1087]: %ROUTING-BGP-5-ADJCHANGE : neighbor 10.1.1.2 Down - Interface flap (CEASE notification sent - administrative shutdown) (VRF: 10) (AS: 4200042517) 
+RP/0/RSP0/CPU0:Sep 29 09:09:05.454 CEST: bgp[1087]: [default-crit]: IDB: FF remove API, ifh=0x4000180, afi=2
+RP/0/RSP0/CPU0:Sep 29 09:09:05.455 CEST: bgp[1087]: [default-crit]: IDB: Processed IMC bulk notif: 1 state, 0 delete, 0 other
+RP/0/RSP0/CPU0:Sep 29 09:09:05.455 CEST: bgp[1087]: [default-crit]: IDB: Processing evq
+RP/0/RSP0/CPU0:Sep 29 09:09:05.455 CEST: bgp[1087]: [default-crit]: IDB: add MH, ifh=0x4000180, afi=2, op: 0, 
+RP/0/RSP0/CPU0:Sep 29 09:09:05.455 CEST: bgp[1087]: [default-crit]: IDB: Processed 1 events in evq
+RP/0/RSP0/CPU0:Sep 29 09:09:05.455 CEST: bgp[1087]: [default-sync]: bgp_sync_encode_postit: ENCODE postit Generic Neighbor Reset comm msg NSR Steady-sync Event Start
+RP/0/RSP0/CPU0:Sep 29 09:09:05.459 CEST: bgp[1087]: [default-crit] (ip4u): bgp_reset_process_label_retain  for table TBL:10 (1/1)pb not enabled
+RP/0/RSP0/CPU0:Sep 29 09:09:05.459 CEST: bgp[1087]: [default-crit] (ip4u): bgp_reset_process_label_retain  for table TBL:10 (1/1)pb not enabled
+RP/0/RSP0/CPU0:Sep 29 09:09:05.459 CEST: bgp[1087]: [default-crit] (ip4u): bgp_reset_process_label_retain  for table TBL:10 (1/1)pb not enabled
+RP/0/RSP0/CPU0:Sep 29 09:09:05.459 CEST: bgp[1087]: [default-crit] (ip4u): bgp_reset_process_label_retain starttimer for TBL:10 (1/1)
+RP/0/RSP1/CPU0:Sep 29 09:09:05.459 CEST: bgp[1087]: [default-crit]: IDB: Rx-ed IMC bulk notif, 1 events
+RP/0/RSP1/CPU0:Sep 29 09:09:05.459 CEST: bgp[1087]: [default-crit]: IDB: IMC intf state event: ifh=0x4000180, proto=12, caps=26, state='down'
+RP/0/RSP1/CPU0:Sep 29 09:09:05.459 CEST: bgp[1087]: [default-crit] VRF 10: Initiating Reset of 10.1.1.2 (Interface flap)
+RP/0/RSP1/CPU0:Sep 29 09:09:05.459 CEST: bgp[1087]: %ROUTING-BGP-5-NBR_NSR_DISABLED_STANDBY : NSR disabled on neighbor 10.1.1.2 on standby RP due to Interface flap (VRF: 10) 
+RP/0/RSP1/CPU0:Sep 29 09:09:05.459 CEST: bgp[1087]: [default-crit]: IDB: FF remove API, ifh=0x4000180, afi=2
+RP/0/RSP0/CPU0:Sep 29 09:09:05.460 CEST: bgp[1087]: [default-lbl]: Error: bgp_lsd_label_results_iter_next2:1591, 'lsd_c_reply_item_next' failed (No such file or directory)
+RP/0/RSP0/CPU0:Sep 29 09:09:05.460 CEST: bgp[1087]: [default-sync]: bgp_sync_encode_postit: ENCODE postit Generic Neighbor Reset comm msg NSR Steady-sync Event Done
+RP/0/RSP0/CPU0:Sep 29 09:09:05.460 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Started updgrp timer for updgrp 0.1:: delay=0.010, delaytype=0
+RP/0/RSP0/CPU0:Sep 29 09:09:05.460 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Started updgrp timer for updgrp 0.2:: delay=0.010, delaytype=0
+RP/0/RSP0/CPU0:Sep 29 09:09:05.460 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Removing neighbor 10.1.1.2 from update filter-group 0.1 in IPv4 Unicast sub-group 0.1 in updgrp 0.1
+RP/0/RSP0/CPU0:Sep 29 09:09:05.461 CEST: bgp[1087]: [default-event] VRF 10 (ip4u): table TBL:10 (1/1) delink check: cleanup flags 0, updgen_done 0, write_done 0, not deleted, not delinked, reset nbr af count 0
+RP/0/RSP0/CPU0:Sep 29 09:09:05.461 CEST: bgp[1087]: [default-event] VRF 10: vrf delink_check: vrf 10 (not deleted, not delinked, 5, 1 0)
+RP/0/RSP1/CPU0:Sep 29 09:09:05.459 CEST: bgp[1087]: [default-crit]: IDB: Processed IMC bulk notif: 1 state, 0 delete, 0 other
+RP/0/RSP1/CPU0:Sep 29 09:09:05.459 CEST: bgp[1087]: [default-crit]: IDB: Processing evq
+RP/0/RSP1/CPU0:Sep 29 09:09:05.459 CEST: bgp[1087]: [default-crit]: IDB: add MH, ifh=0x4000180, afi=2, op: 0, 
+RP/0/RSP1/CPU0:Sep 29 09:09:05.459 CEST: bgp[1087]: [default-crit]: IDB: Processed 1 events in evq
+RP/0/RSP1/CPU0:Sep 29 09:09:05.459 CEST: bgp[1087]: [default-sync]: bgp_sync_encode_postit: ENCODE postit Generic Neighbor Reset comm msg NSR Steady-sync Event Ack
+RP/0/RSP1/CPU0:Sep 29 09:09:05.460 CEST: bgp[1087]: [default-event] VRF 10 (ip4u): table TBL:10 (1/1) delink check: cleanup flags 0, updgen_done 0, write_done 0, not deleted, not delinked, reset nbr af count 0
+RP/0/RSP1/CPU0:Sep 29 09:09:05.460 CEST: bgp[1087]: [default-event] VRF 10: vrf delink_check: vrf 10 (not deleted, not delinked, 5, 1 0)
+RP/0/RSP0/CPU0:Sep 29 09:09:05.464 CEST: bgp[1087]: [default-crit] (ip4u): bgp_reset_process_label_retain starttimer for TBL:10 (1/1)
+RP/0/RSP1/CPU0:Sep 29 09:09:05.467 CEST: bgp[1087]: [default-crit] (ip4u): bgp_reset_process_label_retain  for table TBL:10 (1/1)pb not enabled
+RP/0/RSP0/CPU0:Sep 29 09:09:05.468 CEST: bgp[1087]: [default-crit] (ip4u): bgp_reset_process_label_retain  for table TBL:10 (1/1)pb not enabled
+RP/0/RSP0/CPU0:Sep 29 09:09:05.468 CEST: bgp[1087]: [default-crit] (ip4u): bgp_reset_process_label_retain  for table TBL:10 (1/1)pb not enabled
+RP/0/RSP0/CPU0:Sep 29 09:09:05.468 CEST: bgp[1087]: [default-crit] (ip4u): bgp_reset_process_label_retain  for table TBL:10 (1/1)pb not enabled
+RP/0/RSP0/CPU0:Sep 29 09:09:05.468 CEST: bgp[1087]: [default-crit] (ip4u): bgp_reset_process_label_retain starttimer for TBL:10 (1/1)
+RP/0/RSP1/CPU0:Sep 29 09:09:05.467 CEST: bgp[1087]: [default-crit] (ip4u): bgp_reset_process_label_retain  for table TBL:10 (1/1)pb not enabled
+RP/0/RSP1/CPU0:Sep 29 09:09:05.467 CEST: bgp[1087]: [default-crit] (ip4u): bgp_reset_process_label_retain  for table TBL:10 (1/1)pb not enabled
+RP/0/RSP1/CPU0:Sep 29 09:09:05.470 CEST: bgp[1087]: [default-lbl]: Error: bgp_lsd_label_results_iter_next2:1591, 'lsd_c_reply_item_next' failed (No such file or directory)
+RP/0/RSP0/CPU0:Sep 29 09:09:05.472 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Starting updgen walk for updgrp 0.1:: targetver=639:  tblver=639, labelver=639, minfwdver=639, ackdfwdver=639, standbyver=639
+RP/0/RSP0/CPU0:Sep 29 09:09:05.472 CEST: bgp[1087]: [default-upd] VRF 10 (vpn4u): Computing updates for update sub-group 0.1 (Regular)
+RP/0/RSP0/CPU0:Sep 29 09:09:05.472 CEST: bgp[1087]: [default-upd] VRF 10: table-attr walk for table TBL:10 (1/1), resume version 0, subgrp version 620, target version 639
+RP/0/RSP0/CPU0:Sep 29 09:09:05.472 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): process UPDATE for: tbl=TBL:10 (1/1), afi=0: ug=0.1, (Regular), pelem (Regular), sg=0.1, ugfl=0x00004000: bgpctxfl=0x23, tblctxfl=0x00000221, ltblctxfl=0x00000221, sendlab=0: net=110.110.110.0/24, nver=639: PELEM=161f46d8 (lpathid=1, ver=639, fl=0x00006001): PATH=16239678 (10.1.3.2/32,10.1.3.2,0, 0xc00000000d040003)::: allowbe=0, isbe=0, allowspurwdr=0, pelem-send=1, pelem-wdr=0
+RP/0/RSP0/CPU0:Sep 29 09:09:05.472 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Permit UPDATE to filter-group 0.1 (Regular, pelem Regular) for 110.110.110.0/24 (changedfl=0x1000000/0x6000), path 4200042517
+RP/0/RSP0/CPU0:Sep 29 09:09:05.472 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Sending UPDATE message(0x1504fcbc) to sub-group 0.1 (Regular, pelem Regular) for 110.110.110.0/24 (changedfl=0x1000000/0x6000) -  creating new message with bmsgflags=0x00000020, attributes: nexthop 10.1.3.2, originator 0.0.0.0
+RP/0/RSP0/CPU0:Sep 29 09:09:05.472 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): origin ?, path 42517 4200042517, nexthop 10.1.3.2 (third party)
+RP/0/RSP0/CPU0:Sep 29 09:09:05.472 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Created msg elem 0x1521e058 (pointing to message 0x1504fcbc), for filtergroup 0.1
+RP/0/RSP0/CPU0:Sep 29 09:09:05.472 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): process UPDATE for: tbl=TBL:10 (1/1), afi=0: ug=0.1, (Regular), pelem (Regular), sg=0.1, ugfl=0x00004000: bgpctxfl=0x23, tblctxfl=0x00000221, ltblctxfl=0x00000221, sendlab=0: net=10.1.1.0/30, nver=638: PELEM=161f4718 (lpathid=1, ver=638, fl=0x00007001): PATH=16239854 (10.1.3.2/32,10.1.3.2,0, 0xc00000000d040003)::: allowbe=0, isbe=0, allowspurwdr=0, pelem-send=1, pelem-wdr=0
+RP/0/RSP0/CPU0:Sep 29 09:09:05.472 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Permit UPDATE to filter-group 0.1 (Regular, pelem Regular) for 10.1.1.0/30 (changedfl=0x1000000/0x7000), path 4200042517
+RP/0/RSP0/CPU0:Sep 29 09:09:05.472 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Generated 1 updates for update sub-group 0.1 (average size = 56 bytes, maximum size = 56 bytes)
+RP/0/RSP0/CPU0:Sep 29 09:09:05.472 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Updates replicated to neighbor 10.1.3.2
+RP/0/RSP0/CPU0:Sep 29 09:09:05.472 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Starting updgen walk for updgrp 0.2:: targetver=639:  tblver=640, labelver=639, minfwdver=639, ackdfwdver=639, standbyver=639
+RP/0/RSP0/CPU0:Sep 29 09:09:05.472 CEST: bgp[1087]: [default-upd] VRF 10 (vpn4u): Computing updates for update sub-group 0.2 (Regular)
+RP/0/RSP0/CPU0:Sep 29 09:09:05.472 CEST: bgp[1087]: [default-upd] VRF 10: table-attr walk for table TBL:10 (1/1), resume version 0, subgrp version 620, target version 639
+RP/0/RSP0/CPU0:Sep 29 09:09:05.472 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): process UPDATE for: tbl=TBL:10 (1/1), afi=0: ug=0.2, (Regular), pelem (Regular), sg=0.2, ugfl=0x00014001: bgpctxfl=0x23, tblctxfl=0x00000221, ltblctxfl=0x00000221, sendlab=0: net=110.110.110.0/24, nver=639: PELEM=161f46d8 (lpathid=1, ver=639, fl=0x00006001): PATH=16239678 (10.1.3.2/32,10.1.3.2,0, 0xc00000000d040003)::: allowbe=0, isbe=0, allowspurwdr=0, pelem-send=1, pelem-wdr=0
+RP/0/RSP0/CPU0:Sep 29 09:09:05.472 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Permit UPDATE to filter-group 0.2 (Regular, pelem Regular) for 110.110.110.0/24 (changedfl=0x1000000/0x6000), path 4200042517
+RP/0/RSP0/CPU0:Sep 29 09:09:05.472 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Sending UPDATE message(0x1504fac0) to sub-group 0.2 (Regular, pelem Regular) for 110.110.110.0/24 (changedfl=0x1000000/0x6000) -  creating new message with bmsgflags=0x00000020, attributes: nexthop 10.1.3.2, originator 0.0.0.0
+RP/0/RSP0/CPU0:Sep 29 09:09:05.472 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): origin ?, path 64512 4200042517, nexthop 10.1.3.2 (third party)
+RP/0/RSP0/CPU0:Sep 29 09:09:05.472 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Created msg elem 0x1521e010 (pointing to message 0x1504fac0), for filtergroup 0.2
+RP/0/RSP0/CPU0:Sep 29 09:09:05.472 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): process UPDATE for: tbl=TBL:10 (1/1), afi=0: ug=0.2, (Regular), pelem (Regular), sg=0.2, ugfl=0x00014001: bgpctxfl=0x23, tblctxfl=0x00000221, ltblctxfl=0x00000221, sendlab=0: net=10.1.1.0/30, nver=638: PELEM=161f4718 (lpathid=1, ver=638, fl=0x00007001): PATH=16239854 (10.1.3.2/32,10.1.3.2,0, 0xc00000000d040003)::: allowbe=0, isbe=0, allowspurwdr=0, pelem-send=1, pelem-wdr=0
+RP/0/RSP0/CPU0:Sep 29 09:09:05.472 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Permit UPDATE to filter-group 0.2 (Regular, pelem Regular) for 10.1.1.0/30 (changedfl=0x1000000/0x7000), path 4200042517
+RP/0/RSP0/CPU0:Sep 29 09:09:05.473 CEST: bgp[1087]: [default-crit] (ip4u): bgp_reset_process_label_retain starttimer for TBL:10 (1/1)
+RP/0/RSP0/CPU0:Sep 29 09:09:05.473 CEST: bgp[1087]: [default-iowt] VRF 10: 10.1.3.2 send UPDATE length (incl. header) 56
+RP/0/RSP0/CPU0:Sep 29 09:09:05.473 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Generated 1 updates for update sub-group 0.2 (average size = 56 bytes, maximum size = 56 bytes)
+RP/0/RSP0/CPU0:Sep 29 09:09:05.473 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Updates replicated to neighbor 10.100.1.1
+RP/0/RSP0/CPU0:Sep 29 09:09:05.473 CEST: bgp[1087]: [default-upd] VRF 10: table-attr walk for table TBL:10 (1/1), resume version 0, subgrp version 620, target version 639
+RP/0/RSP0/CPU0:Sep 29 09:09:05.473 CEST: bgp[1087]: [default-iowt] VRF 10: Send message dump for 10.1.3.2:
+RP/0/RSP0/CPU0:Sep 29 09:09:05.473 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Started updgrp timer for updgrp 0.1:: delay=0.009, delaytype=0
+RP/0/RSP0/CPU0:Sep 29 09:09:05.473 CEST: bgp[1087]: [default-iowt] VRF 10: ffff ffff ffff ffff ffff ffff ffff ffff 
+RP/0/RSP0/CPU0:Sep 29 09:09:05.473 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Started updgrp timer for updgrp 0.2:: delay=0.010, delaytype=0
+RP/0/RSP0/CPU0:Sep 29 09:09:05.473 CEST: bgp[1087]: [default-iowt] VRF 10: 0038 0200 0000 1840 0101 0240 020a 0202 
+RP/0/RSP0/CPU0:Sep 29 09:09:05.473 CEST: bgp[1087]: [default-iowt] VRF 10: 0000 a615 fa57 9015 4003 040a 0103 0118 
+RP/0/RSP0/CPU0:Sep 29 09:09:05.473 CEST: bgp[1087]: [default-iowt] VRF 10: 6e6e 6e1e 0a01 0100  
+RP/0/RSP0/CPU0:Sep 29 09:09:05.473 CEST: bgp[1087]: [default-iowt] VRF 10 (ip4u): Deleting msg elem 0x1521e058 (message 0x1504fcbc), for filtergroup 0.1
+RP/0/RSP0/CPU0:Sep 29 09:09:05.473 CEST: bgp[1087]: [default-iowt] VRF 10 (ip4u): Deleting message 0x1504fcbc, from subgroup 0.1
+RP/0/RSP0/CPU0:Sep 29 09:09:05.474 CEST: bgp[1087]: [default-iowt] VRF 10: 10.100.1.1 send UPDATE length (incl. header) 56
+RP/0/RSP0/CPU0:Sep 29 09:09:05.474 CEST: bgp[1087]: [default-iowt] VRF 10: Send message dump for 10.100.1.1:
+RP/0/RSP0/CPU0:Sep 29 09:09:05.474 CEST: bgp[1087]: [default-iowt] VRF 10: ffff ffff ffff ffff ffff ffff ffff ffff 
+RP/0/RSP0/CPU0:Sep 29 09:09:05.474 CEST: bgp[1087]: [default-iowt] VRF 10: 0038 0200 0000 1840 0101 0240 020a 0202 
+RP/0/RSP0/CPU0:Sep 29 09:09:05.474 CEST: bgp[1087]: [default-iowt] VRF 10: 0000 fc00 fa57 9015 4003 040a 6401 0218 
+RP/0/RSP0/CPU0:Sep 29 09:09:05.474 CEST: bgp[1087]: [default-iowt] VRF 10: 6e6e 6e1e 0a01 0100  
+RP/0/RSP0/CPU0:Sep 29 09:09:05.474 CEST: bgp[1087]: [default-iowt] VRF 10 (ip4u): Deleting msg elem 0x1521e010 (message 0x1504fac0), for filtergroup 0.2
+RP/0/RSP0/CPU0:Sep 29 09:09:05.474 CEST: bgp[1087]: [default-iowt] VRF 10 (ip4u): Deleting message 0x1504fac0, from subgroup 0.2
+RP/0/RSP1/CPU0:Sep 29 09:09:05.475 CEST: bgp[1087]: [default-rtr] VRF 10: UPDATE from 10.100.1.1 contains nh 10.100.1.1/32, gw_afi 0, flags 0x20000, nlri_afi 0
+RP/0/RSP0/CPU0:Sep 29 09:09:05.476 CEST: bgp[1087]: [default-rtr] VRF 10: UPDATE from 10.100.1.1 contains nh 10.100.1.1/32, gw_afi 0, flags 0x20000, nlri_afi 0
+RP/0/RSP0/CPU0:Sep 29 09:09:05.476 CEST: bgp[1087]: [default-rtr] VRF 10: NH-Validate-Create: addr=10.100.1.1/32, len=4, nlriafi=0, nbr=10.100.1.1, gwafi=0, gwlen=4, gwaddrlen=32::: nhout=0x156416ec, validity=1, attrwdrflags=0x00000000
+RP/0/RSP0/CPU0:Sep 29 09:09:05.476 CEST: bgp[1087]: [default-rtr] VRF 10: aspath loop detect failed due to finding our own AS 64512
+RP/0/RSP0/CPU0:Sep 29 09:09:05.476 CEST: bgp[1087]: [default-rtr] VRF 10: --bgp4_rcv_attributes--: END: nbr=10.100.1.1:: msg=0x1503f1d0/52, updlen=33, attrbl=0x1503f1e7/24, ipv4reachlen=5, msginpath=0x3cefb24, asloopcheck=1, attrwdrfl=0x00000800:: samecluster=0, local_as_prepended=0, attr_wdr_flags 0x00000800, myascount=0:: rcvdata=0x1503f1ff/0, errptr=0x1503f1f8/7
+RP/0/RSP0/CPU0:Sep 29 09:09:05.476 CEST: bgp[1087]: [default-rtr] VRF 10 (ip4u): Received unreachables from 10.100.1.1: attrcode=0, attrwdrflags=0x00000800
+RP/0/RSP0/CPU0:Sep 29 09:09:05.476 CEST: bgp[1087]: [default-rtr] VRF 10 (ip4u): UPDATE from 10.100.1.1 with attributes:
+RP/0/RSP0/CPU0:Sep 29 09:09:05.476 CEST: bgp[1087]: [default-rtr] VRF 10 (ip4u): nexthop 10.100.1.1/32, origin ?, path 174 64512
+RP/0/RSP0/CPU0:Sep 29 09:09:05.476 CEST: bgp[1087]: [default-rtr] VRF 10 (ip4u): UPDATE from 10.100.1.1, prefix 10.1.1.0/30 (path ID: none) DENIED due to: 
+RP/0/RSP0/CPU0:Sep 29 09:09:05.476 CEST: bgp[1087]: [default-rtr] VRF 10 (ip4u):  as-path contains our own AS, or 0;
+RP/0/RSP0/CPU0:Sep 29 09:09:05.476 CEST: bgp[1087]: [default-rtr] VRF 10: Received UPDATE from 10.100.1.1 (length incl. header = 52)
+RP/0/RSP0/CPU0:Sep 29 09:09:05.476 CEST: bgp[1087]: [default-rtr] VRF 10: Receive message dump for 10.100.1.1:
+RP/0/RSP0/CPU0:Sep 29 09:09:05.476 CEST: bgp[1087]: [default-rtr] VRF 10: ffff ffff ffff ffff ffff ffff ffff ffff 
+RP/0/RSP0/CPU0:Sep 29 09:09:05.476 CEST: bgp[1087]: [default-rtr] VRF 10: 0034 0200 0000 1840 0101 0240 020a 0202 
+RP/0/RSP0/CPU0:Sep 29 09:09:05.476 CEST: bgp[1087]: [default-rtr] VRF 10: 0000 00ae 0000 fc00 4003 040a 6401 011e 
+RP/0/RSP0/CPU0:Sep 29 09:09:05.476 CEST: bgp[1087]: [default-rtr] VRF 10: 0a01 0100  
+RP/0/RSP1/CPU0:Sep 29 09:09:05.475 CEST: bgp[1087]: [default-rtr] VRF 10: NH-Validate-Create: addr=10.100.1.1/32, len=4, nlriafi=0, nbr=10.100.1.1, gwafi=0, gwlen=4, gwaddrlen=32::: nhout=0x15641230, validity=1, attrwdrflags=0x00000000
+RP/0/RSP1/CPU0:Sep 29 09:09:05.475 CEST: bgp[1087]: [default-rtr] VRF 10: aspath loop detect failed due to finding our own AS 64512
+RP/0/RSP1/CPU0:Sep 29 09:09:05.475 CEST: bgp[1087]: [default-rtr] VRF 10: --bgp4_rcv_attributes--: END: nbr=10.100.1.1:: msg=0x1503f1d0/52, updlen=33, attrbl=0x1503f1e7/24, ipv4reachlen=5, msginpath=0x3cefb24, asloopcheck=1, attrwdrfl=0x00000800:: samecluster=0, local_as_prepended=0, attr_wdr_flags 0x00000800, myascount=0:: rcvdata=0x1503f1ff/0, errptr=0x1503f1f8/7
+RP/0/RSP1/CPU0:Sep 29 09:09:05.475 CEST: bgp[1087]: [default-rtr] VRF 10 (ip4u): Received unreachables from 10.100.1.1: attrcode=0, attrwdrflags=0x00000800
+RP/0/RSP1/CPU0:Sep 29 09:09:05.475 CEST: bgp[1087]: [default-rtr] VRF 10 (ip4u): UPDATE from 10.100.1.1 with attributes:
+RP/0/RSP1/CPU0:Sep 29 09:09:05.475 CEST: bgp[1087]: [default-rtr] VRF 10 (ip4u): nexthop 10.100.1.1/32, origin ?, path 174 64512
+RP/0/RSP1/CPU0:Sep 29 09:09:05.475 CEST: bgp[1087]: [default-rtr] VRF 10 (ip4u): UPDATE from 10.100.1.1, prefix 10.1.1.0/30 (path ID: none) DENIED due to: 
+RP/0/RSP1/CPU0:Sep 29 09:09:05.475 CEST: bgp[1087]: [default-rtr] VRF 10 (ip4u):  as-path contains our own AS, or 0;
+RP/0/RSP1/CPU0:Sep 29 09:09:05.475 CEST: bgp[1087]: [default-rtr] VRF 10: Received UPDATE from 10.100.1.1 (length incl. header = 52)
+RP/0/RSP1/CPU0:Sep 29 09:09:05.476 CEST: bgp[1087]: [default-rtr] VRF 10: Receive message dump for 10.100.1.1:
+RP/0/RSP0/CPU0:Sep 29 09:09:05.477 CEST: bgp[1087]: [default-crit] (ip4u): bgp_reset_process_label_retain  for table TBL:10 (1/1)pb not enabled
+RP/0/RSP0/CPU0:Sep 29 09:09:05.477 CEST: bgp[1087]: [default-crit] (ip4u): bgp_reset_process_label_retain  for table TBL:10 (1/1)pb not enabled
+RP/0/RSP0/CPU0:Sep 29 09:09:05.477 CEST: bgp[1087]: [default-crit] (ip4u): bgp_reset_process_label_retain  for table TBL:10 (1/1)pb not enabled
+RP/0/RSP0/CPU0:Sep 29 09:09:05.477 CEST: bgp[1087]: [default-crit] (ip4u): bgp_reset_process_label_retain starttimer for TBL:10 (1/1)
+RP/0/RSP1/CPU0:Sep 29 09:09:05.476 CEST: bgp[1087]: [default-rtr] VRF 10: ffff ffff ffff ffff ffff ffff ffff ffff 
+RP/0/RSP1/CPU0:Sep 29 09:09:05.476 CEST: bgp[1087]: [default-rtr] VRF 10: 0034 0200 0000 1840 0101 0240 020a 0202 
+RP/0/RSP1/CPU0:Sep 29 09:09:05.476 CEST: bgp[1087]: [default-rtr] VRF 10: 0000 00ae 0000 fc00 4003 040a 6401 011e 
+RP/0/RSP1/CPU0:Sep 29 09:09:05.476 CEST: bgp[1087]: [default-rtr] VRF 10: 0a01 0100  
+RP/0/RSP0/CPU0:Sep 29 09:09:05.484 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Starting updgen walk for updgrp 0.1:: targetver=651:  tblver=654, labelver=654, minfwdver=651, ackdfwdver=651, standbyver=654
+RP/0/RSP0/CPU0:Sep 29 09:09:05.484 CEST: bgp[1087]: [default-upd] VRF 10 (vpn4u): Computing updates for update sub-group 0.1 (Regular)
+RP/0/RSP0/CPU0:Sep 29 09:09:05.484 CEST: bgp[1087]: [default-upd] VRF 10: table-attr walk for table TBL:10 (1/1), resume version 0, subgrp version 639, target version 651
+RP/0/RSP0/CPU0:Sep 29 09:09:05.484 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Starting updgen walk for updgrp 0.2:: targetver=651:  tblver=654, labelver=654, minfwdver=651, ackdfwdver=651, standbyver=654
+RP/0/RSP0/CPU0:Sep 29 09:09:05.484 CEST: bgp[1087]: [default-upd] VRF 10 (vpn4u): Computing updates for update sub-group 0.2 (Regular)
+RP/0/RSP0/CPU0:Sep 29 09:09:05.484 CEST: bgp[1087]: [default-upd] VRF 10: table-attr walk for table TBL:10 (1/1), resume version 0, subgrp version 639, target version 651
+RP/0/RSP0/CPU0:Sep 29 09:09:05.484 CEST: bgp[1087]: [default-upd] VRF 10: table-attr walk for table TBL:10 (1/1), resume version 0, subgrp version 639, target version 651
+RP/0/RSP1/CPU0:Sep 29 09:09:05.484 CEST: bgp[1087]: [default-crit] (ip4u): bgp_reset_process_label_retain  for table TBL:10 (1/1)pb not enabled
+RP/0/RSP1/CPU0:Sep 29 09:09:05.484 CEST: bgp[1087]: [default-crit] (ip4u): bgp_reset_process_label_retain  for table TBL:10 (1/1)pb not enabled
+RP/0/RSP1/CPU0:Sep 29 09:09:05.484 CEST: bgp[1087]: [default-crit] (ip4u): bgp_reset_process_label_retain  for table TBL:10 (1/1)pb not enabled
+RP/0/RSP1/CPU0:Sep 29 09:09:05.561 CEST: bgp[1087]: [default-event] VRF 10 (vpn4u): Scoped table walk for nbr-reset
+RP/0/RSP1/CPU0:Sep 29 09:09:05.561 CEST: bgp[1087]: [default-event] (ip4u): bgp_reset_process_label_retain  for table TBL:10 (1/1)pb not enabled
+RP/0/RSP1/CPU0:Sep 29 09:09:05.561 CEST: bgp[1087]: [default-event] (ip4u): bgp_reset_process_label_retain  for table TBL:10 (1/1)pb not enabled
+RP/0/RSP1/CPU0:Sep 29 09:09:05.561 CEST: bgp[1087]: [default-event] (ip4u): bgp_reset_process_label_retain  for table TBL:10 (1/1)pb not enabled
+RP/0/RSP1/CPU0:Sep 29 09:09:05.561 CEST: bgp[1087]: [default-event] (ip4u): bgp_reset_process_label_retain  for table TBL:10 (1/1)pb not enabled
+RP/0/RSP0/CPU0:Sep 29 09:09:05.562 CEST: bgp[1087]: [default-event] VRF 10 (vpn4u): Scoped table walk for nbr-reset
+RP/0/RSP0/CPU0:Sep 29 09:09:05.562 CEST: bgp[1087]: [default-event] (ip4u): bgp_reset_process_label_retain  for table TBL:10 (1/1)pb not enabled
+RP/0/RSP0/CPU0:Sep 29 09:09:05.562 CEST: bgp[1087]: [default-event] (ip4u): bgp_reset_process_label_retain  for table TBL:10 (1/1)pb not enabled
+RP/0/RSP0/CPU0:Sep 29 09:09:05.562 CEST: bgp[1087]: [default-event] (ip4u): bgp_reset_process_label_retain  for table TBL:10 (1/1)pb not enabled
+RP/0/RSP0/CPU0:Sep 29 09:09:05.562 CEST: bgp[1087]: [default-event] (ip4u): bgp_reset_process_label_retain  for table TBL:10 (1/1)pb not enabled
+RP/0/RSP0/CPU0:Sep 29 09:09:05.562 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Started updgrp timer for updgrp 0.1:: delay=0.010, delaytype=0
+RP/0/RSP0/CPU0:Sep 29 09:09:05.562 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Started updgrp timer for updgrp 0.2:: delay=0.010, delaytype=0
+RP/0/RSP0/CPU0:Sep 29 09:09:05.574 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Starting updgen walk for updgrp 0.1:: targetver=654:  tblver=657, labelver=657, minfwdver=654, ackdfwdver=654, standbyver=657
+RP/0/RSP0/CPU0:Sep 29 09:09:05.574 CEST: bgp[1087]: [default-upd] VRF 10 (vpn4u): Computing updates for update sub-group 0.1 (Regular)
+RP/0/RSP0/CPU0:Sep 29 09:09:05.574 CEST: bgp[1087]: [default-upd] VRF 10: table-attr walk for table TBL:10 (1/1), resume version 0, subgrp version 651, target version 654
+RP/0/RSP0/CPU0:Sep 29 09:09:05.574 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Starting updgen walk for updgrp 0.2:: targetver=654:  tblver=657, labelver=657, minfwdver=654, ackdfwdver=654, standbyver=657
+RP/0/RSP0/CPU0:Sep 29 09:09:05.574 CEST: bgp[1087]: [default-upd] VRF 10 (vpn4u): Computing updates for update sub-group 0.2 (Regular)
+RP/0/RSP0/CPU0:Sep 29 09:09:05.574 CEST: bgp[1087]: [default-upd] VRF 10: table-attr walk for table TBL:10 (1/1), resume version 0, subgrp version 651, target version 654
+RP/0/RSP0/CPU0:Sep 29 09:09:05.574 CEST: bgp[1087]: [default-upd] VRF 10: table-attr walk for table TBL:10 (1/1), resume version 0, subgrp version 651, target version 654
+RP/0/RSP0/CPU0:Sep 29 09:09:05.617 CEST: bgp[1087]: [default-crit]: IDB: Tmr expired: 'BG'
+RP/0/RSP0/CPU0:Sep 29 09:09:05.617 CEST: bgp[1087]: [default-crit]: IDB: Tmr started: 'BG', 60 sec
+RP/0/RSP0/CPU0:Sep 29 09:09:06.465 CEST: ipv4_rib[1202]: %ROUTING-RIB-7-SERVER_ROUTING_DEPTH : Recursion loop looking up prefix 10.1.1.2 in Vrf: "10" Tbl: "default" Safi: "Unicast" added by bgp 
+RP/0/RSP1/CPU0:Sep 29 09:09:06.468 CEST: ipv4_rib[1202]: %ROUTING-RIB-7-SERVER_ROUTING_DEPTH : Recursion loop looking up prefix 10.1.1.2 in Vrf: "10" Tbl: "default" Safi: "Unicast" added by bgp 
+LC/0/0/CPU0:Sep 29 09:09:06.878 CEST: vic_0_0[371]: %PLATFORM-VIC-4-RX_LOS : Interface FortyGigE0/0/0/0/0, Detected Rx Loss of Signal 
+RP/0/RSP0/CPU0:Sep 29 09:09:10.971 CEST: bgp[1087]: [default-event]: Performing BGP generic scan
+RP/0/RSP0/CPU0:Sep 29 09:09:10.971 CEST: bgp[1087]: [default-event]: attr free(0x15639e1c), refcnt 1
+RP/0/RSP0/CPU0:Sep 29 09:09:10.972 CEST: bgp[1087]: [default-event]: Finished BGP generic scan
+RP/0/RSP0/CPU0:Sep 29 09:09:11.763 CEST: bgp[1087]: [default-event] (vpn4u): Scanning VPNv4 unicast routing table
+RP/0/RSP0/CPU0:Sep 29 09:09:11.763 CEST: bgp[1087]: [default-event] (vpn4u): Prefix count 38, Segment count 1, Segment size 100000
+RP/0/RSP0/CPU0:Sep 29 09:09:11.763 CEST: bgp[1087]: [default-event] (vpn4u): Finished scanning VPNv4 unicast routing table
+RP/0/RSP0/CPU0:Sep 29 09:09:11.763 CEST: bgp[1087]: [default-event] (vpn6u): Scanning VPNv6 unicast routing table
+RP/0/RSP0/CPU0:Sep 29 09:09:11.763 CEST: bgp[1087]: [default-event] (vpn6u): Prefix count 13, Segment count 1, Segment size 100000
+RP/0/RSP0/CPU0:Sep 29 09:09:11.763 CEST: bgp[1087]: [default-event] (vpn6u): Finished scanning VPNv6 unicast routing table
+RP/0/RSP0/CPU0:Sep 29 09:09:11.763 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Started updgrp timer for updgrp 0.1:: delay=0.010, delaytype=0
+RP/0/RSP0/CPU0:Sep 29 09:09:11.763 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Started updgrp timer for updgrp 0.2:: delay=0.010, delaytype=0
+RP/0/RSP0/CPU0:Sep 29 09:09:11.767 CEST: bgp[1087]: [default-event] (ip4u): Scanning IPv4 unicast routing table
+RP/0/RSP0/CPU0:Sep 29 09:09:11.767 CEST: bgp[1087]: [default-event] (ip4u): Prefix count 0, Segment count 1, Segment size 100000
+RP/0/RSP0/CPU0:Sep 29 09:09:11.767 CEST: bgp[1087]: [default-event] (ip4u): Finished scanning IPv4 unicast routing table
+RP/0/RSP0/CPU0:Sep 29 09:09:11.767 CEST: bgp[1087]: [default-event] (ip6u): Scanning IPv6 Unicast routing table
+RP/0/RSP0/CPU0:Sep 29 09:09:11.767 CEST: bgp[1087]: [default-event] (ip6u): Prefix count 0, Segment count 1, Segment size 100000
+RP/0/RSP0/CPU0:Sep 29 09:09:11.767 CEST: bgp[1087]: [default-event] (ip6u): Finished scanning IPv6 Unicast routing table
+RP/0/RSP0/CPU0:Sep 29 09:09:11.774 CEST: bgp[1087]: [default-upd] VRF 10: table-attr walk for table TBL:10 (1/1), resume version 0, subgrp version 654, target version 657
+RP/0/RSP0/CPU0:Sep 29 09:09:11.774 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Starting updgen walk for updgrp 0.1:: targetver=657:  tblver=660, labelver=660, minfwdver=657, ackdfwdver=657, standbyver=660
+RP/0/RSP0/CPU0:Sep 29 09:09:11.774 CEST: bgp[1087]: [default-upd] VRF 10 (vpn4u): Computing updates for update sub-group 0.1 (Regular)
+RP/0/RSP0/CPU0:Sep 29 09:09:11.774 CEST: bgp[1087]: [default-upd] VRF 10: table-attr walk for table TBL:10 (1/1), resume version 0, subgrp version 654, target version 657
+RP/0/RSP0/CPU0:Sep 29 09:09:11.774 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Starting updgen walk for updgrp 0.2:: targetver=657:  tblver=660, labelver=660, minfwdver=657, ackdfwdver=657, standbyver=660
+RP/0/RSP0/CPU0:Sep 29 09:09:11.774 CEST: bgp[1087]: [default-upd] VRF 10 (vpn4u): Computing updates for update sub-group 0.2 (Regular)
+RP/0/RSP0/CPU0:Sep 29 09:09:11.774 CEST: bgp[1087]: [default-upd] VRF 10: table-attr walk for table TBL:10 (1/1), resume version 0, subgrp version 654, target version 657
+RP/0/RSP0/CPU0:Sep 29 09:09:15.469 CEST: bgp[1087]: [default-rtr] VRF 10: UPDATE from 10.1.3.2 contains nh 10.1.3.2/32, gw_afi 0, flags 0x20000, nlri_afi 0
+RP/0/RSP0/CPU0:Sep 29 09:09:15.469 CEST: bgp[1087]: [default-rtr] VRF 10: NH-Validate-Create: addr=10.1.3.2/32, len=4, nlriafi=0, nbr=10.1.3.2, gwafi=0, gwlen=4, gwaddrlen=32::: nhout=0x156421f8, validity=1, attrwdrflags=0x00000000
+RP/0/RSP0/CPU0:Sep 29 09:09:15.469 CEST: bgp[1087]: [default-rtr] VRF 10: --bgp4_rcv_attributes--: END: nbr=10.1.3.2:: msg=0x1503f1d0/48, updlen=29, attrbl=0x1503f1e7/20, ipv4reachlen=5, msginpath=0x3cefb24, asloopcheck=1, attrwdrfl=0x00000000:: samecluster=0, local_as_prepended=0, attr_wdr_flags 0x00000000, myascount=0:: rcvdata=0x1503f1fb/0, errptr=0x1503f1f4/7
+RP/0/RSP0/CPU0:Sep 29 09:09:15.470 CEST: bgp[1087]: [default-rtr] VRF 10 (ip4u): Received UPDATE from 10.1.3.2 with attributes: 
+RP/0/RSP0/CPU0:Sep 29 09:09:15.470 CEST: bgp[1087]: [default-rtr] VRF 10 (ip4u): nexthop 10.1.3.2/32, origin ?, path 4200042517
+RP/0/RSP0/CPU0:Sep 29 09:09:15.470 CEST: bgp[1087]: [default-rtr] VRF 10 (ip4u): Received prefix 10.1.1.0/30 (path ID: none) from 10.1.3.2
+RP/0/RSP1/CPU0:Sep 29 09:09:15.470 CEST: bgp[1087]: [default-rtr] VRF 10: UPDATE from 10.1.3.2 contains nh 10.1.3.2/32, gw_afi 0, flags 0x20000, nlri_afi 0
+RP/0/RSP0/CPU0:Sep 29 09:09:15.470 CEST: bgp[1087]: [default-rtr] VRF 10 (vpn4u): 10.1.1.0/30: duplicate path (4200042517) ignored
+RP/0/RSP0/CPU0:Sep 29 09:09:15.470 CEST: bgp[1087]: [default-rtr] VRF 10: Received UPDATE from 10.1.3.2 (length incl. header = 48)
+RP/0/RSP0/CPU0:Sep 29 09:09:15.470 CEST: bgp[1087]: [default-rtr] VRF 10: Receive message dump for 10.1.3.2:
+RP/0/RSP0/CPU0:Sep 29 09:09:15.470 CEST: bgp[1087]: [default-rtr] VRF 10: ffff ffff ffff ffff ffff ffff ffff ffff 
+RP/0/RSP0/CPU0:Sep 29 09:09:15.470 CEST: bgp[1087]: [default-rtr] VRF 10: 0030 0200 0000 1440 0101 0240 0206 0201 
+RP/0/RSP0/CPU0:Sep 29 09:09:15.470 CEST: bgp[1087]: [default-rtr] VRF 10: fa57 9015 4003 040a 0103 021e 0a01 0100 
+RP/0/RSP0/CPU0:Sep 29 09:09:15.470 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Started updgrp timer for updgrp 0.1:: delay=0.010, delaytype=0
+RP/0/RSP0/CPU0:Sep 29 09:09:15.470 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Started updgrp timer for updgrp 0.2:: delay=0.010, delaytype=0
+RP/0/RSP1/CPU0:Sep 29 09:09:15.470 CEST: bgp[1087]: [default-rtr] VRF 10: NH-Validate-Create: addr=10.1.3.2/32, len=4, nlriafi=0, nbr=10.1.3.2, gwafi=0, gwlen=4, gwaddrlen=32::: nhout=0x156413c4, validity=1, attrwdrflags=0x00000000
+RP/0/RSP1/CPU0:Sep 29 09:09:15.470 CEST: bgp[1087]: [default-rtr] VRF 10: --bgp4_rcv_attributes--: END: nbr=10.1.3.2:: msg=0x1503f1d0/48, updlen=29, attrbl=0x1503f1e7/20, ipv4reachlen=5, msginpath=0x3cefb24, asloopcheck=1, attrwdrfl=0x00000000:: samecluster=0, local_as_prepended=0, attr_wdr_flags 0x00000000, myascount=0:: rcvdata=0x1503f1fb/0, errptr=0x1503f1f4/7
+RP/0/RSP1/CPU0:Sep 29 09:09:15.470 CEST: bgp[1087]: [default-rtr] VRF 10 (ip4u): Received UPDATE from 10.1.3.2 with attributes: 
+RP/0/RSP1/CPU0:Sep 29 09:09:15.470 CEST: bgp[1087]: [default-rtr] VRF 10 (ip4u): nexthop 10.1.3.2/32, origin ?, path 4200042517
+RP/0/RSP1/CPU0:Sep 29 09:09:15.470 CEST: bgp[1087]: [default-rtr] VRF 10 (ip4u): Received prefix 10.1.1.0/30 (path ID: none) from 10.1.3.2
+RP/0/RSP1/CPU0:Sep 29 09:09:15.471 CEST: bgp[1087]: [default-rtr] VRF 10 (vpn4u): 10.1.1.0/30: duplicate path (4200042517) ignored
+RP/0/RSP1/CPU0:Sep 29 09:09:15.471 CEST: bgp[1087]: [default-rtr] VRF 10: Received UPDATE from 10.1.3.2 (length incl. header = 48)
+RP/0/RSP1/CPU0:Sep 29 09:09:15.471 CEST: bgp[1087]: [default-rtr] VRF 10: Receive message dump for 10.1.3.2:
+RP/0/RSP1/CPU0:Sep 29 09:09:15.471 CEST: bgp[1087]: [default-rtr] VRF 10: ffff ffff ffff ffff ffff ffff ffff ffff 
+RP/0/RSP1/CPU0:Sep 29 09:09:15.471 CEST: bgp[1087]: [default-rtr] VRF 10: 0030 0200 0000 1440 0101 0240 0206 0201 
+RP/0/RSP1/CPU0:Sep 29 09:09:15.471 CEST: bgp[1087]: [default-rtr] VRF 10: fa57 9015 4003 040a 0103 021e 0a01 0100 
+RP/0/RSP0/CPU0:Sep 29 09:09:15.482 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Starting updgen walk for updgrp 0.1:: targetver=663:  tblver=663, labelver=663, minfwdver=663, ackdfwdver=663, standbyver=663
+RP/0/RSP0/CPU0:Sep 29 09:09:15.482 CEST: bgp[1087]: [default-upd] VRF 10 (vpn4u): Computing updates for update sub-group 0.1 (Regular)
+RP/0/RSP0/CPU0:Sep 29 09:09:15.482 CEST: bgp[1087]: [default-upd] VRF 10: table-attr walk for table TBL:10 (1/1), resume version 0, subgrp version 657, target version 663
+RP/0/RSP0/CPU0:Sep 29 09:09:15.482 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): process UPDATE for: tbl=TBL:10 (1/1), afi=0: ug=0.1, (Regular), pelem (Regular), sg=0.1, ugfl=0x00004000: bgpctxfl=0x23, tblctxfl=0x00000221, ltblctxfl=0x00000221, sendlab=0: net=110.110.110.0/24, nver=663: PELEM=161f46d8 (lpathid=1, ver=663, fl=0x00006001): PATH=16239678 (10.1.3.2/32,10.1.3.2,0, 0xc00000000d040003)::: allowbe=0, isbe=0, allowspurwdr=0, pelem-send=1, pelem-wdr=0
+RP/0/RSP0/CPU0:Sep 29 09:09:15.482 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Permit UPDATE to filter-group 0.1 (Regular, pelem Regular) for 110.110.110.0/24 (changedfl=0x1000000/0x6000), path 4200042517
+RP/0/RSP0/CPU0:Sep 29 09:09:15.482 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Sending UPDATE message(0x1504fac0) to sub-group 0.1 (Regular, pelem Regular) for 110.110.110.0/24 (changedfl=0x1000000/0x6000) -  creating new message with bmsgflags=0x00000020, attributes: nexthop 10.1.3.2, originator 0.0.0.0
+RP/0/RSP0/CPU0:Sep 29 09:09:15.482 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): origin ?, path 42517 4200042517, nexthop 10.1.3.2 (third party)
+RP/0/RSP0/CPU0:Sep 29 09:09:15.482 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Created msg elem 0x1521e010 (pointing to message 0x1504fac0), for filtergroup 0.1
+RP/0/RSP0/CPU0:Sep 29 09:09:15.482 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): process UPDATE for: tbl=TBL:10 (1/1), afi=0: ug=0.1, (Regular), pelem (Regular), sg=0.1, ugfl=0x00004000: bgpctxfl=0x23, tblctxfl=0x00000221, ltblctxfl=0x00000221, sendlab=0: net=10.1.1.0/30, nver=662: PELEM=161f4718 (lpathid=1, ver=662, fl=0x00007001): PATH=16239854 (10.1.3.2/32,10.1.3.2,0, 0xc00000000d040003)::: allowbe=0, isbe=0, allowspurwdr=0, pelem-send=1, pelem-wdr=0
+RP/0/RSP0/CPU0:Sep 29 09:09:15.482 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Permit UPDATE to filter-group 0.1 (Regular, pelem Regular) for 10.1.1.0/30 (changedfl=0x1000000/0x7000), path 4200042517
+RP/0/RSP0/CPU0:Sep 29 09:09:15.482 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): process UPDATE for: tbl=TBL:10 (1/1), afi=0: ug=0.1, (Regular), pelem (Regular), sg=0.1, ugfl=0x00004000: bgpctxfl=0x23, tblctxfl=0x00000221, ltblctxfl=0x00000221, sendlab=0: net= 0/24, nver=661: PELEM=164c5aac (lpathid=1, ver=661, fl=0x00006001): PATH=16239ab8 (10.1.3.2/32,10.1.3.2,0, 0xc00000000d040003)::: allowbe=0, isbe=0, allowspurwdr=0, pelem-send=1, pelem-wdr=0
+RP/0/RSP0/CPU0:Sep 29 09:09:15.482 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Permit UPDATE to filter-group 0.1 (Regular, pelem Regular) for 2.2.2.0/24 (changedfl=0x1000000/0x6000), path 4200042517
+RP/0/RSP0/CPU0:Sep 29 09:09:15.482 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Generated 1 updates for update sub-group 0.1 (average size = 60 bytes, maximum size = 60 bytes)
+RP/0/RSP0/CPU0:Sep 29 09:09:15.482 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Updates replicated to neighbor 10.1.3.2
+RP/0/RSP0/CPU0:Sep 29 09:09:15.482 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Starting updgen walk for updgrp 0.2:: targetver=663:  tblver=663, labelver=663, minfwdver=663, ackdfwdver=663, standbyver=663
+RP/0/RSP0/CPU0:Sep 29 09:09:15.482 CEST: bgp[1087]: [default-upd] VRF 10 (vpn4u): Computing updates for update sub-group 0.2 (Regular)
+RP/0/RSP0/CPU0:Sep 29 09:09:15.482 CEST: bgp[1087]: [default-upd] VRF 10: table-attr walk for table TBL:10 (1/1), resume version 0, subgrp version 657, target version 663
+RP/0/RSP0/CPU0:Sep 29 09:09:15.482 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): process UPDATE for: tbl=TBL:10 (1/1), afi=0: ug=0.2, (Regular), pelem (Regular), sg=0.2, ugfl=0x00014001: bgpctxfl=0x23, tblctxfl=0x00000221, ltblctxfl=0x00000221, sendlab=0: net=110.110.110.0/24, nver=663: PELEM=161f46d8 (lpathid=1, ver=663, fl=0x00006001): PATH=16239678 (10.1.3.2/32,10.1.3.2,0, 0xc00000000d040003)::: allowbe=0, isbe=0, allowspurwdr=0, pelem-send=1, pelem-wdr=0
+RP/0/RSP0/CPU0:Sep 29 09:09:15.482 CEST: bgp[1087]: [default-iowt] VRF 10: 10.1.3.2 send UPDATE length (incl. header) 60
+RP/0/RSP0/CPU0:Sep 29 09:09:15.482 CEST: bgp[1087]: [default-iowt] VRF 10: Send message dump for 10.1.3.2:
+RP/0/RSP0/CPU0:Sep 29 09:09:15.482 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Permit UPDATE to filter-group 0.2 (Regular, pelem Regular) for 110.110.110.0/24 (changedfl=0x1000000/0x6000), path 4200042517
+RP/0/RSP0/CPU0:Sep 29 09:09:15.482 CEST: bgp[1087]: [default-iowt] VRF 10: ffff ffff ffff ffff ffff ffff ffff ffff 
+RP/0/RSP0/CPU0:Sep 29 09:09:15.482 CEST: bgp[1087]: [default-iowt] VRF 10: 003c 0200 0000 1840 0101 0240 020a 0202 
+RP/0/RSP0/CPU0:Sep 29 09:09:15.482 CEST: bgp[1087]: [default-iowt] VRF 10: 0000 a615 fa57 9015 4003 040a 0103 0118 
+RP/0/RSP0/CPU0:Sep 29 09:09:15.482 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Sending UPDATE message(0x1504fcbc) to sub-group 0.2 (Regular, pelem Regular) for 110.110.110.0/24 (changedfl=0x1000000/0x6000) -  creating new message with bmsgflags=0x00000020, attributes: nexthop 10.1.3.2, originator 0.0.0.0
+RP/0/RSP0/CPU0:Sep 29 09:09:15.482 CEST: bgp[1087]: [default-iowt] VRF 10: 6e6e 6e1e 0a01 0100 1802 0202  
+RP/0/RSP0/CPU0:Sep 29 09:09:15.482 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): origin ?, path 64512 4200042517, nexthop 10.1.3.2 (third party)
+RP/0/RSP0/CPU0:Sep 29 09:09:15.482 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Created msg elem 0x1521e058 (pointing to message 0x1504fcbc), for filtergroup 0.2
+RP/0/RSP0/CPU0:Sep 29 09:09:15.482 CEST: bgp[1087]: [default-iowt] VRF 10 (ip4u): Deleting msg elem 0x1521e010 (message 0x1504fac0), for filtergroup 0.1
+RP/0/RSP0/CPU0:Sep 29 09:09:15.482 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): process UPDATE for: tbl=TBL:10 (1/1), afi=0: ug=0.2, (Regular), pelem (Regular), sg=0.2, ugfl=0x00014001: bgpctxfl=0x23, tblctxfl=0x00000221, ltblctxfl=0x00000221, sendlab=0: net=10.1.1.0/30, nver=662: PELEM=161f4718 (lpathid=1, ver=662, fl=0x00007001): PATH=16239854 (10.1.3.2/32,10.1.3.2,0, 0xc00000000d040003)::: allowbe=0, isbe=0, allowspurwdr=0, pelem-send=1, pelem-wdr=0
+RP/0/RSP0/CPU0:Sep 29 09:09:15.482 CEST: bgp[1087]: [default-iowt] VRF 10 (ip4u): Deleting message 0x1504fac0, from subgroup 0.1
+RP/0/RSP0/CPU0:Sep 29 09:09:15.482 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Permit UPDATE to filter-group 0.2 (Regular, pelem Regular) for 10.1.1.0/30 (changedfl=0x1000000/0x7000), path 4200042517
+RP/0/RSP0/CPU0:Sep 29 09:09:15.482 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): process UPDATE for: tbl=TBL:10 (1/1), afi=0: ug=0.2, (Regular), pelem (Regular), sg=0.2, ugfl=0x00014001: bgpctxfl=0x23, tblctxfl=0x00000221, ltblctxfl=0x00000221, sendlab=0: net=2.2.2.0/24, nver=661: PELEM=164c5aac (lpathid=1, ver=661, fl=0x00006001): PATH=16239ab8 (10.1.3.2/32,10.1.3.2,0, 0xc00000000d040003)::: allowbe=0, isbe=0, allowspurwdr=0, pelem-send=1, pelem-wdr=0
+RP/0/RSP0/CPU0:Sep 29 09:09:15.482 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Permit UPDATE to filter-group 0.2 (Regular, pelem Regular) for 2.2.2.0/24 (changedfl=0x1000000/0x6000), path 4200042517
+RP/0/RSP0/CPU0:Sep 29 09:09:15.482 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Generated 1 updates for update sub-group 0.2 (average size = 60 bytes, maximum size = 60 bytes)
+RP/0/RSP0/CPU0:Sep 29 09:09:15.482 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Updates replicated to neighbor 10.100.1.1
+RP/0/RSP0/CPU0:Sep 29 09:09:15.482 CEST: bgp[1087]: [default-upd] VRF 10: table-attr walk for table TBL:10 (1/1), resume version 0, subgrp version 657, target version 663
+RP/0/RSP0/CPU0:Sep 29 09:09:15.482 CEST: bgp[1087]: [default-iowt] VRF 10: 10.100.1.1 send UPDATE length (incl. header) 60
+RP/0/RSP0/CPU0:Sep 29 09:09:15.483 CEST: bgp[1087]: [default-iowt] VRF 10: Send message dump for 10.100.1.1:
+RP/0/RSP0/CPU0:Sep 29 09:09:15.483 CEST: bgp[1087]: [default-iowt] VRF 10: ffff ffff ffff ffff ffff ffff ffff ffff 
+RP/0/RSP0/CPU0:Sep 29 09:09:15.483 CEST: bgp[1087]: [default-iowt] VRF 10: 003c 0200 0000 1840 0101 0240 020a 0202 
+RP/0/RSP0/CPU0:Sep 29 09:09:15.483 CEST: bgp[1087]: [default-iowt] VRF 10: 0000 fc00 fa57 9015 4003 040a 6401 0218 
+RP/0/RSP0/CPU0:Sep 29 09:09:15.483 CEST: bgp[1087]: [default-iowt] VRF 10: 6e6e 6e1e 0a01 0100 1802 0202  
+RP/0/RSP0/CPU0:Sep 29 09:09:15.483 CEST: bgp[1087]: [default-iowt] VRF 10 (ip4u): Deleting msg elem 0x1521e058 (message 0x1504fcbc), for filtergroup 0.2
+RP/0/RSP0/CPU0:Sep 29 09:09:15.483 CEST: bgp[1087]: [default-iowt] VRF 10 (ip4u): Deleting message 0x1504fcbc, from subgroup 0.2
+RP/0/RSP0/CPU0:Sep 29 09:09:15.497 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Started updgrp timer for updgrp 0.1:: delay=0.010, delaytype=0
+RP/0/RSP0/CPU0:Sep 29 09:09:15.497 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Started updgrp timer for updgrp 0.2:: delay=0.010, delaytype=0
+RP/0/RSP0/CPU0:Sep 29 09:09:15.499 CEST: bgp[1087]: [default-rtr] VRF 10 (ip4u): Received unreachables from 10.100.1.1: attrcode=0, attrwdrflags=0x00000000
+RP/0/RSP0/CPU0:Sep 29 09:09:15.499 CEST: bgp[1087]: [default-rtr] VRF 10 (ip4u): UPDATE from 10.100.1.1, prefix 10.1.1.0/30 (path ID: none) withdrawn
+RP/0/RSP0/CPU0:Sep 29 09:09:15.499 CEST: bgp[1087]: [default-rtr] VRF 10: Received UPDATE from 10.100.1.1 (length incl. header = 28)
+RP/0/RSP1/CPU0:Sep 29 09:09:15.500 CEST: bgp[1087]: [default-rtr] VRF 10 (ip4u): Received unreachables from 10.100.1.1: attrcode=0, attrwdrflags=0x00000000
+RP/0/RSP0/CPU0:Sep 29 09:09:15.499 CEST: bgp[1087]: [default-rtr] VRF 10: Receive message dump for 10.100.1.1:
+RP/0/RSP0/CPU0:Sep 29 09:09:15.499 CEST: bgp[1087]: [default-rtr] VRF 10: ffff ffff ffff ffff ffff ffff ffff ffff 
+RP/0/RSP0/CPU0:Sep 29 09:09:15.499 CEST: bgp[1087]: [default-rtr] VRF 10: 001c 0200 051e 0a01 0100 0000  
+RP/0/RSP1/CPU0:Sep 29 09:09:15.500 CEST: bgp[1087]: [default-rtr] VRF 10 (ip4u): UPDATE from 10.100.1.1, prefix 10.1.1.0/30 (path ID: none) withdrawn
+RP/0/RSP1/CPU0:Sep 29 09:09:15.500 CEST: bgp[1087]: [default-rtr] VRF 10: Received UPDATE from 10.100.1.1 (length incl. header = 28)
+RP/0/RSP1/CPU0:Sep 29 09:09:15.500 CEST: bgp[1087]: [default-rtr] VRF 10: Receive message dump for 10.100.1.1:
+RP/0/RSP1/CPU0:Sep 29 09:09:15.500 CEST: bgp[1087]: [default-rtr] VRF 10: ffff ffff ffff ffff ffff ffff ffff ffff 
+RP/0/RSP1/CPU0:Sep 29 09:09:15.500 CEST: bgp[1087]: [default-rtr] VRF 10: 001c 0200 051e 0a01 0100 0000  
+RP/0/RSP0/CPU0:Sep 29 09:09:15.508 CEST: bgp[1087]: [default-upd] VRF 10: table-attr walk for table TBL:10 (1/1), resume version 0, subgrp version 663, target version 665
+RP/0/RSP0/CPU0:Sep 29 09:09:15.508 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Starting updgen walk for updgrp 0.1:: targetver=665:  tblver=665, labelver=665, minfwdver=665, ackdfwdver=665, standbyver=665
+RP/0/RSP0/CPU0:Sep 29 09:09:15.508 CEST: bgp[1087]: [default-upd] VRF 10 (vpn4u): Computing updates for update sub-group 0.1 (Regular)
+RP/0/RSP0/CPU0:Sep 29 09:09:15.508 CEST: bgp[1087]: [default-upd] VRF 10: table-attr walk for table TBL:10 (1/1), resume version 0, subgrp version 663, target version 665
+RP/0/RSP0/CPU0:Sep 29 09:09:15.508 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Starting updgen walk for updgrp 0.2:: targetver=665:  tblver=665, labelver=665, minfwdver=665, ackdfwdver=665, standbyver=665
+RP/0/RSP0/CPU0:Sep 29 09:09:15.508 CEST: bgp[1087]: [default-upd] VRF 10 (vpn4u): Computing updates for update sub-group 0.2 (Regular)
+RP/0/RSP0/CPU0:Sep 29 09:09:15.508 CEST: bgp[1087]: [default-upd] VRF 10: table-attr walk for table TBL:10 (1/1), resume version 0, subgrp version 663, target version 665
+RP/0/RSP0/CPU0:Sep 29 09:09:15.671 CEST: bgp[1087]: [default-rtr] VRF 10 (ip4u): Received unreachables from 10.1.3.2: attrcode=0, attrwdrflags=0x00000000
+RP/0/RSP0/CPU0:Sep 29 09:09:15.671 CEST: bgp[1087]: [default-rtr] VRF 10 (ip4u): UPDATE from 10.1.3.2, prefix 10.1.1.0/30 (path ID: none) withdrawn
+RP/0/RSP1/CPU0:Sep 29 09:09:15.672 CEST: bgp[1087]: [default-rtr] VRF 10 (ip4u): Received unreachables from 10.1.3.2: attrcode=0, attrwdrflags=0x00000000
+RP/0/RSP0/CPU0:Sep 29 09:09:15.671 CEST: bgp[1087]: [default-rtr] VRF 10: Received UPDATE from 10.1.3.2 (length incl. header = 28)
+RP/0/RSP0/CPU0:Sep 29 09:09:15.671 CEST: bgp[1087]: [default-rtr] VRF 10: Receive message dump for 10.1.3.2:
+RP/0/RSP0/CPU0:Sep 29 09:09:15.671 CEST: bgp[1087]: [default-rtr] VRF 10: ffff ffff ffff ffff ffff ffff ffff ffff 
+RP/0/RSP0/CPU0:Sep 29 09:09:15.671 CEST: bgp[1087]: [default-rtr] VRF 10: 001c 0200 051e 0a01 0100 0000  
+RP/0/RSP0/CPU0:Sep 29 09:09:15.672 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Started updgrp timer for updgrp 0.1:: delay=0.010, delaytype=0
+RP/0/RSP0/CPU0:Sep 29 09:09:15.672 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Started updgrp timer for updgrp 0.2:: delay=0.010, delaytype=0
+RP/0/RSP1/CPU0:Sep 29 09:09:15.672 CEST: bgp[1087]: [default-rtr] VRF 10 (ip4u): UPDATE from 10.1.3.2, prefix 10.1.1.0/30 (path ID: none) withdrawn
+RP/0/RSP1/CPU0:Sep 29 09:09:15.672 CEST: bgp[1087]: [default-rtr] VRF 10: Received UPDATE from 10.1.3.2 (length incl. header = 28)
+RP/0/RSP1/CPU0:Sep 29 09:09:15.672 CEST: bgp[1087]: [default-rtr] VRF 10: Receive message dump for 10.1.3.2:
+RP/0/RSP1/CPU0:Sep 29 09:09:15.672 CEST: bgp[1087]: [default-rtr] VRF 10: ffff ffff ffff ffff ffff ffff ffff ffff 
+RP/0/RSP1/CPU0:Sep 29 09:09:15.672 CEST: bgp[1087]: [default-rtr] VRF 10: 001c 0200 051e 0a01 0100 0000  
+RP/0/RSP0/CPU0:Sep 29 09:09:15.684 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Starting updgen walk for updgrp 0.1:: targetver=666:  tblver=666, labelver=666, minfwdver=666, ackdfwdver=666, standbyver=666
+RP/0/RSP0/CPU0:Sep 29 09:09:15.684 CEST: bgp[1087]: [default-upd] VRF 10 (vpn4u): Computing updates for update sub-group 0.1 (Regular)
+RP/0/RSP0/CPU0:Sep 29 09:09:15.684 CEST: bgp[1087]: [default-upd] VRF 10: table-attr walk for table TBL:10 (1/1), resume version 0, subgrp version 665, target version 666
+RP/0/RSP0/CPU0:Sep 29 09:09:15.684 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): process UPDATE for: tbl=TBL:10 (1/1), afi=0: ug=0.1, (Regular), pelem (Regular), sg=0.1, ugfl=0x00004000: bgpctxfl=0x23, tblctxfl=0x00000221, ltblctxfl=0x00000221, sendlab=0: net=10.1.1.0/30, nver=666: PELEM=161f4718 (lpathid=1, ver=666, fl=0x02026001): PATH=162398dc (6.6.6.6/32,6.6.6.6,0, 0x4000000005060005)::: allowbe=0, isbe=0, allowspurwdr=0, pelem-send=1, pelem-wdr=0
+RP/0/RSP0/CPU0:Sep 29 09:09:15.684 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Permit UPDATE to filter-group 0.1 (Regular, pelem Regular) for 10.1.1.0/30 (changedfl=0x0/0x2026000), path 4200042517
+RP/0/RSP0/CPU0:Sep 29 09:09:15.684 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Sending UPDATE message(0x1504fcbc) to sub-group 0.1 (Regular, pelem Regular) for 10.1.1.0/30 (changedfl=0x0/0x2026000) -  creating new message with bmsgflags=0x00000004, attributes: nexthop 0.0.0.0, originator 0.0.0.0
+RP/0/RSP0/CPU0:Sep 29 09:09:15.684 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): origin ?, path 42517 4200042517, nexthop local
+RP/0/RSP0/CPU0:Sep 29 09:09:15.684 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Created msg elem 0x1521e010 (pointing to message 0x1504fcbc), for filtergroup 0.1
+RP/0/RSP0/CPU0:Sep 29 09:09:15.684 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Generated 1 updates for update sub-group 0.1 (average size = 52 bytes, maximum size = 52 bytes)
+RP/0/RSP0/CPU0:Sep 29 09:09:15.684 CEST: bgp[1087]: [default-iowt] VRF 10: 10.1.3.2 send UPDATE length (incl. header) 52
+RP/0/RSP0/CPU0:Sep 29 09:09:15.684 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Updates replicated to neighbor 10.1.3.2
+RP/0/RSP0/CPU0:Sep 29 09:09:15.684 CEST: bgp[1087]: [default-iowt] VRF 10: Send message dump for 10.1.3.2:
+RP/0/RSP0/CPU0:Sep 29 09:09:15.684 CEST: bgp[1087]: [default-iowt] VRF 10: ffff ffff ffff ffff ffff ffff ffff ffff 
+RP/0/RSP0/CPU0:Sep 29 09:09:15.684 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Starting updgen walk for updgrp 0.2:: targetver=666:  tblver=666, labelver=666, minfwdver=666, ackdfwdver=666, standbyver=666
+RP/0/RSP0/CPU0:Sep 29 09:09:15.684 CEST: bgp[1087]: [default-iowt] VRF 10: 0034 0200 0000 1840 0101 0240 020a 0202 
+RP/0/RSP0/CPU0:Sep 29 09:09:15.684 CEST: bgp[1087]: [default-upd] VRF 10 (vpn4u): Computing updates for update sub-group 0.2 (Regular)
+RP/0/RSP0/CPU0:Sep 29 09:09:15.684 CEST: bgp[1087]: [default-iowt] VRF 10: 0000 a615 fa57 9015 4003 040a 0103 011e 
+RP/0/RSP0/CPU0:Sep 29 09:09:15.684 CEST: bgp[1087]: [default-upd] VRF 10: table-attr walk for table TBL:10 (1/1), resume version 0, subgrp version 665, target version 666
+RP/0/RSP0/CPU0:Sep 29 09:09:15.684 CEST: bgp[1087]: [default-iowt] VRF 10: 0a01 0100  
+RP/0/RSP0/CPU0:Sep 29 09:09:15.684 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): process UPDATE for: tbl=TBL:10 (1/1), afi=0: ug=0.2, (Regular), pelem (Regular), sg=0.2, ugfl=0x00014001: bgpctxfl=0x23, tblctxfl=0x00000221, ltblctxfl=0x00000221, sendlab=0: net=10.1.1.0/30, nver=666: PELEM=161f4718 (lpathid=1, ver=666, fl=0x02026001): PATH=162398dc (6.6.6.6/32,6.6.6.6,0, 0x4000000005060005)::: allowbe=0, isbe=0, allowspurwdr=0, pelem-send=1, pelem-wdr=0
+RP/0/RSP0/CPU0:Sep 29 09:09:15.684 CEST: bgp[1087]: [default-iowt] VRF 10 (ip4u): Deleting msg elem 0x1521e010 (message 0x1504fcbc), for filtergroup 0.1
+RP/0/RSP0/CPU0:Sep 29 09:09:15.684 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Permit UPDATE to filter-group 0.2 (Regular, pelem Regular) for 10.1.1.0/30 (changedfl=0x0/0x2026000), path 4200042517
+RP/0/RSP0/CPU0:Sep 29 09:09:15.684 CEST: bgp[1087]: [default-iowt] VRF 10 (ip4u): Deleting message 0x1504fcbc, from subgroup 0.1
+RP/0/RSP0/CPU0:Sep 29 09:09:15.684 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Sending UPDATE message(0x1504fac0) to sub-group 0.2 (Regular, pelem Regular) for 10.1.1.0/30 (changedfl=0x0/0x2026000) -  creating new message with bmsgflags=0x00000004, attributes: nexthop 0.0.0.0, originator 0.0.0.0
+RP/0/RSP0/CPU0:Sep 29 09:09:15.684 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): origin ?, path 64512 4200042517, nexthop local
+RP/0/RSP0/CPU0:Sep 29 09:09:15.684 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Created msg elem 0x1521e010 (pointing to message 0x1504fac0), for filtergroup 0.2
+RP/0/RSP0/CPU0:Sep 29 09:09:15.684 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Generated 1 updates for update sub-group 0.2 (average size = 52 bytes, maximum size = 52 bytes)
+RP/0/RSP0/CPU0:Sep 29 09:09:15.684 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Updates replicated to neighbor 10.100.1.1
+RP/0/RSP0/CPU0:Sep 29 09:09:15.684 CEST: bgp[1087]: [default-iowt] VRF 10: 10.100.1.1 send UPDATE length (incl. header) 52
+RP/0/RSP0/CPU0:Sep 29 09:09:15.684 CEST: bgp[1087]: [default-upd] VRF 10: table-attr walk for table TBL:10 (1/1), resume version 0, subgrp version 665, target version 666
+RP/0/RSP0/CPU0:Sep 29 09:09:15.684 CEST: bgp[1087]: [default-iowt] VRF 10: Send message dump for 10.100.1.1:
+RP/0/RSP0/CPU0:Sep 29 09:09:15.684 CEST: bgp[1087]: [default-iowt] VRF 10: ffff ffff ffff ffff ffff ffff ffff ffff 
+RP/0/RSP0/CPU0:Sep 29 09:09:15.684 CEST: bgp[1087]: [default-iowt] VRF 10: 0034 0200 0000 1840 0101 0240 020a 0202 
+RP/0/RSP0/CPU0:Sep 29 09:09:15.684 CEST: bgp[1087]: [default-iowt] VRF 10: 0000 fc00 fa57 9015 4003 040a 6401 021e 
+RP/0/RSP0/CPU0:Sep 29 09:09:15.684 CEST: bgp[1087]: [default-iowt] VRF 10: 0a01 0100  
+RP/0/RSP0/CPU0:Sep 29 09:09:15.684 CEST: bgp[1087]: [default-iowt] VRF 10 (ip4u): Deleting msg elem 0x1521e010 (message 0x1504fac0), for filtergroup 0.2
+RP/0/RSP0/CPU0:Sep 29 09:09:15.684 CEST: bgp[1087]: [default-iowt] VRF 10 (ip4u): Deleting message 0x1504fac0, from subgroup 0.2
+RP/0/RSP0/CPU0:Sep 29 09:09:15.687 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Started updgrp timer for updgrp 0.1:: delay=0.007, delaytype=0
+RP/0/RSP0/CPU0:Sep 29 09:09:15.687 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Started updgrp timer for updgrp 0.2:: delay=0.007, delaytype=0
+RP/0/RSP0/CPU0:Sep 29 09:09:15.696 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Starting updgen walk for updgrp 0.1:: targetver=668:  tblver=668, labelver=668, minfwdver=668, ackdfwdver=668, standbyver=668
+RP/0/RSP0/CPU0:Sep 29 09:09:15.696 CEST: bgp[1087]: [default-upd] VRF 10 (vpn4u): Computing updates for update sub-group 0.1 (Regular)
+RP/0/RSP0/CPU0:Sep 29 09:09:15.696 CEST: bgp[1087]: [default-upd] VRF 10: table-attr walk for table TBL:10 (1/1), resume version 0, subgrp version 666, target version 668
+RP/0/RSP0/CPU0:Sep 29 09:09:15.696 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): process UPDATE for: tbl=TBL:10 (1/1), afi=0: ug=0.1, (Regular), pelem (Regular), sg=0.1, ugfl=0x00004000: bgpctxfl=0x23, tblctxfl=0x00000221, ltblctxfl=0x00000221, sendlab=0: net=10.1.1.0/30, nver=668: PELEM=161f4718 (lpathid=1, ver=668, fl=0x02027001): PATH=0 (NULL,0.0.0.0,0, 0x0)::: allowbe=0, isbe=0, allowspurwdr=0, pelem-send=1, pelem-wdr=0
+RP/0/RSP0/CPU0:Sep 29 09:09:15.696 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Created withdraw message 0x15128d44, for filtergroup 0.1
+RP/0/RSP0/CPU0:Sep 29 09:09:15.696 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Created msg elem 0x1521e058 (pointing to message 0x15128d44), for filtergroup 0.1
+RP/0/RSP0/CPU0:Sep 29 09:09:15.696 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Sending UPDATE (creating new msg) to sub-group 0.1 (Regular) pelem (Regular) filter-group0.1 with 10.1.1.0/30 (changedfl=0x0/0x2027000, bmsgflags=0x00000000, originator 0.0.0.0) unreachable (no path is available)
+RP/0/RSP0/CPU0:Sep 29 09:09:15.696 CEST: bgp[1087]: [default-iowt] VRF 10: 10.1.3.2 send UPDATE length (incl. header) 28
+RP/0/RSP0/CPU0:Sep 29 09:09:15.696 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Starting updgen walk for updgrp 0.2:: targetver=668:  tblver=668, labelver=668, minfwdver=668, ackdfwdver=668, standbyver=668
+RP/0/RSP0/CPU0:Sep 29 09:09:15.696 CEST: bgp[1087]: [default-iowt] VRF 10: Send message dump for 10.1.3.2:
+RP/0/RSP0/CPU0:Sep 29 09:09:15.696 CEST: bgp[1087]: [default-upd] VRF 10 (vpn4u): Computing updates for update sub-group 0.2 (Regular)
+RP/0/RSP0/CPU0:Sep 29 09:09:15.696 CEST: bgp[1087]: [default-iowt] VRF 10: ffff ffff ffff ffff ffff ffff ffff ffff 
+RP/0/RSP0/CPU0:Sep 29 09:09:15.696 CEST: bgp[1087]: [default-upd] VRF 10: table-attr walk for table TBL:10 (1/1), resume version 0, subgrp version 666, target version 668
+RP/0/RSP0/CPU0:Sep 29 09:09:15.696 CEST: bgp[1087]: [default-iowt] VRF 10: 001c 0200 051e 0a01 0100 0000  
+RP/0/RSP0/CPU0:Sep 29 09:09:15.696 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): process UPDATE for: tbl=TBL:10 (1/1), afi=0: ug=0.2, (Regular), pelem (Regular), sg=0.2, ugfl=0x00014001: bgpctxfl=0x23, tblctxfl=0x00000221, ltblctxfl=0x00000221, sendlab=0: net=10.1.1.0/30, nver=668: PELEM=161f4718 (lpathid=1, ver=668, fl=0x02027001): PATH=0 (NULL,0.0.0.0,0, 0x0)::: allowbe=0, isbe=0, allowspurwdr=0, pelem-send=1, pelem-wdr=0
+RP/0/RSP0/CPU0:Sep 29 09:09:15.696 CEST: bgp[1087]: [default-iowt] VRF 10 (ip4u): Deleting msg elem 0x1521e058 (message 0x15128d44), for filtergroup 0.1
+RP/0/RSP0/CPU0:Sep 29 09:09:15.696 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Created withdraw message 0x151295e4, for filtergroup 0.2
+RP/0/RSP0/CPU0:Sep 29 09:09:15.696 CEST: bgp[1087]: [default-iowt] VRF 10 (ip4u): Deleting message 0x15128d44, from subgroup 0.1
+RP/0/RSP0/CPU0:Sep 29 09:09:15.696 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Created msg elem 0x1521e010 (pointing to message 0x151295e4), for filtergroup 0.2
+RP/0/RSP0/CPU0:Sep 29 09:09:15.696 CEST: bgp[1087]: [default-upd] VRF 10 (ip4u): Sending UPDATE (creating new msg) to sub-group 0.2 (Regular) pelem (Regular) filter-group0.2 with 10.1.1.0/30 (changedfl=0x0/0x2027000, bmsgflags=0x00000000, originator 0.0.0.0) unreachable (no path is available)
+RP/0/RSP0/CPU0:Sep 29 09:09:15.696 CEST: bgp[1087]: [default-upd] VRF 10: table-attr walk for table TBL:10 (1/1), resume version 0, subgrp version 666, target version 668
+RP/0/RSP0/CPU0:Sep 29 09:09:15.696 CEST: bgp[1087]: [default-iowt] VRF 10: 10.100.1.1 send UPDATE length (incl. header) 28
+RP/0/RSP0/CPU0:Sep 29 09:09:15.696 CEST: bgp[1087]: [default-iowt] VRF 10: Send message dump for 10.100.1.1:
+RP/0/RSP0/CPU0:Sep 29 09:09:15.696 CEST: bgp[1087]: [default-iowt] VRF 10: ffff ffff ffff ffff ffff ffff ffff ffff 
+RP/0/RSP0/CPU0:Sep 29 09:09:15.696 CEST: bgp[1087]: [default-iowt] VRF 10: 001c 0200 051e 0a01 0100 0000  
+RP/0/RSP0/CPU0:Sep 29 09:09:15.696 CEST: bgp[1087]: [default-iowt] VRF 10 (ip4u): Deleting msg elem 0x1521e010 (message 0x151295e4), for filtergroup 0.2
+RP/0/RSP0/CPU0:Sep 29 09:09:15.696 CEST: bgp[1087]: [default-iowt] VRF 10 (ip4u): Deleting message 0x151295e4, from subgroup 0.2
+RP/0/RSP0/CPU0:Sep 29 09:09:21.241 CEST: tclsh[65605]: %HA-HA_EEM-5-ACTION_SYSLOG_LOG_NOTICE : lpts-threshold-alerting.tcl: LPTS drop threshold (10) exceeded for flow type PUNT_FOR_ICMP on 0/1/CPU0, 6395 drops in last 60 seconds. 
+RP/0/RSP1/CPU0:Sep 29 09:09:31.991 CEST: bgp[1087]: [default-crit]: IDB: Tmr expired: 'BG'
+RP/0/RSP1/CPU0:Sep 29 09:09:31.991 CEST: bgp[1087]: [default-crit]: IDB: Tmr started: 'BG', 60 sec
+RP/0/RSP1/CPU0:Sep 29 09:09:33.012 CEST: bgp[1087]: [default-event]: Performing BGP generic scan
+RP/0/RSP1/CPU0:Sep 29 09:09:33.012 CEST: bgp[1087]: [default-event]: attr free(0x1563a91c), refcnt 1
+RP/0/RSP1/CPU0:Sep 29 09:09:33.012 CEST: bgp[1087]: [default-event]: attr free(0x15639cbc), refcnt 1
+RP/0/RSP1/CPU0:Sep 29 09:09:33.013 CEST: bgp[1087]: [default-event]: Finished BGP generic scan
+ 
+RP/0/RSP0/CPU0:SPN-LAB-AGG05#RP/0/RSP1/CPU0:Sep 29 09:09:38.091 CEST: bgp[1087]: [default-event] (vpn4u): Scanning VPNv4 unicast routing table
+RP/0/RSP1/CPU0:Sep 29 09:09:38.091 CEST: bgp[1087]: [default-event] (vpn4u): Prefix count 39, Segment count 1, Segment size 100000
+RP/0/RSP1/CPU0:Sep 29 09:09:38.091 CEST: bgp[1087]: [default-event] (vpn4u): Finished scanning VPNv4 unicast routing table
+RP/0/RSP1/CPU0:Sep 29 09:09:38.091 CEST: bgp[1087]: [default-event] (vpn6u): Scanning VPNv6 unicast routing table
+RP/0/RSP1/CPU0:Sep 29 09:09:38.091 CEST: bgp[1087]: [default-event] (vpn6u): Prefix count 13, Segment count 1, Segment size 100000
+RP/0/RSP1/CPU0:Sep 29 09:09:38.091 CEST: bgp[1087]: [default-event] (vpn6u): Finished scanning VPNv6 unicast routing table
+RP/0/RSP1/CPU0:Sep 29 09:09:38.091 CEST: bgp[1087]: [default-event] (ip4u): Scanning IPv4 unicast routing table
+RP/0/RSP1/CPU0:Sep 29 09:09:38.091 CEST: bgp[1087]: [default-event] (ip4u): Prefix count 0, Segment count 1, Segment size 100000
+RP/0/RSP1/CPU0:Sep 29 09:09:38.091 CEST: bgp[1087]: [default-event] (ip4u): Finished scanning IPv4 unicast routing table
+RP/0/RSP1/CPU0:Sep 29 09:09:38.091 CEST: bgp[1087]: [default-event] (ip6u): Scanning IPv6 Unicast routing table
+RP/0/RSP1/CPU0:Sep 29 09:09:38.091 CEST: bgp[1087]: [default-event] (ip6u): Prefix count 0, Segment count 1, Segment size 100000
+RP/0/RSP1/CPU0:Sep 29 09:09:38.091 CEST: bgp[1087]: [default-event] (ip6u): Finished scanning IPv6 Unicast routing table
+RP/0/RSP0/CPU0:SPN-LAB-AGG05#no debug all
+Tue Sep 29 09:09:41.970 CEST
+All possible debugging has been turned off
+RP/0/RSP0/CPU0:SPN-LAB-AGG05#
+
+
+
+RP/0/RSP0/CPU0:SPN-LAB-AGG05#LC/0/0/CPU0:Sep 29 09:37:18.393 CEST: ifmgr[209]: %PKT_INFRA-LINK-3-UPDOWN : Interface FortyGigE0/0/0/0/0, changed state to Down 
+LC/0/0/CPU0:Sep 29 09:37:18.393 CEST: ifmgr[209]: %PKT_INFRA-LINEPROTO-5-UPDOWN : Line protocol on Interface FortyGigE0/0/0/0/0, changed state to Down 
+RP/0/RSP0/CPU0:Sep 29 09:37:18.397 CEST: bgp[1087]: %ROUTING-BGP-5-ADJCHANGE : neighbor 10.1.1.2 Down - Interface flap (VRF: 10) (AS: 4200042517) 
+RP/0/RSP0/CPU0:Sep 29 09:37:18.398 CEST: ipv4_rib[1202]: RIB Routing: Vrf: "10", Tbl: "default" IPv4 Unicast, Delete active route to 10.1.1.0 via 10.1.1.1 interface FortyGigE0/0/0/0/0.200, metric [0/0], label None, by client-id 6
+RP/0/RSP0/CPU0:Sep 29 09:37:18.398 CEST: ipv4_rib[1202]: RIB Routing: Vrf: "10", Tbl: "default" IPv4 Unicast, Delete active route to 10.1.1.1 via 0.0.0.0 interface FortyGigE0/0/0/0/0.200, metric [0/0], label None, by client-id 3
+RP/0/RSP1/CPU0:Sep 29 09:37:18.401 CEST: bgp[1087]: %ROUTING-BGP-5-NBR_NSR_DISABLED_STANDBY : NSR disabled on neighbor 10.1.1.2 on standby RP due to Interface flap (VRF: 10) 
+RP/0/RSP1/CPU0:Sep 29 09:37:18.402 CEST: ipv4_rib[1202]: RIB Routing: Vrf: "10", Tbl: "default" IPv4 Unicast, Delete active route to 10.1.1.1 via 0.0.0.0 interface FortyGigE0/0/0/0/0.200, metric [0/0], label None, by client-id 8
+RP/0/RSP1/CPU0:Sep 29 09:37:18.402 CEST: ipv4_rib[1202]: RIB Routing: Vrf: "10", Tbl: "default" IPv4 Unicast, Delete active route to 10.1.1.0 via 10.1.1.1 interface FortyGigE0/0/0/0/0.200, metric [0/0], label None, by client-id 4
+RP/0/RSP0/CPU0:Sep 29 09:37:18.403 CEST: ipv4_rib[1202]: RIB Routing: Vrf: "10", Tbl: "default" IPv4 Unicast, Delete active route to 2.2.2.0 via 10.1.1.2 interface None, metric [20/0], label None, by client-id 13
+RP/0/RSP0/CPU0:Sep 29 09:37:18.403 CEST: ipv4_rib[1202]: RIB Routing: Vrf: "10", Tbl: "default" IPv4 Unicast, Add active route 2.2.2.0/24 via 10.1.3.2 interface None, metric [20/0] (fl: 0x200/0x2604) label None, by client bgp
+RP/0/RSP0/CPU0:Sep 29 09:37:18.403 CEST: ipv4_rib[1202]: RIB Routing: Vrf: "10", Tbl: "default" IPv4 Unicast, Delete active route to 110.110.110.0 via 10.1.1.2 interface None, metric [20/0], label None, by client-id 13
+RP/0/RSP0/CPU0:Sep 29 09:37:18.403 CEST: ipv4_rib[1202]: RIB Routing: Vrf: "10", Tbl: "default" IPv4 Unicast, Add active route 110.110.110.0/24 via 10.1.3.2 interface None, metric [20/0] (fl: 0x200/0x2604) label None, by client bgp
+RP/0/RSP1/CPU0:Sep 29 09:37:18.407 CEST: ipv4_rib[1202]: RIB Routing: Vrf: "10", Tbl: "default" IPv4 Unicast, Delete active route to 2.2.2.0 via 10.1.1.2 interface None, metric [20/0], label None, by client-id 14
+RP/0/RSP1/CPU0:Sep 29 09:37:18.407 CEST: ipv4_rib[1202]: RIB Routing: Vrf: "10", Tbl: "default" IPv4 Unicast, Add active route 2.2.2.0/24 via 10.1.3.2 interface None, metric [20/0] (fl: 0x200/0x2604) label None, by client bgp
+RP/0/RSP1/CPU0:Sep 29 09:37:18.408 CEST: ipv4_rib[1202]: RIB Routing: Vrf: "10", Tbl: "default" IPv4 Unicast, Delete active route to 110.110.110.0 via 10.1.1.2 interface None, metric [20/0], label None, by client-id 14
+RP/0/RSP1/CPU0:Sep 29 09:37:18.408 CEST: ipv4_rib[1202]: RIB Routing: Vrf: "10", Tbl: "default" IPv4 Unicast, Add active route 110.110.110.0/24 via 10.1.3.2 interface None, metric [20/0] (fl: 0x200/0x2604) label None, by client bgp
+LC/0/0/CPU0:Sep 29 09:37:19.394 CEST: vic_0_0[371]: %PLATFORM-VIC-4-RX_LOS : Interface FortyGigE0/0/0/0/0, Detected Rx Loss of Signal 
+LC/0/0/CPU0:Sep 29 09:37:19.394 CEST: inv_agent[216]: %PLATFORM-INV_AGENT-6-IF_OIROUT : xFP OIR: HundredGigE0/0/CPU0/0 Sn: AVM2417U1JK      is removed, state: 0  

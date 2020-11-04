@@ -1,0 +1,47 @@
+RP/0/RSP1/CPU0:SPN-LAB-AGG05#LC/0/1/CPU0:Sep 23 11:05:52.417 CEST: ifmgr[209]: %PKT_INFRA-LINK-3-UPDOWN : Interface GigabitEthernet0/1/0/8, changed state to Down 
+LC/0/1/CPU0:Sep 23 11:05:52.418 CEST: ifmgr[209]: %PKT_INFRA-LINEPROTO-5-UPDOWN : Line protocol on Interface GigabitEthernet0/1/0/8, changed state to Down 
+RP/0/RSP1/CPU0:Sep 23 11:05:52.421 CEST: BM-DISTRIB[1219]: %L2-BM-6-ACTIVE : GigabitEthernet0/1/0/8 is no longer Active as part of Bundle-Ether1 (Link is down) 
+LC/0/1/CPU0:Sep 23 11:05:53.572 CEST: vic_0_2[377]: %PLATFORM-VIC-4-RX_LOS : Interface GigabitEthernet0/1/0/8, Detected Rx Loss of Signal 
+LC/0/1/CPU0:Sep 23 11:05:54.479 CEST: ifmgr[209]: %PKT_INFRA-LINK-3-UPDOWN : Interface GigabitEthernet0/1/0/9, changed state to Down 
+LC/0/1/CPU0:Sep 23 11:05:54.479 CEST: ifmgr[209]: %PKT_INFRA-LINEPROTO-5-UPDOWN : Line protocol on Interface GigabitEthernet0/1/0/9, changed state to Down 
+RP/0/RSP1/CPU0:Sep 23 11:05:54.483 CEST: BM-DISTRIB[1219]: %L2-BM-6-ACTIVE : GigabitEthernet0/1/0/9 is no longer Active as part of Bundle-Ether1 (Link is down) 
+RP/0/RSP1/CPU0:Sep 23 11:05:54.501 CEST: ipv4_rib[1202]: RIB Routing: Vrf: "1", Tbl: "default" IPv4 Unicast, Delete active route to 89.248.142.81 via 0.0.0.0 interface Bundle-Ether1.2020, metric [0/0], label None, by client-id 6
+RP/0/RSP1/CPU0:Sep 23 11:05:54.501 CEST: ipv4_rib[1202]: RIB Routing: Vrf: "1", Tbl: "default" IPv4 Unicast, Delete active route to 89.248.142.80 via 89.248.142.81 interface Bundle-Ether1.2020, metric [0/0], label None, by client-id 4
+RP/0/RSP0/CPU0:Sep 23 11:05:54.501 CEST: ipv4_rib[1202]: RIB Routing: Vrf: "1", Tbl: "default" IPv4 Unicast, Delete active route to 89.248.142.80 via 89.248.142.81 interface Bundle-Ether1.2020, metric [0/0], label None, by client-id 11
+RP/0/RSP0/CPU0:Sep 23 11:05:54.501 CEST: ipv4_rib[1202]: RIB Routing: Vrf: "1", Tbl: "default" IPv4 Unicast, Delete active route to 89.248.142.81 via 0.0.0.0 interface Bundle-Ether1.2020, metric [0/0], label None, by client-id 9
+RP/0/RSP1/CPU0:Sep 23 11:05:54.505 CEST: bgp[1087]: [default-upd] VRF 1 (ip4u): Started updgrp timer for updgrp 0.1:: delay=0.010, delaytype=0
+RP/0/RSP1/CPU0:Sep 23 11:05:54.505 CEST: bgp[1087]: [default-upd] VRF 1 (ip6u): Started updgrp timer for updgrp 0.1:: delay=0.010, delaytype=0
+RP/0/RSP1/CPU0:Sep 23 11:05:54.505 CEST: ipv4_rib[1202]: RIB Routing: Vrf: "1", Tbl: "default" IPv4 Unicast, Closer admin distance for 89.248.142.80, flushing 1 routes
+RP/0/RSP1/CPU0:Sep 23 11:05:54.505 CEST: ipv4_rib[1202]: RIB Routing: Vrf: "1", Tbl: "default" IPv4 Unicast, Add active route 89.248.142.80/29 via 6.6.6.6 (nexthop in 0xe0000000) interface None, metric [200/0] (fl: 0x0/0x2600) label 24004, by client bgp
+RP/0/RSP0/CPU0:Sep 23 11:05:54.506 CEST: ipv4_rib[1202]: RIB Routing: Vrf: "1", Tbl: "default" IPv4 Unicast, Closer admin distance for 89.248.142.80, flushing 1 routes
+RP/0/RSP0/CPU0:Sep 23 11:05:54.506 CEST: ipv4_rib[1202]: RIB Routing: Vrf: "1", Tbl: "default" IPv4 Unicast, Add active route 89.248.142.80/29 via 6.6.6.6 (nexthop in 0xe0000000) interface None, metric [200/0] (fl: 0x0/0x2600) label 24004, by client rib_master
+RP/0/RSP1/CPU0:Sep 23 11:05:54.516 CEST: bgp[1087]: [default-upd] VRF 1: table-attr walk for table TBL:1 (2/1), resume version 0, subgrp version 82064, target version 82066
+RP/0/RSP1/CPU0:Sep 23 11:05:54.516 CEST: bgp[1087]: [default-upd] VRF 1 (ip4u): Starting updgen walk for updgrp 0.1:: targetver=82214:  tblver=82214, labelver=82214, minfwdver=82214, ackdfwdver=82214, standbyver=82214
+RP/0/RSP1/CPU0:Sep 23 11:05:54.516 CEST: bgp[1087]: [default-upd] VRF 1 (vpn4u): Computing updates for update sub-group 0.1 (Regular)
+RP/0/RSP1/CPU0:Sep 23 11:05:54.516 CEST: bgp[1087]: [default-upd] VRF 1: table-attr walk for table TBL:1 (1/1), resume version 0, subgrp version 82212, target version 82214
+RP/0/RSP1/CPU0:Sep 23 11:05:54.516 CEST: bgp[1087]: [default-upd] VRF 1 (ip4u): process UPDATE for: tbl=TBL:1 (1/1), afi=0: ug=0.1, (Regular), pelem (Regular), sg=0.1, ugfl=0x00004001: bgpctxfl=0x23, tblctxfl=0x00000221, ltblctxfl=0x00000221, sendlab=0: net=89.248.142.80/29, nver=82214: PELEM=1650b66c (lpathid=1, ver=82214, fl=0x02022001): PATH=17736260 (6.6.6.6/32,6.6.6.6,0, 0x4000000005460005)::: allowbe=0, isbe=0, allowspurwdr=0, pelem-send=1, pelem-wdr=0
+RP/0/RSP1/CPU0:Sep 23 11:05:54.516 CEST: bgp[1087]: [default-upd] VRF 1 (ip4u): No unreachable (dropped by out-bound policy) sent to sub-group 0.1 (Regular) with 89.248.142.80/29 - already withdrawn
+RP/0/RSP1/CPU0:Sep 23 11:05:54.516 CEST: bgp[1087]: [default-upd] VRF 1: table-attr walk for table TBL:1 (1/1), resume version 0, subgrp version 82212, target version 82214
+RP/0/RSP1/CPU0:Sep 23 11:05:54.516 CEST: bgp[1087]: [default-upd] VRF 1 (ip6u): Starting updgen walk for updgrp 0.1:: targetver=82066:  tblver=82066, labelver=82066, minfwdver=82066, ackdfwdver=82066, standbyver=82066
+RP/0/RSP1/CPU0:Sep 23 11:05:54.516 CEST: bgp[1087]: [default-upd] VRF 1 (vpn6u): Computing updates for update sub-group 0.1 (Regular)
+RP/0/RSP1/CPU0:Sep 23 11:05:54.516 CEST: bgp[1087]: [default-upd] VRF 1: table-attr walk for table TBL:1 (2/1), resume version 0, subgrp version 82064, target version 82066
+RP/0/RSP1/CPU0:Sep 23 11:05:54.516 CEST: bgp[1087]: [default-upd] VRF 1 (ip6u): process UPDATE for: tbl=TBL:1 (2/1), afi=5: ug=0.1, (Regular), pelem (Regular), sg=0.1, ugfl=0x00004201: bgpctxfl=0x23, tblctxfl=0x00000221, ltblctxfl=0x00000221, sendlab=0: net=2a00:1ae8:cafe:cafe::/64, nver=82066: PELEM=16f7282c (lpathid=1, ver=82066, fl=0x02022001): PATH=17756b68 (6.6.6.6/32,6.6.6.6,0, 0x4000000005460005)::: allowbe=0, isbe=0, allowspurwdr=0, pelem-send=1, pelem-wdr=0
+RP/0/RSP1/CPU0:Sep 23 11:05:54.516 CEST: bgp[1087]: [default-upd] VRF 1 (ip6u): Permit UPDATE to filter-group 0.1 (Regular, pelem Regular) for 2a00:1ae8:cafe:cafe::/64 (changedfl=0x1000000/0x2022000), path 
+RP/0/RSP1/CPU0:Sep 23 11:05:54.516 CEST: bgp[1087]: [default-upd] VRF 1 (ip6u): Sending UPDATE message(0x15087930) to sub-group 0.1 (Regular, pelem Regular) for 2a00:1ae8:cafe:cafe::/64 (changedfl=0x1000000/0x2022000) -  creating new message with bmsgflags=0x00000004, attributes: nexthop ::, originator 0.0.0.0
+RP/0/RSP1/CPU0:Sep 23 11:05:54.516 CEST: bgp[1087]: [default-upd] VRF 1 (ip6u): origin ?, path 42517, community 42517:1040
+RP/0/RSP1/CPU0:Sep 23 11:05:54.516 CEST: bgp[1087]: [default-upd] VRF 1 (ip6u): Created msg elem 0x15219f50 (pointing to message 0x15087930), for filtergroup 0.1
+RP/0/RSP1/CPU0:Sep 23 11:05:54.516 CEST: bgp[1087]: [default-upd] VRF 1 (ip6u): Generated 1 updates for update sub-group 0.1 (average size = 93 bytes, maximum size = 93 bytes)
+RP/0/RSP1/CPU0:Sep 23 11:05:54.516 CEST: bgp[1087]: [default-upd] VRF 1 (ip6u): Updates replicated to neighbor 2001:978:2:b1::1
+RP/0/RSP1/CPU0:Sep 23 11:05:54.516 CEST: bgp[1087]: [default-iowt] VRF 1: 2001:978:2:b1::1 send UPDATE length (incl. header) 93
+RP/0/RSP1/CPU0:Sep 23 11:05:54.516 CEST: bgp[1087]: [default-iowt] VRF 1: Send message dump for 2001:978:2:b1::1:
+RP/0/RSP1/CPU0:Sep 23 11:05:54.516 CEST: bgp[1087]: [default-iowt] VRF 1: ffff ffff ffff ffff ffff ffff ffff ffff 
+RP/0/RSP1/CPU0:Sep 23 11:05:54.516 CEST: bgp[1087]: [default-iowt] VRF 1: 005d 0200 0000 4690 0e00 2e00 0201 2020 
+RP/0/RSP1/CPU0:Sep 23 11:05:54.516 CEST: bgp[1087]: [default-iowt] VRF 1: 0109 7800 0200 b100 0000 0000 0000 02fe 
+RP/0/RSP1/CPU0:Sep 23 11:05:54.516 CEST: bgp[1087]: [default-iowt] VRF 1: 8000 0000 0000 00ae 7a56 fffe 1f96 e200 
+RP/0/RSP1/CPU0:Sep 23 11:05:54.516 CEST: bgp[1087]: [default-iowt] VRF 1: 402a 001a e8ca feca fe40 0101 0240 0206 
+RP/0/RSP1/CPU0:Sep 23 11:05:54.516 CEST: bgp[1087]: [default-iowt] VRF 1: 0201 0000 a615 c008 04a6 1504 10 
+RP/0/RSP1/CPU0:Sep 23 11:05:54.516 CEST: bgp[1087]: [default-iowt] VRF 1 (ip6u): Deleting msg elem 0x15219f50 (message 0x15087930), for filtergroup 0.1
+RP/0/RSP1/CPU0:Sep 23 11:05:54.516 CEST: bgp[1087]: [default-iowt] VRF 1 (ip6u): Deleting message 0x15087930, from subgroup 0.1
+RP/0/RSP1/CPU0:Sep 23 11:05:54.548 CEST: ipv4_rib[1202]: RIB Routing: Vrf: "1", Tbl: "default" IPv4 Unicast, Delete active route to 89.248.142.86 via 89.248.142.86 interface Bundle-Ether1.2020, metric [0/0], label None, by client-id 29
+RP/0/RSP0/CPU0:Sep 23 11:05:54.552 CEST: ipv4_rib[1202]: RIB Routing: Vrf: "1", Tbl: "default" IPv4 Unicast, Delete active route to 89.248.142.86 via 89.248.142.86 interface Bundle-Ether1.2020, metric [254/0], label None, by client-id 1
+LC/0/1/CPU0:Sep 23 11:05:55.647 CEST: vic_0_2[377]: %PLATFORM-VIC-4-SIGNAL : Interface GigabitEthernet0/1/0/9, Detected Signal failure 

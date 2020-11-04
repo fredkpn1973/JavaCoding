@@ -1,0 +1,129 @@
+router bgp 42517
+ nsr
+ bgp router-id 5.5.5.5
+ bgp graceful-restart
+ address-family ipv4 unicast
+ !
+ address-family vpnv4 unicast
+ !
+ address-family ipv6 unicast
+ !
+ address-family vpnv6 unicast
+ !
+ neighbor-group MESH
+  remote-as 42517
+  keychain BGP_SPN_KC
+  description iBGP peering
+  update-source Loopback0
+  address-family vpnv4 unicast
+   next-hop-self
+  !
+  address-family vpnv6 unicast
+   next-hop-self
+  !
+ !
+ neighbor-group Cloud-internal
+  remote-as 4200042517
+  address-family ipv4 unicast
+   route-policy SPN_PASS_ALL_RPL in
+   route-policy SPN_PASS_ALL_RPL out
+  !
+ !
+ neighbor 6.6.6.6
+  use neighbor-group MESH
+ !
+ vrf 1
+  rd auto
+  label mode per-ce
+  address-family ipv4 unicast
+   bgp dampening 15 750 2000 60
+   maximum-paths ibgp 2
+   aggregate-address 1.0.0.0/8 summary-only
+   aggregate-address 109.69.224.0/21 summary-only
+   redistribute connected
+   redistribute static
+  !
+  address-family ipv6 unicast
+   bgp dampening 15 750 2000 60
+   maximum-paths ibgp 2
+   aggregate-address 2a00:1ae8::/32 summary-only
+   redistribute connected
+   redistribute static
+  !
+  neighbor 10.23.63.230
+   remote-as 65000
+   enforce-first-as disable
+   address-family ipv4 unicast
+    route-policy SPN_PASS_ALL_RPL in
+    route-policy SPN_PASS_ALL_RPL out
+   !
+  !
+  neighbor 149.11.158.1
+   remote-as 174
+   timers 3 30
+   password encrypted 111D1C1603
+   ttl-security
+   address-family ipv4 unicast
+    send-community-ebgp
+    route-policy COGENT-IN in
+    route-policy COGENT_PEERING_OUT_RPL out
+   !      
+  !
+  neighbor 2001:978:2:b1::1
+   remote-as 174
+   address-family ipv6 unicast
+    send-community-ebgp
+    route-policy SPN_PASS_ALL_RPL in
+    route-policy SPN_PASS_ALL_RPL out
+   !
+  !
+  neighbor 2a02:120:4049:13f::230
+   remote-as 65000
+   shutdown
+   enforce-first-as disable
+   address-family ipv6 unicast
+    route-policy SPN_PASS_ALL_RPL in
+    route-policy SPN_PASS_ALL_RPL out
+   !
+  !
+ !
+ vrf 2
+  rd auto
+  label mode per-ce
+  address-family ipv4 unicast
+   aggregate-address 145.35.0.0/16 summary-only
+   redistribute connected
+   redistribute static
+  !
+  address-family ipv6 unicast
+  !
+ !
+ vrf 10
+  rd auto
+  label mode per-ce
+  address-family ipv4 unicast
+   maximum-paths ibgp 2
+   aggregate-address 55.55.54.0/23 summary-only
+   aggregate-address 110.110.0.0/16 summary-only
+   redistribute connected
+  !
+  neighbor 10.1.1.2
+   use neighbor-group Cloud-internal
+  !
+  neighbor 10.1.3.2
+   use neighbor-group Cloud-internal
+  !
+  neighbor 10.100.1.1
+   remote-as 174
+   local-as 64512 no-prepend replace-as
+   address-family ipv4 unicast
+    send-community-ebgp
+    route-policy COGENT_PEERING_IN_RPL in
+    maximum-prefix 2048000 75 discard-extra-paths
+    route-policy COGENT_PEERING_OUT_RPL out
+   !
+  !
+ !
+!
+
+RP/0/RSP0/CPU0:SPN-LAB-AGG05#  

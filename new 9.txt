@@ -1,0 +1,33 @@
+ip access-list extended from-BGP-peers-15
+ remark --- Deny own & customer networks incoming
+ sequence 10 deny ip 10.0.0.0 0.255.255.255 any 
+ sequence 20 deny ip 172.16.0.0 0.15.255.255 any 
+ sequence 30 deny ip 192.168.0.0 0.0.255.255 any 
+ sequence 40 deny ip 77.241.224.0 0.0.15.255 any 
+ sequence 50 deny ip 109.69.224.0 0.0.7.255 any 
+ sequence 60 deny ip 145.35.0.0 0.0.255.255 any 
+ sequence 70 deny ip 194.229.29.0 0.0.0.255 any 
+ sequence 80 deny ip 89.248.128.0 0.0.15.255 any 
+ sequence 90 deny ip 0.0.0.0 0.255.255.255 any 
+ remark --- Permit ntp from uunet
+ sequence 370 permit udp host 193.67.79.202 eq ntp any eq ntp 
+ sequence 380 permit udp host 194.151.25.195 eq ntp any eq ntp 
+ remark --- Permit outside access from Qi ict all
+ sequence 390 permit ip 46.243.44.0 0.0.1.255 any 
+
+ 
+ 
+ remark --- Permit icmp to the rest
+ sequence 7390 permit icmp any any 
+ remark --- Permit own & customer networks to go out to internet
+ sequence 7400 permit ip any 77.241.224.0 0.0.15.255 
+ sequence 7410 permit ip any 109.69.224.0 0.0.7.255 
+ sequence 7420 permit ip any 145.35.0.0 0.0.255.255 
+ sequence 7430 permit ip any 194.229.29.0 0.0.0.255 
+ sequence 7440 permit ip any 89.248.128.0 0.0.15.255 
+ sequence 7450 permit ip any 194.53.130.0 0.0.1.255 
+ sequence 7460 permit ip any 194.53.132.0 0.0.1.255 
+ sequence 7470 permit ip any 194.53.134.0 0.0.0.255 
+ sequence 7480 permit ip any 224.0.0.0 15.255.255.255 
+ remark --- Deny the rest
+ sequence 7490 deny ip any any 

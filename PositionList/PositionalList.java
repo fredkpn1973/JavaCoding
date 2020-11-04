@@ -1,23 +1,19 @@
 
-public interface PositionalList<E> { 3
+public interface PositionalList<E> {
 
-    int size( );
+    int size();
 
-    boolean isEmpty( );
+    boolean isEmpty();
 
+    Position<E> first();
 
-     Position<E> first( );
-
-
-    Position<E> last( );
+    Position<E> last();
 
     Position<E> before(Position<E> p) throws IllegalArgumentException;
 
     Position<E> after(Position<E> p) throws IllegalArgumentException;
 
-
     Position<E> addFirst(E e);
-
 
     Position<E> addLast(E e);
 
@@ -28,4 +24,4 @@ public interface PositionalList<E> { 3
     E set(Position<E> p, E e) throws IllegalArgumentException;
 
     E remove(Position<E> p) throws IllegalArgumentException;
- }
+}

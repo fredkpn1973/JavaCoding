@@ -1,13 +1,11 @@
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-
 public class LinkedPositionalList<E> implements PositionalList<E> {
 
     private static class Node<E> implements Position<E> {
 
-
-        private E element; 
+        private E element;
         private Node<E> prev; // reference to the previous node in the list
 
         /** A reference to the subsequent node in the list */
@@ -371,7 +369,7 @@ public class LinkedPositionalList<E> implements PositionalList<E> {
      * 
      * @return iterable representation of the list's positions
      */
-    @Override
+    // @Override
     public Iterable<Position<E>> positions() {
         return new PositionIterable(); // create a new instance of the inner class
     }
@@ -401,7 +399,7 @@ public class LinkedPositionalList<E> implements PositionalList<E> {
      * 
      * @return iterator of the list's elements
      */
-    @Override
+    // @Override
     public Iterator<E> iterator() {
         return new ElementIterator();
     }

@@ -101,8 +101,11 @@ public class LinkedStack<E> implements Stack<E> {
     return list.toString();
   }
 
-  public LinkedStack<E> clone() throws CloneNotSupportedException {
-    return list.clone();
+  public void cleanStack() {
+    while (!isEmpty()) {
+      pop();
+      cleanStack();
+    }
   }
 
 }

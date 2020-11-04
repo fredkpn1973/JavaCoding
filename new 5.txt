@@ -1,0 +1,49 @@
+#################################################
+## Laat alles binnen
+## naar buiten wat?
+## 
+
+ ip as-path access-list 2 seq 5 permit .*
+ !
+ ip as-path access-list st-all seq 1 permit ^_
+ ip as-path access-list st-all seq 2 permit ^64512_
+ ip as-path access-list st-all seq 3 permit ^64513_
+ !
+ neighbor 82.150.157.249 filter-list 2 in
+ neighbor 82.150.157.249 filter-list st-all out
+ neighbor 82.150.157.249 route-map in nltransit-in
+ neighbor 82.150.157.249 route-map out nltransit-out
+ neighbor 82.150.157.249 send-community
+ 
+ neighbor 82.150.157.250 filter-list 2 in
+ neighbor 82.150.157.250 filter-list st-all out
+ neighbor 82.150.157.250 route-map in nltransit-in
+ neighbor 82.150.157.250 route-map out nltransit-out
+ neighbor 82.150.157.250 send-community
+ !
+ 
+#############################################
+## Geen RFC1918
+## Geen eigen netwerken
+## Deny subnet 5.61.83.0/24 
+## zet local pref op 100 en communtiy op 42517:10000
+route-map nltransit-in deny 10
+ match ip address prefix-list rfc1918
+route-map nltransit-in deny 11
+ match ip address prefix-list deny-own-networks
+route-map nltransit-in permit 40
+ set local-preference 100 
+ set community  42517:10000
+!
+
+######################################################
+## Geen RFC1918
+## Alleen /25 en grooter
+## deny 701:9881, permit 42517:6000, permit 42517:7000, 702:9881 
+route-map nltransit-out deny 5
+ match ip address prefix-list rfc1918
+route-map nltransit-out deny 6
+ match ip address prefix-list 25bits-and-up
+route-map nltransit-out permit 10
+ match community announce-nltransit
+!

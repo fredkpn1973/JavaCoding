@@ -1,0 +1,2191 @@
+ipv6 access-list from-ipv6-BGP-peers-1
+ remark --- Deny own & customer networks incoming
+ deny ipv6 2a00:1ae8::/32 any sequence 10 
+ remark --- Permit BGP from Openpeering JOINTTRANSIT TER15 router
+ permit tcp host 2a02:10:0:1::44:1 eq bgp host 2a02:10:0:1::44:10 sequence 20 
+ permit tcp host 2a02:10:0:1::44:1 host 2a02:10:0:1::44:10 eq bgp sequence 30 
+ permit tcp host 2a02:10:0:1::44:2 eq bgp host 2a02:10:0:1::44:10 sequence 40 
+ permit tcp host 2a02:10:0:1::44:2 host 2a02:10:0:1::44:10 eq bgp sequence 50 
+ permit tcp host 2a02:10:0:1::44:3 eq bgp host 2a02:10:0:1::44:10 sequence 60 
+ permit tcp host 2a02:10:0:1::44:3 host 2a02:10:0:1::44:10 eq bgp sequence 70 
+ permit icmp host 2a02:10:0:1::44:1 any nd-na sequence 80 
+ permit icmp host 2a02:10:0:1::44:1 any nd-ns sequence 90 
+ permit icmp host 2a02:10:0:1::44:2 any nd-na sequence 100 
+ permit icmp host 2a02:10:0:1::44:2 any nd-ns sequence 110 
+ permit icmp host 2a02:10:0:1::44:3 any nd-na sequence 120 
+ permit icmp host 2a02:10:0:1::44:3 any nd-ns sequence 130 
+ permit icmp any host 2a02:10:0:1::44:10 echo-reply sequence 140 
+ permit icmp any host 2a02:10:0:1::44:10 echo-request sequence 150 
+ permit icmp any host 2a02:10:0:1::44:10 unreachable sequence 160 
+ permit icmp any host 2a02:10:0:1::44:10 port-unreachable sequence 170 
+ permit icmp any host 2a02:10:0:1::44:10 time-exceeded sequence 180 
+ remark --- Permit BGP from Openpeering NLTRANSIT TER15 router
+ permit tcp host 2a02:10:1:1::23:1 eq bgp host 2a02:10:1:1::23:10 sequence 190 
+ permit tcp host 2a02:10:1:1::23:1 host 2a02:10:1:1::23:10 eq bgp sequence 200 
+ permit tcp host 2a02:10:1:1::23:2 eq bgp host 2a02:10:1:1::23:10 sequence 210 
+ permit tcp host 2a02:10:1:1::23:2 host 2a02:10:1:1::23:10 eq bgp sequence 220 
+ permit icmp host 2a02:10:1:1::23:1 any nd-na sequence 230 
+ permit icmp host 2a02:10:1:1::23:1 any nd-ns sequence 240 
+ permit icmp host 2a02:10:1:1::23:2 any nd-na sequence 250 
+ permit icmp host 2a02:10:1:1::23:2 any nd-ns sequence 260 
+ permit icmp any host 2a02:10:1:1::23:10 echo-reply sequence 270 
+ permit icmp any host 2a02:10:1:1::23:10 echo-request sequence 280 
+ permit icmp any host 2a02:10:1:1::23:10 unreachable sequence 290 
+ permit icmp any host 2a02:10:1:1::23:10 port-unreachable sequence 300 
+ permit icmp any host 2a02:10:1:1::23:10 time-exceeded sequence 310 
+ remark --- Permit BGP from Cogent TER15 router
+ permit tcp host 2001:978:2:b1::1 eq bgp host 2001:978:2:b1::2 sequence 320 
+ permit tcp host 2001:978:2:b1::1 host 2001:978:2:b1::2 eq bgp sequence 330 
+ permit icmp host 2001:978:2:b1::1 any nd-na sequence 340 
+ permit icmp host 2001:978:2:b1::1 any nd-ns sequence 350 
+ permit icmp any host 2001:978:2:b1::2 echo-reply sequence 360 
+ permit icmp any host 2001:978:2:b1::2 echo-request sequence 370 
+ permit icmp any host 2001:978:2:b1::2 unreachable sequence 380 
+ permit icmp any host 2001:978:2:b1::2 port-unreachable sequence 390 
+ permit icmp any host 2001:978:2:b1::2 time-exceeded sequence 400 
+ remark --- Permit BGP from Openpeering JOINTTRANSIT TER24 router
+ permit tcp host 2a02:10:0:1::54:1 eq bgp host 2a02:10:0:1::54:10 sequence 410 
+ permit tcp host 2a02:10:0:1::54:1 host 2a02:10:0:1::54:10 eq bgp sequence 420 
+ permit tcp host 2a02:10:0:1::54:2 eq bgp host 2a02:10:0:1::54:10 sequence 430 
+ permit tcp host 2a02:10:0:1::54:2 host 2a02:10:0:1::54:10 eq bgp sequence 440 
+ permit tcp host 2a02:10:0:1::54:3 eq bgp host 2a02:10:0:1::54:10 sequence 450 
+ permit tcp host 2a02:10:0:1::54:3 host 2a02:10:0:1::54:10 eq bgp sequence 460 
+ permit icmp host 2a02:10:0:1::54:1 any nd-na sequence 470 
+ permit icmp host 2a02:10:0:1::54:1 any nd-ns sequence 480 
+ permit icmp host 2a02:10:0:1::54:2 any nd-na sequence 490 
+ permit icmp host 2a02:10:0:1::54:2 any nd-ns sequence 500 
+ permit icmp host 2a02:10:0:1::54:3 any nd-na sequence 510 
+ permit icmp host 2a02:10:0:1::54:3 any nd-ns sequence 520 
+ permit icmp any host 2a02:10:0:1::54:10 echo-reply sequence 530 
+ permit icmp any host 2a02:10:0:1::54:10 echo-request sequence 540 
+ permit icmp any host 2a02:10:0:1::54:10 unreachable sequence 550 
+ permit icmp any host 2a02:10:0:1::54:10 port-unreachable sequence 560 
+ permit icmp any host 2a02:10:0:1::54:10 time-exceeded sequence 570 
+ remark --- Permit BGP from Openpeering NLTRANSIT TER24 router
+ permit tcp host 2a02:10:1:1::33:1 eq bgp host 2a02:10:1:1::33:10 sequence 580 
+ permit tcp host 2a02:10:1:1::33:1 host 2a02:10:1:1::33:10 eq bgp sequence 590 
+ permit tcp host 2a02:10:1:1::33:2 eq bgp host 2a02:10:1:1::33:10 sequence 600 
+ permit tcp host 2a02:10:1:1::33:2 host 2a02:10:1:1::33:10 eq bgp sequence 610 
+ permit icmp host 2a02:10:1:1::33:1 any nd-na sequence 620 
+ permit icmp host 2a02:10:1:1::33:1 any nd-ns sequence 630 
+ permit icmp host 2a02:10:1:1::33:2 any nd-na sequence 640 
+ permit icmp host 2a02:10:1:1::33:2 any nd-ns sequence 650 
+ permit icmp any host 2a02:10:1:1::33:10 echo-reply sequence 660 
+ permit icmp any host 2a02:10:1:1::33:10 echo-request sequence 670 
+ permit icmp any host 2a02:10:1:1::33:10 unreachable sequence 680 
+ permit icmp any host 2a02:10:1:1::33:10 port-unreachable sequence 690 
+ permit icmp any host 2a02:10:1:1::33:10 time-exceeded sequence 700 
+ remark --- Permit BGP from Cogent TER24 router
+ permit tcp host 2001:978:2:2c::2c:1 eq bgp host 2001:978:2:2c::2c:2 sequence 710 
+ permit tcp host 2001:978:2:2c::2c:1 host 2001:978:2:2c::2c:2 eq bgp sequence 720 
+ permit icmp host 2001:978:2:2c::2c:1 any nd-na sequence 730 
+ permit icmp host 2001:978:2:2c::2c:1 any nd-ns sequence 740 
+ permit icmp any host 2001:978:2:2c::2c:2 echo-reply sequence 750 
+ permit icmp any host 2001:978:2:2c::2c:2 echo-request sequence 760 
+ permit icmp any host 2001:978:2:2c::2c:2 unreachable sequence 770 
+ permit icmp any host 2001:978:2:2c::2c:2 port-unreachable sequence 780 
+ permit icmp any host 2001:978:2:2c::2c:2 time-exceeded sequence 790 
+ deny ipv6 any 2a02:10:1:1::23:0/112 sequence 810 
+ deny ipv6 any 2a00:1ae8:5d:c002::/64 sequence 820 
+ deny ipv6 any 2a00:1ae8:0:ffff::/64 sequence 830 
+ deny ipv6 any 2001:978:2:b1::/112 sequence 840 
+ deny ipv6 any 2a02:10:0:1::44:0/112 sequence 850 
+ deny ipv6 any 2a02:10:1:1::33:0/112 sequence 860 
+ deny ipv6 any 2001:978:2:2c::2c:0/112 sequence 870 
+ deny ipv6 any 2a02:10:0:1::54:0/112 sequence 880 
+ remark --- Deny access to own network interfaces // All VE interfaces 
+ deny ipv6 any host 2a00:1ae8:8:fc00::1 sequence 920 
+ deny ipv6 any 2a00:1ae8:8:fc00::2/127 sequence 930 
+ deny ipv6 any host 2a00:1ae8:8:fd00::1 sequence 940 
+ deny ipv6 any 2a00:1ae8:8:fd00::2/127 sequence 950 
+ deny ipv6 any host 2a00:1ae8:8:fe00::1 sequence 960 
+ deny ipv6 any 2a00:1ae8:8:fe00::2/127 sequence 970 
+ deny ipv6 any host 2a00:1ae8:8:ff00::1 sequence 980 
+ deny ipv6 any 2a00:1ae8:8:ff00::2/127 sequence 990 
+ deny ipv6 any host 2a00:1ae8:9::1 sequence 1000 
+ deny ipv6 any 2a00:1ae8:9::2/127 sequence 1010 
+ deny ipv6 any host 2a00:1ae8:9:100::1 sequence 1020 
+ deny ipv6 any 2a00:1ae8:9:100::2/127 sequence 1030 
+ deny ipv6 any host 2a00:1ae8:9:200::1 sequence 1040 
+ deny ipv6 any 2a00:1ae8:9:200::2/127 sequence 1050 
+ deny ipv6 any host 2a00:1ae8:9:300::1 sequence 1060 
+ deny ipv6 any 2a00:1ae8:9:300::2/127 sequence 1070 
+ deny ipv6 any host 2a00:1ae8:9:400::1 sequence 1080 
+ deny ipv6 any 2a00:1ae8:9:400::2/127 sequence 1090 
+ deny ipv6 any host 2a00:1ae8:9:500::1 sequence 1100 
+ deny ipv6 any 2a00:1ae8:9:500::2/127 sequence 1110 
+ deny ipv6 any host 2a00:1ae8:9:600::1 sequence 1120 
+ deny ipv6 any 2a00:1ae8:9:600::2/127 sequence 1130 
+ deny ipv6 any host 2a00:1ae8:9:700::1 sequence 1140 
+ deny ipv6 any 2a00:1ae8:9:700::2/127 sequence 1150 
+ deny ipv6 any host 2a00:1ae8:9:800::1 sequence 1160 
+ deny ipv6 any 2a00:1ae8:9:800::2/127 sequence 1170 
+ deny ipv6 any host 2a00:1ae8:9:900::1 sequence 1180 
+ deny ipv6 any 2a00:1ae8:9:900::2/127 sequence 1190 
+ deny ipv6 any host 2a00:1ae8:9:a00::1 sequence 1200 
+ deny ipv6 any 2a00:1ae8:9:a00::2/127 sequence 1210 
+ deny ipv6 any host 2a00:1ae8:9:b00::1 sequence 1220 
+ deny ipv6 any 2a00:1ae8:9:b00::2/127 sequence 1230 
+ deny ipv6 any host 2a00:1ae8:9:c00::1 sequence 1240 
+ deny ipv6 any 2a00:1ae8:9:c00::2/127 sequence 1250 
+ deny ipv6 any host 2a00:1ae8:9:d00::1 sequence 1260 
+ deny ipv6 any 2a00:1ae8:9:d00::2/127 sequence 1270 
+ deny ipv6 any host 2a00:1ae8:9:e00::1 sequence 1280 
+ deny ipv6 any 2a00:1ae8:9:e00::2/127 sequence 1290 
+ deny ipv6 any host 2a00:1ae8:9:f00::1 sequence 1300 
+ deny ipv6 any 2a00:1ae8:9:f00::2/127 sequence 1310 
+ deny ipv6 any host 2a00:1ae8:9:1000::1 sequence 1320 
+ deny ipv6 any 2a00:1ae8:9:1000::2/127 sequence 1330 
+ deny ipv6 any host 2a00:1ae8:9:1100::1 sequence 1340 
+ deny ipv6 any 2a00:1ae8:9:1100::2/127 sequence 1350 
+ deny ipv6 any host 2a00:1ae8:9:1200::1 sequence 1360 
+ deny ipv6 any 2a00:1ae8:9:1200::2/127 sequence 1370 
+ deny ipv6 any host 2a00:1ae8:9:1300::1 sequence 1380 
+ deny ipv6 any 2a00:1ae8:9:1300::2/127 sequence 1390 
+ deny ipv6 any host 2a00:1ae8:9:1400::1 sequence 1400 
+ deny ipv6 any 2a00:1ae8:9:1400::2/127 sequence 1410 
+ deny ipv6 any host 2a00:1ae8:9:1500::1 sequence 1420 
+ deny ipv6 any 2a00:1ae8:9:1500::2/127 sequence 1430 
+ deny ipv6 any host 2a00:1ae8:9:1600::1 sequence 1440 
+ deny ipv6 any 2a00:1ae8:9:1600::2/127 sequence 1450 
+ deny ipv6 any host 2a00:1ae8:9:1700::1 sequence 1460 
+ deny ipv6 any 2a00:1ae8:9:1700::2/127 sequence 1470 
+ deny ipv6 any host 2a00:1ae8:9:1800::1 sequence 1480 
+ deny ipv6 any 2a00:1ae8:9:1800::2/127 sequence 1490 
+ deny ipv6 any host 2a00:1ae8:9:1900::1 sequence 1500 
+ deny ipv6 any 2a00:1ae8:9:1900::2/127 sequence 1510 
+ deny ipv6 any host 2a00:1ae8:9:1a00::1 sequence 1520 
+ deny ipv6 any 2a00:1ae8:9:1a00::2/127 sequence 1530 
+ deny ipv6 any host 2a00:1ae8:9:1b00::1 sequence 1540 
+ deny ipv6 any 2a00:1ae8:9:1b00::2/127 sequence 1550 
+ deny ipv6 any host 2a00:1ae8:9:1c00::1 sequence 1560 
+ deny ipv6 any 2a00:1ae8:9:1c00::2/127 sequence 1570 
+ deny ipv6 any host 2a00:1ae8:9:1d00::1 sequence 1580 
+ deny ipv6 any 2a00:1ae8:9:1d00::2/127 sequence 1590 
+ deny ipv6 any host 2a00:1ae8:9:1e00::1 sequence 1600 
+ deny ipv6 any 2a00:1ae8:9:1e00::2/127 sequence 1610 
+ deny ipv6 any host 2a00:1ae8:9:1f00::1 sequence 1620 
+ deny ipv6 any 2a00:1ae8:9:1f00::2/127 sequence 1630 
+ deny ipv6 any host 2a00:1ae8:9:2000::1 sequence 1640 
+ deny ipv6 any 2a00:1ae8:9:2000::2/127 sequence 1650 
+ deny ipv6 any host 2a00:1ae8:9:2100::1 sequence 1660 
+ deny ipv6 any 2a00:1ae8:9:2100::2/127 sequence 1670 
+ deny ipv6 any host 2a00:1ae8:9:2200::1 sequence 1680 
+ deny ipv6 any 2a00:1ae8:9:2200::2/127 sequence 1690 
+ deny ipv6 any host 2a00:1ae8:9:2300::1 sequence 1700 
+ deny ipv6 any 2a00:1ae8:9:2300::2/127 sequence 1710 
+ deny ipv6 any host 2a00:1ae8:9:2400::1 sequence 1720 
+ deny ipv6 any 2a00:1ae8:9:2400::2/127 sequence 1730 
+ deny ipv6 any host 2a00:1ae8:9:2500::1 sequence 1740 
+ deny ipv6 any 2a00:1ae8:9:2500::2/127 sequence 1750 
+ deny ipv6 any host 2a00:1ae8:9:2600::1 sequence 1760 
+ deny ipv6 any 2a00:1ae8:9:2600::2/127 sequence 1770 
+ deny ipv6 any host 2a00:1ae8:9:2700::1 sequence 1780 
+ deny ipv6 any 2a00:1ae8:9:2700::2/127 sequence 1790 
+ deny ipv6 any host 2a00:1ae8:9:2800::1 sequence 1800 
+ deny ipv6 any 2a00:1ae8:9:2800::2/127 sequence 1810 
+ deny ipv6 any host 2a00:1ae8:9:2900::1 sequence 1820 
+ deny ipv6 any 2a00:1ae8:9:2900::2/127 sequence 1830 
+ deny ipv6 any host 2a00:1ae8:9:2a00::1 sequence 1840 
+ deny ipv6 any 2a00:1ae8:9:2a00::2/127 sequence 1850 
+ deny ipv6 any host 2a00:1ae8:9:2b00::1 sequence 1860 
+ deny ipv6 any 2a00:1ae8:9:2b00::2/127 sequence 1870 
+ deny ipv6 any host 2a00:1ae8:9:2c00::1 sequence 1880 
+ deny ipv6 any 2a00:1ae8:9:2c00::2/127 sequence 1890 
+ deny ipv6 any host 2a00:1ae8:9:2d00::1 sequence 1900 
+ deny ipv6 any 2a00:1ae8:9:2d00::2/127 sequence 1910 
+ deny ipv6 any host 2a00:1ae8:9:2e00::1 sequence 1920 
+ deny ipv6 any 2a00:1ae8:9:2e00::2/127 sequence 1930 
+ deny ipv6 any host 2a00:1ae8:9:2f00::1 sequence 1940 
+ deny ipv6 any 2a00:1ae8:9:2f00::2/127 sequence 1950 
+ deny ipv6 any host 2a00:1ae8:9:3000::1 sequence 1960 
+ deny ipv6 any 2a00:1ae8:9:3000::2/127 sequence 1970 
+ deny ipv6 any host 2a00:1ae8:9:3100::1 sequence 1980 
+ deny ipv6 any 2a00:1ae8:9:3100::2/127 sequence 1990 
+ deny ipv6 any host 2a00:1ae8:9:3200::1 sequence 2000 
+ deny ipv6 any 2a00:1ae8:9:3200::2/127 sequence 2010 
+ deny ipv6 any host 2a00:1ae8:9:3300::1 sequence 2020 
+ deny ipv6 any 2a00:1ae8:9:3300::2/127 sequence 2030 
+ deny ipv6 any host 2a00:1ae8:9:3400::1 sequence 2040 
+ deny ipv6 any 2a00:1ae8:9:3400::2/127 sequence 2050 
+ deny ipv6 any host 2a00:1ae8:9:3500::1 sequence 2060 
+ deny ipv6 any 2a00:1ae8:9:3500::2/127 sequence 2070 
+ deny ipv6 any host 2a00:1ae8:9:3600::1 sequence 2080 
+ deny ipv6 any 2a00:1ae8:9:3600::2/127 sequence 2090 
+ deny ipv6 any host 2a00:1ae8:9:3700::1 sequence 2100 
+ deny ipv6 any 2a00:1ae8:9:3700::2/127 sequence 2110 
+ deny ipv6 any host 2a00:1ae8:9:3800::1 sequence 2120 
+ deny ipv6 any 2a00:1ae8:9:3800::2/127 sequence 2130 
+ deny ipv6 any host 2a00:1ae8:9:3900::1 sequence 2140 
+ deny ipv6 any 2a00:1ae8:9:3900::2/127 sequence 2150 
+ deny ipv6 any host 2a00:1ae8:9:3a00::1 sequence 2160 
+ deny ipv6 any 2a00:1ae8:9:3a00::2/127 sequence 2170 
+ deny ipv6 any host 2a00:1ae8:9:3b00::1 sequence 2180 
+ deny ipv6 any 2a00:1ae8:9:3b00::2/127 sequence 2190 
+ deny ipv6 any host 2a00:1ae8:9:3c00::1 sequence 2200 
+ deny ipv6 any 2a00:1ae8:9:3c00::2/127 sequence 2210 
+ deny ipv6 any host 2a00:1ae8:9:3d00::1 sequence 2220 
+ deny ipv6 any 2a00:1ae8:9:3d00::2/127 sequence 2230 
+ deny ipv6 any host 2a00:1ae8:9:3e00::1 sequence 2240 
+ deny ipv6 any 2a00:1ae8:9:3e00::2/127 sequence 2250 
+ deny ipv6 any host 2a00:1ae8:9:3f00::1 sequence 2260 
+ deny ipv6 any 2a00:1ae8:9:3f00::2/127 sequence 2270 
+ deny ipv6 any host 2a00:1ae8:9:4000::1 sequence 2280 
+ deny ipv6 any 2a00:1ae8:9:4000::2/127 sequence 2290 
+ deny ipv6 any host 2a00:1ae8:9:4100::1 sequence 2300 
+ deny ipv6 any 2a00:1ae8:9:4100::2/127 sequence 2310 
+ deny ipv6 any host 2a00:1ae8:9:4200::1 sequence 2320 
+ deny ipv6 any 2a00:1ae8:9:4200::2/127 sequence 2330 
+ deny ipv6 any host 2a00:1ae8:9:4300::1 sequence 2340 
+ deny ipv6 any 2a00:1ae8:9:4300::2/127 sequence 2350 
+ deny ipv6 any host 2a00:1ae8:9:4400::1 sequence 2360 
+ deny ipv6 any 2a00:1ae8:9:4400::2/127 sequence 2370 
+ deny ipv6 any host 2a00:1ae8:9:4500::1 sequence 2380 
+ deny ipv6 any 2a00:1ae8:9:4500::2/127 sequence 2390 
+ deny ipv6 any host 2a00:1ae8:9:4600::1 sequence 2400 
+ deny ipv6 any 2a00:1ae8:9:4600::2/127 sequence 2410 
+ deny ipv6 any host 2a00:1ae8:9:4700::1 sequence 2420 
+ deny ipv6 any 2a00:1ae8:9:4700::2/127 sequence 2430 
+ deny ipv6 any host 2a00:1ae8:9:4800::1 sequence 2440 
+ deny ipv6 any 2a00:1ae8:9:4800::2/127 sequence 2450 
+ deny ipv6 any host 2a00:1ae8:9:4900::1 sequence 2460 
+ deny ipv6 any 2a00:1ae8:9:4900::2/127 sequence 2470 
+ deny ipv6 any host 2a00:1ae8:9:4a00::1 sequence 2480 
+ deny ipv6 any 2a00:1ae8:9:4a00::2/127 sequence 2490 
+ deny ipv6 any host 2a00:1ae8:9:4b00::1 sequence 2500 
+ deny ipv6 any 2a00:1ae8:9:4b00::2/127 sequence 2510 
+ deny ipv6 any host 2a00:1ae8:9:4c00::1 sequence 2520 
+ deny ipv6 any 2a00:1ae8:9:4c00::2/127 sequence 2530 
+ deny ipv6 any host 2a00:1ae8:9:4d00::1 sequence 2540 
+ deny ipv6 any 2a00:1ae8:9:4d00::2/127 sequence 2550 
+ deny ipv6 any host 2a00:1ae8:9:4e00::1 sequence 2560 
+ deny ipv6 any 2a00:1ae8:9:4e00::2/127 sequence 2570 
+ deny ipv6 any host 2a00:1ae8:9:4f00::1 sequence 2580 
+ deny ipv6 any 2a00:1ae8:9:4f00::2/127 sequence 2590 
+ deny ipv6 any host 2a00:1ae8:9:5000::1 sequence 2600 
+ deny ipv6 any 2a00:1ae8:9:5000::2/127 sequence 2610 
+ deny ipv6 any host 2a00:1ae8:9:5100::1 sequence 2620 
+ deny ipv6 any 2a00:1ae8:9:5100::2/127 sequence 2630 
+ deny ipv6 any host 2a00:1ae8:9:5200::1 sequence 2640 
+ deny ipv6 any 2a00:1ae8:9:5200::2/127 sequence 2650 
+ deny ipv6 any host 2a00:1ae8:9:5300::1 sequence 2660 
+ deny ipv6 any 2a00:1ae8:9:5300::2/127 sequence 2670 
+ deny ipv6 any host 2a00:1ae8:9:5400::1 sequence 2680 
+ deny ipv6 any 2a00:1ae8:9:5400::2/127 sequence 2690 
+ deny ipv6 any host 2a00:1ae8:9:5500::1 sequence 2700 
+ deny ipv6 any 2a00:1ae8:9:5500::2/127 sequence 2710 
+ deny ipv6 any host 2a00:1ae8:9:5600::1 sequence 2720 
+ deny ipv6 any 2a00:1ae8:9:5600::2/127 sequence 2730 
+ deny ipv6 any host 2a00:1ae8:9:5700::1 sequence 2740 
+ deny ipv6 any 2a00:1ae8:9:5700::2/127 sequence 2750 
+ deny ipv6 any host 2a00:1ae8:9:5800::1 sequence 2760 
+ deny ipv6 any 2a00:1ae8:9:5800::2/127 sequence 2770 
+ deny ipv6 any host 2a00:1ae8:9:5900::1 sequence 2780 
+ deny ipv6 any 2a00:1ae8:9:5900::2/127 sequence 2790 
+ deny ipv6 any host 2a00:1ae8:9:5a00::1 sequence 2800 
+ deny ipv6 any 2a00:1ae8:9:5a00::2/127 sequence 2810 
+ deny ipv6 any host 2a00:1ae8:9:5b00::1 sequence 2820 
+ deny ipv6 any 2a00:1ae8:9:5b00::2/127 sequence 2830 
+ deny ipv6 any host 2a00:1ae8:9:5c00::1 sequence 2840 
+ deny ipv6 any 2a00:1ae8:9:5c00::2/127 sequence 2850 
+ deny ipv6 any host 2a00:1ae8:9:5d00::1 sequence 2860 
+ deny ipv6 any 2a00:1ae8:9:5d00::2/127 sequence 2870 
+ deny ipv6 any host 2a00:1ae8:9:5e00::1 sequence 2880 
+ deny ipv6 any 2a00:1ae8:9:5e00::2/127 sequence 2890 
+ deny ipv6 any host 2a00:1ae8:9:5f00::1 sequence 2900 
+ deny ipv6 any 2a00:1ae8:9:5f00::2/127 sequence 2910 
+ deny ipv6 any host 2a00:1ae8:9:6000::1 sequence 2920 
+ deny ipv6 any 2a00:1ae8:9:6000::2/127 sequence 2930 
+ deny ipv6 any host 2a00:1ae8:9:6100::1 sequence 2940 
+ deny ipv6 any 2a00:1ae8:9:6100::2/127 sequence 2950 
+ deny ipv6 any host 2a00:1ae8:9:6200::1 sequence 2960 
+ deny ipv6 any 2a00:1ae8:9:6200::2/127 sequence 2970 
+ deny ipv6 any host 2a00:1ae8:9:6300::1 sequence 2980 
+ deny ipv6 any 2a00:1ae8:9:6300::2/127 sequence 2990 
+ deny ipv6 any host 2a00:1ae8:9:6400::1 sequence 3000 
+ deny ipv6 any 2a00:1ae8:9:6400::2/127 sequence 3010 
+ deny ipv6 any host 2a00:1ae8:9:6500::1 sequence 3020 
+ deny ipv6 any 2a00:1ae8:9:6500::2/127 sequence 3030 
+ deny ipv6 any host 2a00:1ae8:9:6600::1 sequence 3040 
+ deny ipv6 any 2a00:1ae8:9:6600::2/127 sequence 3050 
+ deny ipv6 any host 2a00:1ae8:9:6700::1 sequence 3060 
+ deny ipv6 any 2a00:1ae8:9:6700::2/127 sequence 3070 
+ deny ipv6 any host 2a00:1ae8:9:6800::1 sequence 3080 
+ deny ipv6 any 2a00:1ae8:9:6800::2/127 sequence 3090 
+ deny ipv6 any host 2a00:1ae8:9:6900::1 sequence 3100 
+ deny ipv6 any 2a00:1ae8:9:6900::2/127 sequence 3110 
+ deny ipv6 any host 2a00:1ae8:9:6a00::1 sequence 3120 
+ deny ipv6 any 2a00:1ae8:9:6a00::2/127 sequence 3130 
+ deny ipv6 any host 2a00:1ae8:9:6b00::1 sequence 3140 
+ deny ipv6 any 2a00:1ae8:9:6b00::2/127 sequence 3150 
+ deny ipv6 any host 2a00:1ae8:9:6c00::1 sequence 3160 
+ deny ipv6 any 2a00:1ae8:9:6c00::2/127 sequence 3170 
+ deny ipv6 any host 2a00:1ae8:9:6d00::1 sequence 3180 
+ deny ipv6 any 2a00:1ae8:9:6d00::2/127 sequence 3190 
+ deny ipv6 any host 2a00:1ae8:9:6e00::1 sequence 3200 
+ deny ipv6 any 2a00:1ae8:9:6e00::2/127 sequence 3210 
+ deny ipv6 any host 2a00:1ae8:9:6f00::1 sequence 3220 
+ deny ipv6 any 2a00:1ae8:9:6f00::2/127 sequence 3230 
+ deny ipv6 any host 2a00:1ae8:9:7000::1 sequence 3240 
+ deny ipv6 any 2a00:1ae8:9:7000::2/127 sequence 3250 
+ deny ipv6 any host 2a00:1ae8:9:7100::1 sequence 3260 
+ deny ipv6 any 2a00:1ae8:9:7100::2/127 sequence 3270 
+ deny ipv6 any host 2a00:1ae8:9:7200::1 sequence 3280 
+ deny ipv6 any 2a00:1ae8:9:7200::2/127 sequence 3290 
+ deny ipv6 any host 2a00:1ae8:9:7300::1 sequence 3300 
+ deny ipv6 any 2a00:1ae8:9:7300::2/127 sequence 3310 
+ deny ipv6 any host 2a00:1ae8:9:7400::1 sequence 3320 
+ deny ipv6 any 2a00:1ae8:9:7400::2/127 sequence 3330 
+ deny ipv6 any host 2a00:1ae8:9:7500::1 sequence 3340 
+ deny ipv6 any 2a00:1ae8:9:7500::2/127 sequence 3350 
+ deny ipv6 any host 2a00:1ae8:9:7600::1 sequence 3360 
+ deny ipv6 any 2a00:1ae8:9:7600::2/127 sequence 3370 
+ deny ipv6 any host 2a00:1ae8:9:7700::1 sequence 3380 
+ deny ipv6 any 2a00:1ae8:9:7700::2/127 sequence 3390 
+ deny ipv6 any host 2a00:1ae8:9:7800::1 sequence 3400 
+ deny ipv6 any 2a00:1ae8:9:7800::2/127 sequence 3410 
+ deny ipv6 any host 2a00:1ae8:9:7900::1 sequence 3420 
+ deny ipv6 any 2a00:1ae8:9:7900::2/127 sequence 3430 
+ deny ipv6 any host 2a00:1ae8:9:7a00::1 sequence 3440 
+ deny ipv6 any 2a00:1ae8:9:7a00::2/127 sequence 3450 
+ deny ipv6 any host 2a00:1ae8:9:7b00::1 sequence 3460 
+ deny ipv6 any 2a00:1ae8:9:7b00::2/127 sequence 3470 
+ deny ipv6 any host 2a00:1ae8:9:7c00::1 sequence 3480 
+ deny ipv6 any 2a00:1ae8:9:7c00::2/127 sequence 3490 
+ deny ipv6 any host 2a00:1ae8:9:7d00::1 sequence 3500 
+ deny ipv6 any 2a00:1ae8:9:7d00::2/127 sequence 3510 
+ deny ipv6 any host 2a00:1ae8:9:7e00::1 sequence 3520 
+ deny ipv6 any 2a00:1ae8:9:7e00::2/127 sequence 3530 
+ deny ipv6 any host 2a00:1ae8:9:7f00::1 sequence 3540 
+ deny ipv6 any 2a00:1ae8:9:7f00::2/127 sequence 3550 
+ deny ipv6 any host 2a00:1ae8:9:8000::1 sequence 3560 
+ deny ipv6 any 2a00:1ae8:9:8000::2/127 sequence 3570 
+ deny ipv6 any host 2a00:1ae8:9:8100::1 sequence 3580 
+ deny ipv6 any 2a00:1ae8:9:8100::2/127 sequence 3590 
+ deny ipv6 any host 2a00:1ae8:9:8200::1 sequence 3600 
+ deny ipv6 any 2a00:1ae8:9:8200::2/127 sequence 3610 
+ deny ipv6 any host 2a00:1ae8:9:8300::1 sequence 3620 
+ deny ipv6 any 2a00:1ae8:9:8300::2/127 sequence 3630 
+ deny ipv6 any host 2a00:1ae8:9:8400::1 sequence 3640 
+ deny ipv6 any 2a00:1ae8:9:8400::2/127 sequence 3650 
+ deny ipv6 any host 2a00:1ae8:9:8500::1 sequence 3660 
+ deny ipv6 any 2a00:1ae8:9:8500::2/127 sequence 3670 
+ deny ipv6 any host 2a00:1ae8:9:8600::1 sequence 3680 
+ deny ipv6 any 2a00:1ae8:9:8600::2/127 sequence 3690 
+ deny ipv6 any host 2a00:1ae8:9:8700::1 sequence 3700 
+ deny ipv6 any 2a00:1ae8:9:8700::2/127 sequence 3710 
+ deny ipv6 any host 2a00:1ae8:9:8800::1 sequence 3720 
+ deny ipv6 any 2a00:1ae8:9:8800::2/127 sequence 3730 
+ deny ipv6 any host 2a00:1ae8:9:8900::1 sequence 3740 
+ deny ipv6 any 2a00:1ae8:9:8900::2/127 sequence 3750 
+ deny ipv6 any host 2a00:1ae8:9:8a00::1 sequence 3760 
+ deny ipv6 any 2a00:1ae8:9:8a00::2/127 sequence 3770 
+ deny ipv6 any host 2a00:1ae8:9:8b00::1 sequence 3780 
+ deny ipv6 any 2a00:1ae8:9:8b00::2/127 sequence 3790 
+ deny ipv6 any host 2a00:1ae8:9:8c00::1 sequence 3800 
+ deny ipv6 any 2a00:1ae8:9:8c00::2/127 sequence 3810 
+ deny ipv6 any host 2a00:1ae8:9:8d00::1 sequence 3820 
+ deny ipv6 any 2a00:1ae8:9:8d00::2/127 sequence 3830 
+ deny ipv6 any host 2a00:1ae8:9:8e00::1 sequence 3840 
+ deny ipv6 any 2a00:1ae8:9:8e00::2/127 sequence 3850 
+ deny ipv6 any host 2a00:1ae8:9:8f00::1 sequence 3860 
+ deny ipv6 any 2a00:1ae8:9:8f00::2/127 sequence 3870 
+ deny ipv6 any host 2a00:1ae8:9:9000::1 sequence 3880 
+ deny ipv6 any 2a00:1ae8:9:9000::2/127 sequence 3890 
+ deny ipv6 any host 2a00:1ae8:9:9100::1 sequence 3900 
+ deny ipv6 any 2a00:1ae8:9:9100::2/127 sequence 3910 
+ deny ipv6 any host 2a00:1ae8:9:9200::1 sequence 3920 
+ deny ipv6 any 2a00:1ae8:9:9200::2/127 sequence 3930 
+ deny ipv6 any host 2a00:1ae8:9:9300::1 sequence 3940 
+ deny ipv6 any 2a00:1ae8:9:9300::2/127 sequence 3950 
+ deny ipv6 any host 2a00:1ae8:9:9400::1 sequence 3960 
+ deny ipv6 any 2a00:1ae8:9:9400::2/127 sequence 3970 
+ deny ipv6 any host 2a00:1ae8:9:9500::1 sequence 3980 
+ deny ipv6 any 2a00:1ae8:9:9500::2/127 sequence 3990 
+ deny ipv6 any host 2a00:1ae8:9:9600::1 sequence 4000 
+ deny ipv6 any 2a00:1ae8:9:9600::2/127 sequence 4010 
+ deny ipv6 any host 2a00:1ae8:9:9700::1 sequence 4020 
+ deny ipv6 any 2a00:1ae8:9:9700::2/127 sequence 4030 
+ deny ipv6 any host 2a00:1ae8:9:9800::1 sequence 4040 
+ deny ipv6 any 2a00:1ae8:9:9800::2/127 sequence 4050 
+ deny ipv6 any host 2a00:1ae8:9:9900::1 sequence 4060 
+ deny ipv6 any 2a00:1ae8:9:9900::2/127 sequence 4070 
+ deny ipv6 any host 2a00:1ae8:9:9a00::1 sequence 4080 
+ deny ipv6 any 2a00:1ae8:9:9a00::2/127 sequence 4090 
+ deny ipv6 any host 2a00:1ae8:9:9b00::1 sequence 4100 
+ deny ipv6 any 2a00:1ae8:9:9b00::2/127 sequence 4110 
+ deny ipv6 any host 2a00:1ae8:9:9c00::1 sequence 4120 
+ deny ipv6 any 2a00:1ae8:9:9c00::2/127 sequence 4130 
+ deny ipv6 any host 2a00:1ae8:9:9d00::1 sequence 4140 
+ deny ipv6 any 2a00:1ae8:9:9d00::2/127 sequence 4150 
+ deny ipv6 any host 2a00:1ae8:9:9e00::1 sequence 4160 
+ deny ipv6 any 2a00:1ae8:9:9e00::2/127 sequence 4170 
+ deny ipv6 any host 2a00:1ae8:9:9f00::1 sequence 4180 
+ deny ipv6 any 2a00:1ae8:9:9f00::2/127 sequence 4190 
+ deny ipv6 any host 2a00:1ae8:9:a000::1 sequence 4200 
+ deny ipv6 any 2a00:1ae8:9:a000::2/127 sequence 4210 
+ deny ipv6 any host 2a00:1ae8:9:a100::1 sequence 4220 
+ deny ipv6 any 2a00:1ae8:9:a100::2/127 sequence 4230 
+ deny ipv6 any host 2a00:1ae8:9:a200::1 sequence 4240 
+ deny ipv6 any 2a00:1ae8:9:a200::2/127 sequence 4250 
+ deny ipv6 any host 2a00:1ae8:9:a300::1 sequence 4260 
+ deny ipv6 any 2a00:1ae8:9:a300::2/127 sequence 4270 
+ deny ipv6 any host 2a00:1ae8:9:a400::1 sequence 4280 
+ deny ipv6 any 2a00:1ae8:9:a400::2/127 sequence 4290 
+ deny ipv6 any host 2a00:1ae8:9:a500::1 sequence 4300 
+ deny ipv6 any 2a00:1ae8:9:a500::2/127 sequence 4310 
+ deny ipv6 any host 2a00:1ae8:9:a600::1 sequence 4320 
+ deny ipv6 any 2a00:1ae8:9:a600::2/127 sequence 4330 
+ deny ipv6 any host 2a00:1ae8:9:a700::1 sequence 4340 
+ deny ipv6 any 2a00:1ae8:9:a700::2/127 sequence 4350 
+ deny ipv6 any host 2a00:1ae8:9:a800::1 sequence 4360 
+ deny ipv6 any 2a00:1ae8:9:a800::2/127 sequence 4370 
+ deny ipv6 any host 2a00:1ae8:9:a900::1 sequence 4380 
+ deny ipv6 any 2a00:1ae8:9:a900::2/127 sequence 4390 
+ deny ipv6 any host 2a00:1ae8:9:aa00::1 sequence 4400 
+ deny ipv6 any 2a00:1ae8:9:aa00::2/127 sequence 4410 
+ deny ipv6 any host 2a00:1ae8:9:ab00::1 sequence 4420 
+ deny ipv6 any 2a00:1ae8:9:ab00::2/127 sequence 4430 
+ deny ipv6 any host 2a00:1ae8:9:ac00::1 sequence 4440 
+ deny ipv6 any 2a00:1ae8:9:ac00::2/127 sequence 4450 
+ deny ipv6 any host 2a00:1ae8:9:ad00::1 sequence 4460 
+ deny ipv6 any 2a00:1ae8:9:ad00::2/127 sequence 4470 
+ deny ipv6 any host 2a00:1ae8:9:ae00::1 sequence 4480 
+ deny ipv6 any 2a00:1ae8:9:ae00::2/127 sequence 4490 
+ deny ipv6 any host 2a00:1ae8:9:af00::1 sequence 4500 
+ deny ipv6 any 2a00:1ae8:9:af00::2/127 sequence 4510 
+ deny ipv6 any host 2a00:1ae8:9:b000::1 sequence 4520 
+ deny ipv6 any 2a00:1ae8:9:b000::2/127 sequence 4530 
+ deny ipv6 any host 2a00:1ae8:9:b100::1 sequence 4540 
+ deny ipv6 any 2a00:1ae8:9:b100::2/127 sequence 4550 
+ deny ipv6 any host 2a00:1ae8:9:b200::1 sequence 4560 
+ deny ipv6 any 2a00:1ae8:9:b200::2/127 sequence 4570 
+ deny ipv6 any host 2a00:1ae8:9:b300::1 sequence 4580 
+ deny ipv6 any 2a00:1ae8:9:b300::2/127 sequence 4590 
+ deny ipv6 any host 2a00:1ae8:9:b400::1 sequence 4600 
+ deny ipv6 any 2a00:1ae8:9:b400::2/127 sequence 4610 
+ deny ipv6 any host 2a00:1ae8:9:b500::1 sequence 4620 
+ deny ipv6 any 2a00:1ae8:9:b500::2/127 sequence 4630 
+ deny ipv6 any host 2a00:1ae8:9:b600::1 sequence 4640 
+ deny ipv6 any 2a00:1ae8:9:b600::2/127 sequence 4650 
+ deny ipv6 any host 2a00:1ae8:9:b700::1 sequence 4660 
+ deny ipv6 any 2a00:1ae8:9:b700::2/127 sequence 4670 
+ deny ipv6 any host 2a00:1ae8:9:b800::1 sequence 4680 
+ deny ipv6 any 2a00:1ae8:9:b800::2/127 sequence 4690 
+ deny ipv6 any host 2a00:1ae8:9:b900::1 sequence 4700 
+ deny ipv6 any 2a00:1ae8:9:b900::2/127 sequence 4710 
+ deny ipv6 any host 2a00:1ae8:9:ba00::1 sequence 4720 
+ deny ipv6 any 2a00:1ae8:9:ba00::2/127 sequence 4730 
+ deny ipv6 any host 2a00:1ae8:9:bb00::1 sequence 4740 
+ deny ipv6 any 2a00:1ae8:9:bb00::2/127 sequence 4750 
+ deny ipv6 any host 2a00:1ae8:9:bc00::1 sequence 4760 
+ deny ipv6 any 2a00:1ae8:9:bc00::2/127 sequence 4770 
+ deny ipv6 any host 2a00:1ae8:9:bd00::1 sequence 4780 
+ deny ipv6 any 2a00:1ae8:9:bd00::2/127 sequence 4790 
+ deny ipv6 any host 2a00:1ae8:9:be00::1 sequence 4800 
+ deny ipv6 any 2a00:1ae8:9:be00::2/127 sequence 4810 
+ deny ipv6 any host 2a00:1ae8:9:bf00::1 sequence 4820 
+ deny ipv6 any 2a00:1ae8:9:bf00::2/127 sequence 4830 
+ deny ipv6 any host 2a00:1ae8:9:c000::1 sequence 4840 
+ deny ipv6 any 2a00:1ae8:9:c000::2/127 sequence 4850 
+ deny ipv6 any host 2a00:1ae8:9:c100::1 sequence 4860 
+ deny ipv6 any 2a00:1ae8:9:c100::2/127 sequence 4870 
+ deny ipv6 any host 2a00:1ae8:9:c200::1 sequence 4880 
+ deny ipv6 any 2a00:1ae8:9:c200::2/127 sequence 4890 
+ deny ipv6 any host 2a00:1ae8:9:c300::1 sequence 4900 
+ deny ipv6 any 2a00:1ae8:9:c300::2/127 sequence 4910 
+ deny ipv6 any host 2a00:1ae8:9:c400::1 sequence 4920 
+ deny ipv6 any 2a00:1ae8:9:c400::2/127 sequence 4930 
+ deny ipv6 any host 2a00:1ae8:9:c500::1 sequence 4940 
+ deny ipv6 any 2a00:1ae8:9:c500::2/127 sequence 4950 
+ deny ipv6 any host 2a00:1ae8:9:c600::1 sequence 4960 
+ deny ipv6 any 2a00:1ae8:9:c600::2/127 sequence 4970 
+ deny ipv6 any host 2a00:1ae8:9:c700::1 sequence 4980 
+ deny ipv6 any 2a00:1ae8:9:c700::2/127 sequence 4990 
+ deny ipv6 any host 2a00:1ae8:9:c800::1 sequence 5000 
+ deny ipv6 any 2a00:1ae8:9:c800::2/127 sequence 5010 
+ deny ipv6 any host 2a00:1ae8:9:c900::1 sequence 5020 
+ deny ipv6 any 2a00:1ae8:9:c900::2/127 sequence 5030 
+ deny ipv6 any host 2a00:1ae8:9:ca00::1 sequence 5040 
+ deny ipv6 any 2a00:1ae8:9:ca00::2/127 sequence 5050 
+ deny ipv6 any host 2a00:1ae8:9:cb00::1 sequence 5060 
+ deny ipv6 any 2a00:1ae8:9:cb00::2/127 sequence 5070 
+ deny ipv6 any host 2a00:1ae8:9:cc00::1 sequence 5080 
+ deny ipv6 any 2a00:1ae8:9:cc00::2/127 sequence 5090 
+ deny ipv6 any host 2a00:1ae8:9:cd00::1 sequence 5100 
+ deny ipv6 any 2a00:1ae8:9:cd00::2/127 sequence 5110 
+ deny ipv6 any host 2a00:1ae8:9:ce00::1 sequence 5120 
+ deny ipv6 any 2a00:1ae8:9:ce00::2/127 sequence 5130 
+ deny ipv6 any host 2a00:1ae8:9:cf00::1 sequence 5140 
+ deny ipv6 any 2a00:1ae8:9:cf00::2/127 sequence 5150 
+ deny ipv6 any host 2a00:1ae8:9:d000::1 sequence 5160 
+ deny ipv6 any 2a00:1ae8:9:d000::2/127 sequence 5170 
+ deny ipv6 any host 2a00:1ae8:9:d100::1 sequence 5180 
+ deny ipv6 any 2a00:1ae8:9:d100::2/127 sequence 5190 
+ deny ipv6 any host 2a00:1ae8:9:d200::1 sequence 5200 
+ deny ipv6 any 2a00:1ae8:9:d200::2/127 sequence 5210 
+ deny ipv6 any host 2a00:1ae8:9:d300::1 sequence 5220 
+ deny ipv6 any 2a00:1ae8:9:d300::2/127 sequence 5230 
+ deny ipv6 any host 2a00:1ae8:9:d400::1 sequence 5240 
+ deny ipv6 any 2a00:1ae8:9:d400::2/127 sequence 5250 
+ deny ipv6 any host 2a00:1ae8:9:d500::1 sequence 5260 
+ deny ipv6 any 2a00:1ae8:9:d500::2/127 sequence 5270 
+ deny ipv6 any host 2a00:1ae8:9:d600::1 sequence 5280 
+ deny ipv6 any 2a00:1ae8:9:d600::2/127 sequence 5290 
+ deny ipv6 any host 2a00:1ae8:9:d700::1 sequence 5300 
+ deny ipv6 any 2a00:1ae8:9:d700::2/127 sequence 5310 
+ deny ipv6 any host 2a00:1ae8:9:d800::1 sequence 5320 
+ deny ipv6 any 2a00:1ae8:9:d800::2/127 sequence 5330 
+ deny ipv6 any host 2a00:1ae8:9:d900::1 sequence 5340 
+ deny ipv6 any 2a00:1ae8:9:d900::2/127 sequence 5350 
+ deny ipv6 any host 2a00:1ae8:9:da00::1 sequence 5360 
+ deny ipv6 any 2a00:1ae8:9:da00::2/127 sequence 5370 
+ deny ipv6 any host 2a00:1ae8:9:db00::1 sequence 5380 
+ deny ipv6 any 2a00:1ae8:9:db00::2/127 sequence 5390 
+ deny ipv6 any host 2a00:1ae8:9:dc00::1 sequence 5400 
+ deny ipv6 any 2a00:1ae8:9:dc00::2/127 sequence 5410 
+ deny ipv6 any host 2a00:1ae8:9:dd00::1 sequence 5420 
+ deny ipv6 any 2a00:1ae8:9:dd00::2/127 sequence 5430 
+ deny ipv6 any host 2a00:1ae8:9:de00::1 sequence 5440 
+ deny ipv6 any 2a00:1ae8:9:de00::2/127 sequence 5450 
+ deny ipv6 any host 2a00:1ae8:9:df00::1 sequence 5460 
+ deny ipv6 any 2a00:1ae8:9:df00::2/127 sequence 5470 
+ deny ipv6 any host 2a00:1ae8:9:e000::1 sequence 5480 
+ deny ipv6 any 2a00:1ae8:9:e000::2/127 sequence 5490 
+ deny ipv6 any host 2a00:1ae8:9:e100::1 sequence 5500 
+ deny ipv6 any 2a00:1ae8:9:e100::2/127 sequence 5510 
+ deny ipv6 any host 2a00:1ae8:9:e200::1 sequence 5520 
+ deny ipv6 any 2a00:1ae8:9:e200::2/127 sequence 5530 
+ deny ipv6 any host 2a00:1ae8:9:e300::1 sequence 5540 
+ deny ipv6 any 2a00:1ae8:9:e300::2/127 sequence 5550 
+ deny ipv6 any host 2a00:1ae8:9:e400::1 sequence 5560 
+ deny ipv6 any 2a00:1ae8:9:e400::2/127 sequence 5570 
+ deny ipv6 any host 2a00:1ae8:9:e500::1 sequence 5580 
+ deny ipv6 any 2a00:1ae8:9:e500::2/127 sequence 5590 
+ deny ipv6 any host 2a00:1ae8:9:e600::1 sequence 5600 
+ deny ipv6 any 2a00:1ae8:9:e600::2/127 sequence 5610 
+ deny ipv6 any host 2a00:1ae8:9:e700::1 sequence 5620 
+ deny ipv6 any 2a00:1ae8:9:e700::2/127 sequence 5630 
+ deny ipv6 any host 2a00:1ae8:9:e800::1 sequence 5640 
+ deny ipv6 any 2a00:1ae8:9:e800::2/127 sequence 5650 
+ deny ipv6 any host 2a00:1ae8:9:e900::1 sequence 5660 
+ deny ipv6 any 2a00:1ae8:9:e900::2/127 sequence 5670 
+ deny ipv6 any host 2a00:1ae8:9:ea00::1 sequence 5680 
+ deny ipv6 any 2a00:1ae8:9:ea00::2/127 sequence 5690 
+ deny ipv6 any host 2a00:1ae8:9:eb00::1 sequence 5700 
+ deny ipv6 any 2a00:1ae8:9:eb00::2/127 sequence 5710 
+ deny ipv6 any host 2a00:1ae8:9:ec00::1 sequence 5720 
+ deny ipv6 any 2a00:1ae8:9:ec00::2/127 sequence 5730 
+ deny ipv6 any host 2a00:1ae8:9:ed00::1 sequence 5740 
+ deny ipv6 any 2a00:1ae8:9:ed00::2/127 sequence 5750 
+ deny ipv6 any host 2a00:1ae8:9:ee00::1 sequence 5760 
+ deny ipv6 any 2a00:1ae8:9:ee00::2/127 sequence 5770 
+ deny ipv6 any host 2a00:1ae8:9:ef00::1 sequence 5780 
+ deny ipv6 any 2a00:1ae8:9:ef00::2/127 sequence 5790 
+ deny ipv6 any host 2a00:1ae8:9:f000::1 sequence 5800 
+ deny ipv6 any 2a00:1ae8:9:f000::2/127 sequence 5810 
+ deny ipv6 any host 2a00:1ae8:9:f100::1 sequence 5820 
+ deny ipv6 any 2a00:1ae8:9:f100::2/127 sequence 5830 
+ deny ipv6 any host 2a00:1ae8:9:f200::1 sequence 5840 
+ deny ipv6 any 2a00:1ae8:9:f200::2/127 sequence 5850 
+ deny ipv6 any host 2a00:1ae8:9:f300::1 sequence 5860 
+ deny ipv6 any 2a00:1ae8:9:f300::2/127 sequence 5870 
+ deny ipv6 any host 2a00:1ae8:9:f400::1 sequence 5880 
+ deny ipv6 any 2a00:1ae8:9:f400::2/127 sequence 5890 
+ deny ipv6 any host 2a00:1ae8:9:f500::1 sequence 5900 
+ deny ipv6 any 2a00:1ae8:9:f500::2/127 sequence 5910 
+ deny ipv6 any host 2a00:1ae8:9:f600::1 sequence 5920 
+ deny ipv6 any 2a00:1ae8:9:f600::2/127 sequence 5930 
+ deny ipv6 any host 2a00:1ae8:9:f700::1 sequence 5940 
+ deny ipv6 any 2a00:1ae8:9:f700::2/127 sequence 5950 
+ deny ipv6 any host 2a00:1ae8:9:f800::1 sequence 5960 
+ deny ipv6 any 2a00:1ae8:9:f800::2/127 sequence 5970 
+ deny ipv6 any host 2a00:1ae8:9:f900::1 sequence 5980 
+ deny ipv6 any 2a00:1ae8:9:f900::2/127 sequence 5990 
+ deny ipv6 any host 2a00:1ae8:9:fa00::1 sequence 6000 
+ deny ipv6 any 2a00:1ae8:9:fa00::2/127 sequence 6010 
+ deny ipv6 any host 2a00:1ae8:9:fb00::1 sequence 6020 
+ deny ipv6 any 2a00:1ae8:9:fb00::2/127 sequence 6030 
+ deny ipv6 any host 2a00:1ae8:9:fc00::1 sequence 6040 
+ deny ipv6 any 2a00:1ae8:9:fc00::2/127 sequence 6050 
+ deny ipv6 any host 2a00:1ae8:9:fd00::1 sequence 6060 
+ deny ipv6 any 2a00:1ae8:9:fd00::2/127 sequence 6070 
+ deny ipv6 any host 2a00:1ae8:9:fe00::1 sequence 6080 
+ deny ipv6 any 2a00:1ae8:9:fe00::2/127 sequence 6090 
+ deny ipv6 any host 2a00:1ae8:9:ff00::1 sequence 6100 
+ deny ipv6 any 2a00:1ae8:9:ff00::2/127 sequence 6110 
+ deny ipv6 any host 2a00:1ae8:a::1 sequence 6120 
+ deny ipv6 any 2a00:1ae8:a::2/127 sequence 6130 
+ deny ipv6 any host 2a00:1ae8:a:100::1 sequence 6140 
+ deny ipv6 any 2a00:1ae8:a:100::2/127 sequence 6150 
+ deny ipv6 any host 2a00:1ae8:a:200::1 sequence 6160 
+ deny ipv6 any 2a00:1ae8:a:200::2/127 sequence 6170 
+ deny ipv6 any host 2a00:1ae8:a:300::1 sequence 6180 
+ deny ipv6 any 2a00:1ae8:a:300::2/127 sequence 6190 
+ deny ipv6 any host 2a00:1ae8:a:400::1 sequence 6200 
+ deny ipv6 any 2a00:1ae8:a:400::2/127 sequence 6210 
+ deny ipv6 any host 2a00:1ae8:a:500::1 sequence 6220 
+ deny ipv6 any 2a00:1ae8:a:500::2/127 sequence 6230 
+ deny ipv6 any host 2a00:1ae8:a:600::1 sequence 6240 
+ deny ipv6 any 2a00:1ae8:a:600::2/127 sequence 6250 
+ deny ipv6 any host 2a00:1ae8:a:700::1 sequence 6260 
+ deny ipv6 any 2a00:1ae8:a:700::2/127 sequence 6270 
+ deny ipv6 any host 2a00:1ae8:a:800::1 sequence 6280 
+ deny ipv6 any 2a00:1ae8:a:800::2/127 sequence 6290 
+ deny ipv6 any host 2a00:1ae8:a:900::1 sequence 6300 
+ deny ipv6 any 2a00:1ae8:a:900::2/127 sequence 6310 
+ deny ipv6 any host 2a00:1ae8:a:a00::1 sequence 6320 
+ deny ipv6 any 2a00:1ae8:a:a00::2/127 sequence 6330 
+ deny ipv6 any host 2a00:1ae8:a:b00::1 sequence 6340 
+ deny ipv6 any 2a00:1ae8:a:b00::2/127 sequence 6350 
+ deny ipv6 any host 2a00:1ae8:a:c00::1 sequence 6360 
+ deny ipv6 any 2a00:1ae8:a:c00::2/127 sequence 6370 
+ deny ipv6 any host 2a00:1ae8:a:d00::1 sequence 6380 
+ deny ipv6 any 2a00:1ae8:a:d00::2/127 sequence 6390 
+ deny ipv6 any host 2a00:1ae8:a:e00::1 sequence 6400 
+ deny ipv6 any 2a00:1ae8:a:e00::2/127 sequence 6410 
+ deny ipv6 any host 2a00:1ae8:a:f00::1 sequence 6420 
+ deny ipv6 any 2a00:1ae8:a:f00::2/127 sequence 6430 
+ deny ipv6 any host 2a00:1ae8:a:1000::1 sequence 6440 
+ deny ipv6 any 2a00:1ae8:a:1000::2/127 sequence 6450 
+ deny ipv6 any host 2a00:1ae8:a:1100::1 sequence 6460 
+ deny ipv6 any 2a00:1ae8:a:1100::2/127 sequence 6470 
+ deny ipv6 any host 2a00:1ae8:a:1200::1 sequence 6480 
+ deny ipv6 any 2a00:1ae8:a:1200::2/127 sequence 6490 
+ deny ipv6 any host 2a00:1ae8:a:1300::1 sequence 6500 
+ deny ipv6 any 2a00:1ae8:a:1300::2/127 sequence 6510 
+ deny ipv6 any host 2a00:1ae8:a:1400::1 sequence 6520 
+ deny ipv6 any 2a00:1ae8:a:1400::2/127 sequence 6530 
+ deny ipv6 any host 2a00:1ae8:a:1500::1 sequence 6540 
+ deny ipv6 any 2a00:1ae8:a:1500::2/127 sequence 6550 
+ deny ipv6 any host 2a00:1ae8:a:1600::1 sequence 6560 
+ deny ipv6 any 2a00:1ae8:a:1600::2/127 sequence 6570 
+ deny ipv6 any host 2a00:1ae8:a:1700::1 sequence 6580 
+ deny ipv6 any 2a00:1ae8:a:1700::2/127 sequence 6590 
+ deny ipv6 any host 2a00:1ae8:a:1800::1 sequence 6600 
+ deny ipv6 any 2a00:1ae8:a:1800::2/127 sequence 6610 
+ deny ipv6 any host 2a00:1ae8:a:1900::1 sequence 6620 
+ deny ipv6 any 2a00:1ae8:a:1900::2/127 sequence 6630 
+ deny ipv6 any host 2a00:1ae8:a:1a00::1 sequence 6640 
+ deny ipv6 any 2a00:1ae8:a:1a00::2/127 sequence 6650 
+ deny ipv6 any host 2a00:1ae8:a:1b00::1 sequence 6660 
+ deny ipv6 any 2a00:1ae8:a:1b00::2/127 sequence 6670 
+ deny ipv6 any host 2a00:1ae8:a:1c00::1 sequence 6680 
+ deny ipv6 any 2a00:1ae8:a:1c00::2/127 sequence 6690 
+ deny ipv6 any host 2a00:1ae8:a:1d00::1 sequence 6700 
+ deny ipv6 any 2a00:1ae8:a:1d00::2/127 sequence 6710 
+ deny ipv6 any host 2a00:1ae8:a:1e00::1 sequence 6720 
+ deny ipv6 any 2a00:1ae8:a:1e00::2/127 sequence 6730 
+ deny ipv6 any host 2a00:1ae8:a:1f00::1 sequence 6740 
+ deny ipv6 any 2a00:1ae8:a:1f00::2/127 sequence 6750 
+ deny ipv6 any host 2a00:1ae8:a:2000::1 sequence 6760 
+ deny ipv6 any 2a00:1ae8:a:2000::2/127 sequence 6770 
+ deny ipv6 any host 2a00:1ae8:a:2100::1 sequence 6780 
+ deny ipv6 any 2a00:1ae8:a:2100::2/127 sequence 6790 
+ deny ipv6 any host 2a00:1ae8:a:2200::1 sequence 6800 
+ deny ipv6 any 2a00:1ae8:a:2200::2/127 sequence 6810 
+ deny ipv6 any host 2a00:1ae8:a:2300::1 sequence 6820 
+ deny ipv6 any 2a00:1ae8:a:2300::2/127 sequence 6830 
+ deny ipv6 any host 2a00:1ae8:a:2400::1 sequence 6840 
+ deny ipv6 any 2a00:1ae8:a:2400::2/127 sequence 6850 
+ deny ipv6 any host 2a00:1ae8:a:2500::1 sequence 6860 
+ deny ipv6 any 2a00:1ae8:a:2500::2/127 sequence 6870 
+ deny ipv6 any host 2a00:1ae8:a:2600::1 sequence 6880 
+ deny ipv6 any 2a00:1ae8:a:2600::2/127 sequence 6890 
+ deny ipv6 any host 2a00:1ae8:a:2700::1 sequence 6900 
+ deny ipv6 any 2a00:1ae8:a:2700::2/127 sequence 6910 
+ deny ipv6 any host 2a00:1ae8:a:2800::1 sequence 6920 
+ deny ipv6 any 2a00:1ae8:a:2800::2/127 sequence 6930 
+ deny ipv6 any host 2a00:1ae8:a:2900::1 sequence 6940 
+ deny ipv6 any 2a00:1ae8:a:2900::2/127 sequence 6950 
+ deny ipv6 any host 2a00:1ae8:a:2a00::1 sequence 6960 
+ deny ipv6 any 2a00:1ae8:a:2a00::2/127 sequence 6970 
+ deny ipv6 any host 2a00:1ae8:a:2b00::1 sequence 6980 
+ deny ipv6 any 2a00:1ae8:a:2b00::2/127 sequence 6990 
+ deny ipv6 any host 2a00:1ae8:a:2c00::1 sequence 7000 
+ deny ipv6 any 2a00:1ae8:a:2c00::2/127 sequence 7010 
+ deny ipv6 any host 2a00:1ae8:a:2d00::1 sequence 7020 
+ deny ipv6 any 2a00:1ae8:a:2d00::2/127 sequence 7030 
+ deny ipv6 any host 2a00:1ae8:a:2e00::1 sequence 7040 
+ deny ipv6 any 2a00:1ae8:a:2e00::2/127 sequence 7050 
+ deny ipv6 any host 2a00:1ae8:a:2f00::1 sequence 7060 
+ deny ipv6 any 2a00:1ae8:a:2f00::2/127 sequence 7070 
+ deny ipv6 any host 2a00:1ae8:a:3000::1 sequence 7080 
+ deny ipv6 any 2a00:1ae8:a:3000::2/127 sequence 7090 
+ deny ipv6 any host 2a00:1ae8:a:3100::1 sequence 7100 
+ deny ipv6 any 2a00:1ae8:a:3100::2/127 sequence 7110 
+ deny ipv6 any host 2a00:1ae8:a:3200::1 sequence 7120 
+ deny ipv6 any 2a00:1ae8:a:3200::2/127 sequence 7130 
+ deny ipv6 any host 2a00:1ae8:a:3300::1 sequence 7140 
+ deny ipv6 any 2a00:1ae8:a:3300::2/127 sequence 7150 
+ deny ipv6 any host 2a00:1ae8:a:3400::1 sequence 7160 
+ deny ipv6 any 2a00:1ae8:a:3400::2/127 sequence 7170 
+ deny ipv6 any host 2a00:1ae8:a:3500::1 sequence 7180 
+ deny ipv6 any 2a00:1ae8:a:3500::2/127 sequence 7190 
+ deny ipv6 any host 2a00:1ae8:a:3600::1 sequence 7200 
+ deny ipv6 any 2a00:1ae8:a:3600::2/127 sequence 7210 
+ deny ipv6 any host 2a00:1ae8:a:3700::1 sequence 7220 
+ deny ipv6 any 2a00:1ae8:a:3700::2/127 sequence 7230 
+ deny ipv6 any host 2a00:1ae8:a:3800::1 sequence 7240 
+ deny ipv6 any 2a00:1ae8:a:3800::2/127 sequence 7250 
+ deny ipv6 any host 2a00:1ae8:a:3900::1 sequence 7260 
+ deny ipv6 any 2a00:1ae8:a:3900::2/127 sequence 7270 
+ deny ipv6 any host 2a00:1ae8:a:3a00::1 sequence 7280 
+ deny ipv6 any 2a00:1ae8:a:3a00::2/127 sequence 7290 
+ deny ipv6 any host 2a00:1ae8:a:3b00::1 sequence 7300 
+ deny ipv6 any 2a00:1ae8:a:3b00::2/127 sequence 7310 
+ deny ipv6 any host 2a00:1ae8:a:3c00::1 sequence 7320 
+ deny ipv6 any 2a00:1ae8:a:3c00::2/127 sequence 7330 
+ deny ipv6 any host 2a00:1ae8:a:3d00::1 sequence 7340 
+ deny ipv6 any 2a00:1ae8:a:3d00::2/127 sequence 7350 
+ deny ipv6 any host 2a00:1ae8:a:3e00::1 sequence 7360 
+ deny ipv6 any 2a00:1ae8:a:3e00::2/127 sequence 7370 
+ deny ipv6 any host 2a00:1ae8:a:3f00::1 sequence 7380 
+ deny ipv6 any 2a00:1ae8:a:3f00::2/127 sequence 7390 
+ deny ipv6 any host 2a00:1ae8:a:4000::1 sequence 7400 
+ deny ipv6 any 2a00:1ae8:a:4000::2/127 sequence 7410 
+ deny ipv6 any host 2a00:1ae8:a:4100::1 sequence 7420 
+ deny ipv6 any 2a00:1ae8:a:4100::2/127 sequence 7430 
+ deny ipv6 any host 2a00:1ae8:a:4200::1 sequence 7440 
+ deny ipv6 any 2a00:1ae8:a:4200::2/127 sequence 7450 
+ deny ipv6 any host 2a00:1ae8:a:4300::1 sequence 7460 
+ deny ipv6 any 2a00:1ae8:a:4300::2/127 sequence 7470 
+ deny ipv6 any host 2a00:1ae8:a:4400::1 sequence 7480 
+ deny ipv6 any 2a00:1ae8:a:4400::2/127 sequence 7490 
+ deny ipv6 any host 2a00:1ae8:a:4500::1 sequence 7500 
+ deny ipv6 any 2a00:1ae8:a:4500::2/127 sequence 7510 
+ deny ipv6 any host 2a00:1ae8:a:4600::1 sequence 7520 
+ deny ipv6 any 2a00:1ae8:a:4600::2/127 sequence 7530 
+ deny ipv6 any host 2a00:1ae8:a:4700::1 sequence 7540 
+ deny ipv6 any 2a00:1ae8:a:4700::2/127 sequence 7550 
+ deny ipv6 any host 2a00:1ae8:a:4800::1 sequence 7560 
+ deny ipv6 any 2a00:1ae8:a:4800::2/127 sequence 7570 
+ deny ipv6 any host 2a00:1ae8:a:4900::1 sequence 7580 
+ deny ipv6 any 2a00:1ae8:a:4900::2/127 sequence 7590 
+ deny ipv6 any host 2a00:1ae8:a:4a00::1 sequence 7600 
+ deny ipv6 any 2a00:1ae8:a:4a00::2/127 sequence 7610 
+ deny ipv6 any host 2a00:1ae8:a:4b00::1 sequence 7620 
+ deny ipv6 any 2a00:1ae8:a:4b00::2/127 sequence 7630 
+ deny ipv6 any host 2a00:1ae8:a:4c00::1 sequence 7640 
+ deny ipv6 any 2a00:1ae8:a:4c00::2/127 sequence 7650 
+ deny ipv6 any host 2a00:1ae8:a:4d00::1 sequence 7660 
+ deny ipv6 any 2a00:1ae8:a:4d00::2/127 sequence 7670 
+ deny ipv6 any host 2a00:1ae8:a:4e00::1 sequence 7680 
+ deny ipv6 any 2a00:1ae8:a:4e00::2/127 sequence 7690 
+ deny ipv6 any host 2a00:1ae8:a:4f00::1 sequence 7700 
+ deny ipv6 any 2a00:1ae8:a:4f00::2/127 sequence 7710 
+ deny ipv6 any host 2a00:1ae8:a:5000::1 sequence 7720 
+ deny ipv6 any 2a00:1ae8:a:5000::2/127 sequence 7730 
+ deny ipv6 any host 2a00:1ae8:a:5100::1 sequence 7740 
+ deny ipv6 any 2a00:1ae8:a:5100::2/127 sequence 7750 
+ deny ipv6 any host 2a00:1ae8:a:5200::1 sequence 7760 
+ deny ipv6 any 2a00:1ae8:a:5200::2/127 sequence 7770 
+ deny ipv6 any host 2a00:1ae8:a:5300::1 sequence 7780 
+ deny ipv6 any 2a00:1ae8:a:5300::2/127 sequence 7790 
+ deny ipv6 any host 2a00:1ae8:a:5400::1 sequence 7800 
+ deny ipv6 any 2a00:1ae8:a:5400::2/127 sequence 7810 
+ deny ipv6 any host 2a00:1ae8:a:5500::1 sequence 7820 
+ deny ipv6 any 2a00:1ae8:a:5500::2/127 sequence 7830 
+ deny ipv6 any host 2a00:1ae8:a:5600::1 sequence 7840 
+ deny ipv6 any 2a00:1ae8:a:5600::2/127 sequence 7850 
+ deny ipv6 any host 2a00:1ae8:a:5700::1 sequence 7860 
+ deny ipv6 any 2a00:1ae8:a:5700::2/127 sequence 7870 
+ deny ipv6 any host 2a00:1ae8:a:5800::1 sequence 7880 
+ deny ipv6 any 2a00:1ae8:a:5800::2/127 sequence 7890 
+ deny ipv6 any host 2a00:1ae8:a:5900::1 sequence 7900 
+ deny ipv6 any 2a00:1ae8:a:5900::2/127 sequence 7910 
+ deny ipv6 any host 2a00:1ae8:a:5a00::1 sequence 7920 
+ deny ipv6 any 2a00:1ae8:a:5a00::2/127 sequence 7930 
+ deny ipv6 any host 2a00:1ae8:a:5b00::1 sequence 7940 
+ deny ipv6 any 2a00:1ae8:a:5b00::2/127 sequence 7950 
+ deny ipv6 any host 2a00:1ae8:a:5c00::1 sequence 7960 
+ deny ipv6 any 2a00:1ae8:a:5c00::2/127 sequence 7970 
+ deny ipv6 any host 2a00:1ae8:a:5d00::1 sequence 7980 
+ deny ipv6 any 2a00:1ae8:a:5d00::2/127 sequence 7990 
+ deny ipv6 any host 2a00:1ae8:a:5e00::1 sequence 8000 
+ deny ipv6 any 2a00:1ae8:a:5e00::2/127 sequence 8010 
+ deny ipv6 any host 2a00:1ae8:a:5f00::1 sequence 8020 
+ deny ipv6 any 2a00:1ae8:a:5f00::2/127 sequence 8030 
+ deny ipv6 any host 2a00:1ae8:a:6000::1 sequence 8040 
+ deny ipv6 any 2a00:1ae8:a:6000::2/127 sequence 8050 
+ deny ipv6 any host 2a00:1ae8:a:6100::1 sequence 8060 
+ deny ipv6 any 2a00:1ae8:a:6100::2/127 sequence 8070 
+ deny ipv6 any host 2a00:1ae8:a:6200::1 sequence 8080 
+ deny ipv6 any 2a00:1ae8:a:6200::2/127 sequence 8090 
+ deny ipv6 any host 2a00:1ae8:a:6300::1 sequence 8100 
+ deny ipv6 any 2a00:1ae8:a:6300::2/127 sequence 8110 
+ deny ipv6 any host 2a00:1ae8:a:6400::1 sequence 8120 
+ deny ipv6 any 2a00:1ae8:a:6400::2/127 sequence 8130 
+ deny ipv6 any host 2a00:1ae8:a:6500::1 sequence 8140 
+ deny ipv6 any 2a00:1ae8:a:6500::2/127 sequence 8150 
+ deny ipv6 any host 2a00:1ae8:a:6600::1 sequence 8160 
+ deny ipv6 any 2a00:1ae8:a:6600::2/127 sequence 8170 
+ deny ipv6 any host 2a00:1ae8:a:6700::1 sequence 8180 
+ deny ipv6 any 2a00:1ae8:a:6700::2/127 sequence 8190 
+ deny ipv6 any host 2a00:1ae8:a:6800::1 sequence 8200 
+ deny ipv6 any 2a00:1ae8:a:6800::2/127 sequence 8210 
+ deny ipv6 any host 2a00:1ae8:a:6900::1 sequence 8220 
+ deny ipv6 any 2a00:1ae8:a:6900::2/127 sequence 8230 
+ deny ipv6 any host 2a00:1ae8:a:6a00::1 sequence 8240 
+ deny ipv6 any 2a00:1ae8:a:6a00::2/127 sequence 8250 
+ deny ipv6 any host 2a00:1ae8:a:6b00::1 sequence 8260 
+ deny ipv6 any 2a00:1ae8:a:6b00::2/127 sequence 8270 
+ deny ipv6 any host 2a00:1ae8:a:6c00::1 sequence 8280 
+ deny ipv6 any 2a00:1ae8:a:6c00::2/127 sequence 8290 
+ deny ipv6 any host 2a00:1ae8:a:6d00::1 sequence 8300 
+ deny ipv6 any 2a00:1ae8:a:6d00::2/127 sequence 8310 
+ deny ipv6 any host 2a00:1ae8:a:6e00::1 sequence 8320 
+ deny ipv6 any 2a00:1ae8:a:6e00::2/127 sequence 8330 
+ deny ipv6 any host 2a00:1ae8:a:6f00::1 sequence 8340 
+ deny ipv6 any 2a00:1ae8:a:6f00::2/127 sequence 8350 
+ deny ipv6 any host 2a00:1ae8:a:7000::1 sequence 8360 
+ deny ipv6 any 2a00:1ae8:a:7000::2/127 sequence 8370 
+ deny ipv6 any host 2a00:1ae8:a:7100::1 sequence 8380 
+ deny ipv6 any 2a00:1ae8:a:7100::2/127 sequence 8390 
+ deny ipv6 any host 2a00:1ae8:a:7200::1 sequence 8400 
+ deny ipv6 any 2a00:1ae8:a:7200::2/127 sequence 8410 
+ deny ipv6 any host 2a00:1ae8:a:7300::1 sequence 8420 
+ deny ipv6 any 2a00:1ae8:a:7300::2/127 sequence 8430 
+ deny ipv6 any host 2a00:1ae8:a:7400::1 sequence 8440 
+ deny ipv6 any 2a00:1ae8:a:7400::2/127 sequence 8450 
+ deny ipv6 any host 2a00:1ae8:a:7500::1 sequence 8460 
+ deny ipv6 any 2a00:1ae8:a:7500::2/127 sequence 8470 
+ deny ipv6 any host 2a00:1ae8:a:7600::1 sequence 8480 
+ deny ipv6 any 2a00:1ae8:a:7600::2/127 sequence 8490 
+ deny ipv6 any host 2a00:1ae8:a:7700::1 sequence 8500 
+ deny ipv6 any 2a00:1ae8:a:7700::2/127 sequence 8510 
+ deny ipv6 any host 2a00:1ae8:a:7800::1 sequence 8520 
+ deny ipv6 any 2a00:1ae8:a:7800::2/127 sequence 8530 
+ deny ipv6 any host 2a00:1ae8:a:7900::1 sequence 8540 
+ deny ipv6 any 2a00:1ae8:a:7900::2/127 sequence 8550 
+ deny ipv6 any host 2a00:1ae8:a:7a00::1 sequence 8560 
+ deny ipv6 any 2a00:1ae8:a:7a00::2/127 sequence 8570 
+ deny ipv6 any host 2a00:1ae8:a:7b00::1 sequence 8580 
+ deny ipv6 any 2a00:1ae8:a:7b00::2/127 sequence 8590 
+ deny ipv6 any host 2a00:1ae8:a:7c00::1 sequence 8600 
+ deny ipv6 any 2a00:1ae8:a:7c00::2/127 sequence 8610 
+ deny ipv6 any host 2a00:1ae8:a:7d00::1 sequence 8620 
+ deny ipv6 any 2a00:1ae8:a:7d00::2/127 sequence 8630 
+ deny ipv6 any host 2a00:1ae8:a:7e00::1 sequence 8640 
+ deny ipv6 any 2a00:1ae8:a:7e00::2/127 sequence 8650 
+ deny ipv6 any host 2a00:1ae8:a:7f00::1 sequence 8660 
+ deny ipv6 any 2a00:1ae8:a:7f00::2/127 sequence 8670 
+ deny ipv6 any host 2a00:1ae8:a:8000::1 sequence 8680 
+ deny ipv6 any 2a00:1ae8:a:8000::2/127 sequence 8690 
+ deny ipv6 any host 2a00:1ae8:a:8100::1 sequence 8700 
+ deny ipv6 any 2a00:1ae8:a:8100::2/127 sequence 8710 
+ deny ipv6 any host 2a00:1ae8:a:8200::1 sequence 8720 
+ deny ipv6 any 2a00:1ae8:a:8200::2/127 sequence 8730 
+ deny ipv6 any host 2a00:1ae8:a:8300::1 sequence 8740 
+ deny ipv6 any 2a00:1ae8:a:8300::2/127 sequence 8750 
+ deny ipv6 any host 2a00:1ae8:a:8400::1 sequence 8760 
+ deny ipv6 any 2a00:1ae8:a:8400::2/127 sequence 8770 
+ deny ipv6 any host 2a00:1ae8:a:8500::1 sequence 8780 
+ deny ipv6 any 2a00:1ae8:a:8500::2/127 sequence 8790 
+ deny ipv6 any host 2a00:1ae8:a:8600::1 sequence 8800 
+ deny ipv6 any 2a00:1ae8:a:8600::2/127 sequence 8810 
+ deny ipv6 any host 2a00:1ae8:a:8700::1 sequence 8820 
+ deny ipv6 any 2a00:1ae8:a:8700::2/127 sequence 8830 
+ deny ipv6 any host 2a00:1ae8:a:8800::1 sequence 8840 
+ deny ipv6 any 2a00:1ae8:a:8800::2/127 sequence 8850 
+ deny ipv6 any host 2a00:1ae8:a:8900::1 sequence 8860 
+ deny ipv6 any 2a00:1ae8:a:8900::2/127 sequence 8870 
+ deny ipv6 any host 2a00:1ae8:a:8a00::1 sequence 8880 
+ deny ipv6 any 2a00:1ae8:a:8a00::2/127 sequence 8890 
+ deny ipv6 any host 2a00:1ae8:a:8b00::1 sequence 8900 
+ deny ipv6 any 2a00:1ae8:a:8b00::2/127 sequence 8910 
+ deny ipv6 any host 2a00:1ae8:a:8c00::1 sequence 8920 
+ deny ipv6 any 2a00:1ae8:a:8c00::2/127 sequence 8930 
+ deny ipv6 any host 2a00:1ae8:a:8d00::1 sequence 8940 
+ deny ipv6 any 2a00:1ae8:a:8d00::2/127 sequence 8950 
+ deny ipv6 any host 2a00:1ae8:a:8e00::1 sequence 8960 
+ deny ipv6 any 2a00:1ae8:a:8e00::2/127 sequence 8970 
+ deny ipv6 any host 2a00:1ae8:a:8f00::1 sequence 8980 
+ deny ipv6 any 2a00:1ae8:a:8f00::2/127 sequence 8990 
+ deny ipv6 any host 2a00:1ae8:a:9000::1 sequence 9000 
+ deny ipv6 any 2a00:1ae8:a:9000::2/127 sequence 9010 
+ deny ipv6 any host 2a00:1ae8:a:9100::1 sequence 9020 
+ deny ipv6 any 2a00:1ae8:a:9100::2/127 sequence 9030 
+ deny ipv6 any host 2a00:1ae8:a:9200::1 sequence 9040 
+ deny ipv6 any 2a00:1ae8:a:9200::2/127 sequence 9050 
+ deny ipv6 any host 2a00:1ae8:a:9300::1 sequence 9060 
+ deny ipv6 any 2a00:1ae8:a:9300::2/127 sequence 9070 
+ deny ipv6 any host 2a00:1ae8:a:9400::1 sequence 9080 
+ deny ipv6 any 2a00:1ae8:a:9400::2/127 sequence 9090 
+ deny ipv6 any host 2a00:1ae8:a:9500::1 sequence 9100 
+ deny ipv6 any 2a00:1ae8:a:9500::2/127 sequence 9110 
+ deny ipv6 any host 2a00:1ae8:a:9600::1 sequence 9120 
+ deny ipv6 any 2a00:1ae8:a:9600::2/127 sequence 9130 
+ deny ipv6 any host 2a00:1ae8:a:9700::1 sequence 9140 
+ deny ipv6 any 2a00:1ae8:a:9700::2/127 sequence 9150 
+ deny ipv6 any host 2a00:1ae8:a:9800::1 sequence 9160 
+ deny ipv6 any 2a00:1ae8:a:9800::2/127 sequence 9170 
+ deny ipv6 any host 2a00:1ae8:a:9900::1 sequence 9180 
+ deny ipv6 any 2a00:1ae8:a:9900::2/127 sequence 9190 
+ deny ipv6 any host 2a00:1ae8:a:9a00::1 sequence 9200 
+ deny ipv6 any 2a00:1ae8:a:9a00::2/127 sequence 9210 
+ deny ipv6 any host 2a00:1ae8:a:9b00::1 sequence 9220 
+ deny ipv6 any 2a00:1ae8:a:9b00::2/127 sequence 9230 
+ deny ipv6 any host 2a00:1ae8:a:9c00::1 sequence 9240 
+ deny ipv6 any 2a00:1ae8:a:9c00::2/127 sequence 9250 
+ deny ipv6 any host 2a00:1ae8:a:9d00::1 sequence 9260 
+ deny ipv6 any 2a00:1ae8:a:9d00::2/127 sequence 9270 
+ deny ipv6 any host 2a00:1ae8:a:9e00::1 sequence 9280 
+ deny ipv6 any 2a00:1ae8:a:9e00::2/127 sequence 9290 
+ deny ipv6 any host 2a00:1ae8:a:9f00::1 sequence 9300 
+ deny ipv6 any 2a00:1ae8:a:9f00::2/127 sequence 9310 
+ deny ipv6 any host 2a00:1ae8:a:a000::1 sequence 9320 
+ deny ipv6 any 2a00:1ae8:a:a000::2/127 sequence 9330 
+ deny ipv6 any host 2a00:1ae8:a:a100::1 sequence 9340 
+ deny ipv6 any 2a00:1ae8:a:a100::2/127 sequence 9350 
+ deny ipv6 any host 2a00:1ae8:a:a200::1 sequence 9360 
+ deny ipv6 any 2a00:1ae8:a:a200::2/127 sequence 9370 
+ deny ipv6 any host 2a00:1ae8:a:a300::1 sequence 9380 
+ deny ipv6 any 2a00:1ae8:a:a300::2/127 sequence 9390 
+ deny ipv6 any host 2a00:1ae8:a:a400::1 sequence 9400 
+ deny ipv6 any 2a00:1ae8:a:a400::2/127 sequence 9410 
+ deny ipv6 any host 2a00:1ae8:a:a500::1 sequence 9420 
+ deny ipv6 any 2a00:1ae8:a:a500::2/127 sequence 9430 
+ deny ipv6 any host 2a00:1ae8:a:a600::1 sequence 9440 
+ deny ipv6 any 2a00:1ae8:a:a600::2/127 sequence 9450 
+ deny ipv6 any host 2a00:1ae8:a:a700::1 sequence 9460 
+ deny ipv6 any 2a00:1ae8:a:a700::2/127 sequence 9470 
+ deny ipv6 any host 2a00:1ae8:a:a800::1 sequence 9480 
+ deny ipv6 any 2a00:1ae8:a:a800::2/127 sequence 9490 
+ deny ipv6 any host 2a00:1ae8:a:a900::1 sequence 9500 
+ deny ipv6 any 2a00:1ae8:a:a900::2/127 sequence 9510 
+ deny ipv6 any host 2a00:1ae8:a:aa00::1 sequence 9520 
+ deny ipv6 any 2a00:1ae8:a:aa00::2/127 sequence 9530 
+ deny ipv6 any host 2a00:1ae8:a:ab00::1 sequence 9540 
+ deny ipv6 any 2a00:1ae8:a:ab00::2/127 sequence 9550 
+ deny ipv6 any host 2a00:1ae8:a:ac00::1 sequence 9560 
+ deny ipv6 any 2a00:1ae8:a:ac00::2/127 sequence 9570 
+ deny ipv6 any host 2a00:1ae8:a:ad00::1 sequence 9580 
+ deny ipv6 any 2a00:1ae8:a:ad00::2/127 sequence 9590 
+ deny ipv6 any host 2a00:1ae8:a:ae00::1 sequence 9600 
+ deny ipv6 any 2a00:1ae8:a:ae00::2/127 sequence 9610 
+ deny ipv6 any host 2a00:1ae8:a:af00::1 sequence 9620 
+ deny ipv6 any 2a00:1ae8:a:af00::2/127 sequence 9630 
+ deny ipv6 any host 2a00:1ae8:a:b000::1 sequence 9640 
+ deny ipv6 any 2a00:1ae8:a:b000::2/127 sequence 9650 
+ deny ipv6 any host 2a00:1ae8:a:b100::1 sequence 9660 
+ deny ipv6 any 2a00:1ae8:a:b100::2/127 sequence 9670 
+ deny ipv6 any host 2a00:1ae8:a:b200::1 sequence 9680 
+ deny ipv6 any 2a00:1ae8:a:b200::2/127 sequence 9690 
+ deny ipv6 any host 2a00:1ae8:a:b300::1 sequence 9700 
+ deny ipv6 any 2a00:1ae8:a:b300::2/127 sequence 9710 
+ deny ipv6 any host 2a00:1ae8:a:b400::1 sequence 9720 
+ deny ipv6 any 2a00:1ae8:a:b400::2/127 sequence 9730 
+ deny ipv6 any host 2a00:1ae8:a:b500::1 sequence 9740 
+ deny ipv6 any 2a00:1ae8:a:b500::2/127 sequence 9750 
+ deny ipv6 any host 2a00:1ae8:a:b600::1 sequence 9760 
+ deny ipv6 any 2a00:1ae8:a:b600::2/127 sequence 9770 
+ deny ipv6 any host 2a00:1ae8:a:b700::1 sequence 9780 
+ deny ipv6 any 2a00:1ae8:a:b700::2/127 sequence 9790 
+ deny ipv6 any host 2a00:1ae8:a:b800::1 sequence 9800 
+ deny ipv6 any 2a00:1ae8:a:b800::2/127 sequence 9810 
+ deny ipv6 any host 2a00:1ae8:a:b900::1 sequence 9820 
+ deny ipv6 any 2a00:1ae8:a:b900::2/127 sequence 9830 
+ deny ipv6 any host 2a00:1ae8:a:ba00::1 sequence 9840 
+ deny ipv6 any 2a00:1ae8:a:ba00::2/127 sequence 9850 
+ deny ipv6 any host 2a00:1ae8:a:bb00::1 sequence 9860 
+ deny ipv6 any 2a00:1ae8:a:bb00::2/127 sequence 9870 
+ deny ipv6 any host 2a00:1ae8:a:bc00::1 sequence 9880 
+ deny ipv6 any 2a00:1ae8:a:bc00::2/127 sequence 9890 
+ deny ipv6 any host 2a00:1ae8:a:bd00::1 sequence 9900 
+ deny ipv6 any 2a00:1ae8:a:bd00::2/127 sequence 9910 
+ deny ipv6 any host 2a00:1ae8:a:be00::1 sequence 9920 
+ deny ipv6 any 2a00:1ae8:a:be00::2/127 sequence 9930 
+ deny ipv6 any host 2a00:1ae8:a:bf00::1 sequence 9940 
+ deny ipv6 any 2a00:1ae8:a:bf00::2/127 sequence 9950 
+ deny ipv6 any host 2a00:1ae8:a:c000::1 sequence 9960 
+ deny ipv6 any 2a00:1ae8:a:c000::2/127 sequence 9970 
+ deny ipv6 any host 2a00:1ae8:a:c100::1 sequence 9980 
+ deny ipv6 any 2a00:1ae8:a:c100::2/127 sequence 9990 
+ deny ipv6 any host 2a00:1ae8:a:c200::1 sequence 10000 
+ deny ipv6 any 2a00:1ae8:a:c200::2/127 sequence 10010 
+ deny ipv6 any host 2a00:1ae8:a:c300::1 sequence 10020 
+ deny ipv6 any 2a00:1ae8:a:c300::2/127 sequence 10030 
+ deny ipv6 any host 2a00:1ae8:a:c400::1 sequence 10040 
+ deny ipv6 any 2a00:1ae8:a:c400::2/127 sequence 10050 
+ deny ipv6 any host 2a00:1ae8:a:c500::1 sequence 10060 
+ deny ipv6 any 2a00:1ae8:a:c500::2/127 sequence 10070 
+ deny ipv6 any host 2a00:1ae8:a:c600::1 sequence 10080 
+ deny ipv6 any 2a00:1ae8:a:c600::2/127 sequence 10090 
+ deny ipv6 any host 2a00:1ae8:a:c700::1 sequence 10100 
+ deny ipv6 any 2a00:1ae8:a:c700::2/127 sequence 10110 
+ deny ipv6 any host 2a00:1ae8:a:c800::1 sequence 10120 
+ deny ipv6 any 2a00:1ae8:a:c800::2/127 sequence 10130 
+ deny ipv6 any host 2a00:1ae8:a:c900::1 sequence 10140 
+ deny ipv6 any 2a00:1ae8:a:c900::2/127 sequence 10150 
+ deny ipv6 any host 2a00:1ae8:a:ca00::1 sequence 10160 
+ deny ipv6 any 2a00:1ae8:a:ca00::2/127 sequence 10170 
+ deny ipv6 any host 2a00:1ae8:a:cb00::1 sequence 10180 
+ deny ipv6 any 2a00:1ae8:a:cb00::2/127 sequence 10190 
+ deny ipv6 any host 2a00:1ae8:a:cc00::1 sequence 10200 
+ deny ipv6 any 2a00:1ae8:a:cc00::2/127 sequence 10210 
+ deny ipv6 any host 2a00:1ae8:a:cd00::1 sequence 10220 
+ deny ipv6 any 2a00:1ae8:a:cd00::2/127 sequence 10230 
+ deny ipv6 any host 2a00:1ae8:a:ce00::1 sequence 10240 
+ deny ipv6 any 2a00:1ae8:a:ce00::2/127 sequence 10250 
+ deny ipv6 any host 2a00:1ae8:a:cf00::1 sequence 10260 
+ deny ipv6 any 2a00:1ae8:a:cf00::2/127 sequence 10270 
+ deny ipv6 any host 2a00:1ae8:a:d000::1 sequence 10280 
+ deny ipv6 any 2a00:1ae8:a:d000::2/127 sequence 10290 
+ deny ipv6 any host 2a00:1ae8:a:d100::1 sequence 10300 
+ deny ipv6 any 2a00:1ae8:a:d100::2/127 sequence 10310 
+ deny ipv6 any host 2a00:1ae8:a:d200::1 sequence 10320 
+ deny ipv6 any 2a00:1ae8:a:d200::2/127 sequence 10330 
+ deny ipv6 any host 2a00:1ae8:a:d300::1 sequence 10340 
+ deny ipv6 any 2a00:1ae8:a:d300::2/127 sequence 10350 
+ deny ipv6 any host 2a00:1ae8:a:d400::1 sequence 10360 
+ deny ipv6 any 2a00:1ae8:a:d400::2/127 sequence 10370 
+ deny ipv6 any host 2a00:1ae8:a:d500::1 sequence 10380 
+ deny ipv6 any 2a00:1ae8:a:d500::2/127 sequence 10390 
+ deny ipv6 any host 2a00:1ae8:a:d600::1 sequence 10400 
+ deny ipv6 any 2a00:1ae8:a:d600::2/127 sequence 10410 
+ deny ipv6 any host 2a00:1ae8:a:d700::1 sequence 10420 
+ deny ipv6 any 2a00:1ae8:a:d700::2/127 sequence 10430 
+ deny ipv6 any host 2a00:1ae8:a:d800::1 sequence 10440 
+ deny ipv6 any 2a00:1ae8:a:d800::2/127 sequence 10450 
+ deny ipv6 any host 2a00:1ae8:a:d900::1 sequence 10460 
+ deny ipv6 any 2a00:1ae8:a:d900::2/127 sequence 10470 
+ deny ipv6 any host 2a00:1ae8:a:da00::1 sequence 10480 
+ deny ipv6 any 2a00:1ae8:a:da00::2/127 sequence 10490 
+ deny ipv6 any host 2a00:1ae8:a:db00::1 sequence 10500 
+ deny ipv6 any 2a00:1ae8:a:db00::2/127 sequence 10510 
+ deny ipv6 any host 2a00:1ae8:a:dc00::1 sequence 10520 
+ deny ipv6 any 2a00:1ae8:a:dc00::2/127 sequence 10530 
+ deny ipv6 any host 2a00:1ae8:a:dd00::1 sequence 10540 
+ deny ipv6 any 2a00:1ae8:a:dd00::2/127 sequence 10550 
+ deny ipv6 any host 2a00:1ae8:a:de00::1 sequence 10560 
+ deny ipv6 any 2a00:1ae8:a:de00::2/127 sequence 10570 
+ deny ipv6 any host 2a00:1ae8:a:df00::1 sequence 10580 
+ deny ipv6 any 2a00:1ae8:a:df00::2/127 sequence 10590 
+ deny ipv6 any host 2a00:1ae8:a:e000::1 sequence 10600 
+ deny ipv6 any 2a00:1ae8:a:e000::2/127 sequence 10610 
+ deny ipv6 any host 2a00:1ae8:a:e100::1 sequence 10620 
+ deny ipv6 any 2a00:1ae8:a:e100::2/127 sequence 10630 
+ deny ipv6 any host 2a00:1ae8:a:e200::1 sequence 10640 
+ deny ipv6 any 2a00:1ae8:a:e200::2/127 sequence 10650 
+ deny ipv6 any host 2a00:1ae8:a:e300::1 sequence 10660 
+ deny ipv6 any 2a00:1ae8:a:e300::2/127 sequence 10670 
+ deny ipv6 any host 2a00:1ae8:a:e400::1 sequence 10680 
+ deny ipv6 any 2a00:1ae8:a:e400::2/127 sequence 10690 
+ deny ipv6 any host 2a00:1ae8:a:e500::1 sequence 10700 
+ deny ipv6 any 2a00:1ae8:a:e500::2/127 sequence 10710 
+ deny ipv6 any host 2a00:1ae8:a:e600::1 sequence 10720 
+ deny ipv6 any 2a00:1ae8:a:e600::2/127 sequence 10730 
+ deny ipv6 any host 2a00:1ae8:a:e700::1 sequence 10740 
+ deny ipv6 any 2a00:1ae8:a:e700::2/127 sequence 10750 
+ deny ipv6 any host 2a00:1ae8:a:e800::1 sequence 10760 
+ deny ipv6 any 2a00:1ae8:a:e800::2/127 sequence 10770 
+ deny ipv6 any host 2a00:1ae8:a:e900::1 sequence 10780 
+ deny ipv6 any 2a00:1ae8:a:e900::2/127 sequence 10790 
+ deny ipv6 any host 2a00:1ae8:a:ea00::1 sequence 10800 
+ deny ipv6 any 2a00:1ae8:a:ea00::2/127 sequence 10810 
+ deny ipv6 any host 2a00:1ae8:a:eb00::1 sequence 10820 
+ deny ipv6 any 2a00:1ae8:a:eb00::2/127 sequence 10830 
+ deny ipv6 any host 2a00:1ae8:a:ec00::1 sequence 10840 
+ deny ipv6 any 2a00:1ae8:a:ec00::2/127 sequence 10850 
+ deny ipv6 any host 2a00:1ae8:a:ed00::1 sequence 10860 
+ deny ipv6 any 2a00:1ae8:a:ed00::2/127 sequence 10870 
+ deny ipv6 any host 2a00:1ae8:a:ee00::1 sequence 10880 
+ deny ipv6 any 2a00:1ae8:a:ee00::2/127 sequence 10890 
+ deny ipv6 any host 2a00:1ae8:a:ef00::1 sequence 10900 
+ deny ipv6 any 2a00:1ae8:a:ef00::2/127 sequence 10910 
+ deny ipv6 any host 2a00:1ae8:a:f000::1 sequence 10920 
+ deny ipv6 any 2a00:1ae8:a:f000::2/127 sequence 10930 
+ deny ipv6 any host 2a00:1ae8:a:f100::1 sequence 10940 
+ deny ipv6 any 2a00:1ae8:a:f100::2/127 sequence 10950 
+ deny ipv6 any host 2a00:1ae8:a:f200::1 sequence 10960 
+ deny ipv6 any 2a00:1ae8:a:f200::2/127 sequence 10970 
+ deny ipv6 any host 2a00:1ae8:a:f300::1 sequence 10980 
+ deny ipv6 any 2a00:1ae8:a:f300::2/127 sequence 10990 
+ deny ipv6 any host 2a00:1ae8:a:f400::1 sequence 11000 
+ deny ipv6 any 2a00:1ae8:a:f400::2/127 sequence 11010 
+ deny ipv6 any host 2a00:1ae8:a:f500::1 sequence 11020 
+ deny ipv6 any 2a00:1ae8:a:f500::2/127 sequence 11030 
+ deny ipv6 any host 2a00:1ae8:a:f600::1 sequence 11040 
+ deny ipv6 any 2a00:1ae8:a:f600::2/127 sequence 11050 
+ deny ipv6 any host 2a00:1ae8:a:f700::1 sequence 11060 
+ deny ipv6 any 2a00:1ae8:a:f700::2/127 sequence 11070 
+ deny ipv6 any host 2a00:1ae8:a:f800::1 sequence 11080 
+ deny ipv6 any 2a00:1ae8:a:f800::2/127 sequence 11090 
+ deny ipv6 any host 2a00:1ae8:a:f900::1 sequence 11100 
+ deny ipv6 any 2a00:1ae8:a:f900::2/127 sequence 11110 
+ deny ipv6 any host 2a00:1ae8:a:fa00::1 sequence 11120 
+ deny ipv6 any 2a00:1ae8:a:fa00::2/127 sequence 11130 
+ deny ipv6 any host 2a00:1ae8:a:fb00::1 sequence 11140 
+ deny ipv6 any 2a00:1ae8:a:fb00::2/127 sequence 11150 
+ deny ipv6 any host 2a00:1ae8:a:fc00::1 sequence 11160 
+ deny ipv6 any 2a00:1ae8:a:fc00::2/127 sequence 11170 
+ deny ipv6 any host 2a00:1ae8:a:fd00::1 sequence 11180 
+ deny ipv6 any 2a00:1ae8:a:fd00::2/127 sequence 11190 
+ deny ipv6 any host 2a00:1ae8:a:fe00::1 sequence 11200 
+ deny ipv6 any 2a00:1ae8:a:fe00::2/127 sequence 11210 
+ deny ipv6 any host 2a00:1ae8:a:ff00::1 sequence 11220 
+ deny ipv6 any 2a00:1ae8:a:ff00::2/127 sequence 11230 
+ deny ipv6 any host 2a00:1ae8:b::1 sequence 11240 
+ deny ipv6 any 2a00:1ae8:b::2/127 sequence 11250 
+ deny ipv6 any host 2a00:1ae8:b:100::1 sequence 11260 
+ deny ipv6 any 2a00:1ae8:b:100::2/127 sequence 11270 
+ deny ipv6 any host 2a00:1ae8:b:200::1 sequence 11280 
+ deny ipv6 any 2a00:1ae8:b:200::2/127 sequence 11290 
+ deny ipv6 any host 2a00:1ae8:b:300::1 sequence 11300 
+ deny ipv6 any 2a00:1ae8:b:300::2/127 sequence 11310 
+ deny ipv6 any host 2a00:1ae8:b:400::1 sequence 11320 
+ deny ipv6 any 2a00:1ae8:b:400::2/127 sequence 11330 
+ deny ipv6 any host 2a00:1ae8:b:500::1 sequence 11340 
+ deny ipv6 any 2a00:1ae8:b:500::2/127 sequence 11350 
+ deny ipv6 any host 2a00:1ae8:b:600::1 sequence 11360 
+ deny ipv6 any 2a00:1ae8:b:600::2/127 sequence 11370 
+ deny ipv6 any host 2a00:1ae8:b:700::1 sequence 11380 
+ deny ipv6 any 2a00:1ae8:b:700::2/127 sequence 11390 
+ deny ipv6 any host 2a00:1ae8:b:800::1 sequence 11400 
+ deny ipv6 any 2a00:1ae8:b:800::2/127 sequence 11410 
+ deny ipv6 any host 2a00:1ae8:b:900::1 sequence 11420 
+ deny ipv6 any 2a00:1ae8:b:900::2/127 sequence 11430 
+ deny ipv6 any host 2a00:1ae8:b:a00::1 sequence 11440 
+ deny ipv6 any 2a00:1ae8:b:a00::2/127 sequence 11450 
+ deny ipv6 any host 2a00:1ae8:b:b00::1 sequence 11460 
+ deny ipv6 any 2a00:1ae8:b:b00::2/127 sequence 11470 
+ deny ipv6 any host 2a00:1ae8:b:c00::1 sequence 11480 
+ deny ipv6 any 2a00:1ae8:b:c00::2/127 sequence 11490 
+ deny ipv6 any host 2a00:1ae8:b:d00::1 sequence 11500 
+ deny ipv6 any 2a00:1ae8:b:d00::2/127 sequence 11510 
+ deny ipv6 any host 2a00:1ae8:b:e00::1 sequence 11520 
+ deny ipv6 any 2a00:1ae8:b:e00::2/127 sequence 11530 
+ deny ipv6 any host 2a00:1ae8:b:f00::1 sequence 11540 
+ deny ipv6 any 2a00:1ae8:b:f00::2/127 sequence 11550 
+ deny ipv6 any host 2a00:1ae8:b:1000::1 sequence 11560 
+ deny ipv6 any 2a00:1ae8:b:1000::2/127 sequence 11570 
+ deny ipv6 any host 2a00:1ae8:b:1100::1 sequence 11580 
+ deny ipv6 any 2a00:1ae8:b:1100::2/127 sequence 11590 
+ deny ipv6 any host 2a00:1ae8:b:1200::1 sequence 11600 
+ deny ipv6 any 2a00:1ae8:b:1200::2/127 sequence 11610 
+ deny ipv6 any host 2a00:1ae8:b:1300::1 sequence 11620 
+ deny ipv6 any 2a00:1ae8:b:1300::2/127 sequence 11630 
+ deny ipv6 any host 2a00:1ae8:b:1400::1 sequence 11640 
+ deny ipv6 any 2a00:1ae8:b:1400::2/127 sequence 11650 
+ deny ipv6 any host 2a00:1ae8:b:1500::1 sequence 11660 
+ deny ipv6 any 2a00:1ae8:b:1500::2/127 sequence 11670 
+ deny ipv6 any host 2a00:1ae8:b:1600::1 sequence 11680 
+ deny ipv6 any 2a00:1ae8:b:1600::2/127 sequence 11690 
+ deny ipv6 any host 2a00:1ae8:b:1700::1 sequence 11700 
+ deny ipv6 any 2a00:1ae8:b:1700::2/127 sequence 11710 
+ deny ipv6 any host 2a00:1ae8:b:1800::1 sequence 11720 
+ deny ipv6 any 2a00:1ae8:b:1800::2/127 sequence 11730 
+ deny ipv6 any host 2a00:1ae8:b:1900::1 sequence 11740 
+ deny ipv6 any 2a00:1ae8:b:1900::2/127 sequence 11750 
+ deny ipv6 any host 2a00:1ae8:b:1a00::1 sequence 11760 
+ deny ipv6 any 2a00:1ae8:b:1a00::2/127 sequence 11770 
+ deny ipv6 any host 2a00:1ae8:b:1b00::1 sequence 11780 
+ deny ipv6 any 2a00:1ae8:b:1b00::2/127 sequence 11790 
+ deny ipv6 any host 2a00:1ae8:b:1c00::1 sequence 11800 
+ deny ipv6 any 2a00:1ae8:b:1c00::2/127 sequence 11810 
+ deny ipv6 any host 2a00:1ae8:b:1d00::1 sequence 11820 
+ deny ipv6 any 2a00:1ae8:b:1d00::2/127 sequence 11830 
+ deny ipv6 any host 2a00:1ae8:b:1e00::1 sequence 11840 
+ deny ipv6 any 2a00:1ae8:b:1e00::2/127 sequence 11850 
+ deny ipv6 any host 2a00:1ae8:b:1f00::1 sequence 11860 
+ deny ipv6 any 2a00:1ae8:b:1f00::2/127 sequence 11870 
+ deny ipv6 any host 2a00:1ae8:b:2000::1 sequence 11880 
+ deny ipv6 any 2a00:1ae8:b:2000::2/127 sequence 11890 
+ deny ipv6 any host 2a00:1ae8:b:2100::1 sequence 11900 
+ deny ipv6 any 2a00:1ae8:b:2100::2/127 sequence 11910 
+ deny ipv6 any host 2a00:1ae8:b:2200::1 sequence 11920 
+ deny ipv6 any 2a00:1ae8:b:2200::2/127 sequence 11930 
+ deny ipv6 any host 2a00:1ae8:b:2300::1 sequence 11940 
+ deny ipv6 any 2a00:1ae8:b:2300::2/127 sequence 11950 
+ deny ipv6 any host 2a00:1ae8:b:2400::1 sequence 11960 
+ deny ipv6 any 2a00:1ae8:b:2400::2/127 sequence 11970 
+ deny ipv6 any host 2a00:1ae8:b:2500::1 sequence 11980 
+ deny ipv6 any 2a00:1ae8:b:2500::2/127 sequence 11990 
+ deny ipv6 any host 2a00:1ae8:b:2600::1 sequence 12000 
+ deny ipv6 any 2a00:1ae8:b:2600::2/127 sequence 12010 
+ deny ipv6 any host 2a00:1ae8:b:2700::1 sequence 12020 
+ deny ipv6 any 2a00:1ae8:b:2700::2/127 sequence 12030 
+ deny ipv6 any host 2a00:1ae8:b:2800::1 sequence 12040 
+ deny ipv6 any 2a00:1ae8:b:2800::2/127 sequence 12050 
+ deny ipv6 any host 2a00:1ae8:b:2900::1 sequence 12060 
+ deny ipv6 any 2a00:1ae8:b:2900::2/127 sequence 12070 
+ deny ipv6 any host 2a00:1ae8:b:2a00::1 sequence 12080 
+ deny ipv6 any 2a00:1ae8:b:2a00::2/127 sequence 12090 
+ deny ipv6 any host 2a00:1ae8:b:2b00::1 sequence 12100 
+ deny ipv6 any 2a00:1ae8:b:2b00::2/127 sequence 12110 
+ deny ipv6 any host 2a00:1ae8:b:2c00::1 sequence 12120 
+ deny ipv6 any 2a00:1ae8:b:2c00::2/127 sequence 12130 
+ deny ipv6 any host 2a00:1ae8:b:2d00::1 sequence 12140 
+ deny ipv6 any 2a00:1ae8:b:2d00::2/127 sequence 12150 
+ deny ipv6 any host 2a00:1ae8:b:2e00::1 sequence 12160 
+ deny ipv6 any 2a00:1ae8:b:2e00::2/127 sequence 12170 
+ deny ipv6 any host 2a00:1ae8:b:2f00::1 sequence 12180 
+ deny ipv6 any 2a00:1ae8:b:2f00::2/127 sequence 12190 
+ deny ipv6 any host 2a00:1ae8:b:3000::1 sequence 12200 
+ deny ipv6 any 2a00:1ae8:b:3000::2/127 sequence 12210 
+ deny ipv6 any host 2a00:1ae8:b:3100::1 sequence 12220 
+ deny ipv6 any 2a00:1ae8:b:3100::2/127 sequence 12230 
+ deny ipv6 any host 2a00:1ae8:b:3200::1 sequence 12240 
+ deny ipv6 any 2a00:1ae8:b:3200::2/127 sequence 12250 
+ deny ipv6 any host 2a00:1ae8:b:3300::1 sequence 12260 
+ deny ipv6 any 2a00:1ae8:b:3300::2/127 sequence 12270 
+ deny ipv6 any host 2a00:1ae8:b:3400::1 sequence 12280 
+ deny ipv6 any 2a00:1ae8:b:3400::2/127 sequence 12290 
+ deny ipv6 any host 2a00:1ae8:b:3500::1 sequence 12300 
+ deny ipv6 any 2a00:1ae8:b:3500::2/127 sequence 12310 
+ deny ipv6 any host 2a00:1ae8:b:3600::1 sequence 12320 
+ deny ipv6 any 2a00:1ae8:b:3600::2/127 sequence 12330 
+ deny ipv6 any host 2a00:1ae8:b:3700::1 sequence 12340 
+ deny ipv6 any 2a00:1ae8:b:3700::2/127 sequence 12350 
+ deny ipv6 any host 2a00:1ae8:b:3800::1 sequence 12360 
+ deny ipv6 any 2a00:1ae8:b:3800::2/127 sequence 12370 
+ deny ipv6 any host 2a00:1ae8:b:3900::1 sequence 12380 
+ deny ipv6 any 2a00:1ae8:b:3900::2/127 sequence 12390 
+ deny ipv6 any host 2a00:1ae8:b:3a00::1 sequence 12400 
+ deny ipv6 any 2a00:1ae8:b:3a00::2/127 sequence 12410 
+ deny ipv6 any host 2a00:1ae8:b:3b00::1 sequence 12420 
+ deny ipv6 any 2a00:1ae8:b:3b00::2/127 sequence 12430 
+ deny ipv6 any host 2a00:1ae8:b:3c00::1 sequence 12440 
+ deny ipv6 any 2a00:1ae8:b:3c00::2/127 sequence 12450 
+ deny ipv6 any host 2a00:1ae8:b:3d00::1 sequence 12460 
+ deny ipv6 any 2a00:1ae8:b:3d00::2/127 sequence 12470 
+ deny ipv6 any host 2a00:1ae8:b:3e00::1 sequence 12480 
+ deny ipv6 any 2a00:1ae8:b:3e00::2/127 sequence 12490 
+ deny ipv6 any host 2a00:1ae8:b:3f00::1 sequence 12500 
+ deny ipv6 any 2a00:1ae8:b:3f00::2/127 sequence 12510 
+ deny ipv6 any host 2a00:1ae8:b:4000::1 sequence 12520 
+ deny ipv6 any 2a00:1ae8:b:4000::2/127 sequence 12530 
+ deny ipv6 any host 2a00:1ae8:b:4100::1 sequence 12540 
+ deny ipv6 any 2a00:1ae8:b:4100::2/127 sequence 12550 
+ deny ipv6 any host 2a00:1ae8:b:4200::1 sequence 12560 
+ deny ipv6 any 2a00:1ae8:b:4200::2/127 sequence 12570 
+ deny ipv6 any host 2a00:1ae8:b:4300::1 sequence 12580 
+ deny ipv6 any 2a00:1ae8:b:4300::2/127 sequence 12590 
+ deny ipv6 any host 2a00:1ae8:b:4400::1 sequence 12600 
+ deny ipv6 any 2a00:1ae8:b:4400::2/127 sequence 12610 
+ deny ipv6 any host 2a00:1ae8:b:4500::1 sequence 12620 
+ deny ipv6 any 2a00:1ae8:b:4500::2/127 sequence 12630 
+ deny ipv6 any host 2a00:1ae8:b:4600::1 sequence 12640 
+ deny ipv6 any 2a00:1ae8:b:4600::2/127 sequence 12650 
+ deny ipv6 any host 2a00:1ae8:b:4700::1 sequence 12660 
+ deny ipv6 any 2a00:1ae8:b:4700::2/127 sequence 12670 
+ deny ipv6 any host 2a00:1ae8:b:4800::1 sequence 12680 
+ deny ipv6 any 2a00:1ae8:b:4800::2/127 sequence 12690 
+ deny ipv6 any host 2a00:1ae8:b:4900::1 sequence 12700 
+ deny ipv6 any 2a00:1ae8:b:4900::2/127 sequence 12710 
+ deny ipv6 any host 2a00:1ae8:b:4a00::1 sequence 12720 
+ deny ipv6 any 2a00:1ae8:b:4a00::2/127 sequence 12730 
+ deny ipv6 any host 2a00:1ae8:b:4b00::1 sequence 12740 
+ deny ipv6 any 2a00:1ae8:b:4b00::2/127 sequence 12750 
+ deny ipv6 any host 2a00:1ae8:b:4c00::1 sequence 12760 
+ deny ipv6 any 2a00:1ae8:b:4c00::2/127 sequence 12770 
+ deny ipv6 any host 2a00:1ae8:b:4d00::1 sequence 12780 
+ deny ipv6 any 2a00:1ae8:b:4d00::2/127 sequence 12790 
+ deny ipv6 any host 2a00:1ae8:b:4e00::1 sequence 12800 
+ deny ipv6 any 2a00:1ae8:b:4e00::2/127 sequence 12810 
+ deny ipv6 any host 2a00:1ae8:b:4f00::1 sequence 12820 
+ deny ipv6 any 2a00:1ae8:b:4f00::2/127 sequence 12830 
+ deny ipv6 any host 2a00:1ae8:b:5000::1 sequence 12840 
+ deny ipv6 any 2a00:1ae8:b:5000::2/127 sequence 12850 
+ deny ipv6 any host 2a00:1ae8:b:5100::1 sequence 12860 
+ deny ipv6 any 2a00:1ae8:b:5100::2/127 sequence 12870 
+ deny ipv6 any host 2a00:1ae8:b:5200::1 sequence 12880 
+ deny ipv6 any 2a00:1ae8:b:5200::2/127 sequence 12890 
+ deny ipv6 any host 2a00:1ae8:b:5300::1 sequence 12900 
+ deny ipv6 any 2a00:1ae8:b:5300::2/127 sequence 12910 
+ deny ipv6 any host 2a00:1ae8:b:5400::1 sequence 12920 
+ deny ipv6 any 2a00:1ae8:b:5400::2/127 sequence 12930 
+ deny ipv6 any host 2a00:1ae8:b:5500::1 sequence 12940 
+ deny ipv6 any 2a00:1ae8:b:5500::2/127 sequence 12950 
+ deny ipv6 any host 2a00:1ae8:b:5600::1 sequence 12960 
+ deny ipv6 any 2a00:1ae8:b:5600::2/127 sequence 12970 
+ deny ipv6 any host 2a00:1ae8:b:5700::1 sequence 12980 
+ deny ipv6 any 2a00:1ae8:b:5700::2/127 sequence 12990 
+ deny ipv6 any host 2a00:1ae8:b:5800::1 sequence 13000 
+ deny ipv6 any 2a00:1ae8:b:5800::2/127 sequence 13010 
+ deny ipv6 any host 2a00:1ae8:b:5900::1 sequence 13020 
+ deny ipv6 any 2a00:1ae8:b:5900::2/127 sequence 13030 
+ deny ipv6 any host 2a00:1ae8:b:5a00::1 sequence 13040 
+ deny ipv6 any 2a00:1ae8:b:5a00::2/127 sequence 13050 
+ deny ipv6 any host 2a00:1ae8:b:5b00::1 sequence 13060 
+ deny ipv6 any 2a00:1ae8:b:5b00::2/127 sequence 13070 
+ deny ipv6 any host 2a00:1ae8:b:5c00::1 sequence 13080 
+ deny ipv6 any 2a00:1ae8:b:5c00::2/127 sequence 13090 
+ deny ipv6 any host 2a00:1ae8:b:5d00::1 sequence 13100 
+ deny ipv6 any 2a00:1ae8:b:5d00::2/127 sequence 13110 
+ deny ipv6 any host 2a00:1ae8:b:5e00::1 sequence 13120 
+ deny ipv6 any 2a00:1ae8:b:5e00::2/127 sequence 13130 
+ deny ipv6 any host 2a00:1ae8:b:5f00::1 sequence 13140 
+ deny ipv6 any 2a00:1ae8:b:5f00::2/127 sequence 13150 
+ deny ipv6 any host 2a00:1ae8:b:6000::1 sequence 13160 
+ deny ipv6 any 2a00:1ae8:b:6000::2/127 sequence 13170 
+ deny ipv6 any host 2a00:1ae8:b:6100::1 sequence 13180 
+ deny ipv6 any 2a00:1ae8:b:6100::2/127 sequence 13190 
+ deny ipv6 any host 2a00:1ae8:b:6200::1 sequence 13200 
+ deny ipv6 any 2a00:1ae8:b:6200::2/127 sequence 13210 
+ deny ipv6 any host 2a00:1ae8:b:6300::1 sequence 13220 
+ deny ipv6 any 2a00:1ae8:b:6300::2/127 sequence 13230 
+ deny ipv6 any host 2a00:1ae8:b:6400::1 sequence 13240 
+ deny ipv6 any 2a00:1ae8:b:6400::2/127 sequence 13250 
+ deny ipv6 any host 2a00:1ae8:b:6500::1 sequence 13260 
+ deny ipv6 any 2a00:1ae8:b:6500::2/127 sequence 13270 
+ deny ipv6 any host 2a00:1ae8:b:6600::1 sequence 13280 
+ deny ipv6 any 2a00:1ae8:b:6600::2/127 sequence 13290 
+ deny ipv6 any host 2a00:1ae8:b:6700::1 sequence 13300 
+ deny ipv6 any 2a00:1ae8:b:6700::2/127 sequence 13310 
+ deny ipv6 any host 2a00:1ae8:b:6800::1 sequence 13320 
+ deny ipv6 any 2a00:1ae8:b:6800::2/127 sequence 13330 
+ deny ipv6 any host 2a00:1ae8:b:6900::1 sequence 13340 
+ deny ipv6 any 2a00:1ae8:b:6900::2/127 sequence 13350 
+ deny ipv6 any host 2a00:1ae8:b:6a00::1 sequence 13360 
+ deny ipv6 any 2a00:1ae8:b:6a00::2/127 sequence 13370 
+ deny ipv6 any host 2a00:1ae8:b:6b00::1 sequence 13380 
+ deny ipv6 any 2a00:1ae8:b:6b00::2/127 sequence 13390 
+ deny ipv6 any host 2a00:1ae8:b:6c00::1 sequence 13400 
+ deny ipv6 any 2a00:1ae8:b:6c00::2/127 sequence 13410 
+ deny ipv6 any host 2a00:1ae8:b:6d00::1 sequence 13420 
+ deny ipv6 any 2a00:1ae8:b:6d00::2/127 sequence 13430 
+ deny ipv6 any host 2a00:1ae8:b:6e00::1 sequence 13440 
+ deny ipv6 any 2a00:1ae8:b:6e00::2/127 sequence 13450 
+ deny ipv6 any host 2a00:1ae8:b:6f00::1 sequence 13460 
+ deny ipv6 any 2a00:1ae8:b:6f00::2/127 sequence 13470 
+ deny ipv6 any host 2a00:1ae8:b:7000::1 sequence 13480 
+ deny ipv6 any 2a00:1ae8:b:7000::2/127 sequence 13490 
+ deny ipv6 any host 2a00:1ae8:b:7100::1 sequence 13500 
+ deny ipv6 any 2a00:1ae8:b:7100::2/127 sequence 13510 
+ deny ipv6 any host 2a00:1ae8:b:7200::1 sequence 13520 
+ deny ipv6 any 2a00:1ae8:b:7200::2/127 sequence 13530 
+ deny ipv6 any host 2a00:1ae8:b:7300::1 sequence 13540 
+ deny ipv6 any 2a00:1ae8:b:7300::2/127 sequence 13550 
+ deny ipv6 any host 2a00:1ae8:b:7400::1 sequence 13560 
+ deny ipv6 any 2a00:1ae8:b:7400::2/127 sequence 13570 
+ deny ipv6 any host 2a00:1ae8:b:7500::1 sequence 13580 
+ deny ipv6 any 2a00:1ae8:b:7500::2/127 sequence 13590 
+ deny ipv6 any host 2a00:1ae8:b:7600::1 sequence 13600 
+ deny ipv6 any 2a00:1ae8:b:7600::2/127 sequence 13610 
+ deny ipv6 any host 2a00:1ae8:b:7700::1 sequence 13620 
+ deny ipv6 any 2a00:1ae8:b:7700::2/127 sequence 13630 
+ deny ipv6 any host 2a00:1ae8:b:7800::1 sequence 13640 
+ deny ipv6 any 2a00:1ae8:b:7800::2/127 sequence 13650 
+ deny ipv6 any host 2a00:1ae8:b:7900::1 sequence 13660 
+ deny ipv6 any 2a00:1ae8:b:7900::2/127 sequence 13670 
+ deny ipv6 any host 2a00:1ae8:b:7a00::1 sequence 13680 
+ deny ipv6 any 2a00:1ae8:b:7a00::2/127 sequence 13690 
+ deny ipv6 any host 2a00:1ae8:b:7b00::1 sequence 13700 
+ deny ipv6 any 2a00:1ae8:b:7b00::2/127 sequence 13710 
+ deny ipv6 any host 2a00:1ae8:b:7c00::1 sequence 13720 
+ deny ipv6 any 2a00:1ae8:b:7c00::2/127 sequence 13730 
+ deny ipv6 any host 2a00:1ae8:b:7d00::1 sequence 13740 
+ deny ipv6 any 2a00:1ae8:b:7d00::2/127 sequence 13750 
+ deny ipv6 any host 2a00:1ae8:b:7e00::1 sequence 13760 
+ deny ipv6 any 2a00:1ae8:b:7e00::2/127 sequence 13770 
+ deny ipv6 any host 2a00:1ae8:b:7f00::1 sequence 13780 
+ deny ipv6 any 2a00:1ae8:b:7f00::2/127 sequence 13790 
+ deny ipv6 any host 2a00:1ae8:b:8000::1 sequence 13800 
+ deny ipv6 any 2a00:1ae8:b:8000::2/127 sequence 13810 
+ deny ipv6 any host 2a00:1ae8:b:8100::1 sequence 13820 
+ deny ipv6 any 2a00:1ae8:b:8100::2/127 sequence 13830 
+ deny ipv6 any host 2a00:1ae8:b:8200::1 sequence 13840 
+ deny ipv6 any 2a00:1ae8:b:8200::2/127 sequence 13850 
+ deny ipv6 any host 2a00:1ae8:b:8300::1 sequence 13860 
+ deny ipv6 any 2a00:1ae8:b:8300::2/127 sequence 13870 
+ deny ipv6 any host 2a00:1ae8:b:8400::1 sequence 13880 
+ deny ipv6 any 2a00:1ae8:b:8400::2/127 sequence 13890 
+ deny ipv6 any host 2a00:1ae8:b:8500::1 sequence 13900 
+ deny ipv6 any 2a00:1ae8:b:8500::2/127 sequence 13910 
+ deny ipv6 any host 2a00:1ae8:b:8600::1 sequence 13920 
+ deny ipv6 any 2a00:1ae8:b:8600::2/127 sequence 13930 
+ deny ipv6 any host 2a00:1ae8:b:8700::1 sequence 13940 
+ deny ipv6 any 2a00:1ae8:b:8700::2/127 sequence 13950 
+ deny ipv6 any host 2a00:1ae8:b:8800::1 sequence 13960 
+ deny ipv6 any 2a00:1ae8:b:8800::2/127 sequence 13970 
+ deny ipv6 any host 2a00:1ae8:b:8900::1 sequence 13980 
+ deny ipv6 any 2a00:1ae8:b:8900::2/127 sequence 13990 
+ deny ipv6 any host 2a00:1ae8:b:8a00::1 sequence 14000 
+ deny ipv6 any 2a00:1ae8:b:8a00::2/127 sequence 14010 
+ deny ipv6 any host 2a00:1ae8:b:8b00::1 sequence 14020 
+ deny ipv6 any 2a00:1ae8:b:8b00::2/127 sequence 14030 
+ deny ipv6 any host 2a00:1ae8:b:8c00::1 sequence 14040 
+ deny ipv6 any 2a00:1ae8:b:8c00::2/127 sequence 14050 
+ deny ipv6 any host 2a00:1ae8:b:8d00::1 sequence 14060 
+ deny ipv6 any 2a00:1ae8:b:8d00::2/127 sequence 14070 
+ deny ipv6 any host 2a00:1ae8:b:8e00::1 sequence 14080 
+ deny ipv6 any 2a00:1ae8:b:8e00::2/127 sequence 14090 
+ deny ipv6 any host 2a00:1ae8:b:8f00::1 sequence 14100 
+ deny ipv6 any 2a00:1ae8:b:8f00::2/127 sequence 14110 
+ deny ipv6 any host 2a00:1ae8:b:9000::1 sequence 14120 
+ deny ipv6 any 2a00:1ae8:b:9000::2/127 sequence 14130 
+ deny ipv6 any host 2a00:1ae8:b:9100::1 sequence 14140 
+ deny ipv6 any 2a00:1ae8:b:9100::2/127 sequence 14150 
+ deny ipv6 any host 2a00:1ae8:b:9200::1 sequence 14160 
+ deny ipv6 any 2a00:1ae8:b:9200::2/127 sequence 14170 
+ deny ipv6 any host 2a00:1ae8:b:9300::1 sequence 14180 
+ deny ipv6 any 2a00:1ae8:b:9300::2/127 sequence 14190 
+ deny ipv6 any host 2a00:1ae8:b:9400::1 sequence 14200 
+ deny ipv6 any 2a00:1ae8:b:9400::2/127 sequence 14210 
+ deny ipv6 any host 2a00:1ae8:b:9500::1 sequence 14220 
+ deny ipv6 any 2a00:1ae8:b:9500::2/127 sequence 14230 
+ deny ipv6 any host 2a00:1ae8:b:9600::1 sequence 14240 
+ deny ipv6 any 2a00:1ae8:b:9600::2/127 sequence 14250 
+ deny ipv6 any host 2a00:1ae8:b:9700::1 sequence 14260 
+ deny ipv6 any 2a00:1ae8:b:9700::2/127 sequence 14270 
+ deny ipv6 any host 2a00:1ae8:b:9800::1 sequence 14280 
+ deny ipv6 any 2a00:1ae8:b:9800::2/127 sequence 14290 
+ deny ipv6 any host 2a00:1ae8:b:9900::1 sequence 14300 
+ deny ipv6 any 2a00:1ae8:b:9900::2/127 sequence 14310 
+ deny ipv6 any host 2a00:1ae8:b:9a00::1 sequence 14320 
+ deny ipv6 any 2a00:1ae8:b:9a00::2/127 sequence 14330 
+ deny ipv6 any host 2a00:1ae8:b:9b00::1 sequence 14340 
+ deny ipv6 any 2a00:1ae8:b:9b00::2/127 sequence 14350 
+ deny ipv6 any host 2a00:1ae8:b:9c00::1 sequence 14360 
+ deny ipv6 any 2a00:1ae8:b:9c00::2/127 sequence 14370 
+ deny ipv6 any host 2a00:1ae8:b:9d00::1 sequence 14380 
+ deny ipv6 any 2a00:1ae8:b:9d00::2/127 sequence 14390 
+ deny ipv6 any host 2a00:1ae8:b:9e00::1 sequence 14400 
+ deny ipv6 any 2a00:1ae8:b:9e00::2/127 sequence 14410 
+ deny ipv6 any host 2a00:1ae8:b:9f00::1 sequence 14420 
+ deny ipv6 any 2a00:1ae8:b:9f00::2/127 sequence 14430 
+ deny ipv6 any host 2a00:1ae8:b:a000::1 sequence 14440 
+ deny ipv6 any 2a00:1ae8:b:a000::2/127 sequence 14450 
+ deny ipv6 any host 2a00:1ae8:b:a100::1 sequence 14460 
+ deny ipv6 any 2a00:1ae8:b:a100::2/127 sequence 14470 
+ deny ipv6 any host 2a00:1ae8:b:a200::1 sequence 14480 
+ deny ipv6 any 2a00:1ae8:b:a200::2/127 sequence 14490 
+ deny ipv6 any host 2a00:1ae8:b:a300::1 sequence 14500 
+ deny ipv6 any 2a00:1ae8:b:a300::2/127 sequence 14510 
+ deny ipv6 any host 2a00:1ae8:b:a400::1 sequence 14520 
+ deny ipv6 any 2a00:1ae8:b:a400::2/127 sequence 14530 
+ deny ipv6 any host 2a00:1ae8:b:a500::1 sequence 14540 
+ deny ipv6 any 2a00:1ae8:b:a500::2/127 sequence 14550 
+ deny ipv6 any host 2a00:1ae8:b:a600::1 sequence 14560 
+ deny ipv6 any 2a00:1ae8:b:a600::2/127 sequence 14570 
+ deny ipv6 any host 2a00:1ae8:b:a700::1 sequence 14580 
+ deny ipv6 any 2a00:1ae8:b:a700::2/127 sequence 14590 
+ deny ipv6 any host 2a00:1ae8:b:a800::1 sequence 14600 
+ deny ipv6 any 2a00:1ae8:b:a800::2/127 sequence 14610 
+ deny ipv6 any host 2a00:1ae8:b:a900::1 sequence 14620 
+ deny ipv6 any 2a00:1ae8:b:a900::2/127 sequence 14630 
+ deny ipv6 any host 2a00:1ae8:b:aa00::1 sequence 14640 
+ deny ipv6 any 2a00:1ae8:b:aa00::2/127 sequence 14650 
+ deny ipv6 any host 2a00:1ae8:b:ab00::1 sequence 14660 
+ deny ipv6 any 2a00:1ae8:b:ab00::2/127 sequence 14670 
+ deny ipv6 any host 2a00:1ae8:b:ac00::1 sequence 14680 
+ deny ipv6 any 2a00:1ae8:b:ac00::2/127 sequence 14690 
+ deny ipv6 any host 2a00:1ae8:b:ad00::1 sequence 14700 
+ deny ipv6 any 2a00:1ae8:b:ad00::2/127 sequence 14710 
+ deny ipv6 any host 2a00:1ae8:b:ae00::1 sequence 14720 
+ deny ipv6 any 2a00:1ae8:b:ae00::2/127 sequence 14730 
+ deny ipv6 any host 2a00:1ae8:b:af00::1 sequence 14740 
+ deny ipv6 any 2a00:1ae8:b:af00::2/127 sequence 14750 
+ deny ipv6 any host 2a00:1ae8:b:b000::1 sequence 14760 
+ deny ipv6 any 2a00:1ae8:b:b000::2/127 sequence 14770 
+ deny ipv6 any host 2a00:1ae8:b:b100::1 sequence 14780 
+ deny ipv6 any 2a00:1ae8:b:b100::2/127 sequence 14790 
+ deny ipv6 any host 2a00:1ae8:b:b200::1 sequence 14800 
+ deny ipv6 any 2a00:1ae8:b:b200::2/127 sequence 14810 
+ deny ipv6 any host 2a00:1ae8:b:b300::1 sequence 14820 
+ deny ipv6 any 2a00:1ae8:b:b300::2/127 sequence 14830 
+ deny ipv6 any host 2a00:1ae8:b:b400::1 sequence 14840 
+ deny ipv6 any 2a00:1ae8:b:b400::2/127 sequence 14850 
+ deny ipv6 any host 2a00:1ae8:b:b500::1 sequence 14860 
+ deny ipv6 any 2a00:1ae8:b:b500::2/127 sequence 14870 
+ deny ipv6 any host 2a00:1ae8:b:b600::1 sequence 14880 
+ deny ipv6 any 2a00:1ae8:b:b600::2/127 sequence 14890 
+ deny ipv6 any host 2a00:1ae8:b:b700::1 sequence 14900 
+ deny ipv6 any 2a00:1ae8:b:b700::2/127 sequence 14910 
+ deny ipv6 any host 2a00:1ae8:b:b800::1 sequence 14920 
+ deny ipv6 any 2a00:1ae8:b:b800::2/127 sequence 14930 
+ deny ipv6 any host 2a00:1ae8:b:b900::1 sequence 14940 
+ deny ipv6 any 2a00:1ae8:b:b900::2/127 sequence 14950 
+ deny ipv6 any host 2a00:1ae8:b:ba00::1 sequence 14960 
+ deny ipv6 any 2a00:1ae8:b:ba00::2/127 sequence 14970 
+ deny ipv6 any host 2a00:1ae8:b:bb00::1 sequence 14980 
+ deny ipv6 any 2a00:1ae8:b:bb00::2/127 sequence 14990 
+ deny ipv6 any host 2a00:1ae8:b:bc00::1 sequence 15000 
+ deny ipv6 any 2a00:1ae8:b:bc00::2/127 sequence 15010 
+ deny ipv6 any host 2a00:1ae8:b:bd00::1 sequence 15020 
+ deny ipv6 any 2a00:1ae8:b:bd00::2/127 sequence 15030 
+ deny ipv6 any host 2a00:1ae8:b:be00::1 sequence 15040 
+ deny ipv6 any 2a00:1ae8:b:be00::2/127 sequence 15050 
+ deny ipv6 any host 2a00:1ae8:b:bf00::1 sequence 15060 
+ deny ipv6 any 2a00:1ae8:b:bf00::2/127 sequence 15070 
+ deny ipv6 any host 2a00:1ae8:b:c000::1 sequence 15080 
+ deny ipv6 any 2a00:1ae8:b:c000::2/127 sequence 15090 
+ deny ipv6 any host 2a00:1ae8:b:c100::1 sequence 15100 
+ deny ipv6 any 2a00:1ae8:b:c100::2/127 sequence 15110 
+ deny ipv6 any host 2a00:1ae8:b:c200::1 sequence 15120 
+ deny ipv6 any 2a00:1ae8:b:c200::2/127 sequence 15130 
+ deny ipv6 any host 2a00:1ae8:b:c300::1 sequence 15140 
+ deny ipv6 any 2a00:1ae8:b:c300::2/127 sequence 15150 
+ deny ipv6 any host 2a00:1ae8:b:c400::1 sequence 15160 
+ deny ipv6 any 2a00:1ae8:b:c400::2/127 sequence 15170 
+ deny ipv6 any host 2a00:1ae8:b:c500::1 sequence 15180 
+ deny ipv6 any 2a00:1ae8:b:c500::2/127 sequence 15190 
+ deny ipv6 any host 2a00:1ae8:b:c600::1 sequence 15200 
+ deny ipv6 any 2a00:1ae8:b:c600::2/127 sequence 15210 
+ deny ipv6 any host 2a00:1ae8:b:c700::1 sequence 15220 
+ deny ipv6 any 2a00:1ae8:b:c700::2/127 sequence 15230 
+ deny ipv6 any host 2a00:1ae8:b:c800::1 sequence 15240 
+ deny ipv6 any 2a00:1ae8:b:c800::2/127 sequence 15250 
+ deny ipv6 any host 2a00:1ae8:b:c900::1 sequence 15260 
+ deny ipv6 any 2a00:1ae8:b:c900::2/127 sequence 15270 
+ deny ipv6 any host 2a00:1ae8:b:ca00::1 sequence 15280 
+ deny ipv6 any 2a00:1ae8:b:ca00::2/127 sequence 15290 
+ deny ipv6 any host 2a00:1ae8:b:cb00::1 sequence 15300 
+ deny ipv6 any 2a00:1ae8:b:cb00::2/127 sequence 15310 
+ deny ipv6 any host 2a00:1ae8:b:cc00::1 sequence 15320 
+ deny ipv6 any 2a00:1ae8:b:cc00::2/127 sequence 15330 
+ deny ipv6 any host 2a00:1ae8:b:cd00::1 sequence 15340 
+ deny ipv6 any 2a00:1ae8:b:cd00::2/127 sequence 15350 
+ deny ipv6 any host 2a00:1ae8:b:ce00::1 sequence 15360 
+ deny ipv6 any 2a00:1ae8:b:ce00::2/127 sequence 15370 
+ deny ipv6 any host 2a00:1ae8:b:cf00::1 sequence 15380 
+ deny ipv6 any 2a00:1ae8:b:cf00::2/127 sequence 15390 
+ deny ipv6 any host 2a00:1ae8:b:d000::1 sequence 15400 
+ deny ipv6 any 2a00:1ae8:b:d000::2/127 sequence 15410 
+ deny ipv6 any host 2a00:1ae8:b:d100::1 sequence 15420 
+ deny ipv6 any 2a00:1ae8:b:d100::2/127 sequence 15430 
+ deny ipv6 any host 2a00:1ae8:b:d200::1 sequence 15440 
+ deny ipv6 any 2a00:1ae8:b:d200::2/127 sequence 15450 
+ deny ipv6 any host 2a00:1ae8:b:d300::1 sequence 15460 
+ deny ipv6 any 2a00:1ae8:b:d300::2/127 sequence 15470 
+ deny ipv6 any host 2a00:1ae8:b:d400::1 sequence 15480 
+ deny ipv6 any 2a00:1ae8:b:d400::2/127 sequence 15490 
+ deny ipv6 any host 2a00:1ae8:b:d500::1 sequence 15500 
+ deny ipv6 any 2a00:1ae8:b:d500::2/127 sequence 15510 
+ deny ipv6 any host 2a00:1ae8:b:d600::1 sequence 15520 
+ deny ipv6 any 2a00:1ae8:b:d600::2/127 sequence 15530 
+ deny ipv6 any host 2a00:1ae8:b:d700::1 sequence 15540 
+ deny ipv6 any 2a00:1ae8:b:d700::2/127 sequence 15550 
+ deny ipv6 any host 2a00:1ae8:b:d800::1 sequence 15560 
+ deny ipv6 any 2a00:1ae8:b:d800::2/127 sequence 15570 
+ deny ipv6 any host 2a00:1ae8:b:d900::1 sequence 15580 
+ deny ipv6 any 2a00:1ae8:b:d900::2/127 sequence 15590 
+ deny ipv6 any host 2a00:1ae8:b:da00::1 sequence 15600 
+ deny ipv6 any 2a00:1ae8:b:da00::2/127 sequence 15610 
+ deny ipv6 any host 2a00:1ae8:b:db00::1 sequence 15620 
+ deny ipv6 any 2a00:1ae8:b:db00::2/127 sequence 15630 
+ deny ipv6 any host 2a00:1ae8:b:dc00::1 sequence 15640 
+ deny ipv6 any 2a00:1ae8:b:dc00::2/127 sequence 15650 
+ deny ipv6 any host 2a00:1ae8:b:dd00::1 sequence 15660 
+ deny ipv6 any 2a00:1ae8:b:dd00::2/127 sequence 15670 
+ deny ipv6 any host 2a00:1ae8:b:de00::1 sequence 15680 
+ deny ipv6 any 2a00:1ae8:b:de00::2/127 sequence 15690 
+ deny ipv6 any host 2a00:1ae8:b:df00::1 sequence 15700 
+ deny ipv6 any 2a00:1ae8:b:df00::2/127 sequence 15710 
+ deny ipv6 any host 2a00:1ae8:b:e000::1 sequence 15720 
+ deny ipv6 any 2a00:1ae8:b:e000::2/127 sequence 15730 
+ deny ipv6 any host 2a00:1ae8:b:e100::1 sequence 15740 
+ deny ipv6 any 2a00:1ae8:b:e100::2/127 sequence 15750 
+ deny ipv6 any host 2a00:1ae8:b:e200::1 sequence 15760 
+ deny ipv6 any 2a00:1ae8:b:e200::2/127 sequence 15770 
+ deny ipv6 any host 2a00:1ae8:b:e300::1 sequence 15780 
+ deny ipv6 any 2a00:1ae8:b:e300::2/127 sequence 15790 
+ deny ipv6 any host 2a00:1ae8:b:e400::1 sequence 15800 
+ deny ipv6 any 2a00:1ae8:b:e400::2/127 sequence 15810 
+ deny ipv6 any host 2a00:1ae8:b:e500::1 sequence 15820 
+ deny ipv6 any 2a00:1ae8:b:e500::2/127 sequence 15830 
+ deny ipv6 any host 2a00:1ae8:b:e600::1 sequence 15840 
+ deny ipv6 any 2a00:1ae8:b:e600::2/127 sequence 15850 
+ deny ipv6 any host 2a00:1ae8:b:e700::1 sequence 15860 
+ deny ipv6 any 2a00:1ae8:b:e700::2/127 sequence 15870 
+ deny ipv6 any host 2a00:1ae8:b:e800::1 sequence 15880 
+ deny ipv6 any 2a00:1ae8:b:e800::2/127 sequence 15890 
+ deny ipv6 any host 2a00:1ae8:b:e900::1 sequence 15900 
+ deny ipv6 any 2a00:1ae8:b:e900::2/127 sequence 15910 
+ deny ipv6 any host 2a00:1ae8:b:ea00::1 sequence 15920 
+ deny ipv6 any 2a00:1ae8:b:ea00::2/127 sequence 15930 
+ deny ipv6 any host 2a00:1ae8:b:eb00::1 sequence 15940 
+ deny ipv6 any 2a00:1ae8:b:eb00::2/127 sequence 15950 
+ deny ipv6 any host 2a00:1ae8:b:ec00::1 sequence 15960 
+ deny ipv6 any 2a00:1ae8:b:ec00::2/127 sequence 15970 
+ deny ipv6 any host 2a00:1ae8:b:ed00::1 sequence 15980 
+ deny ipv6 any 2a00:1ae8:b:ed00::2/127 sequence 15990 
+ deny ipv6 any host 2a00:1ae8:b:ee00::1 sequence 16000 
+ deny ipv6 any 2a00:1ae8:b:ee00::2/127 sequence 16010 
+ deny ipv6 any host 2a00:1ae8:b:ef00::1 sequence 16020 
+ deny ipv6 any 2a00:1ae8:b:ef00::2/127 sequence 16030 
+ deny ipv6 any host 2a00:1ae8:b:f000::1 sequence 16040 
+ deny ipv6 any 2a00:1ae8:b:f000::2/127 sequence 16050 
+ deny ipv6 any host 2a00:1ae8:b:f100::1 sequence 16060 
+ deny ipv6 any 2a00:1ae8:b:f100::2/127 sequence 16070 
+ deny ipv6 any host 2a00:1ae8:b:f200::1 sequence 16080 
+ deny ipv6 any 2a00:1ae8:b:f200::2/127 sequence 16090 
+ deny ipv6 any host 2a00:1ae8:b:f300::1 sequence 16100 
+ deny ipv6 any 2a00:1ae8:b:f300::2/127 sequence 16110 
+ deny ipv6 any host 2a00:1ae8:b:f400::1 sequence 16120 
+ deny ipv6 any 2a00:1ae8:b:f400::2/127 sequence 16130 
+ deny ipv6 any host 2a00:1ae8:b:f500::1 sequence 16140 
+ deny ipv6 any 2a00:1ae8:b:f500::2/127 sequence 16150 
+ deny ipv6 any host 2a00:1ae8:b:f600::1 sequence 16160 
+ deny ipv6 any 2a00:1ae8:b:f600::2/127 sequence 16170 
+ deny ipv6 any host 2a00:1ae8:b:f700::1 sequence 16180 
+ deny ipv6 any 2a00:1ae8:b:f700::2/127 sequence 16190 
+ deny ipv6 any host 2a00:1ae8:b:f800::1 sequence 16200 
+ deny ipv6 any 2a00:1ae8:b:f800::2/127 sequence 16210 
+ deny ipv6 any host 2a00:1ae8:b:f900::1 sequence 16220 
+ deny ipv6 any 2a00:1ae8:b:f900::2/127 sequence 16230 
+ deny ipv6 any host 2a00:1ae8:b:fa00::1 sequence 16240 
+ deny ipv6 any 2a00:1ae8:b:fa00::2/127 sequence 16250 
+ deny ipv6 any host 2a00:1ae8:b:fb00::1 sequence 16260 
+ deny ipv6 any 2a00:1ae8:b:fb00::2/127 sequence 16270 
+ deny ipv6 any host 2a00:1ae8:b:fc00::1 sequence 16280 
+ deny ipv6 any 2a00:1ae8:b:fc00::2/127 sequence 16290 
+ deny ipv6 any host 2a00:1ae8:b:fd00::1 sequence 16300 
+ deny ipv6 any 2a00:1ae8:b:fd00::2/127 sequence 16310 
+ deny ipv6 any host 2a00:1ae8:b:fe00::1 sequence 16320 
+ deny ipv6 any 2a00:1ae8:b:fe00::2/127 sequence 16330 
+ deny ipv6 any host 2a00:1ae8:b:ff00::1 sequence 16340 
+ deny ipv6 any 2a00:1ae8:b:ff00::2/127 sequence 16350 
+ deny ipv6 any host 2a00:1ae8:c::1 sequence 16360 
+ deny ipv6 any 2a00:1ae8:c::2/127 sequence 16370 
+ deny ipv6 any host 2a00:1ae8:c:1::1 sequence 16380 
+ deny ipv6 any 2a00:1ae8:c:1::2/127 sequence 16390 
+ deny ipv6 any host 2a00:1ae8:c:2::1 sequence 16400 
+ deny ipv6 any 2a00:1ae8:c:2::2/127 sequence 16410 
+ deny ipv6 any host 2a00:1ae8:c:3::1 sequence 16420 
+ deny ipv6 any 2a00:1ae8:c:3::2/127 sequence 16430 
+ deny ipv6 any host 2a00:1ae8:c:4::1 sequence 16440 
+ deny ipv6 any 2a00:1ae8:c:4::2/127 sequence 16450 
+ deny ipv6 any host 2a00:1ae8:c:5::1 sequence 16460 
+ deny ipv6 any 2a00:1ae8:c:5::2/127 sequence 16470 
+ deny ipv6 any host 2a00:1ae8:c:6::1 sequence 16480 
+ deny ipv6 any 2a00:1ae8:c:6::2/127 sequence 16490 
+ deny ipv6 any host 2a00:1ae8:c:7::1 sequence 16500 
+ deny ipv6 any 2a00:1ae8:c:7::2/127 sequence 16510 
+ deny ipv6 any host 2a00:1ae8:c:8::1 sequence 16520 
+ deny ipv6 any 2a00:1ae8:c:8::2/127 sequence 16530 
+ deny ipv6 any host 2a00:1ae8:c:9::1 sequence 16540 
+ deny ipv6 any 2a00:1ae8:c:9::2/127 sequence 16550 
+ deny ipv6 any host 2a00:1ae8:c:a::1 sequence 16560 
+ deny ipv6 any 2a00:1ae8:c:a::2/127 sequence 16570 
+ deny ipv6 any host 2a00:1ae8:c:b::1 sequence 16580 
+ deny ipv6 any 2a00:1ae8:c:b::2/127 sequence 16590 
+ deny ipv6 any host 2a00:1ae8:c:c::1 sequence 16600 
+ deny ipv6 any 2a00:1ae8:c:c::2/127 sequence 16610 
+ deny ipv6 any host 2a00:1ae8:c:d::1 sequence 16620 
+ deny ipv6 any 2a00:1ae8:c:d::2/127 sequence 16630 
+ deny ipv6 any host 2a00:1ae8:c:e::1 sequence 16640 
+ deny ipv6 any 2a00:1ae8:c:e::2/127 sequence 16650 
+ deny ipv6 any host 2a00:1ae8:c:f::1 sequence 16660 
+ deny ipv6 any 2a00:1ae8:c:f::2/127 sequence 16670 
+ deny ipv6 any host 2a00:1ae8:c:10::1 sequence 16680 
+ deny ipv6 any 2a00:1ae8:c:10::2/127 sequence 16690 
+ deny ipv6 any host 2a00:1ae8:c:11::1 sequence 16700 
+ deny ipv6 any 2a00:1ae8:c:11::2/127 sequence 16710 
+ deny ipv6 any host 2a00:1ae8:c:12::1 sequence 16720 
+ deny ipv6 any 2a00:1ae8:c:12::2/127 sequence 16730 
+ deny ipv6 any host 2a00:1ae8:c:13::1 sequence 16740 
+ deny ipv6 any 2a00:1ae8:c:13::2/127 sequence 16750 
+ deny ipv6 any host 2a00:1ae8:c:14::1 sequence 16760 
+ deny ipv6 any 2a00:1ae8:c:14::2/127 sequence 16770 
+ deny ipv6 any host 2a00:1ae8:c:15::1 sequence 16780 
+ deny ipv6 any 2a00:1ae8:c:15::2/127 sequence 16790 
+ deny ipv6 any host 2a00:1ae8:c:16::1 sequence 16800 
+ deny ipv6 any 2a00:1ae8:c:16::2/127 sequence 16810 
+ deny ipv6 any host 2a00:1ae8:c:17::1 sequence 16820 
+ deny ipv6 any 2a00:1ae8:c:17::2/127 sequence 16830 
+ deny ipv6 any host 2a00:1ae8:c:18::1 sequence 16840 
+ deny ipv6 any 2a00:1ae8:c:18::2/127 sequence 16850 
+ deny ipv6 any host 2a00:1ae8:c:19::1 sequence 16860 
+ deny ipv6 any 2a00:1ae8:c:19::2/127 sequence 16870 
+ deny ipv6 any host 2a00:1ae8:c:1a::1 sequence 16880 
+ deny ipv6 any 2a00:1ae8:c:1a::2/127 sequence 16890 
+ deny ipv6 any host 2a00:1ae8:c:1b::1 sequence 16900 
+ deny ipv6 any 2a00:1ae8:c:1b::2/127 sequence 16910 
+ deny ipv6 any host 2a00:1ae8:c:1c::1 sequence 16920 
+ deny ipv6 any 2a00:1ae8:c:1c::2/127 sequence 16930 
+ deny ipv6 any host 2a00:1ae8:c:1d::1 sequence 16940 
+ deny ipv6 any 2a00:1ae8:c:1d::2/127 sequence 16950 
+ deny ipv6 any host 2a00:1ae8:c:1e::1 sequence 16960 
+ deny ipv6 any 2a00:1ae8:c:1e::2/127 sequence 16970 
+ deny ipv6 any host 2a00:1ae8:c:1f::1 sequence 16980 
+ deny ipv6 any 2a00:1ae8:c:1f::2/127 sequence 16990 
+ deny ipv6 any host 2a00:1ae8:c:20::1 sequence 17000 
+ deny ipv6 any 2a00:1ae8:c:20::2/127 sequence 17010 
+ deny ipv6 any host 2a00:1ae8:c:21::1 sequence 17020 
+ deny ipv6 any 2a00:1ae8:c:21::2/127 sequence 17030 
+ deny ipv6 any host 2a00:1ae8:c:22::1 sequence 17040 
+ deny ipv6 any 2a00:1ae8:c:22::2/127 sequence 17050 
+ deny ipv6 any host 2a00:1ae8:c:23::1 sequence 17060 
+ deny ipv6 any 2a00:1ae8:c:23::2/127 sequence 17070 
+ deny ipv6 any host 2a00:1ae8:c:24::1 sequence 17080 
+ deny ipv6 any 2a00:1ae8:c:24::2/127 sequence 17090 
+ deny ipv6 any host 2a00:1ae8:c:25::1 sequence 17100 
+ deny ipv6 any 2a00:1ae8:c:25::2/127 sequence 17110 
+ deny ipv6 any host 2a00:1ae8:c:26::1 sequence 17120 
+ deny ipv6 any 2a00:1ae8:c:26::2/127 sequence 17130 
+ deny ipv6 any host 2a00:1ae8:c:27::1 sequence 17140 
+ deny ipv6 any 2a00:1ae8:c:27::2/127 sequence 17150 
+ deny ipv6 any host 2a00:1ae8:c:28::1 sequence 17160 
+ deny ipv6 any 2a00:1ae8:c:28::2/127 sequence 17170 
+ deny ipv6 any host 2a00:1ae8:c:29::1 sequence 17180 
+ deny ipv6 any 2a00:1ae8:c:29::2/127 sequence 17190 
+ deny ipv6 any host 2a00:1ae8:c:2a::1 sequence 17200 
+ deny ipv6 any 2a00:1ae8:c:2a::2/127 sequence 17210 
+ deny ipv6 any host 2a00:1ae8:c:2b::1 sequence 17220 
+ deny ipv6 any 2a00:1ae8:c:2b::2/127 sequence 17230 
+ deny ipv6 any host 2a00:1ae8:c:2c::1 sequence 17240 
+ deny ipv6 any 2a00:1ae8:c:2c::2/127 sequence 17250 
+ deny ipv6 any host 2a00:1ae8:c:2d::1 sequence 17260 
+ deny ipv6 any 2a00:1ae8:c:2d::2/127 sequence 17270 
+ deny ipv6 any host 2a00:1ae8:c:2e::1 sequence 17280 
+ deny ipv6 any 2a00:1ae8:c:2e::2/127 sequence 17290 
+ deny ipv6 any host 2a00:1ae8:c:2f::1 sequence 17300 
+ deny ipv6 any 2a00:1ae8:c:2f::2/127 sequence 17310 
+ deny ipv6 any host 2a00:1ae8:c:30::1 sequence 17320 
+ deny ipv6 any 2a00:1ae8:c:30::2/127 sequence 17330 
+ deny ipv6 any host 2a00:1ae8:c:31::1 sequence 17340 
+ deny ipv6 any 2a00:1ae8:c:31::2/127 sequence 17350 
+ deny ipv6 any host 2a00:1ae8:c:32::1 sequence 17360 
+ deny ipv6 any 2a00:1ae8:c:32::2/127 sequence 17370 
+ deny ipv6 any host 2a00:1ae8:c:33::1 sequence 17380 
+ deny ipv6 any 2a00:1ae8:c:33::2/127 sequence 17390 
+ deny ipv6 any host 2a00:1ae8:c:34::1 sequence 17400 
+ deny ipv6 any 2a00:1ae8:c:34::2/127 sequence 17410 
+ deny ipv6 any host 2a00:1ae8:c:35::1 sequence 17420 
+ deny ipv6 any 2a00:1ae8:c:35::2/127 sequence 17430 
+ deny ipv6 any host 2a00:1ae8:c:36::1 sequence 17440 
+ deny ipv6 any 2a00:1ae8:c:36::2/127 sequence 17450 
+ deny ipv6 any host 2a00:1ae8:c:37::1 sequence 17460 
+ deny ipv6 any 2a00:1ae8:c:37::2/127 sequence 17470 
+ deny ipv6 any host 2a00:1ae8:c:38::1 sequence 17480 
+ deny ipv6 any 2a00:1ae8:c:38::2/127 sequence 17490 
+ deny ipv6 any host 2a00:1ae8:c:39::1 sequence 17500 
+ deny ipv6 any 2a00:1ae8:c:39::2/127 sequence 17510 
+ deny ipv6 any host 2a00:1ae8:c:3a::1 sequence 17520 
+ deny ipv6 any 2a00:1ae8:c:3a::2/127 sequence 17530 
+ deny ipv6 any host 2a00:1ae8:c:3b::1 sequence 17540 
+ deny ipv6 any 2a00:1ae8:c:3b::2/127 sequence 17550 
+ deny ipv6 any host 2a00:1ae8:c:3c::1 sequence 17560 
+ deny ipv6 any 2a00:1ae8:c:3c::2/127 sequence 17570 
+ deny ipv6 any host 2a00:1ae8:c:3d::1 sequence 17580 
+ deny ipv6 any 2a00:1ae8:c:3d::2/127 sequence 17590 
+ deny ipv6 any host 2a00:1ae8:c:3e::1 sequence 17600 
+ deny ipv6 any 2a00:1ae8:c:3e::2/127 sequence 17610 
+ deny ipv6 any host 2a00:1ae8:c:3f::1 sequence 17620 
+ deny ipv6 any 2a00:1ae8:c:3f::2/127 sequence 17630 
+ deny ipv6 any host 2a00:1ae8:c:40::1 sequence 17640 
+ deny ipv6 any 2a00:1ae8:c:40::2/127 sequence 17650 
+ deny ipv6 any host 2a00:1ae8:c:41::1 sequence 17660 
+ deny ipv6 any 2a00:1ae8:c:41::2/127 sequence 17670 
+ deny ipv6 any host 2a00:1ae8:c:42::1 sequence 17680 
+ deny ipv6 any 2a00:1ae8:c:42::2/127 sequence 17690 
+ deny ipv6 any host 2a00:1ae8:c:43::1 sequence 17700 
+ deny ipv6 any 2a00:1ae8:c:43::2/127 sequence 17710 
+ deny ipv6 any host 2a00:1ae8:c:44::1 sequence 17720 
+ deny ipv6 any 2a00:1ae8:c:44::2/127 sequence 17730 
+ deny ipv6 any host 2a00:1ae8:c:45::1 sequence 17740 
+ deny ipv6 any 2a00:1ae8:c:45::2/127 sequence 17750 
+ deny ipv6 any host 2a00:1ae8:c:46::1 sequence 17760 
+ deny ipv6 any 2a00:1ae8:c:46::2/127 sequence 17770 
+ deny ipv6 any host 2a00:1ae8:c:47::1 sequence 17780 
+ deny ipv6 any 2a00:1ae8:c:47::2/127 sequence 17790 
+ deny ipv6 any host 2a00:1ae8:c:48::1 sequence 17800 
+ deny ipv6 any 2a00:1ae8:c:48::2/127 sequence 17810 
+ deny ipv6 any host 2a00:1ae8:c:49::1 sequence 17820 
+ deny ipv6 any 2a00:1ae8:c:49::2/127 sequence 17830 
+ deny ipv6 any host 2a00:1ae8:c:4a::1 sequence 17840 
+ deny ipv6 any 2a00:1ae8:c:4a::2/127 sequence 17850 
+ deny ipv6 any host 2a00:1ae8:c:4b::1 sequence 17860 
+ deny ipv6 any 2a00:1ae8:c:4b::2/127 sequence 17870 
+ deny ipv6 any host 2a00:1ae8:c:4c::1 sequence 17880 
+ deny ipv6 any 2a00:1ae8:c:4c::2/127 sequence 17890 
+ deny ipv6 any host 2a00:1ae8:c:4d::1 sequence 17900 
+ deny ipv6 any 2a00:1ae8:c:4d::2/127 sequence 17910 
+ deny ipv6 any host 2a00:1ae8:c:4e::1 sequence 17920 
+ deny ipv6 any 2a00:1ae8:c:4e::2/127 sequence 17930 
+ deny ipv6 any host 2a00:1ae8:c:4f::1 sequence 17940 
+ deny ipv6 any 2a00:1ae8:c:4f::2/127 sequence 17950 
+ deny ipv6 any host 2a00:1ae8:c:50::1 sequence 17960 
+ deny ipv6 any 2a00:1ae8:c:50::2/127 sequence 17970 
+ deny ipv6 any host 2a00:1ae8:c:51::1 sequence 17980 
+ deny ipv6 any 2a00:1ae8:c:51::2/127 sequence 17990 
+ deny ipv6 any host 2a00:1ae8:c:52::1 sequence 18000 
+ deny ipv6 any 2a00:1ae8:c:52::2/127 sequence 18010 
+ deny ipv6 any host 2a00:1ae8:c:53::1 sequence 18020 
+ deny ipv6 any 2a00:1ae8:c:53::2/127 sequence 18030 
+ deny ipv6 any host 2a00:1ae8:c:54::1 sequence 18040 
+ deny ipv6 any 2a00:1ae8:c:54::2/127 sequence 18050 
+ deny ipv6 any host 2a00:1ae8:c:55::1 sequence 18060 
+ deny ipv6 any 2a00:1ae8:c:55::2/127 sequence 18070 
+ deny ipv6 any host 2a00:1ae8:c:56::1 sequence 18080 
+ deny ipv6 any 2a00:1ae8:c:56::2/127 sequence 18090 
+ deny ipv6 any host 2a00:1ae8:c:57::1 sequence 18100 
+ deny ipv6 any 2a00:1ae8:c:57::2/127 sequence 18110 
+ deny ipv6 any host 2a00:1ae8:c:58::1 sequence 18120 
+ deny ipv6 any 2a00:1ae8:c:58::2/127 sequence 18130 
+ deny ipv6 any host 2a00:1ae8:c:59::1 sequence 18140 
+ deny ipv6 any 2a00:1ae8:c:59::2/127 sequence 18150 
+ deny ipv6 any host 2a00:1ae8:c:5a::1 sequence 18160 
+ deny ipv6 any 2a00:1ae8:c:5a::2/127 sequence 18170 
+ deny ipv6 any host 2a00:1ae8:c:5b::1 sequence 18180 
+ deny ipv6 any 2a00:1ae8:c:5b::2/127 sequence 18190 
+ deny ipv6 any host 2a00:1ae8:c:5c::1 sequence 18200 
+ deny ipv6 any 2a00:1ae8:c:5c::2/127 sequence 18210 
+ deny ipv6 any host 2a00:1ae8:c:5d::1 sequence 18220 
+ deny ipv6 any 2a00:1ae8:c:5d::2/127 sequence 18230 
+ deny ipv6 any host 2a00:1ae8:c:5e::1 sequence 18240 
+ deny ipv6 any 2a00:1ae8:c:5e::2/127 sequence 18250 
+ deny ipv6 any host 2a00:1ae8:c:5f::1 sequence 18260 
+ deny ipv6 any 2a00:1ae8:c:5f::2/127 sequence 18270 
+ deny ipv6 any host 2a00:1ae8:c:60::1 sequence 18280 
+ deny ipv6 any 2a00:1ae8:c:60::2/127 sequence 18290 
+ deny ipv6 any host 2a00:1ae8:c:61::1 sequence 18300 
+ deny ipv6 any 2a00:1ae8:c:61::2/127 sequence 18310 
+ deny ipv6 any host 2a00:1ae8:c:62::1 sequence 18320 
+ deny ipv6 any 2a00:1ae8:c:62::2/127 sequence 18330 
+ deny ipv6 any host 2a00:1ae8:c:63::1 sequence 18340 
+ deny ipv6 any 2a00:1ae8:c:63::2/127 sequence 18350 
+ deny ipv6 any host 2a00:1ae8:c:64::1 sequence 18360 
+ deny ipv6 any 2a00:1ae8:c:64::2/127 sequence 18370 
+ deny ipv6 any host 2a00:1ae8:c:65::1 sequence 18380 
+ deny ipv6 any 2a00:1ae8:c:65::2/127 sequence 18390 
+ deny ipv6 any host 2a00:1ae8:c:66::1 sequence 18400 
+ deny ipv6 any 2a00:1ae8:c:66::2/127 sequence 18410 
+ deny ipv6 any host 2a00:1ae8:c:67::1 sequence 18420 
+ deny ipv6 any 2a00:1ae8:c:67::2/127 sequence 18430 
+ deny ipv6 any host 2a00:1ae8:c:68::1 sequence 18440 
+ deny ipv6 any 2a00:1ae8:c:68::2/127 sequence 18450 
+ deny ipv6 any host 2a00:1ae8:c:69::1 sequence 18460 
+ deny ipv6 any 2a00:1ae8:c:69::2/127 sequence 18470 
+ deny ipv6 any host 2a00:1ae8:c:6a::1 sequence 18480 
+ deny ipv6 any 2a00:1ae8:c:6a::2/127 sequence 18490 
+ deny ipv6 any host 2a00:1ae8:c:6b::1 sequence 18500 
+ deny ipv6 any 2a00:1ae8:c:6b::2/127 sequence 18510 
+ deny ipv6 any host 2a00:1ae8:c:6c::1 sequence 18520 
+ deny ipv6 any 2a00:1ae8:c:6c::2/127 sequence 18530 
+ deny ipv6 any host 2a00:1ae8:c:6d::1 sequence 18540 
+ deny ipv6 any 2a00:1ae8:c:6d::2/127 sequence 18550 
+ deny ipv6 any host 2a00:1ae8:c:6e::1 sequence 18560 
+ deny ipv6 any 2a00:1ae8:c:6e::2/127 sequence 18570 
+ deny ipv6 any host 2a00:1ae8:c:6f::1 sequence 18580 
+ deny ipv6 any 2a00:1ae8:c:6f::2/127 sequence 18590 
+ deny ipv6 any host 2a00:1ae8:c:70::1 sequence 18600 
+ deny ipv6 any 2a00:1ae8:c:70::2/127 sequence 18610 
+ deny ipv6 any host 2a00:1ae8:c:71::1 sequence 18620 
+ deny ipv6 any 2a00:1ae8:c:71::2/127 sequence 18630 
+ deny ipv6 any host 2a00:1ae8:c:72::1 sequence 18640 
+ deny ipv6 any 2a00:1ae8:c:72::2/127 sequence 18650 
+ deny ipv6 any host 2a00:1ae8:c:73::1 sequence 18660 
+ deny ipv6 any 2a00:1ae8:c:73::2/127 sequence 18670 
+ deny ipv6 any host 2a00:1ae8:c:74::1 sequence 18680 
+ deny ipv6 any 2a00:1ae8:c:74::2/127 sequence 18690 
+ deny ipv6 any host 2a00:1ae8:c:75::1 sequence 18700 
+ deny ipv6 any 2a00:1ae8:c:75::2/127 sequence 18710 
+ deny ipv6 any host 2a00:1ae8:c:76::1 sequence 18720 
+ deny ipv6 any 2a00:1ae8:c:76::2/127 sequence 18730 
+ deny ipv6 any host 2a00:1ae8:c:77::1 sequence 18740 
+ deny ipv6 any 2a00:1ae8:c:77::2/127 sequence 18750 
+ deny ipv6 any host 2a00:1ae8:c:78::1 sequence 18760 
+ deny ipv6 any 2a00:1ae8:c:78::2/127 sequence 18770 
+ deny ipv6 any host 2a00:1ae8:c:79::1 sequence 18780 
+ deny ipv6 any 2a00:1ae8:c:79::2/127 sequence 18790 
+ deny ipv6 any host 2a00:1ae8:c:7a::1 sequence 18800 
+ deny ipv6 any 2a00:1ae8:c:7a::2/127 sequence 18810 
+ deny ipv6 any host 2a00:1ae8:c:7b::1 sequence 18820 
+ deny ipv6 any 2a00:1ae8:c:7b::2/127 sequence 18830 
+ deny ipv6 any host 2a00:1ae8:c:7c::1 sequence 18840 
+ deny ipv6 any 2a00:1ae8:c:7c::2/127 sequence 18850 
+ deny ipv6 any host 2a00:1ae8:c:7d::1 sequence 18860 
+ deny ipv6 any 2a00:1ae8:c:7d::2/127 sequence 18870 
+ deny ipv6 any host 2a00:1ae8:c:7e::1 sequence 18880 
+ deny ipv6 any 2a00:1ae8:c:7e::2/127 sequence 18890 
+ deny ipv6 any host 2a00:1ae8:c:7f::1 sequence 18900 
+ deny ipv6 any 2a00:1ae8:c:7f::2/127 sequence 18910 
+ deny ipv6 any host 2a00:1ae8:c:80::1 sequence 18920 
+ deny ipv6 any 2a00:1ae8:c:80::2/127 sequence 18930 
+ deny ipv6 any host 2a00:1ae8:c:81::1 sequence 18940 
+ deny ipv6 any 2a00:1ae8:c:81::2/127 sequence 18950 
+ deny ipv6 any host 2a00:1ae8:c:82::1 sequence 18960 
+ deny ipv6 any 2a00:1ae8:c:82::2/127 sequence 18970 
+ deny ipv6 any host 2a00:1ae8:c:83::1 sequence 18980 
+ deny ipv6 any 2a00:1ae8:c:83::2/127 sequence 18990 
+ deny ipv6 any host 2a00:1ae8:c:84::1 sequence 19000 
+ deny ipv6 any 2a00:1ae8:c:84::2/127 sequence 19010 
+ deny ipv6 any host 2a00:1ae8:c:85::1 sequence 19020 
+ deny ipv6 any 2a00:1ae8:c:85::2/127 sequence 19030 
+ deny ipv6 any host 2a00:1ae8:c:86::1 sequence 19040 
+ deny ipv6 any 2a00:1ae8:c:86::2/127 sequence 19050 
+ deny ipv6 any host 2a00:1ae8:c:87::1 sequence 19060 
+ deny ipv6 any 2a00:1ae8:c:87::2/127 sequence 19070 
+ deny ipv6 any host 2a00:1ae8:c:88::1 sequence 19080 
+ deny ipv6 any 2a00:1ae8:c:88::2/127 sequence 19090 
+ deny ipv6 any host 2a00:1ae8:c:89::1 sequence 19100 
+ deny ipv6 any 2a00:1ae8:c:89::2/127 sequence 19110 
+ deny ipv6 any host 2a00:1ae8:c:8a::1 sequence 19120 
+ deny ipv6 any 2a00:1ae8:c:8a::2/127 sequence 19130 
+ deny ipv6 any host 2a00:1ae8:c:8b::1 sequence 19140 
+ deny ipv6 any 2a00:1ae8:c:8b::2/127 sequence 19150 
+ deny ipv6 any host 2a00:1ae8:c:8c::1 sequence 19160 
+ deny ipv6 any 2a00:1ae8:c:8c::2/127 sequence 19170 
+ deny ipv6 any host 2a00:1ae8:c:8d::1 sequence 19180 
+ deny ipv6 any 2a00:1ae8:c:8d::2/127 sequence 19190 
+ deny ipv6 any host 2a00:1ae8:c:8e::1 sequence 19200 
+ deny ipv6 any 2a00:1ae8:c:8e::2/127 sequence 19210 
+ deny ipv6 any host 2a00:1ae8:c:8f::1 sequence 19220 
+ deny ipv6 any 2a00:1ae8:c:8f::2/127 sequence 19230 
+ deny ipv6 any host 2a00:1ae8:c:90::1 sequence 19240 
+ deny ipv6 any 2a00:1ae8:c:90::2/127 sequence 19250 
+ deny ipv6 any host 2a00:1ae8:c:91::1 sequence 19260 
+ deny ipv6 any 2a00:1ae8:c:91::2/127 sequence 19270 
+ deny ipv6 any host 2a00:1ae8:c:92::1 sequence 19280 
+ deny ipv6 any 2a00:1ae8:c:92::2/127 sequence 19290 
+ deny ipv6 any host 2a00:1ae8:c:93::1 sequence 19300 
+ deny ipv6 any 2a00:1ae8:c:93::2/127 sequence 19310 
+ deny ipv6 any host 2a00:1ae8:c:94::1 sequence 19320 
+ deny ipv6 any 2a00:1ae8:c:94::2/127 sequence 19330 
+ deny ipv6 any host 2a00:1ae8:c:95::1 sequence 19340 
+ deny ipv6 any 2a00:1ae8:c:95::2/127 sequence 19350 
+ deny ipv6 any host 2a00:1ae8:c:96::1 sequence 19360 
+ deny ipv6 any 2a00:1ae8:c:96::2/127 sequence 19370 
+ deny ipv6 any host 2a00:1ae8:c:97::1 sequence 19380 
+ deny ipv6 any 2a00:1ae8:c:97::2/127 sequence 19390 
+ deny ipv6 any host 2a00:1ae8:c:98::1 sequence 19400 
+ deny ipv6 any 2a00:1ae8:c:98::2/127 sequence 19410 
+ deny ipv6 any host 2a00:1ae8:c:99::1 sequence 19420 
+ deny ipv6 any 2a00:1ae8:c:99::2/127 sequence 19430 
+ deny ipv6 any host 2a00:1ae8:c:9a::1 sequence 19440 
+ deny ipv6 any 2a00:1ae8:c:9a::2/127 sequence 19450 
+ deny ipv6 any host 2a00:1ae8:c:9b::1 sequence 19460 
+ deny ipv6 any 2a00:1ae8:c:9b::2/127 sequence 19470 
+ deny ipv6 any host 2a00:1ae8:c:9c::1 sequence 19480 
+ deny ipv6 any 2a00:1ae8:c:9c::2/127 sequence 19490 
+ deny ipv6 any host 2a00:1ae8:c:9d::1 sequence 19500 
+ deny ipv6 any 2a00:1ae8:c:9d::2/127 sequence 19510 
+ deny ipv6 any host 2a00:1ae8:c:9e::1 sequence 19520 
+ deny ipv6 any 2a00:1ae8:c:9e::2/127 sequence 19530 
+ deny ipv6 any host 2a00:1ae8:c:9f::1 sequence 19540 
+ deny ipv6 any 2a00:1ae8:c:9f::2/127 sequence 19550 
+ deny ipv6 any host 2a00:1ae8:c:a0::1 sequence 19560 
+ deny ipv6 any 2a00:1ae8:c:a0::2/127 sequence 19570 
+ deny ipv6 any host 2a00:1ae8:c:a1::1 sequence 19580 
+ deny ipv6 any 2a00:1ae8:c:a1::2/127 sequence 19590 
+ deny ipv6 any host 2a00:1ae8:c:a2::1 sequence 19600 
+ deny ipv6 any 2a00:1ae8:c:a2::2/127 sequence 19610 
+ deny ipv6 any host 2a00:1ae8:c:a3::1 sequence 19620 
+ deny ipv6 any 2a00:1ae8:c:a3::2/127 sequence 19630 
+ deny ipv6 any host 2a00:1ae8:c:a4::1 sequence 19640 
+ deny ipv6 any 2a00:1ae8:c:a4::2/127 sequence 19650 
+ deny ipv6 any host 2a00:1ae8:c:a5::1 sequence 19660 
+ deny ipv6 any 2a00:1ae8:c:a5::2/127 sequence 19670 
+ deny ipv6 any host 2a00:1ae8:c:a6::1 sequence 19680 
+ deny ipv6 any 2a00:1ae8:c:a6::2/127 sequence 19690 
+ deny ipv6 any host 2a00:1ae8:c:a7::1 sequence 19700 
+ deny ipv6 any 2a00:1ae8:c:a7::2/127 sequence 19710 
+ deny ipv6 any host 2a00:1ae8:c:a8::1 sequence 19720 
+ deny ipv6 any 2a00:1ae8:c:a8::2/127 sequence 19730 
+ deny ipv6 any host 2a00:1ae8:c:a9::1 sequence 19740 
+ deny ipv6 any 2a00:1ae8:c:a9::2/127 sequence 19750 
+ deny ipv6 any host 2a00:1ae8:c:aa::1 sequence 19760 
+ deny ipv6 any 2a00:1ae8:c:aa::2/127 sequence 19770 
+ deny ipv6 any host 2a00:1ae8:c:ab::1 sequence 19780 
+ deny ipv6 any 2a00:1ae8:c:ab::2/127 sequence 19790 
+ deny ipv6 any host 2a00:1ae8:c:ac::1 sequence 19800 
+ deny ipv6 any 2a00:1ae8:c:ac::2/127 sequence 19810 
+ deny ipv6 any host 2a00:1ae8:c:ad::1 sequence 19820 
+ deny ipv6 any 2a00:1ae8:c:ad::2/127 sequence 19830 
+ deny ipv6 any host 2a00:1ae8:c:ae::1 sequence 19840 
+ deny ipv6 any 2a00:1ae8:c:ae::2/127 sequence 19850 
+ deny ipv6 any host 2a00:1ae8:c:af::1 sequence 19860 
+ deny ipv6 any 2a00:1ae8:c:af::2/127 sequence 19870 
+ deny ipv6 any host 2a00:1ae8:c:b0::1 sequence 19880 
+ deny ipv6 any 2a00:1ae8:c:b0::2/127 sequence 19890 
+ deny ipv6 any host 2a00:1ae8:c:b1::1 sequence 19900 
+ deny ipv6 any 2a00:1ae8:c:b1::2/127 sequence 19910 
+ deny ipv6 any host 2a00:1ae8:c:b2::1 sequence 19920 
+ deny ipv6 any 2a00:1ae8:c:b2::2/127 sequence 19930 
+ deny ipv6 any host 2a00:1ae8:c:b3::1 sequence 19940 
+ deny ipv6 any 2a00:1ae8:c:b3::2/127 sequence 19950 
+ deny ipv6 any host 2a00:1ae8:c:b4::1 sequence 19960 
+ deny ipv6 any 2a00:1ae8:c:b4::2/127 sequence 19970 
+ deny ipv6 any host 2a00:1ae8:c:b5::1 sequence 19980 
+ deny ipv6 any 2a00:1ae8:c:b5::2/127 sequence 19990 
+ deny ipv6 any host 2a00:1ae8:c:b6::1 sequence 20000 
+ deny ipv6 any 2a00:1ae8:c:b6::2/127 sequence 20010 
+ deny ipv6 any host 2a00:1ae8:c:b7::1 sequence 20020 
+ deny ipv6 any 2a00:1ae8:c:b7::2/127 sequence 20030 
+ deny ipv6 any host 2a00:1ae8:c:b8::1 sequence 20040 
+ deny ipv6 any 2a00:1ae8:c:b8::2/127 sequence 20050 
+ deny ipv6 any host 2a00:1ae8:c:b9::1 sequence 20060 
+ deny ipv6 any 2a00:1ae8:c:b9::2/127 sequence 20070 
+ deny ipv6 any host 2a00:1ae8:c:ba::1 sequence 20080 
+ deny ipv6 any 2a00:1ae8:c:ba::2/127 sequence 20090 
+ deny ipv6 any host 2a00:1ae8:c:bb::1 sequence 20100 
+ deny ipv6 any 2a00:1ae8:c:bb::2/127 sequence 20110 
+ deny ipv6 any host 2a00:1ae8:c:bc::1 sequence 20120 
+ deny ipv6 any 2a00:1ae8:c:bc::2/127 sequence 20130 
+ deny ipv6 any host 2a00:1ae8:c:bd::1 sequence 20140 
+ deny ipv6 any 2a00:1ae8:c:bd::2/127 sequence 20150 
+ deny ipv6 any host 2a00:1ae8:c:be::1 sequence 20160 
+ deny ipv6 any 2a00:1ae8:c:be::2/127 sequence 20170 
+ deny ipv6 any host 2a00:1ae8:c:bf::1 sequence 20180 
+ deny ipv6 any 2a00:1ae8:c:bf::2/127 sequence 20190 
+ deny ipv6 any host 2a00:1ae8:c:c0::1 sequence 20200 
+ deny ipv6 any 2a00:1ae8:c:c0::2/127 sequence 20210 
+ deny ipv6 any host 2a00:1ae8:c:c1::1 sequence 20220 
+ deny ipv6 any 2a00:1ae8:c:c1::2/127 sequence 20230 
+ deny ipv6 any host 2a00:1ae8:c:c2::1 sequence 20240 
+ deny ipv6 any 2a00:1ae8:c:c2::2/127 sequence 20250 
+ deny ipv6 any host 2a00:1ae8:c:c3::1 sequence 20260 
+ deny ipv6 any 2a00:1ae8:c:c3::2/127 sequence 20270 
+ deny ipv6 any host 2a00:1ae8:c:c4::1 sequence 20280 
+ deny ipv6 any 2a00:1ae8:c:c4::2/127 sequence 20290 
+ deny ipv6 any host 2a00:1ae8:c:c5::1 sequence 20300 
+ deny ipv6 any 2a00:1ae8:c:c5::2/127 sequence 20310 
+ deny ipv6 any host 2a00:1ae8:c:c6::1 sequence 20320 
+ deny ipv6 any 2a00:1ae8:c:c6::2/127 sequence 20330 
+ deny ipv6 any host 2a00:1ae8:c:c7::1 sequence 20340 
+ deny ipv6 any 2a00:1ae8:c:c7::2/127 sequence 20350 
+ deny ipv6 any host 2a00:1ae8:c:c8::1 sequence 20360 
+ deny ipv6 any 2a00:1ae8:c:c8::2/127 sequence 20370 
+ deny ipv6 any host 2a00:1ae8:c:c9::1 sequence 20380 
+ deny ipv6 any 2a00:1ae8:c:c9::2/127 sequence 20390 
+ deny ipv6 any host 2a00:1ae8:c:ca::1 sequence 20400 
+ deny ipv6 any 2a00:1ae8:c:ca::2/127 sequence 20410 
+ deny ipv6 any host 2a00:1ae8:c:cb::1 sequence 20420 
+ deny ipv6 any 2a00:1ae8:c:cb::2/127 sequence 20430 
+ deny ipv6 any host 2a00:1ae8:c:cc::1 sequence 20440 
+ deny ipv6 any 2a00:1ae8:c:cc::2/127 sequence 20450 
+ deny ipv6 any host 2a00:1ae8:c:cd::1 sequence 20460 
+ deny ipv6 any 2a00:1ae8:c:cd::2/127 sequence 20470 
+ deny ipv6 any host 2a00:1ae8:c:ce::1 sequence 20480 
+ deny ipv6 any 2a00:1ae8:c:ce::2/127 sequence 20490 
+ deny ipv6 any host 2a00:1ae8:c:cf::1 sequence 20500 
+ deny ipv6 any 2a00:1ae8:c:cf::2/127 sequence 20510 
+ deny ipv6 any host 2a00:1ae8:c:d0::1 sequence 20520 
+ deny ipv6 any 2a00:1ae8:c:d0::2/127 sequence 20530 
+ deny ipv6 any host 2a00:1ae8:c:d1::1 sequence 20540 
+ deny ipv6 any 2a00:1ae8:c:d1::2/127 sequence 20550 
+ deny ipv6 any host 2a00:1ae8:c:d2::1 sequence 20560 
+ deny ipv6 any 2a00:1ae8:c:d2::2/127 sequence 20570 
+ deny ipv6 any host 2a00:1ae8:c:d3::1 sequence 20580 
+ deny ipv6 any 2a00:1ae8:c:d3::2/127 sequence 20590 
+ deny ipv6 any host 2a00:1ae8:c:d4::1 sequence 20600 
+ deny ipv6 any 2a00:1ae8:c:d4::2/127 sequence 20610 
+ deny ipv6 any host 2a00:1ae8:c:d5::1 sequence 20620 
+ deny ipv6 any 2a00:1ae8:c:d5::2/127 sequence 20630 
+ deny ipv6 any host 2a00:1ae8:c:d6::1 sequence 20640 
+ deny ipv6 any 2a00:1ae8:c:d6::2/127 sequence 20650 
+ deny ipv6 any host 2a00:1ae8:c:d7::1 sequence 20660 
+ deny ipv6 any 2a00:1ae8:c:d7::2/127 sequence 20670 
+ deny ipv6 any host 2a00:1ae8:c:d8::1 sequence 20680 
+ deny ipv6 any 2a00:1ae8:c:d8::2/127 sequence 20690 
+ deny ipv6 any host 2a00:1ae8:c:d9::1 sequence 20700 
+ deny ipv6 any 2a00:1ae8:c:d9::2/127 sequence 20710 
+ deny ipv6 any host 2a00:1ae8:c:da::1 sequence 20720 
+ deny ipv6 any 2a00:1ae8:c:da::2/127 sequence 20730 
+ deny ipv6 any host 2a00:1ae8:c:db::1 sequence 20740 
+ deny ipv6 any 2a00:1ae8:c:db::2/127 sequence 20750 
+ deny ipv6 any host 2a00:1ae8:c:dc::1 sequence 20760 
+ deny ipv6 any 2a00:1ae8:c:dc::2/127 sequence 20770 
+ deny ipv6 any host 2a00:1ae8:c:dd::1 sequence 20780 
+ deny ipv6 any 2a00:1ae8:c:dd::2/127 sequence 20790 
+ deny ipv6 any host 2a00:1ae8:c:de::1 sequence 20800 
+ deny ipv6 any 2a00:1ae8:c:de::2/127 sequence 20810 
+ deny ipv6 any host 2a00:1ae8:c:df::1 sequence 20820 
+ deny ipv6 any 2a00:1ae8:c:df::2/127 sequence 20830 
+ deny ipv6 any host 2a00:1ae8:c:e0::1 sequence 20840 
+ deny ipv6 any 2a00:1ae8:c:e0::2/127 sequence 20850 
+ deny ipv6 any host 2a00:1ae8:c:e1::1 sequence 20860 
+ deny ipv6 any 2a00:1ae8:c:e1::2/127 sequence 20870 
+ deny ipv6 any host 2a00:1ae8:c:e2::1 sequence 20880 
+ deny ipv6 any 2a00:1ae8:c:e2::2/127 sequence 20890 
+ deny ipv6 any host 2a00:1ae8:c:e3::1 sequence 20900 
+ deny ipv6 any 2a00:1ae8:c:e3::2/127 sequence 20910 
+ deny ipv6 any host 2a00:1ae8:d:48::1 sequence 20920 
+ deny ipv6 any 2a00:1ae8:d:48::2/127 sequence 20930 
+ deny ipv6 any host 2a00:1ae8:d:49::1 sequence 20940 
+ deny ipv6 any 2a00:1ae8:d:49::2/127 sequence 20950 
+ deny ipv6 any host 2a00:1ae8:d:4a::1 sequence 20960 
+ deny ipv6 any 2a00:1ae8:d:4a::2/127 sequence 20970 
+ deny ipv6 any host 2a00:1ae8:d:4b::1 sequence 20980 
+ deny ipv6 any 2a00:1ae8:d:4b::2/127 sequence 20990 
+ deny ipv6 any host 2a00:1ae8:d:4c::1 sequence 21000 
+ deny ipv6 any 2a00:1ae8:d:4c::2/127 sequence 21010 
+ deny ipv6 any host 2a00:1ae8:d:4d::1 sequence 21020 
+ deny ipv6 any 2a00:1ae8:d:4d::2/127 sequence 21030 
+ deny ipv6 any host 2a00:1ae8:d:4e::1 sequence 21040 
+ deny ipv6 any 2a00:1ae8:d:4e::2/127 sequence 21050 
+ deny ipv6 any host 2a00:1ae8:d:4f::1 sequence 21060 
+ deny ipv6 any 2a00:1ae8:d:4f::2/127 sequence 21070 
+ deny ipv6 any host 2a00:1ae8:d:50::1 sequence 21080 
+ deny ipv6 any 2a00:1ae8:d:50::2/127 sequence 21090 
+ deny ipv6 any host 2a00:1ae8:d:51::1 sequence 21100 
+ deny ipv6 any 2a00:1ae8:d:51::2/127 sequence 21110 
+ deny ipv6 any host 2a00:1ae8:d:52::1 sequence 21120 
+ deny ipv6 any 2a00:1ae8:d:52::2/127 sequence 21130 
+ deny ipv6 any host 2a00:1ae8:d:53::1 sequence 21140 
+ deny ipv6 any 2a00:1ae8:d:53::2/127 sequence 21150 
+ deny ipv6 any host 2a00:1ae8:d:54::1 sequence 21160 
+ deny ipv6 any 2a00:1ae8:d:54::2/127 sequence 21170 
+ deny ipv6 any host 2a00:1ae8:d:55::1 sequence 21180 
+ deny ipv6 any 2a00:1ae8:d:55::2/127 sequence 21190 
+ deny ipv6 any host 2a00:1ae8:d:56::1 sequence 21200 
+ deny ipv6 any 2a00:1ae8:d:56::2/127 sequence 21210 
+ deny ipv6 any host 2a00:1ae8:d:57::1 sequence 21220 
+ deny ipv6 any 2a00:1ae8:d:57::2/127 sequence 21230 
+ deny ipv6 any host 2a00:1ae8:d:58::1 sequence 21240 
+ deny ipv6 any 2a00:1ae8:d:58::2/127 sequence 21250 
+ deny ipv6 any host 2a00:1ae8:d:59::1 sequence 21260 
+ deny ipv6 any 2a00:1ae8:d:59::2/127 sequence 21270 
+ deny ipv6 any host 2a00:1ae8:d:5a::1 sequence 21280 
+ deny ipv6 any 2a00:1ae8:d:5a::2/127 sequence 21290 
+ deny ipv6 any host 2a00:1ae8:d:5b::1 sequence 21300 
+ deny ipv6 any 2a00:1ae8:d:5b::2/127 sequence 21310 
+ deny ipv6 any host 2a00:1ae8:d:5c::1 sequence 21320 
+ deny ipv6 any 2a00:1ae8:d:5c::2/127 sequence 21330 
+ deny ipv6 any host 2a00:1ae8:d:5d::1 sequence 21340 
+ deny ipv6 any 2a00:1ae8:d:5d::2/127 sequence 21350 
+ deny ipv6 any host 2a00:1ae8:d:5e::1 sequence 21360 
+ deny ipv6 any 2a00:1ae8:d:5e::2/127 sequence 21370 
+ deny ipv6 any host 2a00:1ae8:d:5f::1 sequence 21380 
+ deny ipv6 any 2a00:1ae8:d:5f::2/127 sequence 21390 
+ deny ipv6 any host 2a00:1ae8:d:60::1 sequence 21400 
+ deny ipv6 any 2a00:1ae8:d:60::2/127 sequence 21410 
+ deny ipv6 any host 2a00:1ae8:d:61::1 sequence 21420 
+ deny ipv6 any 2a00:1ae8:d:61::2/127 sequence 21430 
+ deny ipv6 any host 2a00:1ae8:d:62::1 sequence 21440 
+ deny ipv6 any 2a00:1ae8:d:62::2/127 sequence 21450 
+ deny ipv6 any host 2a00:1ae8:d:63::1 sequence 21460 
+ deny ipv6 any 2a00:1ae8:d:63::2/127 sequence 21470 
+ deny ipv6 any host 2a00:1ae8:d:64::1 sequence 21480 
+ deny ipv6 any 2a00:1ae8:d:64::2/127 sequence 21490 
+ deny ipv6 any host 2a00:1ae8:d:65::1 sequence 21500 
+ deny ipv6 any 2a00:1ae8:d:65::2/127 sequence 21510 
+ deny ipv6 any host 2a00:1ae8:d:66::1 sequence 21520 
+ deny ipv6 any 2a00:1ae8:d:66::2/127 sequence 21530 
+ deny ipv6 any host 2a00:1ae8:d:67::1 sequence 21540 
+ deny ipv6 any 2a00:1ae8:d:67::2/127 sequence 21550 
+ deny ipv6 any host 2a00:1ae8:d:68::1 sequence 21560 
+ deny ipv6 any 2a00:1ae8:d:68::2/127 sequence 21570 
+ deny ipv6 any host 2a00:1ae8:d:69::1 sequence 21580 
+ deny ipv6 any 2a00:1ae8:d:69::2/127 sequence 21590 
+ deny ipv6 any host 2a00:1ae8:d:6a::1 sequence 21600 
+ deny ipv6 any 2a00:1ae8:d:6a::2/127 sequence 21610 
+ deny ipv6 any host 2a00:1ae8:d:6b::1 sequence 21620 
+ deny ipv6 any 2a00:1ae8:d:6b::2/127 sequence 21630 
+ deny ipv6 any host 2a00:1ae8:d:6c::1 sequence 21640 
+ deny ipv6 any 2a00:1ae8:d:6c::2/127 sequence 21650 
+ deny ipv6 any host 2a00:1ae8:d:6d::1 sequence 21660 
+ deny ipv6 any 2a00:1ae8:d:6d::2/127 sequence 21670 
+ deny ipv6 any host 2a00:1ae8:d:6e::1 sequence 21680 
+ deny ipv6 any 2a00:1ae8:d:6e::2/127 sequence 21690 
+ deny ipv6 any host 2a00:1ae8:d:6f::1 sequence 21700 
+ deny ipv6 any 2a00:1ae8:d:6f::2/127 sequence 21710 
+ deny ipv6 any host 2a00:1ae8:d:70::1 sequence 21720 
+ deny ipv6 any 2a00:1ae8:d:70::2/127 sequence 21730 
+ deny ipv6 any host 2a00:1ae8:d:71::1 sequence 21740 
+ deny ipv6 any 2a00:1ae8:d:71::2/127 sequence 21750 
+ deny ipv6 any host 2a00:1ae8:d:72::1 sequence 21760 
+ deny ipv6 any 2a00:1ae8:d:72::2/127 sequence 21770 
+ deny ipv6 any host 2a00:1ae8:d:73::1 sequence 21780 
+ deny ipv6 any 2a00:1ae8:d:73::2/127 sequence 21790 
+ remark --- Permit icmp to the rest
+ permit icmp any any sequence 21800 
+ remark --- Permit access from internet to own & customer networks
+ permit ipv6 any 2a00:1ae8::/32 sequence 21810 
+ remark --- Deny the rest
+ deny ipv6 any any sequence 21820 
+!
